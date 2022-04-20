@@ -1,0 +1,64 @@
+.footer {
+  flex: 0 0 auto;
+  min-height: 266px;
+  background-color: $dark-cyan;
+}
+
+.footer__wrapper {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 61px 0 51px;
+
+  a {
+    color: $main-white;
+    @include font($raleway, 14px, 16px, 700, normal);
+    text-align: center;
+    @include hover;
+  }
+}
+
+.footer__address,
+.footer__tel {
+  margin-bottom: 29px;
+}
+
+.footer__social-list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  width: 173px;
+}
+
+.footer__address {
+
+  a {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: url("../img/icon/marker.svg");
+      width: 15px;
+      height: 21px;
+      left: -20px;
+    }
+  }
+}
+
+.footer__tel {
+
+  a {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: url("../img/icon/phone-footer.svg");
+      width: 15px;
+      height: 15px;
+      left: -20px;
+    }
+  }
+}

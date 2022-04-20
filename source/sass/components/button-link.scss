@@ -1,0 +1,49 @@
+.button-link {
+  @include flex-center;
+  @include font($raleway, 16px, 19px, 700, normal);
+
+  &--order,
+  &--about {
+    width: 209px;
+    min-height: 47px;
+  }
+
+  &--order {
+    background: $btn-order;
+    color: $main-white;
+    margin-right: 45px;
+
+    &:hover,
+    &:focus-visible {
+      transition: $trans--300;
+      background: none;
+      border: 3px solid $cyan;
+      color: $cyan;
+    }
+  }
+
+  &--about {
+    border: 3px solid $cyan;
+    color: $cyan;
+    transition: $trans--300;
+
+    &:hover,
+    &:focus-visible {
+      background: $btn-order;
+      color: $main-white;
+      border: transparent;
+    }
+  }
+
+  &--callback {
+    width: 333px;
+  }
+
+  &--about,
+  &--order {
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

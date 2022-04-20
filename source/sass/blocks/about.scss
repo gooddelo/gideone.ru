@@ -1,0 +1,41 @@
+.about__wrapper {
+  margin-top: 136px;
+  margin-left: 6px;
+  margin-bottom: 48px;
+  display: flex;
+}
+
+.about__desc {
+  margin-left: 80px;
+  width: 500px;
+  margin-top: 8px;
+
+  h2 {
+    padding-bottom: 50px;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    @include font($raleway, 14px, 20px, 800, normal);
+    color: $light-red;
+    letter-spacing: 0.1px;
+    padding-bottom: 50px;
+  }
+}
+
+.about__founder {
+  @include font($raleway, 14px, 18px, 900, normal);
+  color: $light-red;
+  padding-bottom: 6px;
+  margin: 0;
+  letter-spacing: 0.1px;
+}
+
+.about__description {
+  @include font($raleway, 14px, 18px, 500, normal);
+  color: $main-black;
+  margin: 0;
+  letter-spacing: 0.1px;
+}
+

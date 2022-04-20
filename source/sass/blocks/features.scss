@@ -1,0 +1,41 @@
+.features__wrapper {
+  margin-top: 93px;
+  margin-bottom: 103px;
+  margin-left: 73px;
+
+  h2 {
+    max-width: 508px;
+    width: 100%;
+  }
+}
+
+.features__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  column-gap: 79px;
+  row-gap: 71px;
+  margin-top: 78px;
+}
+
+.features__item {
+  width: 424px;
+  min-height: 89px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  svg {
+    flex-grow: 1;
+    margin-right: 15px;
+  }
+
+  p {
+    margin: 0;
+    @include font($raleway, 14px, 16px, 600, normal);
+    color: $main-black;
+    max-width: 318px;
+    width: 100%;
+  }
+}

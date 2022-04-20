@@ -1,0 +1,36 @@
+// Color
+
+$main-black: #000000;
+$main-white: #ffffff;
+$slightly-green: #a1b983;
+$dark-cyan: #0f656e;
+$very-dark-cyan: #08454e;
+$cyan: #0e616c;
+$light-red: #ff6754;
+$border-color: #ddd8d8;
+
+// Gradient
+
+$btn-order: linear-gradient(273.2deg, #0E616C 4.98%, #3BDCB0 156.06%);
+$gradient-bcg: linear-gradient(100.53deg, #E4F8F2 13.43%, #E0F3EE 26.9%, #CAF9EF 59.86%, #C4EAE2 92.69%);
+
+// Viewports
+
+$min-width: 320px;
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$desktop-width: 1024px;
+
+//fonts
+
+$raleway: "Raleway", "Arial", sans-serif;
+$drina: "Drina", "Comic Sans MS", sans-serif;
+
+//transition
+
+$trans--300:  0.3s ease-in-out;
+
+//retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
