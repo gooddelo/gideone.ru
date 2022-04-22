@@ -20,19 +20,19 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#">О продукте</a>
+              <a href="#about">О продукте</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">Как работает</a>
+              <a href="#how-work">Как работает</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">Как подключить</a>
+              <a href="#features">Как подключить</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">Тарифы</a>
+              <a href="#rates">Тарифы</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">Кейсы</a>
+              <a href="cases">Кейсы</a>
             </li>
           </ul>
         </nav>
@@ -61,7 +61,7 @@
         </div>
       </div>
     </section>
-    <section class="about container fadeIn wow" data-wow-duration="1s" data-wow-delay="0.25s">
+    <section class="about container fadeIn wow" data-wow-duration="1s" data-wow-delay="0.25s" id="about">
       <div class="about__wrapper">
         <picture>
           <source type="image/webp" srcset="img/about-tablet-img.webp 1x, img/about-tablet-img@2x.webp 2x">
@@ -87,11 +87,11 @@
         </div>
       </div>
     </section>
-    <section class="how-work">
+    <section class="how-work" id="how-work">
       <div class="container">
-        <div class="how-work__wrapper slideInLeft wow" data-wow-duration="1.2s" data-wow-delay="1s">
-          <h2 class="fadeIn wow" data-wow-delay="1.2s">Как это работает</h2>
-          <ul class="how-work__features-list fadeIn wow" data-wow-delay="1.3s">
+        <div class="how-work__wrapper slideInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s">
+          <h2 class="fadeIn wow" data-wow-delay="0.7s">Как это работает</h2>
+          <ul class="how-work__features-list fadeIn wow" data-wow-delay="0.7s">
             <li class="how-work__features-item">
               <div class="how-work__features-icon">
                 <svg width="63" height="63" role="img">
@@ -142,7 +142,7 @@
         </div>
       </div>
     </section>
-    <section class="features container slideInRight wow" data-wow-duration="1s">
+    <section class="features container slideInRight wow" data-wow-duration="1s" id="features">
       <div class="features__wrapper">
         <h2>Как подключить <br>и что для этого надо</h2>
         <ul class="features__list">
@@ -192,7 +192,7 @@
         </div>
       </div>
     </section>
-    <section class="rates container fadeIn wow" data-wow-duration="2s">
+    <section class="rates container fadeIn wow" data-wow-duration="2s" id="rates">
       <h2>Тарифы</h2>
       <ul class="rates__list">
         <li class="rates__item fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -243,7 +243,7 @@
                   <img src="img/cases/case-mosaic.png" srcset="img/cases/case-mosaic@2x.png 2x" width="386" height="135" alt="Логотип кофейни «MOSAIC»">
                 </picture>
               </div>
-              <button class="button button--more" type="button">Подробнее</button>
+              <a href="cases?name=mosaic" class="button-link button-link--more">Подробнее</a>
             </li>
             <li class="cases__item swiper-slide">
               <p>Крафт-кафе «Мел»</p>
@@ -253,7 +253,7 @@
                   <img src="img/cases/case-mel.png" srcset="img/cases/case-mel@2x.png 2x" width="386" height="135" alt="Логотип крафт-кафе «Мел»">
                 </picture>
               </div>
-              <button class="button button--more" type="button">Подробнее</button>
+              <a href="cases?name=mel" class="button-link button-link--more">Подробнее</a>
             </li>
             <li class="cases__item swiper-slide">
               <p>Сеть комиссионных магазинов “Эксперт”</p>
@@ -263,27 +263,27 @@
                   <img src="img/cases/case-expert.png" srcset="img/cases/case-expert@2x.png 2x" width="386" height="135" alt="Логотип сети «Эксперт»">
                 </picture>
               </div>
-              <button class="button button--more" type="button">Подробнее</button>
+              <a href="cases?name=expert" class="button-link button-link--more">Подробнее</a>
             </li>
             <li class="cases__item swiper-slide">
               <p>Сеть магазинов подарков и сувенирной продукции «Флинт»</p>
               <div class="cases__logo">
                 <picture>
-                  <source type="image/webp" srcset="img/cases/case-.webp 1x, img/cases/case-@2x.webp 2x">
-                  <img src="img/cases/case-.png" srcset="img/cases/case-@2x.png 2x" width="386" height="135" alt="Логотип сети магазинов «Флинт»">
+                  <source type="image/webp" srcset="img/cases/case-flint.webp 1x, img/cases/case-flint@2x.webp 2x">
+                  <img src="img/cases/case-flint.png" srcset="img/cases/case-flint@2x.png 2x" width="386" height="135" alt="Логотип сети магазинов «Флинт»">
                 </picture>
               </div>
-              <button class="button button--more" type="button">Подробнее</button>
+              <a href="cases?name=flint" class="button-link button-link--more">Подробнее</a>
             </li>
             <li class="cases__item swiper-slide">
               <p>Сеть магазинов “Продукты 9%”</p>
               <div class="cases__logo">
                 <picture>
-                  <source type="image/webp" srcset="img/cases/case-.webp 1x, img/cases/case-@2x.webp 2x">
-                  <img src="img/cases/case-.png" srcset="img/cases/case-@2x.png 2x" width="386" height="135" alt="Логотип 9%">
+                  <source type="image/webp" srcset="img/cases/case-nine-percent.webp 1x, img/cases/case-nine-percent@2x.webp 2x">
+                  <img src="img/cases/case-nine-percent.png" srcset="img/cases/case-nine-percent@2x.png 2x" width="386" height="135" alt="Логотип 9%">
                 </picture>
               </div>
-              <button class="button button--more" type="button">Подробнее</button>
+              <a href="cases?name=nine-percent" class="button-link button-link--more">Подробнее</a>
             </li>
           </ul>
           <div class="cases__controls">
