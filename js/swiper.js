@@ -10,10 +10,13 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: true,
 
   breakpoints: {
-    // 320: {
-    //   slidesPerView: 1,
-    //   spaceBetween: 0,
-    // },
+    320: {
+      // loop: false,
+      slidesPerView: 'auto',
+      // slidesPerGroup: 1,
+      // spaceBetween: 16,
+      // centeredSlides: true,
+    },
     768: {
       slidesPerView: 'auto',
       spaceBetween: 0,
