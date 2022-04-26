@@ -7,6 +7,7 @@ const btnsOpenPopup = body.querySelectorAll('[name=btnOpenPopup]');
 const overlay = body.querySelector('.overlay');
 const main = body.querySelector('.main');
 const header = body.querySelector('.header');
+const form = body.querySelector('.form-callback')
 const numberField = body.querySelector('#number');
 const commentField = body.querySelector('#comment');
 
@@ -50,6 +51,7 @@ function openPopup() {
 
 function closePopup() {
   toggleClass('hide');
+  form.reset();
   escRemover();
 }
 

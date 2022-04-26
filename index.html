@@ -360,27 +360,30 @@
     </button>
     <form class="form-callback" action="https://gooddeloNotify.tojefin.repl.co/api/v1/sendform" method="post">
       <p>Заполните поля ниже и мы свяжемся с вами</p>
-      <ul class="form-callback__data-list">
-        <li class="form-callback__data-item">
-          <label class="visually-hidden" for="name"></label>
-          <input type="text" name="Name" id="name" placeholder="Имя*" required="">
-        </li>
-        <li class="form-callback__data-item">
-          <label class="visually-hidden" for="number"></label>
-          <input type="tel" name="Phone" id="number" placeholder="Телефон*" required="">
-        </li>
-        <li class="form-callback__data-item">
-          <label class="visually-hidden" for="email"></label>
-          <input type="email" name="Email" id="email" placeholder="Email">
-        </li>
-        <li class="form-callback__data-item">
-          <label class="visually-hidden" for="comment"></label>
-          <textarea name="Comment" id="comment" placeholder="Комментарий"></textarea>
-        </li>
-      </ul>
-      <div class="g-recaptcha" data-sitekey="6LdiGJ0fAAAAAGB60zFAAJHe42tdkT8M62yFsgMo" data-callback="enableBtn"></div>
-      <input type="text" value="0" hidden="" id="token" name="token">
-      <button class="button button--form" type="submit" id="submit" disabled="">Отправить</button>
+      <div class="form-callback__wrapper">
+        <ul class="form-callback__data-list">
+          <li class="form-callback__data-item">
+            <label class="visually-hidden" for="name"></label>
+            <input type="text" name="Name" id="name" placeholder="Имя*" required="">
+          </li>
+          <li class="form-callback__data-item">
+            <label class="visually-hidden" for="number"></label>
+            <input type="tel" name="Phone" id="number" placeholder="Телефон*" required="">
+          </li>
+          <li class="form-callback__data-item">
+            <label class="visually-hidden" for="email"></label>
+            <input type="email" name="Email" id="email" placeholder="Email">
+          </li>
+          <li class="form-callback__data-item">
+            <label class="visually-hidden" for="comment"></label>
+            <textarea name="Comment" id="comment" placeholder="Комментарий"></textarea>
+          </li>
+        </ul>
+        <div class="g-recaptcha form-callback__recaptcha" data-sitekey="6LdiGJ0fAAAAAGB60zFAAJHe42tdkT8M62yFsgMo" data-callback="enableBtn">
+        </div>
+        <input type="text" value="0" hidden="" id="token" name="token">
+        <button class="button button--form" type="submit" id="submit" disabled="">Отправить</button>
+      </div>
     </form>
   </div>
   <script src="js/vendor.js"></script>
