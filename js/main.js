@@ -15,10 +15,13 @@ const btnClosePopup = body.querySelector('[name=btnClosePopup]');
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
-const validatePhone = (element) => {
-  const inputPhoneMask = new Inputmask('+7 (999) 999-99-99');
-  inputPhoneMask.mask(element);
-};
+if (numberField) {
+    const validatePhone = (element) => {
+    const inputPhoneMask = new Inputmask('+7 (999) 999-99-99');
+    inputPhoneMask.mask(element);
+  };
+  validatePhone(numberField);
+}
 
 const btnMenuToggler = () => {
   if (window.innerWidth < 1024) {
@@ -29,21 +32,6 @@ const btnMenuToggler = () => {
 }
 
 const btnMenuHandler = () => btnMenuToggler();
-
-for (let item of navItems) {
-  item.addEventListener('click', btnMenuHandler);
-}
-
-for (let btn of btnsOpenPopup) {
-  btn.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    openPopup();
-    if (evt.target.parentNode.querySelector('.rates__item-quantity')) {
-      commentField.value = evt.target.parentNode.querySelector('.rates__item-quantity').textContent;
-    }
-    escRemover();
-  })
-}
 
 function openPopup() {
   toggleClass('show');
@@ -74,6 +62,25 @@ function toggleClass(action) {
   }
 }
 
+if (document.querySelector('.lazyframe')) {
+  lazyframe('.lazyframe');
+
+  // Passing a nodelist
+  let elements = document.querySelectorAll('.lazyframe');
+  lazyframe(elements);
+
+  lazyframe(elements, {
+    debounce: 250,
+    lazyload: true,
+    autoplay: true,
+
+    // Callbacks
+    onLoad: (lazyframe) => console.log(lazyframe),
+    onAppend: (iframe) => console.log(iframe),
+    onThumbnailLoad: (img) => console.log(img),
+  });
+}
+
 function escRemover() {
   window.addEventListener('keydown', (evt) => {
     if (isEscEvent(evt) && popup.classList.contains('popup--show')) {
@@ -83,24 +90,24 @@ function escRemover() {
   }, { once: true })
 }
 
-btnClosePopup.addEventListener('click', closePopup);
-overlay.addEventListener('click', closePopup);
+if (popup || overlay) {
+  btnClosePopup.addEventListener('click', closePopup);
+  overlay.addEventListener('click', closePopup);
+}
+
 btnMenu.addEventListener('click', btnMenuHandler);
-validatePhone(numberField);
 
-lazyframe('.lazyframe');
+for (let item of navItems) {
+  item.addEventListener('click', btnMenuHandler);
+}
 
-// Passing a nodelist
-let elements = document.querySelectorAll('.lazyframe');
-lazyframe(elements);
-
-lazyframe(elements, {
-  debounce: 250,
-  lazyload: true,
-  autoplay: true,
-
-  // Callbacks
-  onLoad: (lazyframe) => console.log(lazyframe),
-  onAppend: (iframe) => console.log(iframe),
-  onThumbnailLoad: (img) => console.log(img),
-});
+for (let btn of btnsOpenPopup) {
+  btn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    openPopup();
+    if (evt.target.parentNode.querySelector('.rates__item-quantity')) {
+      commentField.value = evt.target.parentNode.querySelector('.rates__item-quantity').textContent;
+    }
+    escRemover();
+  })
+}
