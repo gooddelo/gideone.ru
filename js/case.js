@@ -1,10 +1,10 @@
-const caseImgUrl = 'img/cases/case-';
 const btnCases = document.querySelectorAll('[name=btnDesc]');
 const caseTitle = document.querySelector('.case-page__title');
 const caseImg = document.querySelector('.case-page__img');
 const caseSource = document.querySelector('.case-page__source');
 const caseDescription = document.querySelector('.case-page__desc p');
 const casesItem = document.querySelectorAll('.case-page__item');
+const caseImgUrl = 'img/cases/case-';
 
 const cases = {
   'mosaic': {

@@ -87,3 +87,20 @@ btnClosePopup.addEventListener('click', closePopup);
 overlay.addEventListener('click', closePopup);
 btnMenu.addEventListener('click', btnMenuHandler);
 validatePhone(numberField);
+
+lazyframe('.lazyframe');
+
+// Passing a nodelist
+let elements = document.querySelectorAll('.lazyframe');
+lazyframe(elements);
+
+lazyframe(elements, {
+  debounce: 250,
+  lazyload: true,
+  autoplay: true,
+
+  // Callbacks
+  onLoad: (lazyframe) => console.log(lazyframe),
+  onAppend: (iframe) => console.log(iframe),
+  onThumbnailLoad: (img) => console.log(img),
+});

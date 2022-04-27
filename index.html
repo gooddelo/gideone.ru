@@ -66,7 +66,8 @@
     <section class="about container fadeIn wow" data-wow-duration="1s" data-wow-delay="0.25s" id="about">
       <div class="about__wrapper">
         <div class="about__video">
-          <iframe src="https://www.youtube.com/embed/34LuHIVif1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <div class="about__video-ifarme lazyframe" data-vendor="youtube" data-title="Gideone - персонал на максималках" data-src="https://www.youtube.com/embed/34LuHIVif1g" data-autoplay="false" SameSite="None">
+          </div>
           <picture>
             <source type="image/webp" srcset="img/about-tablet-img.webp 1x, img/about-tablet-img@2x.webp 2x">
             <img src="img/about-tablet-img.png" srcset="img/about-tablet-img@2x.png 2x" width="585" height="431" alt="">
@@ -389,7 +390,7 @@
   <script src="js/vendor.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/animation.js"></script>
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
   <script type="text/javascript">
     function enableBtn(token){
       document.getElementById("submit").disabled = false;
