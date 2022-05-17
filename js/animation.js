@@ -8,4 +8,4 @@ const wow = new WOW(
     resetAnimation: true,     // reset animation on end (default is true)
   }
 );
-wow.init()
+wow.init();

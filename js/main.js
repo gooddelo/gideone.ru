@@ -3,15 +3,14 @@ const btnMenu = body.querySelector('.button--burger');
 const navMenu = body.querySelector('.header__nav');
 const navItems = body.querySelectorAll('.header__nav-item a');
 const popup = body.querySelector('.popup');
-const btnsOpenPopup = body.querySelectorAll('[name=btnOpenPopup]');
+const btnsOpenPopup = body.querySelectorAll('[data-modal]');
+const btnClosePopup = body.querySelector('[data-close]');
 const overlay = body.querySelector('.overlay');
 const main = body.querySelector('.main');
 const header = body.querySelector('.header');
-const form = body.querySelector('.form-callback')
+const form = body.querySelector('.form-callback');
 const numberField = body.querySelector('#number');
 const commentField = body.querySelector('#comment');
-
-const btnClosePopup = body.querySelector('[name=btnClosePopup]');
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
@@ -29,7 +28,7 @@ const btnMenuToggler = () => {
     navMenu.classList.toggle('header__nav--show');
     body.classList.toggle('page__body--hidden');
   }
-}
+};
 
 const btnMenuHandler = () => btnMenuToggler();
 
@@ -43,21 +42,31 @@ function closePopup() {
   escRemover();
 }
 
+function toggler() {
+  overlay.classList.toggle('overlay--hidden');
+  popup.classList.toggle('popup--show');
+  body.classList.toggle('page__body--hidden');
+}
+
+function setFilter(action) {
+  if (action === 'show') {
+    header.style.filter = 'blur(5px)';
+    main.style.filter = 'blur(5px)';
+  } else {
+    header.style.filter = '';
+    main.style.filter = '';
+  }
+}
+
 function toggleClass(action) {
   switch (action) {
     case 'show':
-      header.style.filter = 'blur(5px)';
-      main.style.filter = 'blur(5px)';
-      overlay.classList.toggle('overlay--hidden');
-      popup.classList.toggle('popup--show');
-      body.classList.toggle('page__body--hidden');
+      setFilter(action);
+      toggler();
       break;
     case 'hide':
-      overlay.classList.toggle('overlay--hidden');
-      popup.classList.toggle('popup--show');
-      body.classList.toggle('page__body--hidden');
-      header.style.filter = '';
-      main.style.filter = '';
+      toggler();
+      setFilter(action);
       break;
   }
 }
@@ -85,9 +94,9 @@ function escRemover() {
   window.addEventListener('keydown', (evt) => {
     if (isEscEvent(evt) && popup.classList.contains('popup--show')) {
       evt.preventDefault();
-      closePopup()
+      closePopup();
     }
-  }, { once: true })
+  }, { once: true });
 }
 
 if (popup || overlay) {
@@ -97,17 +106,17 @@ if (popup || overlay) {
 
 btnMenu.addEventListener('click', btnMenuHandler);
 
-for (let item of navItems) {
-  item.addEventListener('click', btnMenuHandler);
-}
+navItems.forEach(item => item.addEventListener('click', btnMenuHandler));
 
 for (let btn of btnsOpenPopup) {
   btn.addEventListener('click', (evt) => {
     evt.preventDefault();
     openPopup();
-    if (evt.target.parentNode.querySelector('.rates__item-quantity')) {
-      commentField.value = evt.target.parentNode.querySelector('.rates__item-quantity').textContent;
+
+    if (evt.target.parentElement.querySelector('.rates__item-quantity')) {
+      commentField.value = evt.target.parentElement.querySelector('.rates__item-quantity').textContent;
     }
+
     escRemover();
-  })
+  });
 }

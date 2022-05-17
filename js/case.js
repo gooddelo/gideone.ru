@@ -84,12 +84,12 @@ const cases = {
     выполнять на постоянной основе для поддержания выполнения стандартов качества компании. Стандарты были разработаны и внедрены,
     сразу были выявлены основные “узкие места” продаж и управления.`
   },
-}
+};
 
 const renderCase = (name) => {
   casesItem.forEach((item) => {
     item.classList.remove('case-page__item--active');
-  })
+  });
 
   document.querySelector('#' + name).classList.add('case-page__item--active');
 
@@ -99,7 +99,7 @@ const renderCase = (name) => {
   caseImg.alt = cases[name].alt;
   caseSource.srcset = cases[name].source;
   caseDescription.textContent = cases[name].description;
-}
+};
 
 window.addEventListener('load', () => {
   let param = getUrlVars();
@@ -107,20 +107,20 @@ window.addEventListener('load', () => {
     renderCase(param.name);
     history.replaceState("", document.title, window.location.pathname);
   }
-})
+});
 
 for (let btnCase of btnCases) {
   btnCase.addEventListener('click', (evt) => {
     evt.preventDefault();
     window.scrollTo(0, 0);
     renderCase(evt.target.dataset.name);
-  })
+  });
 }
 
 function getUrlVars() {
   let vars = [], hash;
   let hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-  for(let i = 0; i < hashes.length; i++){
+  for (let i = 0; i < hashes.length; i++) {
     hash = hashes[i].split('=');
     vars.push(hash[0]);
     vars[hash[0]] = hash[1];

@@ -71,8 +71,7 @@
         <div class="intro__wrapper">
           <h1>НАСТРОЙ РАБОТУ ПЕРСОНАЛА <br><span>“на максималках”</span></h1>
           <p>
-            <span>Gideone</span> — программно-аналитический комплекс оценки персонала с автоматизированной обратной
-            связью в режиме реального времени.
+            <span>Gideone</span> — автономный программно-аналитический комплекс оценки и обучения персонала в режиме реального времени.
           </p>
           <img class="intro__img" src="img/decor/intro-composition.svg" width="540" height="540" alt="">
           <ul class="intro__features-list">
@@ -80,7 +79,7 @@
             <li class="intro__features-item">Более 15 лет на рынке управления человеческими ресурсами.</li>
           </ul>
           <div class="intro__links">
-            <button name="btnOpenPopup" class="button button--callback">Попробовать бесплатно</button>
+            <button data-modal="" class="button button--callback">Попробовать бесплатно</button>
           </div>
         </div>
       </div>
@@ -215,7 +214,7 @@
       <div class="container">
         <div class="callback__wrapper">
           <p>ВАС ЗАИНТЕРЕСОВАЛА СИСТЕМА - ЗВОНИТЕ ИЛИ ПИШИТЕ!</p>
-          <button type="button" name="btnOpenPopup" class="button button--callback pulse wow" data-wow-iteration="10" data-wow-duration="3s">
+          <button type="button" data-modal="" class="button button--callback pulse wow" data-wow-iteration="10" data-wow-duration="3s">
             Попробовать бесплатно
           </button>
         </div>
@@ -230,7 +229,7 @@
             <use xlink:href="img/sprite.svg#icon-people-one"></use>
           </svg>
           <p>2500 рублей <br>в месяц за сотрудника</p>
-          <button type="button" name="btnOpenPopup" class="button button--order">Заказать</button>
+          <button type="button" data-modal="" class="button button--order">Заказать</button>
         </li>
         <li class="rates__item fadeInLeft wow" data-wow-duration="1s" data-wow-delay="1s">
           <p class="rates__item-quantity">От 6 до 20 точек</p>
@@ -238,7 +237,7 @@
             <use xlink:href="img/sprite.svg#icon-people-two"></use>
           </svg>
           <p>2300 рублей <br>в месяц за сотрудника</p>
-          <button type="button" name="btnOpenPopup" class="button button--order">Заказать</button>
+          <button type="button" data-modal="" class="button button--order">Заказать</button>
         </li>
         <li class="rates__item fadeInLeft wow" data-wow-duration="1s" data-wow-delay="1.5s">
           <p class="rates__item-quantity">От 21 до 50 точек</p>
@@ -246,7 +245,7 @@
             <use xlink:href="img/sprite.svg#icon-people-tree"></use>
           </svg>
           <p>2100 рублей <br>в месяц за сотрудника</p>
-          <button type="button" name="btnOpenPopup" class="button button--order">Заказать</button>
+          <button type="button" data-modal="" class="button button--order">Заказать</button>
         </li>
         <li class="rates__item rates__item--four fadeInLeft wow" data-wow-duration="1s" data-wow-delay="2s">
           <p class="rates__item-quantity">От 51 точки</p>
@@ -254,7 +253,7 @@
             <use xlink:href="img/sprite.svg#icon-people-four"></use>
           </svg>
           <p>2000 рублей <br>в месяц за сотрудника</p>
-          <button type="button" name="btnOpenPopup" class="button button--order">Заказать</button>
+          <button type="button" data-modal="" class="button button--order">Заказать</button>
         </li>
       </ul>
     </section>
@@ -334,7 +333,7 @@
     </section>
   </main>
   <footer class="footer">
-    <a class="footer__link fadeIn wow" href="https://dolinatlt.ru/">
+    <a class="footer__link fadeIn wow" href="https://dolinatlt.ru/residents/ip-malorossiyanov-ivan-aleksandrovich/">
       <img src="img/icon/dolina.svg" width="200" height="100" alt="Логотип “Жигулёвская долина”">
     </a>
     <div class="footer__wrapper fadeInDown wow">
@@ -381,7 +380,7 @@
   </footer>
   <div class="overlay overlay--hidden"></div>
   <div class="popup">
-    <button class="button button--close button--popup" name="btnClosePopup" type="button">
+    <button class="button button--close button--popup" data-close="" type="button">
       <span class="visually-hidden">Закрыть окно</span>
     </button>
     <form class="form-callback" action="https://gooddeloNotify.tojefin.repl.co/api/v1/sendform/" method="post">
