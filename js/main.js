@@ -3,14 +3,15 @@ const btnMenu = body.querySelector('.button--burger');
 const navMenu = body.querySelector('.header__nav');
 const navItems = body.querySelectorAll('.header__nav-item a');
 const popup = body.querySelector('.popup');
-const btnsOpenPopup = body.querySelectorAll('[data-modal]');
-const btnClosePopup = body.querySelector('[data-close]');
+const btnsOpenModal = body.querySelectorAll('[data-modal]');
+const btnCloseModal = body.querySelector('[data-close]');
 const overlay = body.querySelector('.overlay');
 const main = body.querySelector('.main');
 const header = body.querySelector('.header');
 const form = body.querySelector('.form-callback');
-const numberField = body.querySelector('#number');
-const commentField = body.querySelector('#comment');
+const numberField = form.querySelector('#number');
+const commentField = form.querySelector('#comment');
+const btnSubmit = form.querySelector('#submit');
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
@@ -32,11 +33,11 @@ const btnMenuToggler = () => {
 
 const btnMenuHandler = () => btnMenuToggler();
 
-function openPopup() {
+function openModal() {
   toggleClass('show');
 }
 
-function closePopup() {
+function closeModal() {
   toggleClass('hide');
   form.reset();
   escRemover();
@@ -94,24 +95,24 @@ function escRemover() {
   window.addEventListener('keydown', (evt) => {
     if (isEscEvent(evt) && popup.classList.contains('popup--show')) {
       evt.preventDefault();
-      closePopup();
+      closeModal();
     }
   }, { once: true });
 }
 
 if (popup || overlay) {
-  btnClosePopup.addEventListener('click', closePopup);
-  overlay.addEventListener('click', closePopup);
+  btnCloseModal.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
 }
 
 btnMenu.addEventListener('click', btnMenuHandler);
 
 navItems.forEach(item => item.addEventListener('click', btnMenuHandler));
 
-for (let btn of btnsOpenPopup) {
+btnsOpenModal.forEach(btn => {
   btn.addEventListener('click', (evt) => {
     evt.preventDefault();
-    openPopup();
+    openModal();
 
     if (evt.target.parentElement.querySelector('.rates__item-quantity')) {
       commentField.value = evt.target.parentElement.querySelector('.rates__item-quantity').textContent;
@@ -119,4 +120,71 @@ for (let btn of btnsOpenPopup) {
 
     escRemover();
   });
-}
+});
+
+const message = {
+  loading: 'img/form/spinner.svg',
+  success: 'Спасибо! Скоро мы с вами свяжемся',
+  failure: 'Что-то пошло не так... Попробуйте повторить.',
+};
+
+const showThanksModal = (message) => {
+
+  form.style.display = 'none';
+  popup.style.height = '180px';
+  openModal();
+
+  const thanksModal = document.createElement('form');
+  thanksModal.classList.add('form-callback');
+  thanksModal.innerHTML = `
+    <p>${message}</p>
+  `;
+
+  popup.append(thanksModal);
+  setTimeout(() => {
+    thanksModal.remove();
+    form.style.display = '';
+    popup.style.height = '';
+    closeModal();
+  }, 4000);
+};
+
+form.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+
+  const statusMessage = document.createElement('img');
+
+  statusMessage.src = message.loading;
+  statusMessage.style.cssText = `
+    display: block;
+    margin: 0 auto;
+  `;
+
+  btnSubmit.style.display = 'none';
+  btnSubmit.insertAdjacentElement('afterend', statusMessage);
+
+  const formData = new FormData(form);
+  const URL = 'https://gooddeloNotify.tojefin.repl.co/api/v1/sendform/';
+
+  let data = new URLSearchParams();
+
+  for (let pair of formData) {
+      data.append(pair[0], pair[1]);
+  }
+
+  data.append('getStatus', 'true');
+
+  fetch(URL, {
+      method: 'post',
+      body: data,
+  }).then(() => {
+    btnSubmit.style.display = 'block';
+    showThanksModal(message.success);
+    closeModal();
+    statusMessage.remove();
+  }).catch(() => {
+    showThanksModal(message.failure);
+  }).finally(() => {
+    form.reset();
+  });
+});
