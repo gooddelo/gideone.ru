@@ -9,18 +9,99 @@ const overlay = body.querySelector('.overlay');
 const main = body.querySelector('.main');
 const header = body.querySelector('.header');
 const form = body.querySelector('.form-callback');
-const numberField = form.querySelector('#number');
-const commentField = form.querySelector('#comment');
-const btnSubmit = form.querySelector('#submit');
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
-if (numberField) {
-    const validatePhone = (element) => {
+if (form) {
+  const numberField = form.querySelector('#number');
+  const commentField = form.querySelector('#comment');
+  const btnSubmit = form.querySelector('#submit');
+
+  const validatePhone = (element) => {
     const inputPhoneMask = new Inputmask('+7 (999) 999-99-99');
     inputPhoneMask.mask(element);
   };
   validatePhone(numberField);
+
+  btnsOpenModal.forEach(btn => {
+    btn.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      openModal();
+
+      if (evt.target.parentElement.querySelector('.rates__item-quantity')) {
+        commentField.value = evt.target.parentElement.querySelector('.rates__item-quantity').textContent;
+      }
+
+      escRemover();
+    });
+  });
+
+  const message = {
+    loading: 'img/form/spinner.svg',
+    success: 'Спасибо! Скоро мы с вами свяжемся',
+    failure: 'Что-то пошло не так... Попробуйте повторить.',
+  };
+
+  const showThanksModal = (message) => {
+
+    form.style.display = 'none';
+    popup.style.height = '180px';
+    openModal();
+
+    const thanksModal = document.createElement('form');
+    thanksModal.classList.add('form-callback');
+    thanksModal.innerHTML = `
+      <p>${message}</p>
+    `;
+
+    popup.append(thanksModal);
+    setTimeout(() => {
+      thanksModal.remove();
+      form.style.display = '';
+      popup.style.height = '';
+      closeModal();
+    }, 4000);
+  };
+
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+
+    const statusMessage = document.createElement('img');
+
+    statusMessage.src = message.loading;
+    statusMessage.style.cssText = `
+      display: block;
+      margin: 0 auto;
+    `;
+
+    btnSubmit.style.display = 'none';
+    btnSubmit.insertAdjacentElement('afterend', statusMessage);
+
+    const formData = new FormData(form);
+    const URL = 'https://gooddeloNotify.tojefin.repl.co/api/v1/sendform/';
+
+    let data = new URLSearchParams();
+
+    for (let pair of formData) {
+        data.append(pair[0], pair[1]);
+    }
+
+    data.append('getStatus', 'true');
+
+    fetch(URL, {
+        method: 'post',
+        body: data,
+    }).then(() => {
+      btnSubmit.style.display = 'block';
+      showThanksModal(message.success);
+      closeModal();
+      statusMessage.remove();
+    }).catch(() => {
+      showThanksModal(message.failure);
+    }).finally(() => {
+      form.reset();
+    });
+  });
 }
 
 const btnMenuToggler = () => {
@@ -108,83 +189,3 @@ if (popup || overlay) {
 btnMenu.addEventListener('click', btnMenuHandler);
 
 navItems.forEach(item => item.addEventListener('click', btnMenuHandler));
-
-btnsOpenModal.forEach(btn => {
-  btn.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    openModal();
-
-    if (evt.target.parentElement.querySelector('.rates__item-quantity')) {
-      commentField.value = evt.target.parentElement.querySelector('.rates__item-quantity').textContent;
-    }
-
-    escRemover();
-  });
-});
-
-const message = {
-  loading: 'img/form/spinner.svg',
-  success: 'Спасибо! Скоро мы с вами свяжемся',
-  failure: 'Что-то пошло не так... Попробуйте повторить.',
-};
-
-const showThanksModal = (message) => {
-
-  form.style.display = 'none';
-  popup.style.height = '180px';
-  openModal();
-
-  const thanksModal = document.createElement('form');
-  thanksModal.classList.add('form-callback');
-  thanksModal.innerHTML = `
-    <p>${message}</p>
-  `;
-
-  popup.append(thanksModal);
-  setTimeout(() => {
-    thanksModal.remove();
-    form.style.display = '';
-    popup.style.height = '';
-    closeModal();
-  }, 4000);
-};
-
-form.addEventListener('submit', (evt) => {
-  evt.preventDefault();
-
-  const statusMessage = document.createElement('img');
-
-  statusMessage.src = message.loading;
-  statusMessage.style.cssText = `
-    display: block;
-    margin: 0 auto;
-  `;
-
-  btnSubmit.style.display = 'none';
-  btnSubmit.insertAdjacentElement('afterend', statusMessage);
-
-  const formData = new FormData(form);
-  const URL = 'https://gooddeloNotify.tojefin.repl.co/api/v1/sendform/';
-
-  let data = new URLSearchParams();
-
-  for (let pair of formData) {
-      data.append(pair[0], pair[1]);
-  }
-
-  data.append('getStatus', 'true');
-
-  fetch(URL, {
-      method: 'post',
-      body: data,
-  }).then(() => {
-    btnSubmit.style.display = 'block';
-    showThanksModal(message.success);
-    closeModal();
-    statusMessage.remove();
-  }).catch(() => {
-    showThanksModal(message.failure);
-  }).finally(() => {
-    form.reset();
-  });
-});
