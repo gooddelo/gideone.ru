@@ -16,6 +16,18 @@ if (form) {
   const numberField = form.querySelector('#number');
   const commentField = form.querySelector('#comment');
   const btnSubmit = form.querySelector('#submit');
+  const inputs = Array.from(form.querySelectorAll('input'));
+  const recaptcha = form.querySelector('.form-callback__recaptcha');
+
+  const checkValueInput = input => input.value !== '';
+
+  const showCaptcha = (inputs, captcha) => {
+    if (inputs.every(checkValueInput)) {
+      captcha.classList.add('form-callback__recaptcha--show');
+    } else {
+      captcha.classList.remove('form-callback__recaptcha--show');
+    }
+  };
 
   const validatePhone = (element) => {
     const inputPhoneMask = new Inputmask('+7 (999) 999-99-99');
@@ -63,6 +75,8 @@ if (form) {
     }, 4000);
   };
 
+  form.addEventListener('input', () => showCaptcha(inputs, recaptcha));
+
   form.addEventListener('submit', (evt) => {
     evt.preventDefault();
 
@@ -94,12 +108,13 @@ if (form) {
     }).then(() => {
       btnSubmit.style.display = 'block';
       showThanksModal(message.success);
-      closeModal();
+      closeModal(recaptcha);
       statusMessage.remove();
     }).catch(() => {
       showThanksModal(message.failure);
     }).finally(() => {
       form.reset();
+      recaptcha.classList.remove('form-callback__recaptcha--show');
     });
   });
 }
@@ -118,7 +133,7 @@ function openModal() {
   toggleClass('show');
 }
 
-function closeModal() {
+function closeModal(captcha) {
   toggleClass('hide');
   form.reset();
   escRemover();
@@ -187,5 +202,4 @@ if (popup || overlay) {
 }
 
 btnMenu.addEventListener('click', btnMenuHandler);
-
 navItems.forEach(item => item.addEventListener('click', btnMenuHandler));
