@@ -7,6 +7,10 @@
   @media (max-width: $tablet-width) {
     min-height: 257px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 60px;
+  }
 }
 
 .footer__wrapper {
@@ -35,19 +39,27 @@
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
 
-  img {
-    width: 130px;
+  p {
+    color: #FFF;
+    @include font($raleway, 14px, 16px, 700, normal);
+    text-align: center;
+  }
+
+  a {
+    margin: 0 10px;
   }
 
   @media (max-width: $mobile-width) {
-    right: 10px;
+    left: 50%;
     bottom: 10px;
-    transform: none;
+    transform: translateX(-50%);
     top: auto;
 
     img {
-      width: 55px;
+      width: 100px;
     }
   }
 }
