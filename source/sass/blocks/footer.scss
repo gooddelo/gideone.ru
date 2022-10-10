@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-bottom: 60px;
+    padding-bottom: 90px;
   }
 }
 
@@ -36,11 +36,13 @@
 
 .footer__link {
   position: absolute;
-  right: 30px;
+  right: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(50%, -50%);
+  width: 95%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   p {
     color: #FFF;
@@ -53,9 +55,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    left: 50%;
     bottom: 10px;
-    transform: translateX(-50%);
+    transform: translateX(50%);
     top: auto;
 
     img {
