@@ -26,10 +26,12 @@
     padding-top: 52px;
   }
 
+  color: $main-white;
+  @include font($raleway, 14px, 16px, 700, normal);
+  text-align: center;
+
   a {
     color: $main-white;
-    @include font($raleway, 14px, 16px, 700, normal);
-    text-align: center;
     @include hover;
   }
 }
@@ -68,6 +70,12 @@
 .footer__address,
 .footer__tel {
   margin-bottom: 29px;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin-bottom: 5px
+  }
 }
 
 .footer__social-list {

@@ -88,6 +88,7 @@
 
 .header__nav-item {
   @include font($raleway, 12px, 14px, 600, normal);
+  color: $dark-cyan;
   margin-right: 48px;
 
   @media (max-width: $tablet-width) {
