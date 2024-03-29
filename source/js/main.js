@@ -92,7 +92,7 @@ if (form) {
     btnSubmit.insertAdjacentElement('afterend', statusMessage);
 
     const formData = new FormData(form);
-    const URL = 'https://gooddeloNotify.tojefin.repl.co/api/v1/sendform/';
+    const URL = 'https://tg-notify-gooddelo.vercel.app/api/v1/sendform/';
 
     let data = new URLSearchParams();
 
