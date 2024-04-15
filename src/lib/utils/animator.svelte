@@ -4,15 +4,10 @@
 </script>
 
 <div
-	use:inview={{ unobserveOnEnter: true, rootMargin: '-20px' }}
+	use:inview={{ unobserveOnEnter: true, rootMargin: '-180px' }}
 	on:inview_change={({ detail }) => {
-		console.log(detail);
 		isInView = detail.inView;
 	}}
 >
-	<div>
-		{#if isInView}
-			<slot />
-		{/if}
-	</div>
+	<slot {isInView} />
 </div>

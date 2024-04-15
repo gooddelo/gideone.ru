@@ -1,7 +1,11 @@
 <script>
-	import { Example, Header, Home } from '$lib/blocks';
+	import { Chat, Header, Home, About, Mission, Footer, Contact } from '$lib/blocks';
 </script>
 
 <Header />
 <Home />
-<Example />
+<Chat />
+<About />
+<Mission />
+<Contact />
+<Footer />

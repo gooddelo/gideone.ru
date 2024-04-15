@@ -11,17 +11,23 @@
 
 	<div class="phone">
 		<div class="chat">
-			<Animator>
-				<p class="bot" transition:fly={{ x: -40, duration: 1000 }}>
+			<Animator let:isInView>
+				<p class="message bot" class:isInView>
 					Привет, Иван! На основе последней продажи, я заметил, что вы отлично справились с
 					презентацией товара.
 				</p>
 			</Animator>
-
-			<Animator>
-				<p class="you" transition:fly={{ x: 40, duration: 1000 }}>
-					Спасибо, Gideone! Посмотрю прямо сейчас.
+			<Animator let:isInView>
+				<p class="message bot" class:isInView>
+					Однако, было бы здорово уделить больше внимания заключительной фазе обслуживания.
+					Рекомендую пройти короткое видеообучение по этой теме, вот сслыка: www.gooddelo.ru
 				</p>
+			</Animator>
+			<Animator let:isInView>
+				<p class="message you" class:isInView>Спасибо, Gideone! Посмотрю прямо сейчас.</p>
+			</Animator>
+			<Animator let:isInView>
+				<p class="message bot" class:isInView>Всегда рад быть полезным 😊</p>
 			</Animator>
 		</div>
 		<img
@@ -45,7 +51,7 @@
 	}
 	.chat {
 		position: absolute;
-		bottom: 150px;
+		top: 230px;
 		left: 60px;
 		z-index: 20;
 		font-weight: 400;
@@ -53,20 +59,37 @@
 		font-variant: small-caps;
 		color: #fff;
 
-		.bot {
-			width: 280px;
-			background: #6c60ef;
+		.message {
 			border-radius: 20px;
 			padding: 20px;
-			margin-bottom: 60px;
+			max-width: 240px;
+			margin-bottom: 15px;
+			opacity: 0;
+			// transform: translateY(-30px);
+			// transition: opacity 1.0s ease;
+		}
+
+		.bot {
+			background: #6c60ef;
 		}
 		.you {
-			margin-left: 115px;
-			width: 280px;
+			margin-left: 155px;
 			background: #212745;
-			border-radius: 20px;
-			padding: 20px;
-			margin-bottom: 60px;
+		}
+
+		.isInView {
+			animation: messageUp ease 0.8s both;
+			
+			@keyframes messageUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+			}
 		}
 	}
 	.mockup {
