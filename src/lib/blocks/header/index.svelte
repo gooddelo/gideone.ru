@@ -1,24 +1,24 @@
 <script>
 	let menu = [
 		{
-			title: 'ИИ тренер',
-			href: '/#home'
+			title: 'Дашборды',
+			href: '/#dashbords'
 		},
 		{
 			title: 'Подписки',
-			href: '/#subsmart'
+			href: '/#subscription'
 		},
 		{
 			title: 'Почему мы?',
-			href: '/#features'
-		},
-		{
-			title: 'Инвестируй',
-			href: '/#investor'
+			href: '/#uniqueness'
 		},
 		{
 			title: 'Напиши нам',
 			href: '/#contact'
+		},
+		{
+			title: '8-800-101-79-87',
+			href: 'tel:88001017987'
 		}
 	];
 </script>

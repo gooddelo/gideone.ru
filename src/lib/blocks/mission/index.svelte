@@ -28,7 +28,7 @@
 					базовых навыков до сложных компетенций.
 				</p>
 			</div>
-			<img src="img/placeholder.png" alt="" />
+			<img src="img/code.png" alt="" />
 		</div>
 	</section>
 	<footer>

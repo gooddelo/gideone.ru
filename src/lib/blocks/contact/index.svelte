@@ -3,7 +3,7 @@
 	let token = '';
 </script>
 
-<section>
+<section id="contact">
 	<script async defer src="https://www.google.com/recaptcha/api.js"></script>
 	<h2>ПЕРСОНАЛИЗИРОВАННО. <br />ТОЧНО. <br />СЕЙЧАС<b>!</b></h2>
 	<p>Свяжитесь с нами если остались вопросы</p>

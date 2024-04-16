@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section>
+<section id="subscription">
 	<h2>ПОДПИСКА <br />НА 100% РЕЗУЛЬТАТ <br /><mark>ЗА 2 МИНУТЫ</mark></h2>
 	<h3>Подключи Gideone с подпиской “SMART START”</h3>
 	<div class="subtitle">Неоспоримые преимущества нашего ИИ-тренера</div>
