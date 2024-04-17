@@ -14,16 +14,16 @@
 <style lang="scss">
 	section {
 		margin: 80px 65px;
-		max-width: 1020px;
+		max-width: 760px;
 	}
 	h2 {
 		font-weight: 700;
-		font-size: 60px;
+		font-size: 40px;
 		margin-bottom: 42px;
 	}
 	p {
 		font-weight: 500;
-		font-size: 35px;
+		font-size: 23px;
 		margin-bottom: 52px;
 	}
 	mark {
