@@ -22,7 +22,7 @@
 		</div>
 		<div>
 			<label for="comment">комментарий</label>
-			<textarea id="comment" type="text" name="Comment" placeholder="Оставьте вашу заявку" value="Здравствуйте, хотелось бы узнать подробнее про обратную ссвяз ть для сотрудников в реальном времени" required />
+			<textarea id="comment" type="text" name="Comment" placeholder="Оставьте вашу заявку" required />
 		</div>
 		<Gcaptcha bind:token />
 		<input type="text" value={token} hidden id="token" name="token" />
@@ -94,6 +94,7 @@
 		textarea {
 			resize: none;
 			min-height: 180px;
+			padding-top: 10px;
 		}
 
 		input, textarea {
