@@ -42,7 +42,7 @@
 
 <style lang="scss">
 	article {
-		margin: 180px 75px;
+		margin: 180px 135px;
 		&::after {
 			display: block;
 			content: '';
@@ -64,13 +64,13 @@
 			font-weight: 700;
 			font-size: 80px;
 			text-transform: uppercase;
-			margin-bottom: 24px;
+			margin-bottom: 74px;
 			max-height: none;
 		}
 		p {
-			max-width: 850px;
+			max-width: 670px;
 			font-weight: 500;
-			font-size: 27px;
+			font-size: 23px;
 			color: #fff;
 		}
 	}
@@ -79,11 +79,12 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 80px;
+		margin-bottom: 30px;
 		span {
 			position: absolute;
+			bottom: 100px;
 			font-weight: 700;
-			font-size: 17vw;
+			font-size: 18vw;
 			text-transform: uppercase;
 			text-align: right;
 			color: #fff;
@@ -93,7 +94,7 @@
 
 		.block {
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-around;
 			width: 100%;
 			.text {
 				display: flex;
@@ -104,16 +105,16 @@
 
 			h3 {
 				font-weight: 700;
-				font-size: 60px;
+				font-size: 45px;
 				text-transform: uppercase;
 				color: #fff;
 				margin-bottom: 30px;
 			}
 			p {
 				font-weight: 500;
-				font-size: 27px;
+				font-size: 23px;
 				color: #fff;
-				max-width: 770px;
+				max-width: 600px;
 			}
 			&.right {
 				text-align: right;
@@ -122,18 +123,18 @@
 	}
 	footer {
 		h3 {
-			min-width: 830px;
+			max-width: 720px;
 			font-weight: 700;
-			font-size: 60px;
+			font-size: 50px;
 			text-transform: uppercase;
 			color: #fff;
 			margin-bottom: 30px;
 		}
 		p {
 			font-weight: 500;
-			font-size: 35px;
+			font-size: 23px;
 			color: #fff;
-			max-width: 864px;
+			max-width: 664px;
 		}
 	}
 </style>
