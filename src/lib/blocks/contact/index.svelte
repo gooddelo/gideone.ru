@@ -9,21 +9,24 @@
 	<p>Свяжитесь с нами если остались вопросы</p>
 	<form action="https://tg-notify-gooddelo.vercel.app/api/v1/sendform" method="post">
 		<div>
-			<label for="name">Имя</label>
-			<input id="name" type="text" name="Name" placeholder="Иван" required />
+			<label for="name">ваше имя</label>
+			<input id="name" type="text" name="Name" required />
 		</div>
 		<div>
-			<label for="phone">Телефон</label>
-			<input id="phone" type="tel" name="Phone" placeholder="+78001017987" />
+			<label for="phone">телефон</label>
+			<input id="phone" type="tel" name="Phone" />
 		</div>
 		<div>
-			<label for="email">Почта</label>
-			<input id="email" type="email" name="Email" placeholder="delo@gooddelo.com" required />
+			<label for="email">почта</label>
+			<input id="email" type="email" name="Email" required />
+		</div>
+		<div>
+			<label for="comment">комментарий</label>
+			<textarea id="comment" type="text" name="Comment" placeholder="Оставьте вашу заявку" value="Здравствуйте, хотелось бы узнать подробнее про обратную ссвяз ть для сотрудников в реальном времени" required />
 		</div>
 		<Gcaptcha bind:token />
-		<input type="text" value="" hidden id="comment" name="Comment" />
 		<input type="text" value={token} hidden id="token" name="token" />
-		<button type="submit" disabled={!token}>ОТПРАВИТЬ</button>
+		<button type="submit" disabled={!token}>отправить</button>
 	</form>
 </section>
 
@@ -85,10 +88,15 @@
 			font-weight: 400;
 			font-size: 20px;
 			color: #fff;
-			margin-bottom: 5px;
+			margin-bottom: 7px;
 		}
 
-		input {
+		textarea {
+			resize: none;
+			min-height: 180px;
+		}
+
+		input, textarea {
 			border: none;
 			padding-left: 10px;
 			background: #212745;
@@ -104,7 +112,7 @@
 			background: #6c60ef;
 			border: 4px solid #6c60ef;
 			border: none;
-			padding: 20px 30px;
+			padding: 16px 47px;
 			border-radius: 60px;
 			font-weight: 500;
 			font-size: 24px;
@@ -118,7 +126,7 @@
 
 			&:not(:disabled) {
 				@include hover {
-					box-shadow: 10px 15px 0 0 rgba(108, 96, 239, 0.3);
+					box-shadow: 5px 8px 0 0 rgba(108, 96, 239, 0.3);
 					background: #6c60ef;
 				}
 				:active {
