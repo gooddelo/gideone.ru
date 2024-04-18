@@ -14,7 +14,7 @@
 	</div>
 	<div class="middle">
 		<a class="map" target="_blank" href="https://yandex.ru/maps/-/CDVaNMZd"
-			>г. Самара, ул. Антонова-Овсеенко 44Б, 7 этах, офис 704</a
+			>г. Самара, ул. Антонова-Овсеенко 44Б, 7 этаж, офис 704</a
 		>
 		<a class="telephone" href="tel:88001017987">8-800-101-7987</a>
 	</div>
@@ -69,7 +69,7 @@
 		min-width: 300px;
 
 		div {
-			padding-bottom: 15px;
+			padding-bottom: 8px;
 		}
 
 		a {
@@ -88,9 +88,9 @@
 			line-height: 90%;
 		}
 		h3 {
+			line-height: 120%;
 			font-weight: 600;
 			font-size: 25px;
-			line-height: 72%;
 		}
 	}
 	.fsi {

@@ -59,6 +59,7 @@
 		z-index: 2;
 	}
 	p {
+		line-height: 120%;
 		margin-top: 130px;
 		font-weight: 500;
 		font-size: 30px;

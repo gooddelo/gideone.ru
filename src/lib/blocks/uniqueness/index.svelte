@@ -11,7 +11,7 @@
 		<h4>Неоспоримые преимущества нашего ИИ-тренера</h4>
 	</section>
 
-	<Cards/>
+	<Cards />
 
 	<section>
 		<div>
@@ -20,7 +20,7 @@
 				Сценарии в Gideone обеспечивают точную настройку обучения и оценки сотрудников для различных
 				продуктов и услуг, например, в банках, учебных центрах, и ритейле. Это улучшает развитие
 				навыков, адаптируя тренинги под конкретные задачи, что значительно повышает качество
-				обслуживания и увеличивает продажи.
+				обслуживания и увеличивает продажи
 			</p>
 		</div>
 		<img src="img/scenario.svg" alt="оценка персонала по сценариям" />
@@ -74,9 +74,10 @@
 	h3 {
 		max-width: 820px;
 		font-family: 'Unbounded', sans-serif;
-		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 40px;
+		line-height: 120%;
+		text-transform: uppercase;
 		color: #fff;
 		margin-bottom: 50px;
 	}
@@ -156,6 +157,7 @@
 					max-width: 510px;
 					font-weight: 700;
 					font-size: 26px;
+					line-height: 120%;
 					text-transform: uppercase;
 					color: #80f0ff;
 					font-family: 'Unbounded', sans-serif;

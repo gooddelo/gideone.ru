@@ -93,6 +93,13 @@
 			button {
 				background-color: #80f0ff;
 				color: #212745;
+
+				&:not(:disabled) {
+					@include hover {
+						box-shadow: 5px 8px 0 0 rgba(128, 240, 255, 0.3);
+						background: #80f0ff;
+					}
+				}
 			}
 		}
 
@@ -151,6 +158,17 @@
 			font-size: 26px;
 			text-transform: lowercase;
 			color: #fff;
+			transition: all ease 0.25s;
+
+			&:not(:disabled) {
+				@include hover {
+					box-shadow: 5px 8px 0 0 rgba(108, 96, 239, 0.3);
+					background: #6c60ef;
+				}
+				:active {
+					background: none;
+				}
+			}
 		}
 	}
 
@@ -161,6 +179,7 @@
 		padding: 64px 220px;
 
 		p {
+			line-height: 120%;
 			font-weight: 500;
 			font-size: 26px;
 			text-align: center;

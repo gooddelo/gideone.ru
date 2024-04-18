@@ -1,6 +1,5 @@
 <script>
 	import Animator from '$lib/utils/animator.svelte';
-	import { fly } from 'svelte/transition';
 </script>
 
 <section>
@@ -13,14 +12,14 @@
 		<div class="chat">
 			<Animator let:isInView>
 				<p class="message bot" class:isInView>
-					Привет, Иван! На основе последней продажи, я заметил, что вы отлично справились с
+					Привет, Иван! На основе последней продажи я заметил, что вы отлично справились с
 					презентацией товара.
 				</p>
 			</Animator>
 			<Animator let:isInView>
 				<p class="message bot" class:isInView>
 					Однако, было бы здорово уделить больше внимания заключительной фазе обслуживания.
-					Рекомендую пройти короткое видеообучение по этой теме, вот сслыка: www.gooddelo.ru
+					Рекомендую пройти короткое видеообучение по этой теме, вот ссылка: www.gooddelo.ru
 				</p>
 			</Animator>
 			<Animator let:isInView>
