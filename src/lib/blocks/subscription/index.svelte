@@ -164,6 +164,7 @@
 				@include hover {
 					box-shadow: 5px 8px 0 0 rgba(108, 96, 239, 0.3);
 					background: #6c60ef;
+					transform: scale(1.1);
 				}
 				:active {
 					background: none;

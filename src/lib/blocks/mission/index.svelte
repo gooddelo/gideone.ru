@@ -123,7 +123,7 @@
 	}
 	footer {
 		h3 {
-			max-width: 720px;
+			max-width: 550px;
 			font-weight: 700;
 			font-size: 50px;
 			text-transform: uppercase;
