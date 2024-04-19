@@ -46,7 +46,6 @@
 	section {
 		display: flex;
 		justify-content: space-around;
-		margin-top: 160px;
 	}
 	.chat {
 		position: absolute;

@@ -13,6 +13,8 @@
 	section{
 		display: flex;
 		justify-content: center;
+		margin-bottom: 15vh;
+		height: 50vh;
 	}
 	h1 {
 		padding-left: 4vw;
