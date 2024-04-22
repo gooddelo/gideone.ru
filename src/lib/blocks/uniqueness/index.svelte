@@ -4,18 +4,13 @@
 
 <article id="uniqueness">
 	<header>
-		<h2>ПОЧЕМУ МЫ?</h2>
+		<h2>Неоспоримые преимущества нашего ИИ-тренера</h2>
 	</header>
-
-	<section class="mini">
-		<h4>Неоспоримые преимущества нашего ИИ-тренера</h4>
-	</section>
 
 	<Cards />
 
 	<section>
 		<div>
-			<h3>СЦЕНАРИИ В GIDEONE</h3>
 			<p>Сценарии в Gideone созданы для отработки отдельных навыков, товаров и услуг</p>
 		</div>
 		<img src="img/scenario.svg" alt="оценка персонала по сценариям" />
@@ -23,9 +18,8 @@
 
 	<section class="operator">
 		<div>
-			<h3>Для компаний со своей системой контроля качества персонала</h3>
 			<p>
-				мы предоставляем удобную платформу AI-рекомендаций, аналаитики и статистики в режиме
+				мы предоставляем удобную платформу AI-рекомендаций, аналаитики и с статистики в режиме
 				реального времени
 			</p>
 		</div>
@@ -34,7 +28,6 @@
 				<img src="img/feedback.svg" alt="персональные рекомендации в режиме реального времени" />
 				<span>персональные рекомендации в режиме реального времени</span>
 			</div>
-			<p>Мы обеспечим</p>
 			<div>
 				<img src="img/stats.svg" alt="управление качеством работы персонала" />
 				<span style="max-width: 380px;">Рычаги настройки сервиса в ваших руках</span>
@@ -44,7 +37,6 @@
 
 	<section>
 		<div>
-			<h3>Раскройте потенциал вашего бизнеса с Gideone</h3>
 			<p>
 				Раскройте потенциал ваших сотрудников и выведете бизнес на новый уровень вместе с Gideone
 			</p>
@@ -58,30 +50,16 @@
 		margin-left: 70px;
 		font-family: 'Unbounded', sans-serif;
 		font-weight: 700;
-		font-size: 70px;
+		font-size: 60px;
+		max-width: 1050px;
 		color: #fff;
 		margin-bottom: 30px;
-	}
-	h3 {
-		max-width: 874px;
-		font-weight: 500;
-		font-size: 40px;
-		color: #fff;
-		line-height: 120%;
-		text-transform: uppercase;
-		color: #fff;
-		margin-bottom: 25px;
-	}
-	h4 {
-		font-weight: 700;
-		font-size: 30px;
-		color: #80f0ff;
 	}
 	p {
 		line-height: 120%;
 		max-width: 981px;
 		font-weight: 500;
-		font-size: 26px;
+		font-size: 35px;
 		text-transform: uppercase;
 		color: #fff;
 	}
@@ -90,14 +68,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
-	}
-
-	.mini {
-		padding: 45px 115px;
-		border-radius: 0 40px 40px 0;
-		max-width: 876px;
-		min-width: auto;
-		min-height: auto;
 	}
 
 	section {

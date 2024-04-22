@@ -45,6 +45,10 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: 90px 134px;
+
+		@media (width <= 768px) {
+			padding: 50px 20px;
+		}
 	}
 	h2 {
 		font-weight: 700;
@@ -57,11 +61,20 @@
 			color: #80f0ff;
 			background: none;
 		}
+
+		@media (width <= 768px) {
+			font-weight: 600;
+			font-size: clamp(19px, 6vw, 32px);
+			text-align: center;
+			color: #fff;
+			margin-bottom: 35px;
+		}
 	}
 
 	section {
 		display: flex;
 		align-self: center;
+		flex-wrap: wrap;
 		margin-bottom: 50px;
 		width: 100%;
 		justify-content: space-evenly;
@@ -69,7 +82,8 @@
 
 		.card {
 			width: 460px;
-			max-height: 750px;
+			min-width: 285px;
+			height: auto;
 			border-radius: 40px;
 			background: #212745;
 			overflow: hidden;
@@ -113,7 +127,7 @@
 			h3 {
 				font-family: 'Unbounded', sans-serif;
 				font-weight: 500;
-				font-size: 26px;
+				font-size: clamp(19px, 6vw, 32px);
 				text-align: center;
 				color: #fff;
 			}
@@ -153,9 +167,9 @@
 			margin-bottom: 50px;
 			padding: 20px 30px;
 			border-radius: 60px;
-			width: 280px;
+			max-width: 280px;
 			font-weight: 500;
-			font-size: 26px;
+			font-size: clamp(16px, 6vw, 26px);
 			text-transform: lowercase;
 			color: #fff;
 			transition: all ease 0.25s;
@@ -179,13 +193,26 @@
 		background: #1e2445;
 		padding: 64px 220px;
 
+		@media (width <= 768px) {
+			border-radius: 0;
+			padding: 25px;
+			width: 100vw;
+		}
+
 		p {
 			line-height: 120%;
 			font-weight: 500;
 			font-size: 26px;
 			text-align: center;
 			color: #fff;
-			max-width: 650px;
+			max-width: clamp(295px, 100vw, 650px);
+
+			@media (width <= 768px) {
+				font-weight: 500;
+				font-size: 16px;
+				text-align: center;
+				color: #fff;
+			}
 		}
 	}
 </style>

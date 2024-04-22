@@ -40,18 +40,23 @@
 		padding: 40px 0 60px;
 		justify-content: center;
 		align-items: center;
+
+		@media (width <= 1024px) {
+			padding: 25px 20px 0;
+		}
 	}
 	.logo {
 		top: -5px;
 	}
 	nav {
-		margin-left: 64px;
+		margin-left: clamp(6px, 3vw, 64px);
 		display: flex;
+		align-items: center;
 		a {
 			font-weight: 600;
-			font-size: 20px;
+			font-size: clamp(6px, 1.4vw, 20px);
 			text-transform: uppercase;
-			padding: 14px 25px;
+			padding: 14px clamp(6px, 1vw, 25px);
 			border-radius: 40px;
 			background: transparent;
 			transition: all 0.25s ease;

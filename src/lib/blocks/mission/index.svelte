@@ -18,16 +18,6 @@
 				</p>
 			</div>
 		</div>
-		<div class="block">
-			<div class="text">
-				<p>
-					Путем интеграции инновационных алгоритмов и методик, Gideone обещает предоставить
-					инструменты для достижения любых учебных амбиций, от базовых навыков до сложных
-					компетенций.
-				</p>
-			</div>
-			<img src="img/code.png" alt="" />
-		</div>
 	</section>
 	<footer>
 		<h3>Присоединяйтесь к нам,</h3>
@@ -40,7 +30,7 @@
 
 <style lang="scss">
 	article {
-		margin: 180px 135px 0;
+		margin: 250px 135px 130px;
 		&::after {
 			display: block;
 			content: '';
@@ -51,7 +41,7 @@
 			max-width: 1280px;
 			aspect-ratio: 1/1;
 			z-index: -1;
-			top: -60px;
+			top: -160px;
 			left: -20%;
 		}
 	}
@@ -81,7 +71,7 @@
 		margin-bottom: 30px;
 		span {
 			position: absolute;
-			bottom: 100px;
+			top: -500px;
 			font-weight: 700;
 			font-size: 18vw;
 			text-transform: uppercase;
@@ -93,7 +83,7 @@
 
 		.block {
 			display: flex;
-			justify-content: space-evenly;
+			justify-content: center;
 			width: 100%;
 			.text {
 				display: flex;
@@ -108,13 +98,14 @@
 				font-family: 'Unbounded', sans-serif;
 				text-transform: uppercase;
 				color: #fff;
-				margin-bottom: 30px;
+				line-height: 120%;
 			}
 			p {
+				line-height: 120%;
 				font-weight: 500;
 				font-size: 23px;
 				color: #fff;
-				max-width: 600px;
+				max-width: 800px;
 			}
 			&.right {
 				text-align: right;

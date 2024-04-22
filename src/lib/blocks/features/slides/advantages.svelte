@@ -10,8 +10,9 @@
 			<b class="extra">максимальной вовлеченности и продуктивности</b>
 		</p>
 		<h3>Продажи увеличиваются, прибыль растет</h3>
-		<h3 class="center">Снижается текучка кадров в компании</h3>
+		<h3>Снижается текучка кадров в компании</h3>
 	</div>
+	<img src="img/sh-report.png" alt="Обратная связь сотрудкинам">
 	<span>use Gideone</span>
 </section>
 
@@ -47,17 +48,13 @@
 		font-family: 'Unbounded', sans-serif;
 		max-width: 630px;
 		margin-bottom: 4vh;
-
-		&.center {
-			margin-left: 40%;
-		}
 	}
 	p {
 		font-weight: 500;
 		font-size: 26px;
 		line-height: 165%;
 		color: #fff;
-		max-width: 864px;
+		max-width: 744px;
 		margin-bottom: 6vh;
 
 		b.extra {
@@ -65,6 +62,10 @@
 			text-transform: uppercase;
 			font-weight: 700;
 		}
+	}
+	img {
+		max-height: 100vh;
+		z-index: 2;
 	}
 	span {
 		font-weight: 700;

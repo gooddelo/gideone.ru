@@ -9,7 +9,7 @@
 	<p>Форма для связи</p>
 	<form action="https://tg-notify-gooddelo.vercel.app/api/v1/sendform" method="post">
 		<div>
-			<label for="name">ваше имя</label>
+			<label for="name">имя</label>
 			<input id="name" type="text" name="Name" required />
 		</div>
 		<div>
@@ -22,7 +22,13 @@
 		</div>
 		<div>
 			<label for="comment">комментарий</label>
-			<textarea id="comment" type="text" name="Comment" placeholder="Оставьте вашу заявку" required />
+			<textarea
+				id="comment"
+				type="text"
+				name="Comment"
+				placeholder="Оставьте вашу заявку"
+				required
+			/>
 		</div>
 		<Gcaptcha bind:token />
 		<input type="text" value={token} hidden id="token" name="token" />
@@ -31,6 +37,8 @@
 </section>
 
 <style lang="scss">
+	$mobile: 830px;
+
 	section {
 		padding: 155px 0 180px;
 		background: url(img/bg-dashbords.png);
@@ -62,6 +70,20 @@
 			line-height: 1;
 			font-size: 70px;
 		}
+
+		@media (width <= $mobile) {
+			font-weight: 700;
+			font-size: clamp(12px, 6vw, 28px ) ;
+			text-transform: uppercase;
+			text-align: center;
+			color: #fff;
+			line-height: 42px;
+
+			b {
+				line-height: 42px;
+				font-size: 21px;
+			}
+		}
 	}
 
 	p {
@@ -71,6 +93,14 @@
 		color: #fff;
 		max-width: 440px;
 		margin-bottom: 65px;
+
+		@media (width <= $mobile) {
+			font-weight: 500;
+			font-size: 18px;
+			text-align: center;
+			color: #fff;
+			margin-bottom: 35px;
+		}
 	}
 
 	form {
@@ -78,10 +108,14 @@
 		flex-direction: column;
 		gap: 40px;
 		align-items: center;
+		width: 90%;
+		max-width: 400px;
+
 
 		div {
 			display: flex;
 			flex-direction: column;
+			width: 100%;
 		}
 
 		label {
@@ -97,7 +131,8 @@
 			padding-top: 10px;
 		}
 
-		input, textarea {
+		input,
+		textarea {
 			border: none;
 			padding-left: 10px;
 			background: #212745;
@@ -107,6 +142,10 @@
 			font-weight: 400;
 			font-size: 20px;
 			color: #fff;
+
+			@media (width <= $mobile) {
+				width: 100%;
+			}
 		}
 
 		button {

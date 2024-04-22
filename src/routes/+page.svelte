@@ -1,6 +1,21 @@
 <script>
-	import { Chat, Header, Home, About, Mission, Footer, Contact, Uniqueness, Subscription, Features } from '$lib/blocks';
+	import {
+		Chat,
+		Header,
+		Home,
+		Mission,
+		Contact,
+		Uniqueness,
+		Subscription,
+		Features,
+		Footer,
+		MobFooter
+	} from '$lib/blocks';
+
+	let innerWidth
 </script>
+
+<svelte:window bind:innerWidth />
 
 <Header />
 <Home />
@@ -8,7 +23,10 @@
 <Features />
 <Subscription />
 <Uniqueness />
-<!-- <About /> -->
 <Mission />
 <Contact />
-<Footer />
+{#if innerWidth > 1050}
+	<Footer />
+{:else}
+	<MobFooter />
+{/if}

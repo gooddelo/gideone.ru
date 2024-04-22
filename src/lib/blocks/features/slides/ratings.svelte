@@ -5,7 +5,7 @@
 	<img src="img/sh-charts.png" alt="Сравнитильная аналитика для персонала">
 	<div>
 		<p>
-			Используйте мощь <mark>рейтингов</mark> и <mark class="dark">сравнительной аналитики</mark> для
+			Используйте мощь рейтингов и <mark>сравнительной аналитики</mark> для
 			мотивации и развития вашей команды
 		</p>
 	</div>
@@ -58,10 +58,7 @@
 		mark {
 			background: none;
 			font-family: 'Unbounded', sans-serif;
-			color: #80f0ff;
-			&.dark {
-				color: #8d83ff;
-			}
+			color: #24B6AC;
 		}
 	}
 	img {

@@ -8,3 +8,5 @@ export { default as About } from './about/index.svelte';
 export { default as Mission } from './mission/index.svelte';
 export { default as Contact } from './contact/index.svelte';
 export { default as Footer } from './footer/index.svelte';
+
+export { default as MobFooter } from './footer/mobile.svelte';
