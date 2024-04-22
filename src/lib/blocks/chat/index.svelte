@@ -45,7 +45,8 @@
 <style lang="scss">
 	section {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
+		gap: 2%;
 	}
 	.chat {
 		position: absolute;

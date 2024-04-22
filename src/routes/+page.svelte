@@ -8,7 +8,7 @@
 <Features />
 <Subscription />
 <Uniqueness />
-<About />
+<!-- <About /> -->
 <Mission />
 <Contact />
 <Footer />

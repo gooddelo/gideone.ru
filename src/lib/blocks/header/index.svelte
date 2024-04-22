@@ -54,9 +54,9 @@
 			padding: 14px 25px;
 			border-radius: 40px;
 			background: transparent;
+			transition: all 0.25s ease;
 
 			@include hover {
-				transition: all 0.25s ease;
 				background: var(--bright);
 			}
 		}

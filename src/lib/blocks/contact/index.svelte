@@ -5,8 +5,8 @@
 
 <section id="contact">
 	<script async defer src="https://www.google.com/recaptcha/api.js"></script>
-	<h2>ПЕРСОНАЛИЗИРОВАНО. <br />ТОЧНО. <br />СЕЙЧАС<b>!</b></h2>
-	<p>Свяжитесь с нами, если остались вопросы</p>
+	<h2>ПЕРСОНАЛИЗИРОВАНО. <br />эффективно. <br />сейчас<b>!</b></h2>
+	<p>Форма для связи</p>
 	<form action="https://tg-notify-gooddelo.vercel.app/api/v1/sendform" method="post">
 		<div>
 			<label for="name">ваше имя</label>
@@ -56,6 +56,7 @@
 		font-family: 'Unbounded', sans-serif;
 		line-height: 127px;
 		text-align: center;
+		margin-bottom: 20px;
 
 		b {
 			line-height: 1;
@@ -69,7 +70,7 @@
 		text-align: center;
 		color: #fff;
 		max-width: 440px;
-		margin-bottom: 45px;
+		margin-bottom: 65px;
 	}
 
 	form {

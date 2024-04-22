@@ -35,7 +35,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background: #8d83ff;
+		background: #212745;
 	}
 
 	.middle {

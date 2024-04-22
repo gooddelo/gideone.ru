@@ -13,19 +13,17 @@
 			<div class="text">
 				<h3>Наша миссия —</h3>
 				<p>
-					разработать сильный ИИ, который станет вашим персональным наставником, способным
-					адаптироваться и направлять обучение в соответствии с вашими уникальными целями и
-					потребностями.
+					разработать сильный ИИ, способный направлять обучение в соответствии с вашими уникальными
+					целями и потребностями.
 				</p>
 			</div>
 		</div>
 		<div class="block">
 			<div class="text">
 				<p>
-					Мы видим будущее, где каждый человек имеет возможность расти и развиваться, используя
-					технологии, чтобы учиться более эффективно. Путем интеграции инновационных алгоритмов и
-					методик, Gideone обещает предоставить инструменты для достижения любых учебных амбиций, от
-					базовых навыков до сложных компетенций.
+					Путем интеграции инновационных алгоритмов и методик, Gideone обещает предоставить
+					инструменты для достижения любых учебных амбиций, от базовых навыков до сложных
+					компетенций.
 				</p>
 			</div>
 			<img src="img/code.png" alt="" />
@@ -63,12 +61,13 @@
 			max-width: 1180px;
 			font-weight: 700;
 			font-size: 80px;
+			font-family: 'Unbounded', sans-serif;
 			text-transform: uppercase;
 			margin-bottom: 74px;
 			max-height: none;
 		}
 		p {
-			max-width: 670px;
+			max-width: 824px;
 			font-weight: 500;
 			font-size: 23px;
 			color: #fff;
@@ -94,7 +93,7 @@
 
 		.block {
 			display: flex;
-			justify-content: space-around;
+			justify-content: space-evenly;
 			width: 100%;
 			.text {
 				display: flex;
@@ -106,6 +105,7 @@
 			h3 {
 				font-weight: 700;
 				font-size: 45px;
+				font-family: 'Unbounded', sans-serif;
 				text-transform: uppercase;
 				color: #fff;
 				margin-bottom: 30px;
@@ -126,6 +126,7 @@
 			max-width: 550px;
 			font-weight: 700;
 			font-size: 50px;
+			font-family: 'Unbounded', sans-serif;
 			text-transform: uppercase;
 			color: #fff;
 			margin-bottom: 30px;
@@ -134,7 +135,7 @@
 			font-weight: 500;
 			font-size: 23px;
 			color: #fff;
-			max-width: 664px;
+			max-width: 864px;
 		}
 	}
 </style>
