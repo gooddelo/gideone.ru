@@ -21,17 +21,38 @@
 			href: 'tel:88001017987'
 		}
 	];
+
+	let open = false;
+
+	function toggleMenu() {
+		open = !open;
+		document.body.style = `overflow: ${open ? 'hidden' : 'auto'}`;
+		scrollTo(0, 0);
+	}
+	function closeMenu() {
+		open = false;
+		document.body.style = `overflow: auto`;
+	}
 </script>
+
+<svelte:body />
 
 <header>
 	<a href="/" class="logo">
 		<img src="img/logo.svg" alt="gideone logo" />
 	</a>
-	<nav>
+	<nav class:open>
 		{#each menu as link}
-			<a href={link.href}>{link.title}</a>
+			<a href={link.href} on:click={closeMenu}>{link.title}</a>
 		{/each}
 	</nav>
+	<button on:click={toggleMenu}>
+		{#if open}
+			<img src="img/close.svg" width="36px" height="36px" alt="Закрыть меню" />
+		{:else}
+			<img src="img/burger.svg" width="36px" height="36px" alt="Открыть меню" />
+		{/if}
+	</button>
 </header>
 
 <style lang="scss">
@@ -44,9 +65,14 @@
 		@media (width <= 1024px) {
 			padding: 25px 20px 0;
 		}
+
+		@media (width <= 768px) {
+			justify-content: space-between;
+		}
 	}
 	.logo {
 		top: -5px;
+		z-index: 101;
 	}
 	nav {
 		margin-left: clamp(6px, 3vw, 64px);
@@ -64,6 +90,55 @@
 			@include hover {
 				background: var(--bright);
 			}
+		}
+
+		@media (width <= 768px) {
+			visibility: hidden;
+			position: absolute;
+			z-index: 100;
+			width: 100vw;
+			height: 100vh;
+			background: #2b3152;
+			flex-direction: column;
+			gap: 5%;
+			top: 0;
+			left: 0;
+			margin: 0;
+			align-items: center;
+			justify-content: center;
+
+			a {
+				font-weight: 600;
+				font-size: 25px;
+				text-transform: uppercase;
+				padding: 11px 30px;
+				border-radius: 40px;
+				background: transparent;
+				transition: all 0.25s ease;
+
+				@include hover {
+					background: var(--bright);
+				}
+			}
+
+			&.open {
+				visibility: visible;
+			}
+		}
+	}
+
+	button {
+		display: none;
+		background: none;
+		border: none;
+		z-index: 101;
+
+		img {
+			width: 40px;
+		}
+
+		@media (width <= 768px) {
+			display: block;
 		}
 	}
 </style>

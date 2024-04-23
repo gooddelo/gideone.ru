@@ -9,7 +9,7 @@
 	<section>
 		<span inert>training</span>
 		<div class="block right">
-			<img src="img/placeholder.png" alt="" />
+			<img src="img/idea.svg" alt="" />
 			<div class="text">
 				<h3>Наша миссия —</h3>
 				<p>

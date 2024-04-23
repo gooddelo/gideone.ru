@@ -5,10 +5,10 @@
 	</li>
 	<li class="opposite">
 		<p>рост числа довольных покупателей</p>
-		<img src="img/bord.svg" alt="рост числа довольных покупателей" />
+		<img src="img/stars.svg" alt="рост числа довольных покупателей" />
 	</li>
 	<li>
-		<img src="img/rocket.svg" alt="снижение текучки кадров" />
+		<img src="img/chart.svg" height="210px" alt="снижение текучки кадров" />
 		<p>снижение текучки "кадров"</p>
 	</li>
 </ul>
@@ -22,6 +22,7 @@
 
 	li {
 		display: flex;
+		border-radius: 40px 0;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -45,16 +46,16 @@
 	.opposite {
 		img {
 			top: auto;
-			bottom: 20px;
+			bottom: 50px;
 		}
 		p {
 			margin-top: 0;
-			margin-bottom: 240px;
+			margin-bottom: 130px;
 		}
 	}
 	img {
 		position: absolute;
-		top: -30px;
+		top: 20px;
 		aspect-ratio: 1/1;
 		z-index: 2;
 	}
@@ -62,11 +63,11 @@
 		line-height: 120%;
 		margin-top: 130px;
 		font-weight: 500;
-		font-size: 30px;
+		font-size: 40px;
 		text-transform: uppercase;
 		text-align: center;
 		color: #fff;
-		max-width: 330px;
+		max-width: 360px;
 		z-index: 2;
 	}
 </style>
