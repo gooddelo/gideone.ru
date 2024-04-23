@@ -10,24 +10,32 @@
 
 	<div class="phone">
 		<div class="chat">
-			<Animator let:isInView>
-				<p class="message bot" class:isInView>
-					Привет, Иван! На основе последней продажи я заметил, что вы отлично справились с
-					презентацией товара.
-				</p>
-			</Animator>
-			<Animator let:isInView>
-				<p class="message bot" class:isInView>
-					Однако, было бы здорово уделить больше внимания заключительной фазе обслуживания.
-					Рекомендую пройти короткое видеообучение по этой теме, вот ссылка: www.gooddelo.ru
-				</p>
-			</Animator>
-			<Animator let:isInView>
-				<p class="message you" class:isInView>Спасибо, Gideone! Посмотрю прямо сейчас.</p>
-			</Animator>
-			<Animator let:isInView>
-				<p class="message bot" class:isInView>Всегда рад быть полезным 😊</p>
-			</Animator>
+			<div class="asist">
+				<Animator let:isInView>
+					<p class="message bot" class:isInView>
+						Привет, Иван! На основе последней продажи я заметил, что вы отлично справились с
+						презентацией товара.
+					</p>
+				</Animator>
+			</div>
+			<div class="asist">
+				<Animator let:isInView>
+					<p class="message bot" class:isInView>
+						Однако, было бы здорово уделить больше внимания заключительной фазе обслуживания.
+						Рекомендую пройти короткое видеообучение по этой теме, вот ссылка: www.gooddelo.ru
+					</p>
+				</Animator>
+			</div>
+			<div class="client">
+				<Animator let:isInView>
+					<p class="message you" class:isInView>Спасибо, Gideone! Посмотрю прямо сейчас.</p>
+				</Animator>
+			</div>
+			<div class="asist">
+				<Animator let:isInView>
+					<p class="message bot" class:isInView>Всегда рад быть полезным 😊</p>
+				</Animator>
+			</div>
 		</div>
 		<img
 			class="mockup"
@@ -47,7 +55,21 @@
 		display: flex;
 		justify-content: center;
 		gap: 2%;
+
+		@media (width <= 768px) {
+			flex-direction: column;
+		}
 	}
+
+	.phone {
+		@media (width <= 768px) {
+			order: -1;
+			min-height: 660px;
+			background-image: url('img/bg-text.svg');
+			background-size: contain;
+		}
+	}
+
 	.chat {
 		position: absolute;
 		top: 230px;
@@ -57,6 +79,17 @@
 		font-size: 20px;
 		font-variant: small-caps;
 		color: #fff;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-right: 130px;
+
+		@media (width <= 768px) {
+			top: 20px;
+			left: 20px;
+			padding-right: 40px;
+			padding-top: 40px;
+		}
 
 		.message {
 			border-radius: 20px;
@@ -64,21 +97,25 @@
 			max-width: 240px;
 			margin-bottom: 15px;
 			opacity: 0;
-			// transform: translateY(-30px);
-			// transition: opacity 1.0s ease;
+
+			@media (width <= 768px) {
+				max-width: 280px;
+			}
 		}
 
 		.bot {
 			background: #6c60ef;
 		}
 		.you {
-			margin-left: 155px;
 			background: #212745;
+		}
+		.client {
+			align-self: flex-end;
 		}
 
 		.isInView {
 			animation: messageUp ease 0.8s both;
-			
+
 			@keyframes messageUp {
 				from {
 					opacity: 0;
@@ -94,6 +131,10 @@
 	.mockup {
 		width: fit-content;
 		display: block;
+
+		@media (width <= 768px) {
+			display: none;
+		}
 	}
 	aside {
 		h2 {
@@ -114,6 +155,30 @@
 		}
 		&.right {
 			margin-top: 35%;
+		}
+
+		@media (width <= 768px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			h2 {
+				font-size: 16px;
+				text-align: center;
+				max-width: 180px;
+			}
+			p {
+				font-size: 16px;
+				max-width: 320px;
+				text-align: center;
+			}
+			&.left {
+				margin-top: 60px;
+			}
+			&.right {
+				margin-top: 20px;
+			}
 		}
 	}
 </style>

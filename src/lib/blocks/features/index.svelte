@@ -46,6 +46,10 @@
 <style lang="scss">
 	#dashbords {
 		margin-top: 170px;
+
+		@media (width <= 768px) {
+			margin-top: 90px;
+		}
 	}
 	.splide {
 		cursor: grab;
