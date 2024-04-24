@@ -9,7 +9,7 @@
 			href: '/#subscription'
 		},
 		{
-			title: 'Почему мы?',
+			title: 'Преимущества',
 			href: '/#uniqueness'
 		},
 		{

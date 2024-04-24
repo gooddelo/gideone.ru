@@ -76,8 +76,7 @@
 		left: 60px;
 		z-index: 20;
 		font-weight: 400;
-		font-size: 20px;
-		font-variant: small-caps;
+		font-size: 18px;
 		color: #fff;
 		display: flex;
 		flex-direction: column;
@@ -139,14 +138,12 @@
 	aside {
 		h2 {
 			font-weight: 600;
-			font-size: 30px;
-			font-variant: small-caps;
+			font-size: 28px;
 			max-width: 390px;
 		}
 		p {
 			font-weight: 500;
-			font-size: 30px;
-			font-variant: small-caps;
+			font-size: 28px;
 			max-width: 390px;
 		}
 
