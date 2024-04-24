@@ -33,7 +33,7 @@
 		margin: 250px 135px 130px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+
 		&::after {
 			display: block;
 			content: '';
