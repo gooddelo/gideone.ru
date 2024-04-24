@@ -18,6 +18,10 @@
 		display: flex;
 		justify-content: space-around;
 		margin-top: 30px;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		margin-bottom: 30px;
 	}
 
 	li {
@@ -40,8 +44,12 @@
 			height: 360px;
 			z-index: 0;
 		}
-	}
 
+		@media (width <= 768px) {
+			aspect-ratio: auto;
+			padding: 16px;
+		}
+	}
 
 	.opposite {
 		img {

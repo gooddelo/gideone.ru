@@ -49,7 +49,8 @@
 
 			@media (width <= 768px) {
 				top: -60px;
-				left: auto;
+				left: 50%;
+				transform: translate(-50%);
 				width: clamp(547px, 110vw, 768px);
 			}
 		}

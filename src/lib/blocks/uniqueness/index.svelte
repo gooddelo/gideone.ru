@@ -9,7 +9,7 @@
 
 	<Cards />
 
-	<section>
+	<section class="top">
 		<div>
 			<p>Сценарии в Gideone созданы для отработки отдельных навыков, товаров и услуг</p>
 		</div>
@@ -35,7 +35,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="bot">
 		<div>
 			<p>
 				Раскройте потенциал ваших сотрудников и выведете бизнес на новый уровень вместе с Gideone
@@ -54,6 +54,12 @@
 		max-width: 1050px;
 		color: #fff;
 		margin-bottom: 30px;
+
+		@media (width <= 768px) {
+			text-align: center;
+			font-size: 6vw;
+			margin-left: 0px;
+		}
 	}
 	p {
 		line-height: 120%;
@@ -62,12 +68,25 @@
 		font-size: 35px;
 		text-transform: uppercase;
 		color: #fff;
+
+		@media (width <= 768px) {
+			font-weight: 500;
+			font-size: 16px;
+			text-transform: uppercase;
+			text-align: center;
+			color: #fff;
+			width: 320px;
+			z-index: 2;
+		}
 	}
 
 	article {
 		display: flex;
 		flex-direction: column;
-		gap: 30px;
+
+		@media (width <= 768px) {
+			gap: 0;
+		}
 	}
 
 	section {
@@ -80,10 +99,33 @@
 		justify-content: space-between;
 		min-height: 404px;
 		max-width: 1440px;
+		margin-bottom: 30px;
 
 		img {
 			position: absolute;
 			right: 14px;
+
+			@media (width <= 768px) {
+				right: 0;
+				top: -30px;
+				z-index: 0;
+				position: relative;
+			}
+		}
+
+		@media (width <= 768px) {
+			margin-right: 0;
+			margin-bottom: 0;
+			border-radius: 0;
+			flex-direction: column;
+			padding: 80px 30px 10px;
+
+			&.top {
+				border-radius: 60px 60px 0 0;
+			}
+			&.bot {
+				border-radius: 0 0 60px 60px;
+			}
 		}
 	}
 
@@ -93,12 +135,30 @@
 		align-items: flex-start;
 		padding: 75px 0 75px 70px;
 
+		@media (width <= 768px) {
+			padding: 40px 0px 10px;
+		}
+
+		p {
+			@media (width <= 768px) {
+				min-width: 100vw;
+				padding: 0 30px;
+				margin: 0 auto;
+			}
+		}
+
 		.features {
 			padding-right: 45px;
 			margin-top: 40px;
 			display: flex;
 			min-width: 100%;
 			justify-content: space-between;
+
+			@media (width <= 768px) {
+				flex-direction: column;
+				align-items: center;
+				padding: 0;
+			}
 
 			p {
 				font-weight: 500;
@@ -115,6 +175,12 @@
 				min-width: 404px;
 				max-width: 510px;
 				min-height: 404px;
+
+				@media (width <= 768px) {
+					flex-direction: column;
+					align-items: center;
+				}
+
 				span {
 					bottom: 40px;
 					max-width: 510px;
@@ -124,6 +190,15 @@
 					text-align: center;
 					color: #fff;
 					text-align: center;
+
+					@media (width <= 768px) {
+						bottom: -90px;
+						font-weight: 500;
+						font-size: 14px;
+						text-transform: uppercase;
+						text-align: center;
+						color: #fff;
+					}
 				}
 				img {
 					position: absolute;
