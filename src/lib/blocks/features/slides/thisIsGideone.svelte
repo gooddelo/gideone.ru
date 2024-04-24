@@ -15,7 +15,7 @@
 	section {
 		min-width: 100vw;
 		min-height: 100vh;
-		background: url('img/bg-round.svg') no-repeat;
+		background: url('/img/bg-round.svg') no-repeat;
 		background-position-y: center;
 		background-color: #161d3b;
 		background-size: cover;

@@ -65,7 +65,7 @@
 		@media (width <= 768px) {
 			order: -1;
 			min-height: 660px;
-			background-image: url('img/bg-text.svg');
+			background-image: url('/img/bg-text.svg');
 			background-size: contain;
 		}
 	}

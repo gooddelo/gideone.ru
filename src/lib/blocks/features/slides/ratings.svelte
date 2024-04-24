@@ -17,7 +17,7 @@
 		min-width: 100vw;
 		min-height: 100vh;
 		max-height: 100vh;
-		background: url('img/bg-line.svg') no-repeat;
+		background: url('/img/bg-line.svg') no-repeat;
 		background-size: cover;
 		background-color: #343a5c;
 		display: flex;

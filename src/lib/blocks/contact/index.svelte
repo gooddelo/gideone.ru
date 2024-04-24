@@ -41,7 +41,7 @@
 
 	section {
 		padding: 155px 0 180px;
-		background: url(img/bg-dashbords.png);
+		background: url('/img/bg-dashbords.png');
 		mask-image: linear-gradient(
 			180deg,
 			transparent 0%,

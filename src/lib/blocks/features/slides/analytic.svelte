@@ -16,7 +16,7 @@
 	section {
 		min-width: 100vw;
 		min-height: 100vh;
-		background: url('img/bg-analityc.png') no-repeat;
+		background: url('/img/bg-analityc.png') no-repeat;
 		background-size: cover;
 		display: flex;
 		justify-content: center;

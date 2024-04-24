@@ -34,7 +34,7 @@
 			display: block;
 			content: '';
 			position: absolute;
-			background: url(img/star.svg) no-repeat;
+			background: url('/img/star.svg') no-repeat;
 			background-size: contain;
 			width: 360px;
 			height: 360px;

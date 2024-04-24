@@ -15,7 +15,7 @@
 		min-width: 100%;
 		min-height: 100vh;
 		max-height: 100vh;
-		background: url("img/bg-curves.svg") no-repeat;
+		background: url("/img/bg-curves.svg") no-repeat;
 		background-size: cover;
 		display: flex;
 		justify-content: center;
