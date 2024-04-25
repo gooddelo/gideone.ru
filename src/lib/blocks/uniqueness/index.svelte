@@ -177,6 +177,7 @@
 				min-height: 404px;
 
 				@media (width <= 768px) {
+					min-width: auto;
 					flex-direction: column;
 					align-items: center;
 				}
