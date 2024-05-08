@@ -2,7 +2,7 @@
 </script>
 
 <section>
-	<img src="img/dashbords.png" alt="аналитика с дашбордами" />
+	<img src="img/dashbords.png" alt="Аналитика или статистика сотрудников" />
 	<div>
 		<h2>дашборды</h2>
 		<p>Работающая аналитика с дашбордами Gideone</p>

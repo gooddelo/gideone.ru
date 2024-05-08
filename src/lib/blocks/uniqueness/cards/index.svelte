@@ -1,14 +1,14 @@
 <ul class="cards">
 	<li>
-		<img src="img/coin.svg" alt="рост среднего чека уже с 1го месяца" />
+		<img src="img/coin.svg" alt="как увеличить средний чек" />
 		<p>рост среднего чека уже с 1го месяца</p>
 	</li>
 	<li class="opposite">
 		<p>рост числа довольных покупателей</p>
-		<img src="img/stars.svg" alt="рост числа довольных покупателей" />
+		<img src="img/stars.svg" alt="как поднять качество обслуживания" />
 	</li>
 	<li>
-		<img src="img/chart.svg" height="210px" alt="снижение текучки кадров" />
+		<img src="img/chart.svg" height="210px" alt="как снизить текучку кадров" />
 		<p>снижение "текучки" кадров</p>
 	</li>
 </ul>

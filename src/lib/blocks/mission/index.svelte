@@ -9,7 +9,7 @@
 	<section>
 		<span inert>training</span>
 		<div class="block right">
-			<img src="img/idea.svg" alt="" />
+			<img src="img/idea.svg" alt="персонализированое обучение сотрудников" />
 			<div class="text">
 				<h3>Наша миссия —</h3>
 				<p>

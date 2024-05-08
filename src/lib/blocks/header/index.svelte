@@ -39,7 +39,7 @@
 
 <header>
 	<a href="/" class="logo">
-		<img src="img/logo.svg" alt="gideone logo" />
+		<img src="img/logo.svg" alt="gideone логотип" />
 	</a>
 	<nav class:open>
 		{#each menu as link}

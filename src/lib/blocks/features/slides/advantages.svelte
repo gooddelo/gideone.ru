@@ -3,7 +3,7 @@
 
 <section>
 	<h2>ПРЕИМУЩЕСТВА у вас в руках</h2>
-	<img src="img/sh-report.png" alt="Обратная связь сотрудкинам" />
+	<img src="img/sh-report.png" alt="Обучение сотрудков с обратной связью" />
 	<span>use Gideone</span>
 </section>
 
