@@ -16,13 +16,20 @@
 	section {
 		min-width: 100vw;
 		min-height: 100vh;
-		background: url('/img/bg-analityc.png') no-repeat;
+		background-repeat: no-repeat;
+		background-image: url('/img/bg-analityc.png');
 		background-size: cover;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 42px;
 		margin-left: -200px;
+
+		@media (width <= 768px) {
+			align-items: start;
+			padding-top: 60px;
+			background-image: linear-gradient(to bottom, #161D3B 30%, transparent), url('/img/bg-analityc.png');
+		}
 	}
 	div {
 		position: absolute;

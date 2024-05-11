@@ -45,6 +45,12 @@
 		{#each menu as link}
 			<a href={link.href} on:click={closeMenu}>{link.title}</a>
 		{/each}
+		<a
+			class="no-hover"
+			href="https://www.youtube.com/watch?v=sIDgW2ZMljo"
+			target="_blank"
+			on:click={closeMenu}><img src="/img/youtube.svg" alt="youtube gideone" /></a
+		>
 	</nav>
 	<button on:click={toggleMenu}>
 		{#if open}
@@ -87,8 +93,10 @@
 			background: transparent;
 			transition: all 0.25s ease;
 
-			@include hover {
-				background: var(--bright);
+			&:not(.no-hover) {
+				@include hover {
+					background: var(--bright);
+				}
 			}
 		}
 

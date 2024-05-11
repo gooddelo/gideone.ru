@@ -1,17 +1,20 @@
 <footer>
-	<div class="company">
-		<img src="img/gooddelo.svg" height="64px" width="64px" alt="gooddelo gideone" />
-		<div>
-			<a
-				href="https://www1.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023668234&TypeFile=html"
-				target="_blank"
-			>
-				ЗАПАТЕНТОВАННАЯ ТЕХНОЛОГИЯ
-			</a>
-			<p>ПРОЕКТ КОМПАНИИ</p>
-			<h3>Gooddelo</h3>
+	<a href="https://gooddelo.com" target="_blank">
+		<div class="company">
+			<img src="img/gooddelo.svg" height="64px" width="64px" alt="gooddelo gideone" />
+			<div>
+				<a
+					href="https://www1.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023668234&TypeFile=html"
+					target="_blank"
+				>
+					ЗАПАТЕНТОВАННАЯ ТЕХНОЛОГИЯ
+				</a>
+				<p>ПРОЕКТ КОМПАНИИ</p>
+				<h3>Gooddelo</h3>
+			</div>
 		</div>
-	</div>
+	</a>
+
 	<div class="middle">
 		<a class="map" target="_blank" href="https://yandex.ru/maps/-/CDVaNMZd"
 			>г. Самара, ул. Антонова-Овсеенко 44Б, 7 этаж, офис 704</a

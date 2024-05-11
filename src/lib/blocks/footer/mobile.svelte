@@ -9,13 +9,15 @@
 	</div>
 
 	<div class="middle">
-		<div class="company">
-			<img src="img/gooddelo.svg" height="64px" width="64px" alt="gooddelo gideone" />
-			<div>
-				<p>ПРОЕКТ КОМПАНИИ</p>
-				<h3>Gooddelo</h3>
+		<a href="https://gooddelo.com" target="_blank">
+			<div class="company">
+				<img src="img/gooddelo.svg" height="64px" width="64px" alt="gooddelo gideone" />
+				<div>
+					<p>ПРОЕКТ КОМПАНИИ</p>
+					<h3>Gooddelo</h3>
+				</div>
 			</div>
-		</div>
+		</a>
 		<img
 			src="img/fsi.png"
 			height="105px"
@@ -93,7 +95,7 @@
 			color: #fff;
 		}
 		.telephone {
-			font-family: "Unbounded", sans-serif;
+			font-family: 'Unbounded', sans-serif;
 			font-weight: 500;
 			font-size: 20px;
 			text-transform: lowercase;
