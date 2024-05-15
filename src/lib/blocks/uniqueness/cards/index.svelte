@@ -71,7 +71,7 @@
 		line-height: 120%;
 		margin-top: 130px;
 		font-weight: 500;
-		font-size: 40px;
+		font-size: 28px;
 		text-transform: uppercase;
 		text-align: center;
 		color: #fff;

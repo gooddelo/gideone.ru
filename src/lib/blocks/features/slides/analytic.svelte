@@ -47,7 +47,7 @@
 		text-transform: uppercase;
 		color: #fff;
 		font-family: 'Unbounded', sans-serif;
-		margin-bottom: 90px;
+		margin-bottom: 60px;
 		max-width: 810px;
 
 		@media (width <= 1024px) {
@@ -63,8 +63,8 @@
 		}
 	}
 	p {
-		font-weight: 500;
-		font-size: 30px;
+		font-weight: 400;
+		font-size: 28px;
 		color: #fff;
 		font-family: 'Montserrat', sans-serif;
 		max-width: 670px;
