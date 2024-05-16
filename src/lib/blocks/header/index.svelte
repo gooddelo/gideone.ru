@@ -102,6 +102,7 @@
 
 		@media (width <= 768px) {
 			visibility: hidden;
+			opacity: 0;
 			position: absolute;
 			z-index: 100;
 			width: 100vw;
@@ -131,6 +132,7 @@
 
 			&.open {
 				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}
