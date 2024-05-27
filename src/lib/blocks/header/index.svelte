@@ -51,6 +51,12 @@
 			target="_blank"
 			on:click={closeMenu}><img src="/img/youtube.svg" alt="youtube gideone" /></a
 		>
+		<a
+			class="no-hover"
+			href="https://t.me/gideone_care_bot"
+			target="_blank"
+			on:click={closeMenu}><img src="/img/tg.svg" alt="telegram gideone" /></a
+		>
 	</nav>
 	<button on:click={toggleMenu}>
 		{#if open}
