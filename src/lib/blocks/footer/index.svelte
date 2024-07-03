@@ -23,12 +23,14 @@
 	</div>
 
 	<div class="fsi">
-		<img
-			src="img/fsi.png"
-			height="137px"
-			width="186px"
-			alt="Фонд содействия инновациям gooddelo gideone"
-		/>
+		<a href="https://fasie.ru/press/fund/arch2022-results/">
+			<img
+				src="img/fsi.png"
+				height="137px"
+				width="186px"
+				alt="Фонд содействия инновациям gooddelo gideone"
+			/>
+		</a>
 	</div>
 </footer>
 
