@@ -1,35 +1,36 @@
 <footer>
-	<a href="https://gooddelo.com" target="_blank">
-		<div class="company">
-			<img src="img/gooddelo.svg" height="64px" width="64px" alt="gooddelo gideone" />
-			<div>
-				<a
-					href="https://www1.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023668234&TypeFile=html"
-					target="_blank"
-				>
-					ЗАПАТЕНТОВАННАЯ ТЕХНОЛОГИЯ
-				</a>
-				<p>ПРОЕКТ КОМПАНИИ</p>
-				<h3>Gooddelo</h3>
-			</div>
+	<div class="company">
+		<div>
+			<a
+				href="https://www1.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023668234&TypeFile=html"
+				target="_blank"
+			>
+				ЗАПАТЕНТОВАННАЯ ТЕХНОЛОГИЯ
+			</a>
+			<img src="img/logo.svg" height="32px" width="120px" alt="gooddelo gideone" />
+			<h3>ООО Гидеон</h3>
+			<p>ИНН: 6318074870</p>
 		</div>
-	</a>
+	</div>
 
 	<div class="middle">
 		<a class="map" target="_blank" href="https://yandex.ru/maps/-/CDVaNMZd"
 			>г. Самара, ул. Антонова-Овсеенко 44Б, 7 этаж, офис 704</a
 		>
 		<a class="telephone" href="tel:88001017987">8-800-101-7987</a>
+		<a class="telephone" href="tel:+79967379912">+7(996)737-99-12</a>
+		<div class="email">info@gideone.ru</div>
 	</div>
 
 	<div class="fsi">
-		<a href="https://fasie.ru/press/fund/arch2022-results/">
-			<img
-				src="img/fsi.png"
-				height="137px"
-				width="186px"
-				alt="Фонд содействия инновациям gooddelo gideone"
-			/>
+		<a href="https://navigator.sk.ru/orn/1126754">
+			<div class="skolkovoImg">
+				<img
+					src="img/skolkovo.svg"
+					width="186px"
+					alt="Фонд содействия инновациям gooddelo gideone"
+				/>
+			</div>
 		</a>
 	</div>
 </footer>
@@ -60,8 +61,16 @@
 			text-align: center;
 			font-family: 'Unbounded', sans-serif;
 			font-weight: 500;
-			font-size: 30px;
+			font-size: 20px;
 			text-transform: lowercase;
+			color: #fff;
+		}
+		.email {
+			text-align: center;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 125%;
+			text-align: center;
 			color: #fff;
 		}
 	}
@@ -102,5 +111,11 @@
 		min-width: 300px;
 		display: flex;
 		justify-content: center;
+	}
+
+	.skolkovoImg {
+		padding: 16px;
+		border-radius: 15px;
+		background-color: white;
 	}
 </style>

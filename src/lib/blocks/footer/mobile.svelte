@@ -9,22 +9,21 @@
 	</div>
 
 	<div class="middle">
-		<a href="https://gooddelo.com" target="_blank">
-			<div class="company">
-				<img src="img/gooddelo.svg" height="64px" width="64px" alt="gooddelo gideone" />
-				<div>
-					<p>ПРОЕКТ КОМПАНИИ</p>
-					<h3>Gooddelo</h3>
-				</div>
+		<div class="company">
+			<img src="img/logo.svg" height="32px" width="120px" alt="gooddelo gideone" />
+			<div>
+				<h3>ООО Гидеон</h3>
+				<p>ИНН: 6318074870</p>
 			</div>
-		</a>
-		<a href="https://fasie.ru/press/fund/arch2022-results/">
-			<img
-				src="img/fsi.png"
-				height="105px"
-				width="115px"
-				alt="Фонд содействия инновациям gooddelo gideone"
-			/>
+		</div>
+		<a href="https://navigator.sk.ru/orn/1126754">
+			<div class="skolkovoImg">
+				<img
+					src="img/skolkovo.svg"
+					width="150px"
+					alt="Фонд содействия инновациям gooddelo gideone"
+				/>
+			</div>
 		</a>
 	</div>
 
@@ -33,6 +32,8 @@
 			>г. Самара, ул. Антонова-Овсеенко 44Б, 7 этаж, офис 704</a
 		>
 		<a class="telephone" href="tel:88001017987">8-800-101-7987</a>
+		<a class="telephone" href="tel:+79967379912">+7(996)737-99-12</a>
+		<div class="email">info@gideone.ru</div>
 	</div>
 </footer>
 
@@ -97,10 +98,19 @@
 			color: #fff;
 		}
 		.telephone {
+			text-align: center;
 			font-family: 'Unbounded', sans-serif;
 			font-weight: 500;
 			font-size: 20px;
 			text-transform: lowercase;
+			color: #fff;
+		}
+		.email {
+			text-align: center;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 125%;
+			text-align: center;
 			color: #fff;
 		}
 	}
@@ -118,5 +128,11 @@
 		text-align: center;
 		max-width: 191px;
 		margin-bottom: 16px;
+	}
+
+	.skolkovoImg {
+		padding: 16px;
+		border-radius: 15px;
+		background-color: white;
 	}
 </style>
