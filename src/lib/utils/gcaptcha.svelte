@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 
-	const sitekey = '6LdiGJ0fAAAAAGB60zFAAJHe42tdkT8M62yFsgMo';
+	const sitekey = '6LdYNcsqAAAAAMFHghG6DMjajwYR8vKwDKTfl9hX';
 	export let token = '';
 
 	let loaded = false;
