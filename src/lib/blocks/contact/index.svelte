@@ -30,6 +30,10 @@
 				required
 			/>
 		</div>
+
+		<div class="privacy">
+			Продолжая, вы соглашаетесь с <a href="/privacy_policy_gideone.pdf">политикой конфиденциальности</a>
+		</div>
 		<Gcaptcha bind:token />
 		<input type="text" value={token} hidden id="token" name="token" />
 		<button type="submit" disabled={!token}>отправить</button>
@@ -38,6 +42,14 @@
 
 <style lang="scss">
 	$mobile: 830px;
+
+	.privacy{
+		line-height: 24px;
+		a {
+			text-decoration: underline;
+			font-weight: 500;
+		}
+	}
 
 	section {
 		padding: 155px 0 180px;
