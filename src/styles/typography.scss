@@ -1,0 +1,270 @@
+//******************************** Headings
+@mixin typography-h1($color: var(---primary-100, #eaedff), $align: left, $font: 'Montserrat') {
+  color: $color;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 84px;
+  line-height: 100%;
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+@mixin typography-h2($color: var(---primary-100, #eaedff), $align: left, $font: 'Montserrat') {
+  color: $color;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+@mixin typography-h3($color: var(---primary-100, #eaedff), $align: left, $font: 'Montserrat') {
+  color: $color;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+
+@mixin typography-h3-medium(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+
+@mixin typography-h4($color: var(---primary-100, #eaedff), $align: left, $font: 'Montserrat') {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+
+//******************************** Body L
+@mixin typography-body-l-medium-narrow(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+@mixin typography-body-l-narrow(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+@mixin typography-body-l-wide(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+
+//******************************** Body M
+@mixin typography-body-m-narrow(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: $font, sans-serif;
+  letter-spacing: 0.16px;
+  text-align: $align;
+}
+@mixin typography-body-m-bold-narrow(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: $font, sans-serif;
+  letter-spacing: 0.32px;
+  text-align: $align;
+}
+@mixin typography-body-m-wide(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 155%;
+  font-family: $font, sans-serif;
+  letter-spacing: 0.32px;
+  text-align: $align;
+}
+
+//******************************** Body S
+@mixin typography-body-s-narrow(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 130%;
+  font-family: $font, sans-serif;
+  letter-spacing: 0.12px;
+  text-align: $align;
+}
+@mixin typography-body-s-narrow-mobile(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%; /* 18.2px */
+  font-family: $font, sans-serif;
+  letter-spacing: 0.14px;
+  text-align: $align;
+}
+@mixin typography-body-s-wide(
+  $color: var(---primary-100, #eaedff),
+  $align: left,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 165%;
+  font-family: $font, sans-serif;
+  letter-spacing: 0.12px;
+  text-align: $align;
+}
+
+//******************************** Button-Input S
+@mixin typography-btn-input-s(
+  $color: var(---primary-100, #eaedff),
+  $align: center,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px; /* 133.333% */
+  font-family: $font, sans-serif;
+  letter-spacing: 0.4px;
+  text-align: $align;
+}
+@mixin typography-btn-input-s-bold(
+  $color: var(---primary-100, #eaedff),
+  $align: center,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px; /* 133.333% */
+  font-family: $font, sans-serif;
+  letter-spacing: 0.4px;
+  text-align: $align;
+}
+
+//******************************** Button-Input M
+@mixin typography-btn-input-m(
+  $color: var(---primary-100, #eaedff),
+  $align: center,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+  font-family: $font, sans-serif;
+  letter-spacing: 0px;
+  text-align: $align;
+}
+@mixin typography-btn-input-m-bold(
+  $color: var(---primary-100, #eaedff),
+  $align: center,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px; /* 142.857% */
+  font-family: $font, sans-serif;
+  text-align: $align;
+}
+
+//******************************** Button-Input L
+@mixin typography-btn-input-l(
+  $color: var(---primary-100, #eaedff),
+  $align: center,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+  font-family: $font, sans-serif;
+  letter-spacing: 0px;
+  text-align: $align;
+}
+@mixin typography-btn-input-l-bold(
+  $color: var(---primary-100, #eaedff),
+  $align: center,
+  $font: 'Montserrat'
+) {
+  color: $color;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+  font-family: $font, sans-serif;
+  letter-spacing: 0.4px;
+  text-align: $align;
+}

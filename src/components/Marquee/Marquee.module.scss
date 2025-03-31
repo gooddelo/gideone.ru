@@ -1,0 +1,9 @@
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-top: 140px;
+  width: 100vw !important;
+  // left: 50%;
+  transform: translateX(-100%);
+}

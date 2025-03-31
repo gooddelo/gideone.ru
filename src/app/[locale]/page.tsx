@@ -1,24 +1,17 @@
-import Image from "next/image";
-import styles from "./page.module.scss";
+import { FC } from 'react';
+import styles from './page.module.scss';
 
-import Header from "@/components/Header/Header";
-import MainBanner from "@/components/MainBanner/MainBanner";
-import About from "@/components/About/About";
-import Prices from "@/components/Prices/Prices";
-import FAQ from "@/components/FAQ/FAQ";
-import Feedback from "@/components/Feedback/Feedback";
-import Contacts from "@/components/Contacts/Contacts";
-import Footer from "@/components/Footer/Footer";
+import { Banner, Marquee, News, Tasks } from '@/components';
 
-export default function Home() {
+const Home: FC = () => {
   return (
-      <main className={styles.main}>
-        <MainBanner />
-        <About />
-        <Prices />
-        <FAQ />
-        <Feedback />
-        <Contacts />
-      </main>
+    <main className={styles.main}>
+      <Banner />
+      <Tasks />
+      <Marquee />
+      <News />
+    </main>
   );
-}
+};
+
+export default Home;
