@@ -1,15 +1,14 @@
 import { FC } from 'react';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
-import { initTranslations } from '@/i18n';
-import { Locales } from '@/i18n/i18nConfig';
+import { getServerTranslation, I18nConfig } from '@/i18n';
 import { Icon } from '../UI';
 import Image from 'next/image';
 import cn from 'classnames';
 import Logo from '../UI/Logo';
 
-export const Footer: FC = async () => {
-  const { t } = await initTranslations(Locales.RU, ['footer']);
+export const Footer: FC<I18nConfig> = async ({ locale }) => {
+  const { t } = await getServerTranslation(locale, ['footer']);
   return (
     <footer className={styles.footer}>
       <div className={styles.top}>

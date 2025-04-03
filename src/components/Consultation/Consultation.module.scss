@@ -1,0 +1,15 @@
+.consultation {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  border-radius: 0px 40px 40px 0px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container, rgba(255, 255, 255, 0.08));
+  width: fit-content;
+  max-width: calc(100vw - 20px);
+  margin: 140px 0;
+
+  &__img {
+    border-radius: 0px 50px 50px 0px;
+  }
+}

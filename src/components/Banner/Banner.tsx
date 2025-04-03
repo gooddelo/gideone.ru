@@ -1,11 +1,11 @@
-import { initTranslations } from '@/i18n';
+import { getServerTranslation } from '@/i18n';
 import styles from './Banner.module.scss';
 import { FC } from 'react';
-import { Locales } from '@/i18n/i18nConfig';
+import { I18nConfig } from '@/i18n';
 import Image from 'next/image';
 
-const Banner: FC = async () => {
-  const { t } = await initTranslations(Locales.RU, ['banner']);
+const Banner: FC<I18nConfig> = async ({ locale }) => {
+  const { t } = await getServerTranslation(locale, ['banner']);
   return (
     <section className={styles.banner}>
       <Image

@@ -1,11 +1,10 @@
 import { FunctionComponent } from 'react';
 import styles from './Tasks.module.scss';
 import Image from 'next/image';
-import { initTranslations } from '@/i18n';
-import { Locales } from '@/i18n/i18nConfig';
+import { getServerTranslation, I18nConfig } from '@/i18n';
 
-const Tasks: FunctionComponent = async () => {
-  const { t } = await initTranslations(Locales.RU, ['tasks']);
+const Tasks: FunctionComponent<I18nConfig> = async ({ locale }) => {
+  const { t } = await getServerTranslation(locale, ['tasks']);
   return (
     <section className={styles.tasks}>
       <div className={styles.task}>

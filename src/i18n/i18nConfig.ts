@@ -8,6 +8,11 @@ export enum Locales {
   RU = 'ru',
 }
 
-export const i18nNamespaces = ['header', 'banner'] as const;
+export interface I18nConfig {
+  locale: Locales;
+}
+
+export const i18nNamespaces = ['header', 'banner', 'consultation', 'faq'] as const;
+export type i18nNamespacesType = (typeof i18nNamespaces)[number];
 
 export default i18nConfig;

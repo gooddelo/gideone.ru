@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import styles from './Header.module.scss';
 import Link from 'next/link';
-import { initTranslations } from '@/i18n';
-import { Locales } from '@/i18n/i18nConfig';
+import { getServerTranslation } from '@/i18n';
+import { I18nConfig } from '@/i18n';
 import { Icon } from '@/components/UI';
 
-export const Header: FC = async () => {
-  const { t } = await initTranslations(Locales.RU, ['header']);
+export const Header: FC<I18nConfig> = async ({ locale }) => {
+  const { t } = await getServerTranslation(locale, ['header']);
 
   return (
     <header className={styles.header}>
