@@ -101,5 +101,5 @@ const InputCheck: FunctionComponent<InputProps> = forwardRef<HTMLInputElement, I
   }
 );
 
-InputCheck.displayName = 'InputCheck';
+InputCheck.displayName = ' UI InputCheck';
 export default InputCheck;

@@ -14,4 +14,6 @@ const Logo: FunctionComponent = () => {
   );
 };
 
+Logo.displayName = 'UI Logo';
+
 export default Logo;

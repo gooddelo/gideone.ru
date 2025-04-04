@@ -34,4 +34,6 @@ const Icon: FunctionComponent<IconProps> = ({
   );
 };
 
+Icon.displayName = 'UI Icon';
+
 export default Icon;

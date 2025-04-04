@@ -1,0 +1,15 @@
+@use '@/styles/typography' as *;
+
+.agreement {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  @include typography-body-m-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+  margin-top: 16px;
+
+  a {
+    @include typography-body-m-narrow(var(--color-roles-primary, #acbafd));
+  }
+}

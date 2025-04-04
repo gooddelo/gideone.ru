@@ -36,6 +36,7 @@ body {
 
 button {
   cursor: pointer;
+  border: none;
 }
 
 * {
@@ -60,4 +61,13 @@ a {
   & > * {
     gap: 80px;
   }
+}
+
+textarea,
+input {
+  outline: none;
+}
+
+textarea {
+  resize: none;
 }

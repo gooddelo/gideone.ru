@@ -68,11 +68,11 @@ const ConsultationForm: FC = () => {
           <InputCheck size='small' />
           {/* <input type='checkbox' className={styles.form__agreement_box} /> */}
           <p>
-            {t('agreement')}
+            {t('agreement', { ns: 'common' })}
             <Link href={'/policy'} target='_blank'>
-              {t('policy')}
+              {t('policy', { ns: 'common' })}
             </Link>
-            {t('agreement_2')}
+            {t('agreement_2', { ns: 'common' })}
           </p>
         </div>
       </div>

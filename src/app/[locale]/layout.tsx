@@ -30,7 +30,7 @@ export default async function RootLayout({
   const { locale } = await params;
   return (
     <html lang={locale}>
-      <body data-theme='dark' className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body data-theme='dark' id='root' className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header locale={locale} />
         {children}
         <Footer locale={locale} />
