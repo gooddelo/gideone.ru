@@ -5,6 +5,10 @@
   border-radius: 40px;
   border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
   box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33);
+
+  @media (max-width: 1240px) {
+    display: none;
+  }
 }
 
 .task {

@@ -28,6 +28,7 @@ export const i18nNamespaces = [
   'forWho',
   'analytics',
   'possibilities',
+  'howGideoneWorks',
 ] as const;
 export type i18nNamespacesType = (typeof i18nNamespaces)[number];
 

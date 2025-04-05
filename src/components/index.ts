@@ -13,3 +13,4 @@ export { default as ForWho } from './ForWho';
 export { default as Analytics } from './Analytics';
 export { default as Sales } from './Sales';
 export { default as Possibilities } from './Possibilities';
+export { default as HowGideoneWorks } from './HowGideoneWorks';

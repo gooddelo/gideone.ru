@@ -24,9 +24,16 @@ export const Header: FC<I18nConfig> = async ({ locale }) => {
           {t('nav.contacts')}
         </Link>
       </nav>
+
+      <button className={styles.burger}>
+        <Icon className={styles.burger__icon} icon='burger-menu' size={24} />
+      </button>
+
       <div className={styles.right}>
         <div className={styles.contact}>
-          <a href={`tel:${t('phone')}`}>{t('phone')}</a>
+          <a className={styles.contact__link} href={`tel:${t('phone')}`}>
+            {t('phone')}
+          </a>
           <div className={styles.icon}>
             <Icon icon='telegram' />
           </div>

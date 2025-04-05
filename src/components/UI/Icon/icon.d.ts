@@ -1,4 +1,5 @@
 export type IconNames = 
+  | "burger-menu"
   | "logo"
   | "vk"
   | "calculator"

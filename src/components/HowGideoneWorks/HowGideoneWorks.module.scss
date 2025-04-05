@@ -1,0 +1,87 @@
+@use "@/styles/typography" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 0 auto;
+  padding: 140px 20px;
+  max-width: 1622px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .title {
+    @include typography-h2(var(---primary-100, #eaedff), center);
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+  }
+
+  .content {
+    padding: 0 50px;
+    position: relative;
+
+    &__line {
+      position: absolute;
+      top: 10px;
+      left: 55px;
+      height: 100%;
+
+      .line {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      .item {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        @include typography-body-l-medium-narrow(
+        var(--01primitives--secondary-100, #dadae1)
+
+        );
+        .circle {
+          position: relative;
+        }
+
+      .text {
+        flex-shrink: 2;
+        max-width: 505px;
+      }
+
+      &::marker {
+        content: "";
+      }
+    }
+  }}
+}
+
+.image {
+  border-radius: 40px;
+  flex-shrink: 2;
+  object-fit: cover;
+
+  @media (max-width: 1340px) {
+    max-width: 500px;
+    max-height: 400px;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

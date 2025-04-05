@@ -22,6 +22,7 @@ const Sales: FC<I18nConfig> = async ({ locale }) => {
             <Image src={t('analytics.img_2')} width={1008} height={976} alt={t('analytics.name')} />
           </div>
         </div>
+        
         <div className={cn(styles.block, styles.second)}>
           <h4 className={cn(styles.block__title)}>
             <span className={styles.block__title_yellow}>{t('education.name')}</span>

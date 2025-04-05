@@ -1,4 +1,4 @@
-@use '@/styles/typography.scss' as *;
+@use "@/styles/typography.scss" as *;
 
 .header {
   position: absolute;
@@ -7,6 +7,34 @@
   max-width: 100%;
   display: flex;
   align-items: center;
+  padding: 0 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+.burger {
+  display: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid var(---primary-100, #eaedff);
+
+  &__icon {
+    path {
+      fill: var(---primary-100, #eaedff);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
 }
 
 .nav {
@@ -19,6 +47,10 @@
   gap: 2px;
   border-radius: 40px;
   border: 1px solid var(---white-500, rgba(255, 255, 255, 0.55));
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 
   &__link {
     display: flex;
@@ -38,7 +70,19 @@
   gap: 24px;
   border-radius: 40px;
   border: 1px solid var(---white-400, rgba(255, 255, 255, 0.3));
+  position: relative;
+  z-index: 10;
   @include typography-body-m-narrow;
+
+  @media (max-width: 1024px) {
+    padding-left: 0;
+  }
+
+  &__link {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
 
   .icon {
     display: flex;
@@ -70,6 +114,9 @@
   border: 1px solid var(---primary-100, #eaedff);
   background: none;
   cursor: pointer;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 
   @include typography-btn-input-l-bold;
 }

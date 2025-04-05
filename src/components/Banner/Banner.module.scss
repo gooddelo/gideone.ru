@@ -1,5 +1,5 @@
-@use '@/styles/mixins.scss' as *;
-@use '@/styles/typography.scss' as *;
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/typography.scss" as *;
 
 .banner {
   width: 100%;
@@ -11,8 +11,14 @@
 
 .logo {
   object-fit: contain;
-  max-width: 100%;
-  transform: translateX(-10%);
+  width: 1600px;
+  transform: translate(-23%, 29%);
+  @media (max-width: 1240px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -90%);
+  }
 }
 
 .main {
@@ -20,18 +26,37 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+
+  @media (max-width: 1240px) {
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+  }
+
+  @media (max-width: 1024px) {
+    top: 66%;
+    width: 100%;
+    padding: 0 16px;
+  }
 }
 
 .name {
   color: #ececec;
   text-shadow: 41px 10px 59.5px #211e35;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   font-size: 200px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 200px */
   letter-spacing: -10px;
   margin-right: 62px;
+
+  @media (max-width: 1024px) {
+    font-size: 20vw;
+    letter-spacing: 0px;
+    margin-right: 0;
+  }
 }
 
 .description {
@@ -44,6 +69,12 @@
   letter-spacing: -0.96px;
   width: 709px;
   margin: 20px 0 0 auto;
+
+  @media (max-width: 1024px) {
+    font-size: 6.5vw;
+    letter-spacing: 0px;
+    width: 100%;
+  }
 }
 
 .sub_text {
@@ -56,9 +87,15 @@
   line-height: 120%; /* 24px */
   margin: 52px 128px 0 auto;
   opacity: 0.9;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .button {
+  margin-top: 70px;
+  margin-left: 80px;
   display: inline-flex;
   padding: 24px 48px;
   justify-content: center;
@@ -71,4 +108,12 @@
   border: none;
 
   @include typography-body-l-narrow(var(--color-roles-on-surface, #f7f7fa));
+
+  @media (max-width: 768px) {
+    margin-top: 24px;
+    margin-left: 0;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 16px;
+  }
 }

@@ -5,6 +5,10 @@
   flex-direction: column;
   gap: 60px;
   padding: 70px 0 140px;
+
+  @media (max-width: 1240px) {
+    display: none;
+  }
 }
 
 .title {

@@ -4,13 +4,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1240px;
+  max-width: 1240px;
   margin: 0 auto;
   gap: 60px;
   padding: 140px 0 334px;
   // background: url('/img/decisions_bg.png') no-repeat;
   // background-size: contain;
   // background-position: center;
+
+  @media (max-width: 1024px) {
+    padding: 140px 16px;
+  }
 }
 
 .title {
@@ -24,6 +28,11 @@
   grid-template-rows: repeat(3, 1fr);
   padding: 0 40px;
   gap: 32px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
 }
 
 .decision {
@@ -38,6 +47,12 @@
 
   &:nth-child(even) {
     transform: translateY(calc(50% + 16px));
+  }
+
+  @media (max-width: 1024px) {
+    &:nth-child(even) {
+      transform: translateY(0);
+    }
   }
 
   &__name {
