@@ -4,21 +4,21 @@
 	import { setupI18n, locale, _ } from '$lib/i18n';
 
 	let isVisible = false;
+	console.log('layout');
 
 	// Проверка cookies и инициализация i18n при монтировании компонента
-	onMount(() => {
-		checkCookie();
-		setupI18n();
-	});
+setupI18n();
 
-	// Функция проверки наличия cookie
-	const checkCookie = () => {
-		const isPolicyAccepted = document.cookie
-			.split('; ')
-			.some((cookie) => cookie.trim().startsWith('privacypolicy='));
 
-		isVisible = !isPolicyAccepted;
-	};
+// Функция проверки наличия cookie
+const checkCookie = () => {
+	const isPolicyAccepted = document.cookie
+	.split('; ')
+	.some((cookie) => cookie.trim().startsWith('privacypolicy='));
+	
+	isVisible = !isPolicyAccepted;
+};
+onMount(checkCookie);
 
 	// Обработчик принятия политики
 	const acceptPolicy = () => {
