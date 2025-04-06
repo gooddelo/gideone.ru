@@ -1,19 +1,25 @@
 <script>
+	import { _, locale } from '$lib/i18n';
+
 	let menu = [
 		{
-			title: 'Дашборды',
+			titleKey: 'nav.dashboards',
+			defaultTitle: 'Дашборды',
 			href: '/#dashbords'
 		},
 		{
-			title: 'Подписки',
+			titleKey: 'nav.subscriptions',
+			defaultTitle: 'Подписки',
 			href: '/#subscription'
 		},
 		{
-			title: 'Преимущества',
+			titleKey: 'nav.advantages',
+			defaultTitle: 'Преимущества',
 			href: '/#uniqueness'
 		},
 		{
-			title: 'Напиши нам',
+			titleKey: 'nav.contactUs',
+			defaultTitle: 'Напиши нам',
 			href: '/#contact'
 		},
 		{
@@ -33,6 +39,10 @@
 		open = false;
 		document.body.style = `overflow: auto`;
 	}
+	
+	function toggleLanguage() {
+		$locale = $locale === 'ru' ? 'en' : 'ru';
+	}
 </script>
 
 <svelte:body />
@@ -43,7 +53,13 @@
 	</a>
 	<nav class:open>
 		{#each menu as link}
-			<a href={link.href} on:click={closeMenu}>{link.title}</a>
+			<a href={link.href} on:click={closeMenu}>
+				{#if link.titleKey}
+					{$_(link.titleKey, { default: link.defaultTitle })}
+				{:else}
+					{link.title}
+				{/if}
+			</a>
 		{/each}
 		<a
 			class="no-hover"
@@ -57,12 +73,15 @@
 			target="_blank"
 			on:click={closeMenu}><img src="/img/tg.svg" alt="telegram gideone" /></a
 		>
+		<button class="language-toggle" on:click={toggleLanguage}>
+			{$_('common.switchLanguage')}
+		</button>
 	</nav>
-	<button on:click={toggleMenu}>
+	<button class="menu-toggle" on:click={toggleMenu}>
 		{#if open}
-			<img src="img/close.svg" width="36px" height="36px" alt="Закрыть меню" />
+			<img src="img/close.svg" width="36px" height="36px" alt={$_('nav.closeMenu', { default: 'Закрыть меню' })} />
 		{:else}
-			<img src="img/burger.svg" width="36px" height="36px" alt="Открыть меню" />
+			<img src="img/burger.svg" width="36px" height="36px" alt={$_('nav.openMenu', { default: 'Открыть меню' })} />
 		{/if}
 	</button>
 </header>
@@ -105,6 +124,25 @@
 				}
 			}
 		}
+		
+		.language-toggle {
+			font-weight: 600;
+			font-size: clamp(6px, 1.4vw, 20px);
+			text-transform: uppercase;
+			padding: 10px clamp(6px, 1vw, 20px);
+			border-radius: 40px;
+			background: var(--bright);
+			color: white;
+			border: none;
+			margin-left: 10px;
+			cursor: pointer;
+			transition: all 0.25s ease;
+			
+			@include hover {
+				background: #fff;
+				color: var(--dark);
+			}
+		}
 
 		@media (width <= 768px) {
 			visibility: hidden;
@@ -135,6 +173,12 @@
 					background: var(--bright);
 				}
 			}
+			
+			.language-toggle {
+				font-size: 25px;
+				padding: 11px 30px;
+				margin-top: 20px;
+			}
 
 			&.open {
 				visibility: visible;
@@ -143,7 +187,7 @@
 		}
 	}
 
-	button {
+	.menu-toggle {
 		display: none;
 		background: none;
 		border: none;

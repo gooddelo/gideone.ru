@@ -1,9 +1,10 @@
 <script>
+	import { _ } from '$lib/i18n';
 </script>
 
 <section>
-	<h1>ИИ – тренер для вашего бизнеса</h1>
-	<span inert>use Gideon</span>
+	<h1>{$_('home.title', { default: 'ИИ – тренер для вашего бизнеса' })}</h1>
+	<span inert>{$_('home.subtitle', { default: 'use Gideon' })}</span>
 </section>
 <svg
 	width="1818"

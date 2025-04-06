@@ -1,13 +1,14 @@
 <script>
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section>
 	<img src="img/charts.svg" alt="Выявление точек роста компании" />
 	<div>
-		<h2>Gideone это</h2>
-		<p class="a">Рейтинг сотрудников по KPI</p>
-		<p class="b">Контроль выполнения стандартов работы сотрудниками</p>
-		<p class="c">Выявление зон роста компании</p>
+		<h2>{$_('features.thisIsGideone.title')}</h2>
+		<p class="a">{$_('features.thisIsGideone.point1')}</p>
+		<p class="b">{$_('features.thisIsGideone.point2')}</p>
+		<p class="c">{$_('features.thisIsGideone.point3')}</p>
 	</div>
 </section>
 

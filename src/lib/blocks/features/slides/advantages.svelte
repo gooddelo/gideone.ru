@@ -1,10 +1,11 @@
 <script>
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section>
-	<h2>ПРЕИМУЩЕСТВА у вас в руках</h2>
+	<h2>{$_('features.advantages.title')}</h2>
 	<img src="img/sh-report.png" alt="Обучение сотрудков с обратной связью" />
-	<span>use Gideone</span>
+	<span>{$_('features.advantages.useGideone')}</span>
 </section>
 
 <style lang="scss">

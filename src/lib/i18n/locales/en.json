@@ -1,0 +1,165 @@
+{
+	"common": {
+		"title": "GIDEONE",
+		"description": "Agency for creating businesses and developing marketing",
+		"learnMore": "Learn more",
+		"contactUs": "Contact us",
+		"sendRequest": "Send request",
+		"yourName": "Your name",
+		"phone": "Phone",
+		"submit": "Submit",
+		"namePlaceholder": "Enter your name",
+		"phonePlaceholder": "Enter your phone number",
+		"cookieMessage": "We collect and process cookies",
+		"moreInfo": "More info",
+		"accept": "Accept",
+		"switchLanguage": "RU"
+	},
+	"nav": {
+		"home": "Home",
+		"services": "Services",
+		"portfolio": "Portfolio",
+		"about": "About us",
+		"contacts": "Contacts",
+		"dashboards": "Dashboards",
+		"subscriptions": "Subscriptions",
+		"advantages": "Advantages",
+		"contactUs": "Contact us",
+		"closeMenu": "Close menu",
+		"openMenu": "Open menu"
+	},
+	"home": {
+		"title": "AI - coach for your business",
+		"subtitle": "use Gideon"
+	},
+	"contact": {
+		"heading": {
+			"first": "PERSONALIZED.",
+			"second": "EFFECTIVE.",
+			"third": "NOW!"
+		},
+		"formTitle": "Contact form",
+		"name": "name",
+		"phone": "phone",
+		"email": "email",
+		"comment": "comment",
+		"commentPlaceholder": "Leave your request",
+		"privacyPolicy": "By continuing, you agree to the",
+		"privacyPolicyLink": "privacy policy",
+		"submit": "submit"
+	},
+	"services": {
+		"title": "Our Services",
+		"subtitle": "What we offer",
+		"webDevelopment": "Web Development",
+		"branding": "Branding",
+		"digitalMarketing": "Digital Marketing",
+		"marketResearch": "Market Research",
+		"development": "Development",
+		"support": "Support"
+	},
+	"portfolio": {
+		"title": "Portfolio",
+		"subtitle": "Our projects",
+		"viewAll": "View all projects"
+	},
+	"about": {
+		"title": "About us",
+		"subtitle": "Who we are",
+		"description": "We are a team of professionals who help businesses grow and develop through marketing and digital solutions."
+	},
+	"contacts": {
+		"title": "Contacts",
+		"address": "Address",
+		"email": "Email",
+		"phone": "Phone"
+	},
+	"footer": {
+		"rights": "All rights reserved",
+		"privacy": "Privacy Policy",
+		"terms": "Terms of Service",
+		"patentedTechnology": "PATENTED TECHNOLOGY",
+		"companyName": "Gideone LLC",
+		"taxId": "Tax ID: 6318074870",
+		"address": "Samara, Antonova-Ovseenko St. 44B, 7th floor, office 704"
+	},
+	"uniqueness": {
+		"heading": "Undeniable advantages of our AI coach",
+		"cards": {
+			"averageCheck": "average check growth from the 1st month",
+			"satisfiedCustomers": "increase in satisfied customers",
+			"staffTurnover": "reduced staff turnover"
+		},
+		"scenarios": "Scenarios in Gideone are designed to practice specific skills, products, and services",
+		"platform": "we provide a convenient platform of AI recommendations, analytics, and real-time statistics",
+		"realTimeRecommendations": "personalized recommendations in real-time",
+		"serviceControl": "Service setting levers are in your hands",
+		"potential": "Unlock the potential of your employees and take your business to the next level with Gideone"
+	},
+	"subscription": {
+		"heading": "SUBSCRIPTION TO 100% RESULT IN 2 MINUTES",
+		"aiCoach": {
+			"title": "AI Coach Package",
+			"features": {
+				"feature1": "AI coach for your employees",
+				"feature2": "up to 100 users",
+				"feature3": "from $30/user"
+			},
+			"button": "submit request"
+		},
+		"individual": {
+			"title": "Individual Package",
+			"features": {
+				"feature1": "for companies with their own staff of quality control operators",
+				"feature2": "up to 100 users",
+				"feature3": "all the benefits of the AI package, but assessment and control are provided by your operators",
+				"feature4": "from $6/user"
+			},
+			"button": "submit request"
+		},
+		"note": "Individual conditions are provided for systems with over 100 users"
+	},
+	"mission": {
+		"heading": "Reimagining Learning with Gideone",
+		"intro": "At Gideone, we strive to redefine learning, making it personalized, accessible, and effective for everyone.",
+		"missionTitle": "Our mission is",
+		"missionText": "to develop strong AI capable of guiding learning according to your unique goals and needs.",
+		"joinTitle": "Join us",
+		"joinText": "to bring the learning of the future to life together — where every step toward knowledge is accompanied by confidence in yourself and your abilities."
+	},
+	"features": {
+		"dashboards": {
+			"title": "dashboards",
+			"description": "Working analytics with Gideone dashboards",
+			"beProductive": "BE<br />productive"
+		},
+		"analytics": {
+			"title": "Gideone dashboards make analytics accessible and understandable",
+			"description": "From individual employee performance to general business trends - each element is analyzed to identify potential for improvement and growth",
+			"yourPath": "Your path to excellence starts here"
+		},
+		"ratings": {
+			"description": "Use the power of <mark>ratings</mark> and <mark>comparative analytics</mark> to motivate and develop your team",
+			"useGideone": "use Gideone"
+		},
+		"advantages": {
+			"title": "ADVANTAGES in your hands",
+			"useGideone": "use Gideone"
+		},
+		"thisIsGideone": {
+			"title": "Gideone is",
+			"point1": "Employee rating by KPI",
+			"point2": "Control of work standards compliance by employees",
+			"point3": "Identifying company growth areas"
+		}
+	},
+	"chat": {
+		"heading": "Meet Gideone –",
+		"subtitle": "your personal business coach with artificial intelligence",
+		"firstMessage": "Hello, Ivan! Based on your last sale, I noticed that you did great with the product presentation.",
+		"secondMessage": "However, it would be great to pay more attention to the final phase of service. I recommend watching a short video training on this topic, here's the link: www.gooddelo.ru",
+		"reply": "Thanks, Gideone! I'll watch it right now.",
+		"botResponse": "Always happy to help 😊",
+		"aside": "Instant analysis and feedback for each employee in online and offline retail"
+	}
+}

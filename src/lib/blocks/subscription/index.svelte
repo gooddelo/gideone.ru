@@ -1,41 +1,44 @@
 <script>
+	import { _ } from '$lib/i18n';
 </script>
 
 <article id="subscription">
 	<header>
-		<h2>ПОДПИСКА <br />НА 100% РЕЗУЛЬТАТ <br /><mark>ЗА 2 МИНУТЫ</mark></h2>
+		<h2>
+			{$_('subscription.heading')}
+		</h2>
 	</header>
 	<section>
 		<div class="card">
 			<div class="name">
-				<h3>Пакет <br /> “AI-тренер”</h3>
+				<h3>{$_('subscription.aiCoach.title')}</h3>
 			</div>
 			<ul>
-				<li>AI-тренер для ваших сотрудников</li>
-				<li>до 100 пользователей</li>
-				<li><b>от 3500 руб/ пользователь</b></li>
+					<li>{$_('subscription.aiCoach.features.feature1')}</li>
+					<li>{$_('subscription.aiCoach.features.feature2')}</li>
+					<li>{$_('subscription.aiCoach.features.feature3')}</li>
 			</ul>
 			<a href="/#contact">
-				<button>оставить заявку</button>
+				<button>{$_('subscription.aiCoach.button')}</button>
 			</a>
 		</div>
 		<div class="card opposite">
 			<div class="name">
-				<h3>Пакет <br /> “Индивидуальный”</h3>
+				<h3>{$_('subscription.individual.title')}</h3>
 			</div>
 			<ul>
-				<li>для компаний со своим штатом операторов контроля качества работы персонала</li>
-				<li>до 100 пользователей</li>
-				<li>все преимущества пакета AI, но оценку и контроль предоставляют ваши операторы</li>
-				<li><b>от 500 руб/ пользователь</b></li>
+				<li>{$_('subscription.individual.features.feature1')}</li>
+				<li>{$_('subscription.individual.features.feature2')}</li>
+				<li>{$_('subscription.individual.features.feature3')}</li>
+				<li>{$_('subscription.individual.features.feature4')}</li>
 			</ul>
 			<a href="/#contact">
-				<button>оставить заявку</button>
+				<button>{$_('subscription.individual.button')}</button>
 			</a>
 		</div>
 	</section>
 	<footer>
-		<p>Предоставление индивидуальных условий, если в системе свыше 100 пользователей</p>
+		<p>{$_('subscription.note')}</p>
 	</footer>
 </article>
 

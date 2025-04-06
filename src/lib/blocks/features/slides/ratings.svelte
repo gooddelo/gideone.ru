@@ -1,15 +1,15 @@
 <script>
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section>
 	<img src="img/sh-charts.png" alt="Сравнитильная аналитика или статистика для персонала" />
 	<div>
 		<p>
-			Используйте мощь <mark>рейтингов</mark> и <mark>сравнительной аналитики</mark> для мотивации и
-			развития вашей команды
+			{@html $_('features.ratings.description')}
 		</p>
 	</div>
-	<span>use Gideone</span>
+	<span>{$_('features.ratings.useGideone')}</span>
 </section>
 
 <style lang="scss">
@@ -85,12 +85,6 @@
 				top: -200%;
 				left: -40%;
 			}
-		}
-
-		mark {
-			background: none;
-			font-family: 'Unbounded', sans-serif;
-			color: #80f0ff;
 		}
 	}
 	img {

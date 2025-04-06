@@ -1,12 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
 	import '../app.scss';
+	import { setupI18n, locale, _ } from '$lib/i18n';
 
 	let isVisible = false;
 
-	// Проверка cookies при монтировании компонента
+	// Проверка cookies и инициализация i18n при монтировании компонента
 	onMount(() => {
 		checkCookie();
+		setupI18n();
 	});
 
 	// Функция проверки наличия cookie
@@ -34,10 +36,10 @@
 	{#if isVisible}
 	<div class="container">
 		<div class="cookie">
-			<p>Мы собираем и обрабатываем файлы cookie</p>
+			<p>{$_('common.cookieMessage', { default: 'Мы собираем и обрабатываем файлы cookie' })}</p>
 			<div class="cookie__controls">
-				<a href="/privacy_policy_gideone.pdf">Подробнее</a>
-				<button on:click={acceptPolicy}>Принять</button>
+				<a href="/privacy_policy_gideone.pdf">{$_('common.moreInfo', { default: 'Подробнее' })}</a>
+				<button on:click={acceptPolicy}>{$_('common.accept', { default: 'Принять' })}</button>
 			</div>
 		</div>
 	</div>
@@ -49,6 +51,14 @@
 		min-width: 100%;
 		min-height: 100vh;
 		overflow: clip;
+		position: relative;
+	}
+
+	.language-switcher-container {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 1000;
 	}
 
 	.cookie {

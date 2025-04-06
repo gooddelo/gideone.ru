@@ -1,11 +1,12 @@
 <script>
 	import Animator from '$lib/utils/animator.svelte';
+	import { _ } from '$lib/i18n';
 </script>
 
 <section>
 	<aside class="left">
-		<h2>Встречайте Gideone –</h2>
-		<p>вашего персонального бизнес-тренера с искусственным интеллектом</p>
+		<h2>{$_('chat.heading')}</h2>
+		<p>{$_('chat.subtitle')}</p>
 	</aside>
 
 	<div class="phone">
@@ -13,27 +14,25 @@
 			<div class="asist">
 				<Animator let:isInView>
 					<p class="message bot" class:isInView>
-						Привет, Иван! На основе последней продажи я заметил, что вы отлично справились с
-						презентацией товара.
+						{$_('chat.firstMessage')}
 					</p>
 				</Animator>
 			</div>
 			<div class="asist">
 				<Animator let:isInView>
 					<p class="message bot" class:isInView>
-						Однако, было бы здорово уделить больше внимания заключительной фазе обслуживания.
-						Рекомендую пройти короткое видеообучение по этой теме, вот ссылка: www.gooddelo.ru
+						{$_('chat.secondMessage')}
 					</p>
 				</Animator>
 			</div>
 			<div class="client">
 				<Animator let:isInView>
-					<p class="message you" class:isInView>Спасибо, Gideone! Посмотрю прямо сейчас.</p>
+					<p class="message you" class:isInView>{$_('chat.reply')}</p>
 				</Animator>
 			</div>
 			<div class="asist">
 				<Animator let:isInView>
-					<p class="message bot" class:isInView>Всегда рад быть полезным 😊</p>
+					<p class="message bot" class:isInView>{$_('chat.botResponse')}</p>
 				</Animator>
 			</div>
 		</div>
@@ -46,7 +45,7 @@
 		/>
 	</div>
 	<aside class="right">
-		<p>Мгновенный анализ и обратная связь для каждого сотрудника онлайн и оффлайн торговли</p>
+		<p>{$_('chat.aside')}</p>
 	</aside>
 </section>
 

@@ -1,10 +1,14 @@
+<script>
+	import { _ } from '$lib/i18n';
+</script>
+
 <footer>
 	<div class="fsi">
 		<a
 			href="https://www1.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023668234&TypeFile=html"
 			target="_blank"
 		>
-			ЗАПАТЕНТОВАННАЯ ТЕХНОЛОГИЯ
+			{$_('footer.patentedTechnology')}
 		</a>
 	</div>
 
@@ -12,8 +16,8 @@
 		<div class="company">
 			<img src="img/logo.svg" height="32px" width="120px" alt="gooddelo gideone" />
 			<div>
-				<h3>ООО Гидеон</h3>
-				<p>ИНН: 6318074870</p>
+				<h3>{$_('footer.companyName')}</h3>
+				<p>{$_('footer.taxId')}</p>
 			</div>
 		</div>
 		<a href="https://navigator.sk.ru/orn/1126754">
@@ -29,7 +33,7 @@
 
 	<div class="bot">
 		<a class="map" target="_blank" href="https://yandex.ru/maps/-/CDVaNMZd"
-			>г. Самара, ул. Антонова-Овсеенко 44Б, 7 этаж, офис 704</a
+			>{$_('footer.address')}</a
 		>
 		<a class="telephone" href="tel:88001017987">8-800-101-7987</a>
 		<a class="telephone" href="tel:+79967379912">+7(996)737-99-12</a>

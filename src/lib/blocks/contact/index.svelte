@@ -1,42 +1,43 @@
 <script>
 	import Gcaptcha from '$lib/utils/gcaptcha.svelte';
+	import { _ } from '$lib/i18n';
 	let token = '';
 </script>
 
 <section id="contact">
 	<script async defer src="https://www.google.com/recaptcha/api.js"></script>
-	<h2>ПЕРСОНАЛИЗИРОВАНО. <br />эффективно. <br />сейчас<b>!</b></h2>
-	<p>Форма для связи</p>
+	<h2>{$_('contact.heading.first')} <br />{$_('contact.heading.second')} <br />{$_('contact.heading.third')}</h2>
+	<p>{$_('contact.formTitle', { default: 'Форма для связи' })}</p>
 	<form action="https://tg-notify-gooddelo.vercel.app/api/v1/sendform" method="post">
 		<div>
-			<label for="name">имя</label>
+			<label for="name">{$_('contact.name', { default: 'имя' })}</label>
 			<input id="name" type="text" name="Name" required />
 		</div>
 		<div>
-			<label for="phone">телефон</label>
+			<label for="phone">{$_('contact.phone', { default: 'телефон' })}</label>
 			<input id="phone" type="tel" name="Phone" />
 		</div>
 		<div>
-			<label for="email">почта</label>
+			<label for="email">{$_('contact.email', { default: 'почта' })}</label>
 			<input id="email" type="email" name="Email" required />
 		</div>
 		<div>
-			<label for="comment">комментарий</label>
+			<label for="comment">{$_('contact.comment', { default: 'комментарий' })}</label>
 			<textarea
 				id="comment"
 				type="text"
 				name="Comment"
-				placeholder="Оставьте вашу заявку"
+				placeholder={$_('contact.commentPlaceholder', { default: 'Оставьте вашу заявку' })}
 				required
 			/>
 		</div>
 
 		<div class="privacy">
-			Продолжая, вы соглашаетесь с <a href="/privacy_policy_gideone.pdf">политикой конфиденциальности</a>
+			{$_('contact.privacyPolicy', { default: 'Продолжая, вы соглашаетесь с' })} <a href="/privacy_policy_gideone.pdf">{$_('contact.privacyPolicyLink', { default: 'политикой конфиденциальности' })}</a>
 		</div>
 		<Gcaptcha bind:token />
 		<input type="text" value={token} hidden id="token" name="token" />
-		<button type="submit" disabled={!token}>отправить</button>
+		<button type="submit" disabled={!token}>{$_('contact.submit', { default: 'отправить' })}</button>
 	</form>
 </section>
 

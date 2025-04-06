@@ -1,0 +1,1900 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/app/[locale]/page.module.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_main__HA9zO {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Banner/Banner.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Banner_banner__jid0L {
+  width: 100%;
+  max-width: 1240px;
+  margin: auto;
+  height: 100vh;
+  height: 100svh;
+  position: relative;
+}
+
+.Banner_logo__8VTm0 {
+  object-fit: contain;
+  width: 1600px;
+  transform: translate(-23%, 29%);
+}
+@media (max-width: 1240px) {
+  .Banner_logo__8VTm0 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -90%);
+  }
+}
+
+.Banner_main__R3qmQ {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+@media (max-width: 1240px) {
+  .Banner_main__R3qmQ {
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (max-width: 1024px) {
+  .Banner_main__R3qmQ {
+    top: 66%;
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+.Banner_name__wSy_4 {
+  color: #ececec;
+  text-shadow: 41px 10px 59.5px #211e35;
+  font-family: "Montserrat", "sans-serif";
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 200px */
+  letter-spacing: -10px;
+  margin-right: 62px;
+}
+@media (max-width: 1024px) {
+  .Banner_name__wSy_4 {
+    font-size: 20vw;
+    letter-spacing: 0px;
+    margin-right: 0;
+  }
+}
+
+.Banner_description__GTHVM {
+  color: #cdcde3;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 48px */
+  letter-spacing: -0.96px;
+  width: 709px;
+  margin: 20px 0 0 auto;
+}
+@media (max-width: 1024px) {
+  .Banner_description__GTHVM {
+    font-size: 6.5vw;
+    letter-spacing: 0px;
+    width: 100%;
+  }
+}
+
+.Banner_sub_text__NdgGk {
+  width: 581px;
+  color: #dadae1;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+  margin: 52px 128px 0 auto;
+  opacity: 0.9;
+}
+@media (max-width: 1024px) {
+  .Banner_sub_text__NdgGk {
+    display: none;
+  }
+}
+
+.Banner_button__CLX0d {
+  margin-top: 70px;
+  margin-left: 80px;
+  display: inline-flex;
+  padding: 24px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #9363f9 9.3%, #2c3493 138.03%);
+  box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33), 2px 2px 34.1px 0px rgba(54, 213, 255, 0.44) inset;
+  border: none;
+  color: var(--color-roles-on-surface, #f7f7fa);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .Banner_button__CLX0d {
+    margin-top: 24px;
+    margin-left: 0;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Consultation/Consultation.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Consultation_consultation__kUIlp {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  border-radius: 0px 40px 40px 0px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container, rgba(255, 255, 255, 0.08));
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: calc(100vw - 20px);
+  margin: 140px 0;
+}
+.Consultation_consultation__img__obCTL {
+  border-radius: 0px 50px 50px 0px;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Analytics/Analytics.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Analytics_container__WN6uK {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 70px 0 140px;
+}
+@media (max-width: 1240px) {
+  .Analytics_container__WN6uK {
+    display: none;
+  }
+}
+
+.Analytics_title__lUsD_ {
+  color: var(---primary-200, #d5dcfe);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.Analytics_content__g6IUJ {
+  display: grid;
+  grid-template: "first second" "first fourth" "third fourth";
+  grid-gap: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(2, 610px);
+  grid-template-rows: repeat(3, 312px);
+  margin: 0 auto;
+}
+
+.Analytics_item__qkXcH {
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(---white-100, rgba(255, 255, 255, 0.08));
+  padding: 40px;
+  position: relative;
+}
+.Analytics_item__title__qif5f {
+  color: var(--color-roles-on-surface, #f7f7fa);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.Analytics_item__title__qif5f span {
+  color: var(---yellow-200, #fbf3bc);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.Analytics_item__title_sub_block__pmhXa {
+  display: block;
+}
+.Analytics_item__description__Wjvhr {
+  color: var(---white-500, rgba(255, 255, 255, 0.55));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+  margin-top: 40px;
+}
+.Analytics_item__img__xaaF8 {
+  border-radius: 10px;
+  border: 1px solid rgba(251, 243, 188, 0.5);
+  box-shadow: 0px 0px 37.2px 0px rgba(251, 216, 97, 0.5);
+}
+.Analytics_item__img_1__I9jMx {
+  width: 400px;
+  height: 232px;
+  aspect-ratio: 50/29;
+  position: absolute;
+  bottom: 148px;
+  left: 40px;
+}
+.Analytics_item__img_2__6v6iy {
+  width: 416.41px;
+  height: 232px;
+  aspect-ratio: 416.41/232;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+.Analytics_item__img_3__p5iON {
+  width: 530px;
+  height: 60px;
+  aspect-ratio: 53/6;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Analytics_item__img_4__iAMlz {
+  width: 113px;
+  height: 232px;
+  aspect-ratio: 113/232;
+}
+.Analytics_item__img_5__eAEF6 {
+  width: 530px;
+  height: 288px;
+  aspect-ratio: 265/144;
+  margin-top: auto;
+}
+
+.Analytics_first__ZQfTR {
+  grid-area: first;
+}
+
+.Analytics_second__6uNx8 {
+  grid-area: second;
+}
+
+.Analytics_third__2oFLr {
+  grid-area: third;
+  display: flex;
+  justify-content: space-between;
+  gap: 38px;
+}
+
+.Analytics_fourth__RptOZ {
+  grid-area: fourth;
+  display: flex;
+  flex-direction: column;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Consultation/ConsultationForm/ConsultationForm.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.ConsultationForm_form__fgfew {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 610px;
+  margin: 112.5px 134px 112.5px 0;
+}
+.ConsultationForm_form__fields__QODhU {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ConsultationForm_form__block__9fbX6 {
+  max-width: 390px;
+}
+.ConsultationForm_form__block_head__9CR1v {
+  width: max-content;
+  max-width: 610px;
+}
+.ConsultationForm_form__input__bfTew {
+  display: flex;
+  height: 56px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 8px 0px 24px;
+  gap: 4px;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+  /* shadow-light-mode-input */
+  box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+  outline: none;
+  color: var(--color-roles-on-surface-variant, #dadae1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.ConsultationForm_form__message__tsTIg {
+  display: flex;
+  height: 136px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  outline: none;
+  align-self: stretch;
+  padding: 16px 12px 8px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+  resize: none;
+  /* shadow-light-mode-input */
+  box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+  color: var(--input-placeholder, rgba(255, 255, 255, 0.55));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.ConsultationForm_form__btn__N3z7s {
+  display: flex;
+  height: 56px;
+  padding: 0px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--color-roles-primary, #acbafd);
+  color: var(--btn-on-primary, #020268);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  border: none;
+  width: 100%;
+}
+.ConsultationForm_form__agreement__ABqDv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  color: var(--input-placeholder, rgba(255, 255, 255, 0.55));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+  margin-top: 16px;
+}
+.ConsultationForm_form__agreement__ABqDv a {
+  color: var(--color-roles-primary, #acbafd);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+
+.ConsultationForm_title__4e_3R {
+  color: var(--color-roles-primary, #acbafd);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+
+.ConsultationForm_subtitle__UPfYq {
+  color: var(---primary-100, #eaedff);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/UI/InputCheck/InputCheck.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.InputCheck_container__dwA1b {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.InputCheck_container__disabled__r_mB_ {
+  pointer-events: none;
+}
+.InputCheck_container__dwA1b:hover .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-off-hover);
+}
+.InputCheck_container__dwA1b:active .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-off-active);
+}
+.InputCheck_container__dwA1b .InputCheck_checkbox__hMMA2:checked ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-default);
+}
+.InputCheck_container__dwA1b .InputCheck_checkbox__hMMA2:checked ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%);
+}
+.InputCheck_container__dwA1b .InputCheck_checkbox__hMMA2:checked:hover ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-hover);
+}
+.InputCheck_container__dwA1b .InputCheck_checkbox__hMMA2:checked:active ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-active);
+}
+.InputCheck_container__dwA1b .InputCheck_radio__7hfx_:checked ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-default);
+}
+.InputCheck_container__dwA1b .InputCheck_radio__7hfx_:checked ~ .InputCheck_checkmark__aVie_:after {
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%);
+}
+.InputCheck_container__dwA1b .InputCheck_radio__7hfx_:checked:hover ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-hover);
+}
+.InputCheck_container__dwA1b .InputCheck_radio__7hfx_:checked:active ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-active);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__small__wYXMg:checked ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-default);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__small__wYXMg:checked ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  top: 50%;
+  transform: scale(1) translateY(-50%);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__small__wYXMg:checked ~ .InputCheck_checkmark__aVie_:after {
+  left: 4px;
+  transform: translate(14px, -50%);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__small__wYXMg:checked ~ .InputCheck_checkmark__aVie_:before {
+  top: 25%;
+  transform: scale(0) translateY(-50%);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__medium__Hyeqe:checked ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-default);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__medium__Hyeqe:checked ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  top: 50%;
+  transform: scale(1) translateY(-50%);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__medium__Hyeqe:checked ~ .InputCheck_checkmark__aVie_:after {
+  left: 4px;
+  transform: translate(24px, -50%);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__medium__Hyeqe:checked ~ .InputCheck_checkmark__aVie_:before {
+  top: 25%;
+  transform: scale(0) translateY(-50%);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__WGdg4:checked:hover ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-hover);
+}
+.InputCheck_container__dwA1b .InputCheck_switch__WGdg4:checked:active ~ .InputCheck_checkmark__aVie_ {
+  background: var(--color-switch-bg-switch-on-active);
+}
+
+.InputCheck_checkbox__hMMA2 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.InputCheck_checkbox__small__9EQXi ~ .InputCheck_checkmark__aVie_ {
+  width: 16px;
+  height: 16px;
+}
+.InputCheck_checkbox__small__9EQXi ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  width: 16px;
+  height: 16px;
+}
+.InputCheck_checkbox__medium__NZ_4C ~ .InputCheck_checkmark__aVie_ {
+  width: 24px;
+  height: 24px;
+}
+.InputCheck_checkbox__medium__NZ_4C ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  width: 24px;
+  height: 24px;
+}
+.InputCheck_checkbox__hMMA2 ~ .InputCheck_checkmark__aVie_ {
+  position: relative;
+  left: 0;
+  border-radius: 6px;
+  background: var(--color-bg-default-on_surface);
+  transition: all 0.3s ease;
+}
+.InputCheck_checkbox__hMMA2 ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  position: absolute;
+  transition: all 0.1s ease;
+  top: 0%;
+  left: 0%;
+  transform: scale(0) translate(-50%, -50%);
+  transform-origin: center;
+}
+.InputCheck_checkbox__hMMA2 ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A path {
+  fill: var(--color-day-base-09);
+}
+
+.InputCheck_radio__7hfx_ {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.InputCheck_radio__small__MR65C ~ .InputCheck_checkmark__aVie_ {
+  width: 16px;
+  height: 16px;
+}
+.InputCheck_radio__medium__Z_KyR ~ .InputCheck_checkmark__aVie_ {
+  width: 24px;
+  height: 24px;
+}
+.InputCheck_radio__7hfx_ ~ .InputCheck_checkmark__aVie_ {
+  position: relative;
+  left: 0;
+  border-radius: 50%;
+  background: var(--color-bg-default-on_surface);
+  transition: all 0.3s ease;
+}
+.InputCheck_radio__7hfx_ ~ .InputCheck_checkmark__aVie_:after {
+  position: absolute;
+  content: "";
+  transition: all 0.1s ease;
+  top: 25%;
+  left: 25%;
+  transform: scale(0) translate(-50%, -50%);
+  transform-origin: center;
+  border-radius: 50%;
+  background: var(--color-switch-bg-icon);
+  width: 50%;
+  height: 50%;
+}
+
+.InputCheck_switch__WGdg4 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.InputCheck_switch__small__wYXMg ~ .InputCheck_checkmark__aVie_ {
+  width: 32px;
+  height: 16px;
+}
+.InputCheck_switch__small__wYXMg ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  width: 16px;
+  height: 16px;
+}
+.InputCheck_switch__small__wYXMg ~ .InputCheck_checkmark__aVie_:after {
+  left: 4px;
+  width: 12px;
+  height: 12px;
+}
+.InputCheck_switch__small__wYXMg ~ .InputCheck_checkmark__aVie_:before {
+  right: 4px;
+  width: 8px;
+  height: 8px;
+}
+.InputCheck_switch__medium__Hyeqe ~ .InputCheck_checkmark__aVie_ {
+  width: 48px;
+  height: 24px;
+}
+.InputCheck_switch__medium__Hyeqe ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  width: 24px;
+  height: 24px;
+}
+.InputCheck_switch__medium__Hyeqe ~ .InputCheck_checkmark__aVie_:after {
+  left: 2px;
+  width: 16px;
+  height: 16px;
+}
+.InputCheck_switch__medium__Hyeqe ~ .InputCheck_checkmark__aVie_:before {
+  right: 6px;
+  width: 8px;
+  height: 8px;
+}
+.InputCheck_switch__WGdg4 ~ .InputCheck_checkmark__aVie_ {
+  position: relative;
+  left: 0;
+  border-radius: 48px;
+  background: var(--color-bg-default-on_surface);
+  transition: all 0.3s ease;
+}
+.InputCheck_switch__WGdg4 ~ .InputCheck_checkmark__aVie_ .InputCheck_checkmark__icon__Mrp1A {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0) translateY(-50%);
+  transition: all 0.3s ease;
+}
+.InputCheck_switch__WGdg4 ~ .InputCheck_checkmark__aVie_:after, .InputCheck_switch__WGdg4 ~ .InputCheck_checkmark__aVie_:before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  content: "";
+  transition: all 0.3s ease;
+}
+.InputCheck_switch__WGdg4 ~ .InputCheck_checkmark__aVie_:after {
+  left: 4px;
+  transform: translate(0, -50%);
+  background: var(--color-switch-bg-icon);
+}
+.InputCheck_switch__WGdg4 ~ .InputCheck_checkmark__aVie_:before {
+  transform: scale(1) translateY(-50%);
+  transform-origin: center;
+  border: 2px solid var(--color-switch-bg-icon-off);
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/UI/Logo/Logo.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Logo_logo__RKpkC {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.Logo_logo__RKpkC:hover {
+  cursor: pointer;
+}
+.Logo_logo__icon__jA8ES {
+  fill: #e6e6e6;
+}
+.Logo_logo__icon_wrapper__sf57Z {
+  position: relative;
+}
+.Logo_logo__icon_bg__6jShZ {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 82px;
+  height: 75.5px;
+}
+.Logo_logo__text__zdXP5 {
+  color: var(--txt-logo, #e6e6e6);
+  font-family: Montserrat;
+  font-size: 49.88px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 49.88px */
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/UI/Modal/Modal.module.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Modal_modal__5JLj1 {
+  display: flex;
+  width: 508px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline, rgba(255, 255, 255, 0.3));
+  background: var(--color-roles-surface-container-highest, rgba(255, 255, 255, 0.2));
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+}
+.Modal_modal__wrapper__2erEg {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(13.4499998093px);
+          backdrop-filter: blur(13.4499998093px);
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Decisions/Decisions.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Decisions_container__UvX8v {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  gap: 60px;
+  padding: 140px 0 334px;
+}
+@media (max-width: 1024px) {
+  .Decisions_container__UvX8v {
+    padding: 140px 16px;
+  }
+}
+
+.Decisions_title__yP_FJ {
+  color: var(---primary-200, #d5dcfe);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.Decisions_decisions__NthX4 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 0 40px;
+  grid-gap: 32px;
+  gap: 32px;
+}
+@media (max-width: 1024px) {
+  .Decisions_decisions__NthX4 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+.Decisions_decision__2MJYK {
+  height: 388px;
+  position: relative;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(107, 100, 146, 0.39);
+  background: rgba(22, 22, 30, 0.26);
+  -webkit-backdrop-filter: blur(31.8999996185px);
+          backdrop-filter: blur(31.8999996185px);
+}
+.Decisions_decision__2MJYK:nth-child(even) {
+  transform: translateY(calc(50% + 16px));
+}
+@media (max-width: 1024px) {
+  .Decisions_decision__2MJYK:nth-child(even) {
+    transform: translateY(0);
+  }
+}
+.Decisions_decision__name__VHxBc {
+  color: var(---primary-300, #acbafd);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin-bottom: 32px;
+}
+.Decisions_decision__description__yJwSs {
+  color: var(---secondary-500, #7d7d94);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+.Decisions_decision__img__WfZUl {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  transform: translateX(-50%);
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/FAQ/FAQ.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.FAQ_faq__5vClH {
+  max-width: 1240px;
+  padding: 140px 0;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .FAQ_faq__5vClH {
+    padding: 140px 16px;
+  }
+}
+.FAQ_faq__title__HxgMh {
+  color: var(---primary-100, #eaedff);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.FAQ_faq__questions__1MglI {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 644px;
+  margin: 0 auto;
+}
+.FAQ_faq__ask__mHkFf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px auto 0 auto;
+  max-width: 644px;
+  width: 100%;
+  gap: 8px;
+  height: 56px;
+  padding: 0px 8px 0px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+  /* shadow-light-mode-input */
+  box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+}
+.FAQ_faq__ask__mHkFf input {
+  color: var(--btn-primary, #acbafd);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  background: none;
+  border: none;
+  flex: 1 1;
+  outline: none;
+}
+.FAQ_faq__ask__mHkFf button {
+  display: inline-flex;
+  height: 44px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid var(--btn-primary, #acbafd);
+  background: none;
+  color: var(--btn-primary, #acbafd);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+.FAQ_question__n2LlZ {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid var(--btn-primary-hover, #d5dcfe);
+  background: var(--color-roles-surface-container, rgba(255, 255, 255, 0.08));
+  cursor: pointer;
+}
+.FAQ_question__head__Yt_Yk {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(---primary-100, #eaedff);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+.FAQ_question__head__Yt_Yk button {
+  background: none;
+  border: none;
+  fill: var(---primary-100, #eaedff);
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.FAQ_question__head_open__e3yZh button {
+  transform: rotate(180deg);
+}
+.FAQ_question__answer__Zpg1r {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 0.3s ease;
+  padding-top: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.FAQ_question__answer__Zpg1r p {
+  overflow: hidden;
+  color: var(---primary-100, #eaedff);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+.FAQ_question__answer_open__tgoHZ {
+  transition: all 0.3s ease;
+  grid-template-rows: 1fr;
+  padding-top: 8px;
+}
+
+.FAQ_modal__title__7_D_I {
+  color: var(--color-roles-on-surface, #f7f7fa);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.FAQ_modal__fields__3__mb {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.FAQ_modal__textarea__mNymy {
+  display: flex;
+  height: 136px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+  padding: 16px 12px 8px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+  /* shadow-light-mode-input */
+  box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+  resize: none;
+  color: var(--input-placeholder, rgba(255, 255, 255, 0.55));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.FAQ_modal__textarea__mNymy::placeholder {
+  color: var(--input-placeholder, rgba(255, 255, 255, 0.55));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.FAQ_modal__input__YjrLJ {
+  height: 56px;
+  padding: 6px 8px 6px 24px;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+  /* shadow-light-mode-input */
+  box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+  color: var(--color-roles-on-surface-variant, #dadae1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.FAQ_modal__input__YjrLJ::placeholder {
+  color: var(--color-roles-on-surface-variant, #dadae1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.FAQ_modal__btn__4GCAo {
+  display: flex;
+  height: 56px;
+  padding: 0px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--color-roles-primary, #acbafd);
+  color: var(--btn-on-primary, #020268);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.FAQ_modal__btns__4KEXJ {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.FAQ_modal__agreement__Ma5wh {
+  margin-top: 0 !important;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/PolicyAgreement/PolicyAgreement.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.PolicyAgreement_agreement__3aIHW {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  color: var(--input-placeholder, rgba(255, 255, 255, 0.55));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+  margin-top: 16px;
+}
+.PolicyAgreement_agreement__3aIHW a {
+  color: var(--color-roles-primary, #acbafd);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/HowGideoneWorks/HowGideoneWorks.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.HowGideoneWorks_container__0_Qan {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 0 auto;
+  padding: 140px 20px;
+  max-width: 1622px;
+}
+@media (max-width: 1024px) {
+  .HowGideoneWorks_container__0_Qan {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_title__IbD9F {
+  color: var(---primary-100, #eaedff);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_info__FcDUE {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_content__wgsOe {
+  padding: 0 50px;
+  position: relative;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_content__line__tcHhY {
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  height: 100%;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_content__line__tcHhY .HowGideoneWorks_line__pu8di {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_content__wgsOe .HowGideoneWorks_list__1ccNy {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_content__wgsOe .HowGideoneWorks_list__1ccNy .HowGideoneWorks_item__jXA_3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  color: var(--01primitives--secondary-100, #dadae1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_content__wgsOe .HowGideoneWorks_list__1ccNy .HowGideoneWorks_item__jXA_3 .HowGideoneWorks_circle__6sc8l {
+  position: relative;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_content__wgsOe .HowGideoneWorks_list__1ccNy .HowGideoneWorks_item__jXA_3 .HowGideoneWorks_text__SdZ_6 {
+  flex-shrink: 2;
+  max-width: 505px;
+}
+.HowGideoneWorks_container__0_Qan .HowGideoneWorks_content__wgsOe .HowGideoneWorks_list__1ccNy .HowGideoneWorks_item__jXA_3::marker {
+  content: "";
+}
+
+.HowGideoneWorks_image__adzUp {
+  border-radius: 40px;
+  flex-shrink: 2;
+  object-fit: cover;
+}
+@media (max-width: 1340px) {
+  .HowGideoneWorks_image__adzUp {
+    max-width: 500px;
+    max-height: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .HowGideoneWorks_image__adzUp {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/News/News.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.News_news__mx7Ji {
+  display: flex;
+  padding-top: 140px;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1240px;
+  margin: auto;
+  overflow: hidden;
+}
+.News_news__title__4Kwq2 {
+  color: var(---primary-100, #eaedff);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.News_news__blocks__7HpUd {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 20px;
+  overscroll-behavior-inline: contain;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow-x: "auto";
+  white-space: "nowrap";
+  cursor: "grab";
+}
+.News_news__blocks__7HpUd::-webkit-scrollbar {
+  display: none;
+}
+
+.News_block__9CVr2 {
+  border-radius: 16px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container, rgba(255, 255, 255, 0.08));
+  display: flex;
+  flex-direction: column;
+}
+.News_block__info__eQhy_ {
+  display: flex;
+  padding: 24px 32px 24px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+.News_block__date__gWgLr {
+  color: var(---white-400, rgba(255, 255, 255, 0.3));
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 20.8px */
+  letter-spacing: 0.16px;
+}
+.News_block__paragraph__4IcUZ {
+  color: var(--color-roles-on-surface-variant, #dadae1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+}
+.News_block__list__xC_8T {
+  list-style: none;
+}
+.News_block__list_item___w4JW {
+  color: var(--color-roles-on-surface-variant, #dadae1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+  display: flex;
+}
+.News_block__list_item___w4JW:before {
+  content: "•";
+  display: block;
+  position: relative;
+  padding: 0 10px;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Tasks/Tasks.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Tasks_tasks__I_ic2 {
+  display: inline-flex;
+  margin: auto;
+  align-items: center;
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33);
+}
+@media (max-width: 1240px) {
+  .Tasks_tasks__I_ic2 {
+    display: none;
+  }
+}
+
+.Tasks_task__ROKs6 {
+  display: flex;
+  padding: 24px 4px 24px 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.Tasks_task__ROKs6:first-of-type {
+  padding-left: 24px;
+}
+.Tasks_task__ROKs6:last-of-type {
+  padding-right: 24px;
+}
+.Tasks_task__ROKs6 span {
+  color: #d1e0e3;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: 0.16px;
+  width: 240px;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Marquee/Marquee.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Marquee_marquee__sogE9 {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin: 140px 0;
+  width: 100vw !important;
+  transform: translateX(-100%);
+}
+@media (max-width: 768px) {
+  .Marquee_marquee__sogE9 {
+    display: none !important;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Subscriptions/Subscriptions.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Subscriptions_container__7i81l {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 32px;
+  padding: 140px 0;
+  position: relative;
+}
+.Subscriptions_container__7i81l:before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  max-height: 1130px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: url("/img/graph.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.Subscriptions_title__LnPaK {
+  color: var(---primary-100, #eaedff);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.Subscriptions_subscriptions__bmM1i {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.Subscriptions_subscription__mwEZc {
+  display: flex;
+  width: 408px;
+  height: 660px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  flex-shrink: 0;
+}
+.Subscriptions_subscription_1__38aK_ {
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline, rgba(255, 255, 255, 0.3));
+  background: rgba(0, 44, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.Subscriptions_subscription_2__g7zNt {
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline, rgba(255, 255, 255, 0.3));
+  background: linear-gradient(180deg, #002cff 0%, #0022c3 19%, #001a94 37%, #000832 100%);
+  box-shadow: 0px 4px 100px 0px rgba(92, 66, 255, 0.8);
+}
+.Subscriptions_subscription_3__FqtDq {
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline, rgba(255, 255, 255, 0.3));
+  background: rgba(0, 44, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.Subscriptions_subscription__name__vNi5c {
+  color: var(--color-roles-on-primary-container, #d5dcfe);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.Subscriptions_subscription__price__5NXvS {
+  background: linear-gradient(180deg, #dae1ff 0%, #a6b6ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(---primary-100, #eaedff);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.Subscriptions_subscription__price__5NXvS span {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.Subscriptions_subscription__price_wrapper__pZxgb {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.Subscriptions_subscription__per__hkaGP {
+  color: rgba(197, 246, 249, 0.88);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.Subscriptions_subscription__description__QpcUG {
+  color: var(--color-roles-on-primary-container, #d5dcfe);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: center;
+}
+.Subscriptions_subscription__options__rEPHl {
+  list-style: none;
+  width: 100%;
+}
+.Subscriptions_subscription__option__ZHf3S {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-roles-on-surface-variant, #dadae1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.Subscriptions_subscription__action__gdwJE {
+  display: flex;
+  height: 56px;
+  padding: 0px 32px;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  gap: 8px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 16px;
+  margin-top: auto;
+}
+.Subscriptions_subscription__action_1__M145N {
+  border: 1px solid var(--color-roles-tertiary, #c5f6f9);
+  background: none;
+  color: var(--color-roles-tertiary, #c5f6f9);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.Subscriptions_subscription__action_2__30DI5 {
+  border-radius: 16px;
+  background: linear-gradient(180deg, #c6d0ff 0%, #8898e4 100%);
+  color: var(--btn-on-primary, #020268);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.Subscriptions_subscription__action_3__k1MVW {
+  border-radius: 16px;
+  border: 2px solid var(--color-roles-tertiary, #c5f6f9);
+  background: var(--color-roles-tertiary, #c5f6f9);
+  color: var(--btn-on-primary, #020268);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Try/Try.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Try_container__cEdfN {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1720px;
+  padding: 140px 0;
+  gap: 80px;
+}
+@media (max-width: 1540px) {
+  .Try_container__cEdfN {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+  }
+}
+
+.Try_title__npUm7 {
+  color: var(--color-roles-on-surface, #f7f7fa);
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+}
+.Try_title__inner__iP_HL {
+  color: var(--color-roles-primary, #acbafd);
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+}
+
+.Try_action__RQd93 {
+  display: flex;
+  padding: 24px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #9363f9 9.3%, #2c3493 138.03%);
+  box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33), 2px 2px 34.1px 0px rgba(54, 213, 255, 0.44) inset;
+  color: var(--color-roles-on-surface, #f7f7fa);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.Try_content__rq7z5 {
+  display: flex;
+  width: 643px;
+  height: 710px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-shrink: 0;
+}
+@media (max-width: 1540px) {
+  .Try_content__rq7z5 {
+    width: 100%;
+  }
+}
+
+.Try_reasons__X_pO3 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Try_reason__o7ISi {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--color-roles-on-surface-variant, #dadae1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+
+.Try_img__IhcAN {
+  width: 919px;
+  height: 710px;
+  flex-shrink: 0;
+  aspect-ratio: 919/710;
+}
+@media (max-width: 1540px) {
+  .Try_img__IhcAN {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/ForWho/ForWho.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.ForWho_container__s01AM {
+  padding: 140px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.ForWho_list__GkGGh {
+  display: grid;
+  grid-template-columns: repeat(3, 387px);
+  grid-gap: 40px;
+  gap: 40px;
+}
+@media (max-width: 1240px) {
+  .ForWho_list__GkGGh {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .ForWho_list__GkGGh {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 16px;
+  }
+}
+
+.ForWho_title__rwaYM {
+  color: var(---primary-200, #d5dcfe);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.ForWho_item__QeKLa {
+  max-width: 387px;
+}
+.ForWho_item__img__xSm_Z {
+  width: 100%;
+  height: 189px;
+  object-fit: cover;
+}
+.ForWho_item__name__8Xz8_ {
+  color: var(--color-roles-on-surface, #f7f7fa);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin: 24px 0 16px;
+}
+.ForWho_item__description__LNOgC {
+  color: var(---white-600, rgba(255, 255, 255, 0.7));
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.32px;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Sales/Sales.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Sales_container__IMMhm {
+  padding: 140px 0 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.Sales_title__CIWsR {
+  color: var(---primary-200, #d5dcfe);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.Sales_content__NFRQN {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  width: 100%;
+  grid-template: "first second" "third third";
+  grid-template-columns: repeat(2, 1fr);
+}
+.Sales_content__NFRQN img {
+  border-radius: 10px;
+  border: 1px solid rgba(251, 243, 188, 0.5);
+  box-shadow: 0px 0px 37.2px 0px rgba(251, 216, 97, 0.5);
+}
+@media (max-width: 1240px) {
+  .Sales_content__NFRQN {
+    padding: 0 16px;
+    grid-template: "first" "second" "third";
+    grid-template-columns: 1fr;
+  }
+}
+
+.Sales_block__PwyHK {
+  padding: 40px;
+}
+.Sales_block__title__NZ9Br {
+  color: var(--color-roles-on-surface, #f7f7fa);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.Sales_block__title_yellow__xCccK {
+  color: var(---yellow-200, #fbf3bc);
+}
+.Sales_block__description__9VSnd {
+  color: var(---white-500, rgba(255, 255, 255, 0.55));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.16px;
+  text-align: left;
+  padding: 40px 0;
+}
+
+.Sales_first__cTkhl {
+  grid-area: first;
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(---white-100, rgba(255, 255, 255, 0.08));
+}
+.Sales_first__images__B0AZq {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.Sales_first__images__B0AZq img:nth-child(1) {
+  width: 209px;
+  height: 244px;
+  aspect-ratio: 209/244;
+}
+.Sales_first__images__B0AZq img:nth-child(2) {
+  width: 252px;
+  height: 244px;
+  aspect-ratio: 63/61;
+}
+
+.Sales_second__dZl5G {
+  grid-area: second;
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(---white-100, rgba(255, 255, 255, 0.08));
+}
+.Sales_second__images__zRTs_ {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.Sales_second__images__zRTs_ img {
+  width: 529px;
+  height: 200px;
+  aspect-ratio: 529/200;
+}
+
+.Sales_third__08J2B {
+  grid-area: third;
+  border-radius: 40px;
+  background: rgba(80, 77, 118, 0.4);
+}
+.Sales_third__images__OwXea {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Sales_third__images__OwXea img:nth-child(1) {
+  width: 286px;
+  height: 106px;
+  aspect-ratio: 143/53;
+}
+.Sales_third__images__OwXea img:nth-child(2) {
+  width: 404px;
+  height: 106px;
+  aspect-ratio: 202/53;
+}
+.Sales_third__images__OwXea img:nth-child(3) {
+  width: 461px;
+  height: 106px;
+  aspect-ratio: 461/106;
+}
+.Sales_third__images__OwXea img:nth-child(4) {
+  width: 469px;
+  height: 105px;
+  aspect-ratio: 67/15;
+}
+.Sales_third__images__OwXea img:nth-child(5) {
+  width: 285px;
+  height: 105.231px;
+  aspect-ratio: 285/105.23;
+}
+.Sales_third__images__OwXea img:nth-child(6) {
+  width: 392px;
+  height: 105px;
+  aspect-ratio: 56/15;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/components/Possibilities/Possibilities.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Possibilities_container__3eR7r {
+  padding: 140px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Possibilities_title__wpvQq {
+  color: #8ac3c7;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+
+.Possibilities_subtitle__vbU0d {
+  color: var(---primary-200, #d5dcfe);
+  display: block;
+}
+
+.Possibilities_description__bQun6 {
+  color: var(---white-400, rgba(255, 255, 255, 0.3));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  max-width: 820px;
+}
+
+.Possibilities_step__wrBPW {
+  color: var(---white-600, rgba(255, 255, 255, 0.7));
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  max-width: 440px;
+  padding: 40px 0;
+  border-bottom: 1px solid #1298a4;
+}

@@ -1,17 +1,18 @@
 <script>
 	import Cards from './cards/index.svelte';
+	import { _ } from '$lib/i18n';
 </script>
 
 <article id="uniqueness">
 	<header>
-		<h2>Неоспоримые преимущества нашего ИИ-тренера</h2>
+		<h2>{$_('uniqueness.heading')}</h2>
 	</header>
 
 	<Cards />
 
 	<section class="top">
 		<div>
-			<p>Сценарии в Gideone созданы для отработки отдельных навыков, товаров и услуг</p>
+			<p>{$_('uniqueness.scenarios')}</p>
 		</div>
 		<img src="img/scenario.svg" alt="оценка персонала по сценариям" />
 	</section>
@@ -19,18 +20,17 @@
 	<section class="operator">
 		<div>
 			<p>
-				мы предоставляем удобную платформу AI-рекомендаций, аналитики и с статистики в режиме
-				реального времени
+				{$_('uniqueness.platform')}
 			</p>
 		</div>
 		<div class="features">
 			<div>
 				<img src="img/feedback.svg" alt="персональные рекомендации в режиме реального времени" />
-				<span>персональные рекомендации в режиме реального времени</span>
+				<span>{$_('uniqueness.realTimeRecommendations')}</span>
 			</div>
 			<div>
 				<img src="img/stats.svg" alt="управление качеством работы персонала" />
-				<span style="max-width: 380px;">Рычаги настройки сервиса в ваших руках</span>
+				<span style="max-width: 380px;">{$_('uniqueness.serviceControl')}</span>
 			</div>
 		</div>
 	</section>
@@ -38,7 +38,7 @@
 	<section class="bot">
 		<div>
 			<p>
-				Раскройте потенциал ваших сотрудников и выведете бизнес на новый уровень вместе с Gideone
+				{$_('uniqueness.potential')}
 			</p>
 		</div>
 		<img src="img/store.svg" alt="оценка персонала для микро, малого и крупного бизнеса" />

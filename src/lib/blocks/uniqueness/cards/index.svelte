@@ -1,15 +1,19 @@
+<script>
+	import { _ } from '$lib/i18n';
+</script>
+
 <ul class="cards">
 	<li>
 		<img src="img/coin.svg" alt="как увеличить средний чек" />
-		<p>рост среднего чека уже с 1го месяца</p>
+		<p>{$_('uniqueness.cards.averageCheck')}</p>
 	</li>
 	<li class="opposite">
-		<p>рост числа довольных покупателей</p>
+		<p>{$_('uniqueness.cards.satisfiedCustomers')}</p>
 		<img src="img/stars.svg" alt="как поднять качество обслуживания" />
 	</li>
 	<li>
 		<img src="img/chart.svg" height="210px" alt="как снизить текучку кадров" />
-		<p>снижение "текучки" кадров</p>
+		<p>{$_('uniqueness.cards.staffTurnover')}</p>
 	</li>
 </ul>
 

@@ -1,13 +1,14 @@
 <script>
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section>
 	<img src="img/dashbords.png" alt="Аналитика или статистика сотрудников" />
 	<div>
-		<h2>дашборды</h2>
-		<p>Работающая аналитика с дашбордами Gideone</p>
+		<h2>{$_('features.dashboards.title')}</h2>
+		<p>{$_('features.dashboards.description')}</p>
 	</div>
-	<span>BE<br />productive</span>
+	<span>{@html $_('features.dashboards.beProductive')}</span>
 </section>
 
 <style lang="scss">

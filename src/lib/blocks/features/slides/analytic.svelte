@@ -1,14 +1,14 @@
 <script>
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section>
 	<div>
-		<h2>Дашборды Gideone делают аналитику доступной и понятной</h2>
+		<h2>{$_('features.analytics.title')}</h2>
 		<p>
-			От индивидуальной производительности сотрудников до общих трендов бизнеса – каждый элемент
-			анализируется для выявления потенциала к улучшению и росту
+			{$_('features.analytics.description')}
 		</p>
-		<h3>Ваш путь к совершенству начинается здесь</h3>
+		<h3>{$_('features.analytics.yourPath')}</h3>
 	</div>
 </section>
 
