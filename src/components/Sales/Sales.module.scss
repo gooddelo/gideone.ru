@@ -39,7 +39,9 @@
 
   &__title {
     @include typography-h4(var(--color-roles-on-surface, #f7f7fa));
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
     &_yellow {
       color: var(---yellow-200, #fbf3bc);
     }

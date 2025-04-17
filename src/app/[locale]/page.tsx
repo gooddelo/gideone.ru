@@ -1,5 +1,5 @@
-import { FC } from "react";
-import styles from "./page.module.scss";
+import { FC } from 'react';
+import styles from './page.module.scss';
 import {
   Analytics,
   Banner,
@@ -9,14 +9,14 @@ import {
   ForWho,
   Marquee,
   News,
-  Possibilities,
+  // Possibilities,
   Sales,
-  Subscriptions,
+  // Subscriptions,
   Tasks,
   Try,
   HowGideoneWorks,
-} from "@/components";
-import { Locales } from "@/i18n/i18nConfig";
+} from '@/components';
+import { Locales } from '@/i18n/i18nConfig';
 interface HomeProps {
   params: { locale: Locales };
 }

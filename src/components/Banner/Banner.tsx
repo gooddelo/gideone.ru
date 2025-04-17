@@ -7,20 +7,23 @@ import Image from 'next/image';
 const Banner: FC<I18nConfig> = async ({ locale }) => {
   const { t } = await getServerTranslation(locale, ['banner']);
   return (
-    <section className={styles.banner}>
+    <section className={styles.banner} id='banner'>
       <Image
         src='/img/gideone_logo_lg.png'
         alt='banner'
         className={styles.logo}
         width={1604.79}
         height={787.14}
+        priority
         // sizes='100vw'
       />
       <div className={styles.main}>
         <h1 className={styles.name}>{t('name')}</h1>
         <h2 className={styles.description}>{t('description')}</h2>
         <p className={styles.sub_text}>{t('sub_text')}</p>
-        <button className={styles.button}>{t('button')}</button>
+        <button className={styles.button} id='banner-button'>
+          {t('button')}
+        </button>
       </div>
     </section>
   );

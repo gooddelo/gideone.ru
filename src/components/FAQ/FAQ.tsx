@@ -51,34 +51,35 @@ const FAQ: FC<I18nConfig> = () => {
     <section className={styles.faq}>
       <h2 className={styles.faq__title}>{t('title')}</h2>
       <div className={styles.faq__questions}>
-        {questions.map(({ question, answer }, i) => (
-          <div
-            key={question + Math.random()}
-            className={cn(styles.question)}
-            onClick={() => setOpen(open === i ? null : i)}
-          >
+        {questions.length &&
+          questions.map(({ question, answer }, i) => (
             <div
-              className={cn(styles.question__head, {
-                [styles.question__head_open]: open === i,
-              })}
+              key={question + Math.random()}
+              className={cn(styles.question)}
+              onClick={() => setOpen(open === i ? null : i)}
             >
-              {question}{' '}
-              <button className={styles.question__btn}>
-                <Icon icon='chevron-down' size={24} />
-              </button>
+              <div
+                className={cn(styles.question__head, {
+                  [styles.question__head_open]: open === i,
+                })}
+              >
+                {question}{' '}
+                <button className={styles.question__btn}>
+                  <Icon icon='chevron-down' size={24} />
+                </button>
+              </div>
+              <div
+                className={cn([
+                  styles.question__answer,
+                  {
+                    [styles.question__answer_open]: open === i,
+                  },
+                ])}
+              >
+                <p>{answer}</p>
+              </div>
             </div>
-            <div
-              className={cn([
-                styles.question__answer,
-                {
-                  [styles.question__answer_open]: open === i,
-                },
-              ])}
-            >
-              <p>{answer}</p>
-            </div>
-          </div>
-        ))}
+          ))}
       </div>
 
       <div className={styles.faq__ask}>
