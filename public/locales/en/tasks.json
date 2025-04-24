@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "task": "Increase in company revenue",
+      "img": "/img/profit.png",
+      "alt": "Increase in company revenue"
+    },
+    {
+      "task": "Employee motivation management and training",
+      "img": "/img/motivation.png",
+      "alt": "Employee motivation management and training"
+    },
+    {
+      "task": "Service standard control",
+      "img": "/img/standards.png",
+      "alt": "Service standard control"
+    },
+    {
+      "task": "Accelerated employee adaptation",
+      "img": "/img/adaptation.png",
+      "alt": "Accelerated employee adaptation"
+    }
+  ]
+}

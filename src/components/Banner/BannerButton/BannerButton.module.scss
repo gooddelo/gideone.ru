@@ -1,0 +1,105 @@
+@use '@/styles/mixins.scss' as *;
+@use '@/styles/typography.scss' as *;
+
+.button {
+  margin-top: 70px;
+  margin-left: 80px;
+  display: inline-flex;
+  padding: 24px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #9363f9 9.3%, #2c3493 138.03%);
+  box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33),
+    2px 2px 34.1px 0px rgba(54, 213, 255, 0.44) inset;
+  border: none;
+
+  @include typography-body-l-narrow(var(--color-roles-on-surface, #f7f7fa));
+
+  // @media (max-width: 768px) {
+  //   margin-top: 24px;
+  //   margin-left: 0;
+  //   width: 100%;
+  //   font-size: 16px;
+  //   padding: 10px 16px;
+  // }
+}
+
+.modal {
+  &__title {
+    @include typography-h3(var(--color-roles-on-surface, #f7f7fa), center);
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  &__textarea {
+    display: flex;
+    height: 136px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+    padding: 16px 12px 8px 16px;
+
+    border-radius: 16px;
+    border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+    background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+
+    /* shadow-light-mode-input */
+    box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+    resize: none;
+    @include typography-body-l-medium-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+
+    &::placeholder {
+      @include typography-body-l-medium-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+    }
+  }
+
+  &__input {
+    height: 56px;
+    padding: 6px 8px 6px 24px;
+    width: 100%;
+
+    border-radius: 16px;
+    border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+    background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+
+    /* shadow-light-mode-input */
+    box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+    @include typography-body-l-medium-narrow(var(--color-roles-on-surface-variant, #dadae1));
+
+    &::placeholder {
+      @include typography-body-l-medium-narrow(var(--color-roles-on-surface-variant, #dadae1));
+    }
+  }
+
+  &__btn {
+    display: flex;
+    height: 56px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: var(--color-roles-primary, #acbafd);
+    @include typography-body-l-narrow(var(--btn-on-primary, #020268));
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  &__agreement {
+    margin-top: 0 !important;
+  }
+}

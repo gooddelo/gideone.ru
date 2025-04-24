@@ -1,0 +1,42 @@
+{
+	"agreement": "By clicking the \"{{agreementVia}}\" button, I agree to the",
+	"agreement_2": "and give consent to the processing of personal data.",
+	"policy": " privacy policy ",
+	"agreementVia": {
+		"send": "Send",
+		"get_consultation": "Get a consultation"
+	},
+	"nav_blocks": {
+		"banner": "banner",
+		"tasks": "tasks",
+		"marquee": "marquee",
+		"sales": "sales",
+		"analytics": "analytics",
+		"for-who": "for-who",
+		"try": "try",
+		"decisions": "decisions",
+		"how-it-works": "how-it-works",
+		"start-using": "start-using",
+		"possibilities": "possibilities",
+		"subscriptions": "subscriptions",
+		"faq": "faq",
+		"consultations": "consultations",
+		"news": "news"
+	},
+	"nav_links": {
+		"about": "#sales",
+		"subscriptions": "#subscriptions",
+		"faq": "#faq",
+		"news": "#news",
+		"top": "#banner"
+	},
+	"nav": {
+		"about": "About the product",
+		"subscriptions": "Pricing",
+		"faq": "FAQ",
+		"news": "News"
+	},
+	"telegram_link": "https://t.me/kolibri_ai",
+	"vk_link": "https://vk.com/kolibri_ai",
+	"phone": "+7 927 16-27-22"
+}

@@ -1,0 +1,13 @@
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin: 140px 0;
+  width: 100vw !important;
+  // left: 50%;
+  transform: translateX(-100%);
+
+  // @media (max-width: 768px) {
+  //   display: none !important;
+  // }
+}

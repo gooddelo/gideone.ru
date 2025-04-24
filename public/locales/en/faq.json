@@ -1,0 +1,42 @@
+{
+	"title": "Still Have Questions?",
+	"questions": [
+		{
+			"question": "Is complex installation required?",
+			"answer": "answer 1"
+		},
+		{
+			"question": "What if employees are against cameras?",
+			"answer": "answer 2"
+		},
+		{
+			"question": "How quickly will I see results?",
+			"answer": "answer 3"
+		},
+		{
+			"question": "How does Gideone work with existing training programs?",
+			"answer": "answer 4"
+		},
+		{
+			"question": "What about privacy?",
+			"answer": "answer 5"
+		},
+		{
+			"question": "How can I be sure it actually works?",
+			"answer": "answer 6"
+		},
+		{
+			"question": "Can scripts and rules be changed during the process?",
+			"answer": "answer 7"
+		}
+	],
+	"send": "Send",
+	"ask": "Ask us a question and we’ll get back to you",
+	"modal": {
+		"title": "Ask Us a Question",
+		"question": "I’d like to know...",
+		"name": "Name",
+		"email": "Email for response",
+		"send": "Send"
+	}
+}

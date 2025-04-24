@@ -1,0 +1,79 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  overflow: hidden;
+
+  @include container($max-width: 1920px);
+}
+
+.title {
+  @include typography-h2(var(---primary-200, #d5dcfe), center);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+
+  &:nth-child(1) {
+    gap: 74px;
+    margin-left: 36%;
+    padding: 14px 0;
+  }
+
+  &:nth-child(2) {
+    gap: 52px;
+    margin-left: 18%;
+    padding: 29px 0;
+  }
+
+  &:nth-child(3) {
+    gap: 59px;
+    margin-left: 31%;
+    padding: 57px 0;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      bottom: -40px;
+      right: 0;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.48) 0%, #0e0d14 100%);
+    }
+  }
+
+  &__order {
+    @include typography-h1(var(--color-roles-primary, #acbafd));
+    text-shadow: 0px 4px 66.5px #4e40ff;
+  }
+
+  &__img {
+    object-fit: contain;
+    object-position: right;
+    width: fit-content;
+  }
+
+  &__text {
+    @include typography-body-l-medium-narrow(var(--color-roles-on-surface-variant, #dadae1));
+    max-width: 400px;
+    white-space: wrap;
+  }
+}

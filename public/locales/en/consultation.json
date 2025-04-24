@@ -1,0 +1,13 @@
+{
+	"title": "Let's have a",
+	"subtitle": "personal consultation",
+	"form": {
+		"name": "Name",
+		"phone": "Phone",
+		"placeholder": "I want to learn more!"
+	},
+	"button": "Get a consultation",
+	"agreement": "By clicking the \"{{button}}\" button, I agree to the",
+	"agreement_2": "and give consent to the processing of personal data.",
+	"policy": " privacy policy "
+}

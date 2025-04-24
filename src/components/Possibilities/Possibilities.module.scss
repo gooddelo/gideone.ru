@@ -1,0 +1,108 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.possibilities {
+  display: flex;
+  flex-direction: column;
+  @include container();
+}
+
+.title {
+  @include typography-h2(#8ac3c7);
+  margin-bottom: 40px;
+
+  .subtitle {
+    display: block;
+    color: var(---primary-200, #d5dcfe);
+  }
+}
+
+.description {
+  @include typography-body-l-medium-narrow(var(---white-400, rgba(255, 255, 255, 0.3)));
+  max-width: 820px;
+}
+
+.main {
+  display: flex;
+  position: relative;
+  padding: 100px 0;
+
+  &__list {
+    width: 100%;
+    position: relative;
+  }
+
+  &__step {
+    list-style: none;
+    @include typography-body-l-medium-narrow(var(---white-600, rgba(255, 255, 255, 0.7)));
+    display: flex;
+    align-items: flex-start;
+    padding: 40px 0;
+    gap: 24px;
+    position: relative;
+
+    transition: all 0.3s ease;
+
+    &__active {
+      background: linear-gradient(
+        90deg,
+        rgba(17, 142, 155, 0.18) 3.23%,
+        rgba(18, 146, 158, 0) 100.18%
+      );
+    }
+
+    &:nth-child(1),
+    &:nth-child(6) {
+      padding-left: 355px;
+    }
+    &:nth-child(2),
+    &:nth-child(5) {
+      padding-left: 445px;
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      padding-left: 497px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(18, 152, 164, 1) 3.23%,
+        rgba(18, 146, 158, 0) 100.18%
+      );
+    }
+
+    &__text {
+      max-width: 440px;
+    }
+  }
+}
+
+.main__img__container {
+  position: absolute;
+  top: 50%;
+  left: 452px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+
+  transform: translate(-100%, -50%);
+  z-index: +1;
+  background: #0c091b;
+  border-radius: 50%;
+  padding: 37px;
+
+  .main__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
+  }
+}

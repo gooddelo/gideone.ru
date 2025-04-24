@@ -1,0 +1,118 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 70px 0 140px;
+
+  @include media-max-tablet {
+    display: none;
+  }
+}
+
+.title {
+  @include typography-h3(var(---primary-200, #d5dcfe), center);
+}
+
+.content {
+  display: grid;
+  grid-template:
+    'first second'
+    'first fourth'
+    'third fourth';
+  gap: 20px;
+  grid-template-columns: repeat(2, 610px);
+  grid-template-rows: repeat(3, 312px);
+  margin: 0 auto;
+}
+
+.item {
+  border-radius: 40px;
+  // border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  // background: var(---white-100, rgba(255, 255, 255, 0.08));
+  background: #1f1c2d;
+  padding: 40px;
+  position: relative;
+
+  &__title {
+    @include typography-h4(var(--color-roles-on-surface, #f7f7fa));
+
+    span {
+      @include typography-h4(var(---yellow-200, #fbf3bc));
+    }
+
+    &_sub_block {
+      display: block;
+    }
+  }
+
+  &__description {
+    @include typography-body-m-narrow(var(---white-500, rgba(255, 255, 255, 0.55)));
+    margin-top: 40px;
+  }
+
+  &__img {
+    border-radius: 10px;
+    border: 1px solid rgba(251, 243, 188, 0.5);
+    // background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    box-shadow: 0px 0px 37.2px 0px rgba(251, 216, 97, 0.5);
+
+    &_1 {
+      width: 400px;
+      height: 232px;
+      aspect-ratio: 50/29;
+      position: absolute;
+      bottom: 148px;
+      left: 40px;
+    }
+    &_2 {
+      width: 416.41px;
+      height: 232px;
+      aspect-ratio: 416.41/232;
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+    }
+    &_3 {
+      width: 530px;
+      height: 60px;
+      aspect-ratio: 53/6;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &_4 {
+      width: 113px;
+      height: 232px;
+      aspect-ratio: 113/232;
+    }
+    &_5 {
+      width: 530px;
+      height: 288px;
+      aspect-ratio: 265/144;
+      margin-top: auto;
+    }
+  }
+}
+
+.first {
+  grid-area: first;
+}
+.second {
+  grid-area: second;
+}
+.third {
+  grid-area: third;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 38px;
+}
+.fourth {
+  grid-area: fourth;
+  display: flex;
+  flex-direction: column;
+}

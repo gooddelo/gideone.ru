@@ -1,0 +1,42 @@
+{
+  "name": "landing_2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
+    "accept-language-parser": "^1.5.0",
+    "classnames": "^2.5.1",
+    "crypto-js": "^4.2.0",
+    "i18next": "^25.0.1",
+    "i18next-http-backend": "^3.0.2",
+    "i18next-resources-to-backend": "^1.2.1",
+    "icomoon-react": "^3.0.0",
+    "next": "14.2.3",
+    "next-i18n-router": "^5.5.1",
+    "next-i18next": "^15.4.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.5",
+    "react-hook-form": "^7.56.1",
+    "react-i18next": "^15.5.1",
+    "sass": "^1.87.0",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/accept-language-parser": "^1.5.7",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
+  }
+}

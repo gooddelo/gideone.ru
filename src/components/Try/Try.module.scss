@@ -1,0 +1,78 @@
+@use '@/styles/typography' as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1720px;
+  padding: 140px 20px;
+  gap: 80px;
+}
+
+.title {
+  color: var(--color-roles-on-surface, #f7f7fa);
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+
+  &__inner {
+    color: var(--color-roles-primary, #acbafd);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+  }
+}
+
+.action {
+  display: flex;
+  padding: 24px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+
+  border-radius: 40px;
+  background: linear-gradient(180deg, #9363f9 9.3%, #2c3493 138.03%);
+  box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33),
+    2px 2px 34.1px 0px rgba(54, 213, 255, 0.44) inset;
+
+  @include typography-body-l-narrow(var(--color-roles-on-surface, #f7f7fa), center);
+}
+
+.content {
+  display: flex;
+  width: 643px;
+  max-width: 37%;
+  height: 710px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-shrink: 0;
+}
+
+.reasons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reason {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @include typography-body-l-medium-narrow(var(--color-roles-on-surface-variant, #dadae1));
+}
+
+.img {
+  width: 919px;
+  max-width: 57%;
+  height: 710px;
+  flex-shrink: 0;
+  aspect-ratio: 919/710;
+}

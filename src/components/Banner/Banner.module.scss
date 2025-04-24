@@ -1,0 +1,114 @@
+@use '@/styles/mixins.scss' as *;
+@use '@/styles/typography.scss' as *;
+
+.banner {
+  width: 100%;
+  @include container;
+  height: 100vh;
+  height: 100svh;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+  }
+}
+
+.logo {
+  object-fit: contain;
+  width: 1600px;
+  transform: translate(-25%, -10%);
+  // transform: translate(-23%, 29%);
+  // @media (max-width: 1240px) {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-40%, -90%);
+  // }
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.name {
+  color: #ececec;
+  text-shadow: 41px 10px 59.5px #211e35;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 200px */
+  letter-spacing: -10px;
+  margin-right: 62px;
+
+  // @media (max-width: 1024px) {
+  //   font-size: 20vw;
+  //   letter-spacing: 0px;
+  //   margin-right: 0;
+  // }
+}
+
+.description {
+  color: #cdcde3;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 48px */
+  letter-spacing: -0.96px;
+  width: 709px;
+  margin: 20px 0 0 auto;
+
+  // @media (max-width: 1024px) {
+  //   font-size: 6.5vw;
+  //   letter-spacing: 0px;
+  //   width: 100%;
+  // }
+}
+
+.sub_text {
+  width: 581px;
+  color: #dadae1;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+  margin: 52px 128px 0 auto;
+  opacity: 0.9;
+
+  // @media (max-width: 1024px) {
+  //   display: none;
+  // }
+}
+
+.button {
+  margin-top: 70px;
+  margin-left: 80px;
+  display: inline-flex;
+  padding: 24px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #9363f9 9.3%, #2c3493 138.03%);
+  box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33),
+    2px 2px 34.1px 0px rgba(54, 213, 255, 0.44) inset;
+  border: none;
+
+  @include typography-body-l-narrow(var(--color-roles-on-surface, #f7f7fa));
+
+  // @media (max-width: 768px) {
+  //   margin-top: 24px;
+  //   margin-left: 0;
+  //   width: 100%;
+  //   font-size: 16px;
+  //   padding: 10px 16px;
+  // }
+}
