@@ -1,13 +1,19 @@
 @use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
 
 .footer {
-  padding: 140px 0 80px;
+  @include container;
+  @include media-max-tablet {
+    padding: 80px 20px 20px;
+  }
 }
 
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
 .nav {
@@ -27,12 +33,24 @@
     align-items: center;
     gap: 8px;
   }
+
+  @include media-max-tablet {
+    column-gap: 58px;
+    width: fit-content;
+    flex-wrap: wrap;
+
+    &__link {
+      padding: 8px 16px;
+    }
+  }
 }
 
 .actions {
   display: flex;
   padding-top: 32px;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 24px;
 
   &__social {
     display: flex;
@@ -49,6 +67,10 @@
 
     &:nth-child(odd) {
       margin-right: 12px;
+    }
+
+    &_vk {
+      transform: translateY(22%);
     }
   }
 
@@ -67,8 +89,13 @@
     gap: 8px;
     border-radius: 16px;
     background: var(--color-roles-primary, #acbafd);
-    @include typography-body-l-narrow(var(--btn-on-primary, #020268));
+    @include typography-body-l-narrow(var(--btn-on-primary, #020268, center));
     border: none;
+
+    @include media-max-tablet {
+      border-radius: 100px;
+      margin-left: 0;
+    }
   }
 }
 
@@ -99,7 +126,7 @@
     /* shadow-light-mode-input */
     box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
 
-    p {
+    input {
       @include typography-body-l-medium-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
     }
 
@@ -118,12 +145,20 @@
 
       @include typography-btn-input-l-bold(var(--btn-primary, #acbafd));
     }
+
+    @include media-max-tablet {
+      display: none;
+    }
+  }
+
+  @include media-max-tablet {
+    padding: 40px 0;
   }
 }
 
 .links {
   display: flex;
-  width: 1240px;
+  // width: 1240px;
   padding-top: 32px;
   justify-content: space-between;
   align-items: flex-start;
@@ -132,6 +167,12 @@
   flex-wrap: wrap;
   border-top: 1px solid var(---secondary-600, #5d5d71);
   margin-top: 32px;
+
+  @include container($padding: 0 20px);
+
+  @include media-max-tablet {
+    padding: 40px 20px 20px;
+  }
 
   &__group {
     display: flex;

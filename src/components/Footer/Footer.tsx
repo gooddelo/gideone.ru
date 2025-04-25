@@ -32,9 +32,9 @@ export const Footer: FC<I18nConfig> = async ({ locale }) => {
         <Link
           href={t('vk_link', { ns: 'common' })}
           target='_blank'
-          className={styles.actions__social}
+          className={cn(styles.actions__social)}
         >
-          <Icon icon='vk' size={32} />
+          <Icon icon='vk' size={32} className={styles.actions__social_vk} />
         </Link>
         <Link
           href={t('telegram_link', { ns: 'common' })}
@@ -43,14 +43,14 @@ export const Footer: FC<I18nConfig> = async ({ locale }) => {
         >
           <Icon icon='telegram' size={32} />
         </Link>
-        <a href={`tel:${t('phone', { ns: 'common' })}`} className={styles.actions__phone}>
+        <Link href={`tel:${t('phone', { ns: 'common' })}`} className={styles.actions__phone}>
           {t('phone', { ns: 'common' })}
-        </a>
+        </Link>
         <button className={styles.actions__application}>{t('application')}</button>
       </div>
       <div className={styles.bottom}>
         <div className={styles.questions}>
-          <p>{t('questions')}</p>
+          <input placeholder={t('questions')}></input>
           <button>{t('send')}</button>
         </div>
         <Link href={'https://www.sk.ru/'} target='_blank'>

@@ -1,4 +1,5 @@
 @use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
 
 .container {
   padding: 140px 0 70px;
@@ -11,6 +12,10 @@
 
 .title {
   @include typography-h3(var(---primary-200, #d5dcfe), center);
+
+  @include media-max-tablet {
+    @include typography-h3(var(---primary-200, #d5dcfe), center);
+  }
 }
 
 .content {

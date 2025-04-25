@@ -3,6 +3,8 @@ import styles from './Header.module.scss';
 import Link from 'next/link';
 import { getServerTranslation, I18nConfig } from '@/i18n';
 import { Icon } from '@/components/UI';
+import { HeaderLangBtn } from '../HeaderLangBtn';
+import { Burger } from '../Burger';
 
 export const Header: FC<I18nConfig> = async ({ locale }) => {
   const { t } = await getServerTranslation(locale, ['header', 'common']);
@@ -33,7 +35,7 @@ export const Header: FC<I18nConfig> = async ({ locale }) => {
             <Icon icon='telegram' />
           </Link>
         </div>
-        <button className={styles.lang}>{t('lang.ru')}</button>
+        <HeaderLangBtn locale={locale} />
       </div>
     </header>
   );

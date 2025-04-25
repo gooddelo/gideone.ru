@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { Icon } from '@/components/UI';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { HeaderLangBtn } from '../HeaderLangBtn';
+import '../../i18n/client';
 
 const HeaderLarge: FC<I18nConfig> = ({ locale }) => {
   const { t } = useTranslation('header', { lng: locale });
@@ -51,10 +53,6 @@ const HeaderLarge: FC<I18nConfig> = ({ locale }) => {
         </Link>
       </nav>
 
-      {/* <button className={styles.burger}>
-        <Icon className={styles.burger__icon} icon='burger-menu' size={24} />
-      </button> */}
-
       <div className={styles.right}>
         <div className={styles.contact}>
           <Link className={styles.contact__link} href={`tel:${t('phone', { ns: 'common' })}`}>
@@ -64,7 +62,8 @@ const HeaderLarge: FC<I18nConfig> = ({ locale }) => {
             <Icon icon='telegram' />
           </Link>
         </div>
-        <button className={styles.lang}>{t('lang.ru')}</button>
+        {/* <button className={styles.lang}>{t('lang.ru')}</button> */}
+        <HeaderLangBtn locale={locale} />
       </div>
     </div>
   );

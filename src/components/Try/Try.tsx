@@ -26,7 +26,7 @@ const Try: FC<I18nConfig> = async ({ locale }) => {
         </ul>
         <button className={styles.action}>{t('action')}</button>
       </div>
-      <Image className={styles.img} src={t('img')} width={919} height={710} alt='try' />
+      <Image src={t('img')} className={styles.img} width={919} height={710} alt='try' />
     </section>
   );
 };

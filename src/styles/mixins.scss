@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: $padding;
   width: 100%;
+
+  @media screen and (max-width: 1280px) {
+    padding: 80px 20px;
+  }
 }
 
 @mixin media-max-tablet {
@@ -18,6 +22,12 @@
 }
 
 @mixin media-mobile {
+  @media screen and (max-width: 720px) {
+    @content;
+  }
+}
+
+@mixin media-max-mobile {
   @media screen and (max-width: 720px) {
     @content;
   }

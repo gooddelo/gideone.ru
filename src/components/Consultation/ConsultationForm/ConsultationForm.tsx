@@ -9,7 +9,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
 import { InputCheck } from '@/components/UI';
-
+import '../../../i18n/client';
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -36,10 +36,10 @@ const ConsultationForm: FC<I18nConfig> = ({ locale }) => {
   return (
     <form action='' className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <div className={cn(styles.form__head, styles.form__block_head)}>
-        <h3 className={styles.subtitle}>{t('title')}</h3>
-        <h3 className={styles.title}>{t('subtitle')}</h3>
+        <h3 className={styles.title}>{t('title')}</h3>
+        <h3 className={styles.subtitle}>{t('subtitle')}</h3>
       </div>
-      <div className={cn(styles.form__fields, styles.form__block)}>
+      <div className={cn(styles.form__block, styles.form__fields)}>
         <input
           className={cn(styles.form__input, [errors.name && styles.input_error])}
           {...register('name')}

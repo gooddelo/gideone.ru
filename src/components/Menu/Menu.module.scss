@@ -1,0 +1,117 @@
+@use '@/styles/typography.scss' as *;
+@use '@/styles/mixins.scss' as *;
+
+.container {
+  width: 100vw;
+  width: 100svw;
+  height: 100vh;
+  height: 100svh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: rgba(2, 2, 4, 0.4);
+  z-index: 1000;
+  // transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+
+  &_open {
+    // transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.menu {
+  width: 316px;
+  max-width: 90vw;
+  height: 100vh;
+  height: 100svh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 0 56px 32px;
+
+  border-right: 1px solid rgba(109, 112, 206, 0.28);
+  background: rgba(63, 55, 115, 0.5);
+  backdrop-filter: blur(28.049999237060547px);
+  transform: translateX(-100%);
+
+  transition: all 0.3s ease-in-out;
+  &_open {
+    transform: translateX(0);
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+
+  &__link {
+    padding: 8px 32px;
+
+    @include typography-body-l-medium-narrow(var(---primary-200, #d5dcfe));
+  }
+}
+
+.contacts {
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__social {
+    display: flex;
+    height: 44px;
+    width: 44px;
+    padding: 10px;
+    gap: 8px;
+    border-radius: 50%;
+    border: 1px solid var(---primary-100, #eaedff);
+
+    path {
+      fill: var(---primary-100, #eaedff);
+    }
+  }
+
+  &__phone {
+    border-radius: 40px;
+    border: 1px solid var(---white-400, rgba(255, 255, 255, 0.3));
+    padding: 11px 16px;
+    width: fit-content;
+
+    @include typography-body-m-narrow(#e0e4fa);
+  }
+}
+
+.close__btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // height: 44px;
+  // width: 44px;
+  // padding: 10px;
+  gap: 8px;
+  border-radius: 50%;
+  background: none;
+
+  path {
+    fill: var(---primary-100, #eaedff);
+  }
+}

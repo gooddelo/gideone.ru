@@ -11,9 +11,8 @@ import PolicyAgreement from '../PolicyAgreement';
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-// import Image from 'next/image';
 import cn from 'classnames';
-
+import '../../i18n/client'; // Import the i18n client to ensure translations are available
 export const schema = yup.object().shape({
   name: yup.string().required().min(2),
   email: yup.string().required().min(2),
@@ -88,6 +87,7 @@ const FAQ: FC<I18nConfig> = ({ locale }) => {
           placeholder={t('ask')}
           onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.faq_question)}
         />
+        {/* TODO в душе не ебу как и что нужно сделать с кнопкой, но нужно менять текст в зависимости от ширины экрана */}
         <button onClick={openModal}>{t('send')}</button>
       </div>
 

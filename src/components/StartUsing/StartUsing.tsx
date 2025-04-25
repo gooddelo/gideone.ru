@@ -2,7 +2,6 @@ import { I18nConfig, getServerTranslation } from '@/i18n';
 import Image from 'next/image';
 import { FC } from 'react';
 import styles from './StartUsing.module.scss';
-// import cn from 'classnames'
 
 interface IStep {
   step: string;

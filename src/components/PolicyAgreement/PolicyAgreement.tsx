@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { i18nNamespacesType } from '@/i18n/i18nConfig';
 import cn from 'classnames';
-
+import '../../i18n/client';
 interface IProps {
   checked?: boolean;
   check?: () => void;

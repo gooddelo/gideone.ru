@@ -60,4 +60,5 @@ export type IconNames =
   | "people"
   | "arrow-up-right"
   | "delete"
+  | "burger"
 

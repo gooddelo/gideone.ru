@@ -1,4 +1,5 @@
 @use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
 
 .faq {
   max-width: 1240px;
@@ -6,6 +7,8 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
+
+  @include container();
 
   &__title {
     @include typography-h3(var(---primary-100, #eaedff), center);
@@ -37,12 +40,24 @@
     /* shadow-light-mode-input */
     box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
 
+    @include media-max-tablet {
+      border: none;
+      background: none;
+      box-shadow: none;
+      gap: 0;
+      padding: 0 50px;
+    }
+
     input {
       @include typography-body-l-medium-narrow(var(--btn-primary, #acbafd));
       background: none;
       border: none;
       flex: 1;
       outline: none;
+
+      @include media-max-tablet {
+        display: none;
+      }
     }
 
     button {
@@ -57,6 +72,20 @@
       border: 1px solid var(--btn-primary, #acbafd);
       background: none;
       @include typography-btn-input-l-bold(var(--btn-primary, #acbafd), center);
+
+      @include media-max-tablet {
+        margin: 0 auto;
+        display: flex;
+        width: 100%;
+        max-width: 420px;
+        height: 56px;
+        padding: 0px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 40px;
+        background: var(--color-roles-primary, #acbafd);
+      }
     }
   }
 }
@@ -184,9 +213,9 @@
 .eclipse {
   position: absolute;
   width: 1005px;
-  max-width: 52vw;
+  // max-width: 52vw;
   height: 1005px;
-  max-height: 52vw;
+  // max-height: 52vw;
   border-radius: 50%;
   background: radial-gradient(
     50% 50% at 50% 50%,
@@ -194,22 +223,42 @@
     rgba(74, 44, 255, 0) 100%
   );
   z-index: -1;
+  transition: all 0.3s ease;
+
+  @include media-max-tablet {
+    width: 854px;
+    max-width: none;
+    height: 854px;
+    max-height: none;
+  }
 }
 
 .eclipse_1 {
   top: 10%;
   left: 0%;
   transform: translate(-10%, -40%);
+
+  @include media-max-tablet {
+    transform: translate(-5%, -48%);
+  }
 }
 
 .eclipse_2 {
   top: 50%;
   right: 0%;
   transform: translate(-10%, -50%);
+
+  @include media-max-tablet {
+    transform: translate(-67%, -40%);
+  }
 }
 
 .eclipse_3 {
   top: 75%;
   left: 0%;
   transform: translate(-10%, -50%);
+
+  @include media-max-tablet {
+    transform: translate(25%, -26%);
+  }
 }

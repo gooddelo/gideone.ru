@@ -6,6 +6,7 @@ import { Locales } from '@/i18n/i18nConfig';
 import HeaderLarge from '@/components/HeaderLarge';
 import { CookieAgreement } from '@/components';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister/ServiceWorkerRegister';
+import { TabletHeader } from '@/components/TabletHeader';
 
 export const metadata: Metadata = {
   title: 'Gideone',
@@ -27,6 +28,7 @@ export default async function RootLayout({
       <body data-theme='dark' id='root'>
         <Header locale={locale} />
         <HeaderLarge locale={locale} />
+        <TabletHeader locale={locale} />
         {children}
         <ServiceWorkerRegister />
         <CookieAgreement />

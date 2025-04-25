@@ -1,12 +1,23 @@
 @use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
 
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0 auto;
   max-width: 1720px;
   padding: 140px 20px;
   gap: 80px;
+
+  @include media-max-tablet {
+    gap: 40px;
+  }
+
+  @media screen and (max-width: 940px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .title {
@@ -52,7 +63,16 @@
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
-  flex-shrink: 0;
+
+  @include media-max-tablet {
+    width: 510px;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 940px) {
+    max-width: 100%;
+    height: fit-content;
+  }
 }
 
 .reasons {
@@ -72,7 +92,21 @@
 .img {
   width: 919px;
   max-width: 57%;
-  height: 710px;
-  flex-shrink: 0;
-  aspect-ratio: 919/710;
+  height: auto;
+  border-radius: 40px;
+  max-height: 710px;
+
+  // aspect-ratio: 919/710;
+
+  @include media-max-tablet {
+    width: calc(100% - 510px);
+    max-width: none;
+    height: 710px;
+    object-fit: none;
+  }
+
+  @media screen and (max-width: 940px) {
+    width: 100%;
+    height: 410px;
+  }
 }

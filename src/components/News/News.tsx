@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import { I18nConfig } from '@/i18n';
-
+import '../../i18n/client';
 interface NewsItem {
   date: string;
   text: string | { item: string }[];

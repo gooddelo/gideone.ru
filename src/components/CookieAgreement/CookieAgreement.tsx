@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FC, useLayoutEffect, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import styles from './CookieAgreement.module.scss';
+import '../../i18n/client'; // Import the i18n client to ensure translations are available
 
 const CookieAgreement: FC = () => {
   const { t } = useTranslation('cookieAgreement');

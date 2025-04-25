@@ -18,6 +18,13 @@ i18next
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
+    preload: i18nConfig.locales,
   });
+
+i18nConfig.locales.forEach((lng) => {
+  i18nNamespaces.forEach((ns) => {
+    i18next.loadNamespaces(ns);
+  });
+});
 
 export default i18next;

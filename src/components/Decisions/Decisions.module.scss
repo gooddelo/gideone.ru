@@ -10,10 +10,18 @@
   z-index: 2;
 
   @include container($padding: 140px 20px 334px);
+
+  @include media-max-tablet {
+    padding: 80px 20px;
+  }
 }
 
 .title {
   @include typography-h2(var(---primary-200, #d5dcfe), center);
+
+  @include media-max-tablet {
+    @include typography-h3(var(---primary-200, #d5dcfe), center);
+  }
 }
 
 .decisions {
@@ -22,6 +30,22 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 32px;
+
+  @include media-max-tablet {
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+    width: fit-content;
+  }
+
+  @media screen and (max-width: 1190px) {
+    grid-template-columns: repeat(2, 360px);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 776px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .decision {
@@ -33,16 +57,19 @@
   border: 1px solid rgba(107, 100, 146, 0.39);
   background: rgba(22, 22, 30, 0.26);
   backdrop-filter: blur(31.899999618530273px);
+  position: relative;
 
   &:nth-child(even) {
     transform: translateY(calc(50% + 16px));
   }
 
-  // @media (max-width: 1024px) {
-  //   &:nth-child(even) {
-  //     transform: translateY(0);
-  //   }
-  // }
+  @include media-max-tablet {
+    overflow-x: hidden;
+    max-width: 360px;
+    &:nth-child(even) {
+      transform: none;
+    }
+  }
 
   &__name {
     @include typography-body-l-narrow(var(---primary-300, #acbafd));
@@ -63,6 +90,19 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+
+    @include media-max-tablet {
+      width: 560px;
+      height: 210px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateX(0);
+    }
+
+    @media screen and (max-width: 1190px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -75,4 +115,16 @@
   top: 10%;
   transform: translate(-50%, 0);
   z-index: -1;
+
+  // TODO correct this img
+
+  @include media-max-tablet {
+    height: 90vw;
+    width: 90vw;
+    left: 0;
+    top: 0;
+    transform: rotate(90deg) translate(20%, -10%);
+    max-width: 950px;
+    max-height: 950px;
+  }
 }

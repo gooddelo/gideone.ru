@@ -83,6 +83,10 @@
 
   &__title {
     @include typography-h2(var(---primary-100, #eaedff), center);
+
+    @include media-max-tablet {
+      @include typography-h3(var(---primary-100, #eaedff), center);
+    }
   }
 
   &__blocks {

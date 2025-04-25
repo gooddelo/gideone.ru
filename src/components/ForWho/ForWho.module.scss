@@ -23,6 +23,10 @@
 
 .title {
   @include typography-h3(var(---primary-200, #d5dcfe), center);
+
+  @include media-max-tablet {
+    @include typography-h3(var(---primary-200, #d5dcfe), center);
+  }
 }
 
 .item {

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+'use client';
 import { LOCAL_STORAGE_KEYS, SESSION_STORAGE_KEYS } from '@/types';
 import * as CryptoJS from 'crypto-js';
 
