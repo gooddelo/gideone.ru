@@ -1,13 +1,5 @@
 {
     "name": "Gideone",
     "description": "AI-powered business coach",
-    "sub_text": "Your personal AI coach for quality control and sales growth, which pays off in the first month.",
-    "button": "Try it free for 14 days",
-    "modal": {
-        "title": "We'll get in touch with you!",
-        "name": "Name",
-        "phone": "Phone",
-        "email": "Email",
-        "send": "Send"
-    }
+    "button": "Try for free for 14 days"
 }

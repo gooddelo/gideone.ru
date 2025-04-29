@@ -3,9 +3,10 @@ import styles from './Banner.module.scss';
 import { FC } from 'react';
 import { I18nConfig } from '@/i18n';
 import Image from 'next/image';
-import { BannerButton } from './BannerButton';
+import { ModalContact } from '@/components/Widgets';
 
 const Banner: FC<I18nConfig> = async ({ locale }) => {
+  // TODO: fix margins for adaptive
   const { t } = await getServerTranslation(locale, ['banner', 'common']);
   return (
     <section className={styles.banner} id={t('nav_blocks.banner', { ns: 'common' })}>
@@ -20,11 +21,12 @@ const Banner: FC<I18nConfig> = async ({ locale }) => {
       <div className={styles.main}>
         <h1 className={styles.name}>{t('name')}</h1>
         <h2 className={styles.description}>{t('description')}</h2>
-        <p className={styles.sub_text}>{t('sub_text')}</p>
-        {/* <button className={styles.button} id='banner-button'>
-          {t('button')}
-        </button> */}
-        <BannerButton locale={locale} />
+        <ModalContact
+          locale={locale}
+          className={styles.button}
+          text={t('button')}
+          id='banner-button'
+        />
       </div>
     </section>
   );

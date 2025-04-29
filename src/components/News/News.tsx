@@ -6,8 +6,9 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import { I18nConfig } from '@/i18n';
-import '../../i18n/client';
-interface NewsItem {
+import '@/i18n/client';
+import { DragBlock } from '@/components/UI';
+export interface NewsItem {
   date: string;
   text: string | { item: string }[];
   img: string;
@@ -52,8 +53,9 @@ const News: FC<I18nConfig> = ({ locale }) => {
     if (!container) return;
 
     const handleScroll = () => {
+      const width = container.clientWidth;
       const currentScrollLeft = container.scrollLeft;
-      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      const maxScrollLeft = container.scrollWidth - width;
 
       // Scroll direction
       if (currentScrollLeft > prevScrollLeft.current) {
@@ -63,9 +65,9 @@ const News: FC<I18nConfig> = ({ locale }) => {
       }
 
       // Snap to edge (optional)
-      if (currentScrollLeft <= 0) {
+      if (currentScrollLeft <= 0 && width > 1280) {
         setScrollClass('left');
-      } else if (currentScrollLeft >= maxScrollLeft - 1) {
+      } else if (currentScrollLeft >= maxScrollLeft - 1 && width > 1280) {
         setScrollClass('right');
       }
 
@@ -118,6 +120,35 @@ const News: FC<I18nConfig> = ({ locale }) => {
             </div>
           ))}
       </div>
+
+      <DragBlock className={cn(styles.drag_block)}>
+        {Array.isArray(news) &&
+          news.map((item, i) => (
+            <div className={styles.block} key={'news-from-news-' + i}>
+              <div className={styles.block__info}>
+                <span className={styles.block__date}>{item.date}</span>
+                {Array.isArray(item.text) ? (
+                  <ul className={styles.block__list}>
+                    {item.text.map((el, j) => (
+                      <li className={styles.block__list_item} key={'news-list-item-' + j}>
+                        {el.item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className={styles.block__paragraph}>{item.text}</p>
+                )}
+              </div>
+              <Image
+                className={styles.block__image}
+                src={item.img}
+                alt={'news' + i}
+                width={505}
+                height={200}
+              />
+            </div>
+          ))}
+      </DragBlock>
     </section>
   );
 };

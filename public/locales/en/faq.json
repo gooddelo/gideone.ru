@@ -30,13 +30,5 @@
 			"answer": "answer 7"
 		}
 	],
-	"send": "Send",
-	"ask": "Ask us a question and we’ll get back to you",
-	"modal": {
-		"title": "Ask Us a Question",
-		"question": "I’d like to know...",
-		"name": "Name",
-		"email": "Email for response",
-		"send": "Send"
-	}
+	"send": "Send"
 }

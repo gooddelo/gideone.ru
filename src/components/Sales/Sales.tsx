@@ -18,8 +18,20 @@ const Sales: FC<I18nConfig> = async ({ locale }) => {
           </h4>
           <p className={styles.block__description}>{t('analytics.description')}</p>
           <div className={styles.first__images}>
-            <Image src={t('analytics.img_1')} width={836} height={976} alt={t('analytics.name')} />
-            <Image src={t('analytics.img_2')} width={1008} height={976} alt={t('analytics.name')} />
+            <Image
+              // src={'/img/sales-1.png'}
+              src={t('analytics.img_1') || '/img/sales-1.png'}
+              width={836}
+              height={976}
+              alt={t('analytics.name')}
+            />
+            <Image
+              // src={'/img/sales-2.png'}
+              src={t('analytics.img_2') || '/img/sales-2.png'}
+              width={1008}
+              height={976}
+              alt={t('analytics.name')}
+            />
           </div>
         </div>
 

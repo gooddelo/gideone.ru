@@ -2,6 +2,7 @@ import { getServerTranslation, I18nConfig } from '@/i18n';
 import React, { FC } from 'react';
 import styles from './Decisions.module.scss';
 import Image from 'next/image';
+import { DragBlock } from '../UI';
 
 interface IDecision {
   name: string;
@@ -38,6 +39,22 @@ const Decisions: FC<I18nConfig> = async ({ locale }) => {
           </div>
         ))}
       </div>
+
+      <DragBlock className={styles.drag_block}>
+        {decisions.map((decision, i) => (
+          <div className={styles.decision} key={decision.name + i}>
+            <h4 className={styles.decision__name}>{decision.name}</h4>
+            <p className={styles.decision__description}>{decision.description}</p>
+            <Image
+              width={564}
+              height={207}
+              className={styles.decision__img}
+              src={decision.img}
+              alt={decision.name}
+            />
+          </div>
+        ))}
+      </DragBlock>
     </section>
   );
 };

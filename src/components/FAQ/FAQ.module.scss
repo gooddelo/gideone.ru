@@ -6,7 +6,6 @@
   padding: 140px 0;
   margin: 0 auto;
   position: relative;
-  z-index: 2;
 
   @include container();
 
@@ -261,4 +260,8 @@
   @include media-max-tablet {
     transform: translate(25%, -26%);
   }
+}
+
+.switch_btn {
+  margin: 24px auto 0;
 }

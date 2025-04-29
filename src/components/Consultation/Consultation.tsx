@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 import styles from './Consultation.module.scss';
 import { getServerTranslation, I18nConfig } from '@/i18n';
-import ConsultationForm from './ConsultationForm';
+import { ConsultationForm } from './ConsultationForm';
 
 const Consultation: FC<I18nConfig> = async ({ locale }) => {
   const { t } = await getServerTranslation(locale, ['common']);

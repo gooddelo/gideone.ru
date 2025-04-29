@@ -1,5 +1,5 @@
 'use client';
-import { i18nClient, I18nConfig } from '@/i18n';
+import { I18nConfig } from '@/i18n';
 import Link from 'next/link';
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -9,7 +9,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
 import { InputCheck } from '@/components/UI';
-import '../../../i18n/client';
+import '@/i18n/client';
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -20,7 +20,7 @@ const schema = yup.object().shape({
 });
 
 const ConsultationForm: FC<I18nConfig> = ({ locale }) => {
-  const { t } = useTranslation('consultation', { i18n: i18nClient, lng: locale });
+  const { t } = useTranslation('consultation', { lng: locale });
   const {
     register,
     handleSubmit,

@@ -2,6 +2,7 @@ import { getServerTranslation, I18nConfig } from '@/i18n';
 import React, { FC } from 'react';
 import styles from './Try.module.scss';
 import Image from 'next/image';
+import { ModalContact } from '@/components/Widgets';
 
 interface IReason {
   reason: string;
@@ -24,7 +25,9 @@ const Try: FC<I18nConfig> = async ({ locale }) => {
             </li>
           ))}
         </ul>
-        <button className={styles.action}>{t('action')}</button>
+        {/* <button className={styles.action}>{t('action')}</button> */}
+
+        <ModalContact className={styles.action} locale={locale} text={t('action')} />
       </div>
       <Image src={t('img')} className={styles.img} width={919} height={710} alt='try' />
     </section>

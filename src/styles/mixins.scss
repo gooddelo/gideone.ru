@@ -4,8 +4,12 @@
   padding: $padding;
   width: 100%;
 
-  @media screen and (max-width: 1280px) {
+  @include media-max-tablet {
     padding: 80px 20px;
+  }
+
+  @include media-max-mobile {
+    padding: 40px 20px;
   }
 }
 

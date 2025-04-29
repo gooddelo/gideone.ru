@@ -1,0 +1,16 @@
+@use '@/styles/typography.scss' as *;
+@use '@/styles/mixins.scss' as *;
+
+.lang {
+  height: 44px;
+  width: 44px;
+  padding: 10px;
+  gap: 8px;
+  border-radius: 50%;
+  border: 1px solid var(---primary-100, #eaedff);
+  background: none;
+  cursor: pointer;
+  pointer-events: all;
+
+  @include typography-btn-input-l-bold;
+}

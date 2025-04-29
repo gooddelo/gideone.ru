@@ -1,0 +1,65 @@
+.carousel_container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  z-index: +1;
+}
+
+.embla {
+  overflow-x: clip;
+  overflow-y: visible;
+  margin-top: 80px;
+}
+
+.embla__container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.embla__slide {
+  flex: 0 0 33.3333%; /* 3 slides visible */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+  position: relative;
+
+  filter: blur(3.2580645084381104px);
+
+  transition: filter 0.3s ease, margin-top 0.3s ease;
+
+  &_active {
+    filter: none;
+    margin-top: -40px;
+  }
+}
+
+.slide_content {
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 40px;
+
+  &__btn {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(192, 196, 167, 0.36);
+    transition: all 0.3s ease;
+
+    &_active {
+      background: #eefc82;
+    }
+  }
+}

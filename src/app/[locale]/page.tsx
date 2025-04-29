@@ -18,6 +18,8 @@ import {
 } from '@/components';
 import { Locales } from '@/i18n/i18nConfig';
 import { StartUsing } from '@/components/StartUsing';
+import { DragBlock } from '@/components/UI';
+import { AnalyticsSales } from '@/components/AnalyticsSales';
 interface HomeProps {
   params: Promise<{ locale: Locales }>;
 }
@@ -30,6 +32,7 @@ const Home: FC<HomeProps> = async ({ params }) => {
       <Banner locale={locale} />
       <Tasks locale={locale} />
       <Marquee />
+      <AnalyticsSales />
       <Sales locale={locale} />
       <Analytics locale={locale} />
       <ForWho locale={locale} />
@@ -40,7 +43,7 @@ const Home: FC<HomeProps> = async ({ params }) => {
       <Possibilities locale={locale} />
       <Subscriptions locale={locale} />
       <FAQ locale={locale} />
-      <Consultation locale={locale} />
+      {/* <Consultation locale={locale} /> */}
       <News locale={locale} />
     </main>
   );

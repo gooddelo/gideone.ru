@@ -3,6 +3,7 @@ import styles from './Subscriptions.module.scss';
 import Image from 'next/image';
 import cn from 'classnames';
 import { getServerTranslation, I18nConfig } from '@/i18n';
+import { ModalContact } from '@/components/Widgets';
 
 interface Subscription {
   title: string;
@@ -51,11 +52,17 @@ const Subscriptions: FC<I18nConfig> = async ({ locale }) => {
               ))}
             </ul>
 
-            <button
+            {/* <button
               className={cn(styles.subscription__action, styles[`subscription__action_${i + 1}`])}
             >
               {subscription.action}
-            </button>
+            </button> */}
+
+            <ModalContact
+              className={cn(styles.subscription__action, styles[`subscription__action_${i + 1}`])}
+              locale={locale}
+              text={subscription.action}
+            />
           </div>
         ))}
 
@@ -75,7 +82,13 @@ const Subscriptions: FC<I18nConfig> = async ({ locale }) => {
             <div className={styles.enterprise__amount}>{t('enterprise.amount')}</div>
             <div className={styles.enterprise__employees}>{t('enterprise.employees')}</div>
           </div>
-          <button className={styles.enterprise__button}>{t('enterprise.button')}</button>
+          {/* <button className={styles.enterprise__button}>{t('enterprise.button')}</button> */}
+
+          <ModalContact
+            className={styles.enterprise__button}
+            locale={locale}
+            text={t('enterprise.button')}
+          />
         </div>
 
         <Image

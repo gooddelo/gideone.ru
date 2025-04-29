@@ -1,11 +1,9 @@
 export { default as Banner } from './Banner';
-export { default as Header } from './Header';
 export { default as Tasks } from './Tasks';
 export { default as Marquee } from './Marquee';
 export { default as News } from './News';
 export { default as Consultation } from './Consultation';
 export { default as FAQ } from './FAQ';
-export { default as PolicyAgreement } from './PolicyAgreement';
 export { default as Subscriptions } from './Subscriptions';
 export { default as Decisions } from './Decisions';
 export { default as Try } from './Try';
@@ -14,4 +12,3 @@ export { default as Analytics } from './Analytics';
 export { default as Sales } from './Sales';
 export { default as Possibilities } from './Possibilities';
 export { default as HowGideoneWorks } from './HowGideoneWorks';
-export { default as CookieAgreement } from './CookieAgreement';

@@ -2,10 +2,11 @@ import { FC } from 'react';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
 import { getServerTranslation, I18nConfig } from '@/i18n';
-import { Icon } from '../UI';
+import { Icon } from '@/components/UI';
 import Image from 'next/image';
 import cn from 'classnames';
-import Logo from '../UI/Logo';
+import Logo from '@/components/UI/Logo';
+import { ModalContact, ModalQuestion } from '@/components/Widgets';
 
 export const Footer: FC<I18nConfig> = async ({ locale }) => {
   const { t } = await getServerTranslation(locale, ['footer', 'common']);
@@ -29,30 +30,34 @@ export const Footer: FC<I18nConfig> = async ({ locale }) => {
         </nav>
       </div>
       <div className={styles.actions}>
-        <Link
-          href={t('vk_link', { ns: 'common' })}
-          target='_blank'
-          className={cn(styles.actions__social)}
-        >
-          <Icon icon='vk' size={32} className={styles.actions__social_vk} />
-        </Link>
-        <Link
-          href={t('telegram_link', { ns: 'common' })}
-          target='_blank'
-          className={styles.actions__social}
-        >
-          <Icon icon='telegram' size={32} />
-        </Link>
-        <Link href={`tel:${t('phone', { ns: 'common' })}`} className={styles.actions__phone}>
-          {t('phone', { ns: 'common' })}
-        </Link>
-        <button className={styles.actions__application}>{t('application')}</button>
+        <div className={styles.actions__links}>
+          <Link
+            href={t('vk_link', { ns: 'common' })}
+            target='_blank'
+            className={cn(styles.actions__social)}
+          >
+            <Icon icon='vk' size={32} className={styles.actions__social_vk} />
+          </Link>
+          <Link
+            href={t('telegram_link', { ns: 'common' })}
+            target='_blank'
+            className={styles.actions__social}
+          >
+            <Icon icon='telegram' size={32} />
+          </Link>
+          <Link href={`tel:${t('phone', { ns: 'common' })}`} className={styles.actions__phone}>
+            {t('phone', { ns: 'common' })}
+          </Link>
+        </div>
+        {/* <button className={styles.actions__application}>{t('application')}</button> */}
+        <ModalContact
+          locale={locale}
+          text={t('application')}
+          className={styles.actions__application}
+        />
       </div>
       <div className={styles.bottom}>
-        <div className={styles.questions}>
-          <input placeholder={t('questions')}></input>
-          <button>{t('send')}</button>
-        </div>
+        <ModalQuestion locale={locale} />
         <Link href={'https://www.sk.ru/'} target='_blank'>
           <Image src='/img/logo-skolkovo.png' alt='Сколково' width={55} height={55} />
         </Link>

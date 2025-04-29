@@ -1,0 +1,11 @@
+export { default as ModalQuestion } from './ModalQuestion';
+export { default as ModalContact } from './ModalContact';
+export { default as Menu } from './Menu';
+export { default as PolicyAgreement } from './PolicyAgreement';
+export { default as TabletHeader } from './TabletHeader';
+export { default as HeaderLarge } from './HeaderLarge';
+export { default as HeaderLangBtn } from './HeaderLangBtn';
+export { default as Header } from './Header';
+export { default as Burger } from './Burger';
+export { default as CookieAgreement } from './CookieAgreement';
+export { default as ButtonToTop } from './ButtonToTop';

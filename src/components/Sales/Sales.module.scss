@@ -2,12 +2,16 @@
 @use '@/styles/mixins' as *;
 
 .container {
-  padding: 140px 0 70px;
   display: flex;
   flex-direction: column;
   gap: 60px;
-  max-width: 1240px;
-  margin: 0 auto;
+
+  @include container;
+
+  @include media-max-tablet {
+    gap: 0;
+    display: none;
+  }
 }
 
 .title {
@@ -22,7 +26,6 @@
   display: grid;
   gap: 20px;
   width: 100%;
-
   grid-template: 'first second' 'third third';
   grid-template-columns: repeat(2, 1fr);
 
@@ -31,12 +34,6 @@
     border: 1px solid rgba(251, 243, 188, 0.5);
     box-shadow: 0px 0px 37.2px 0px rgba(251, 216, 97, 0.5);
   }
-
-  // @media (max-width: 1240px) {
-  //   padding: 0 16px;
-  //   grid-template: 'first' 'second' 'third';
-  //   grid-template-columns: 1fr;
-  // }
 }
 
 .block {
@@ -81,6 +78,12 @@
         height: 244px;
         aspect-ratio: 63/61;
       }
+    }
+  }
+
+  @include media-tablet {
+    &__images {
+      flex-wrap: nowrap;
     }
   }
 }
@@ -137,11 +140,19 @@
         width: 469px;
         height: 105px;
         aspect-ratio: 67/15;
+
+        @include media-max-tablet {
+          display: none;
+        }
       }
       &:nth-child(5) {
         width: 285px;
         height: 105.231px;
         aspect-ratio: 285/105.23;
+
+        @include media-max-tablet {
+          display: none;
+        }
       }
       &:nth-child(6) {
         width: 392px;

@@ -38,5 +38,21 @@
 	},
 	"telegram_link": "https://t.me/gideone_4u",
 	"vk_link": "https://vk.com/gideone.online",
-	"phone": "+7 927 16-27-22"
+	"phone": "+7 927 16-27-22",
+	"modal-contact": {
+		"title": "Мы с вами свяжемся!",
+		"name": "Имя",
+		"phone": "Телефон",
+		"email": "Почта",
+		"send": "Отправить"
+	},
+	"modal-question": {
+		"ask": "Задайте нам вопрос и мы ответим",
+		"title": "Задайте нам вопрос",
+		"question": "Я бы хотел узнать...",
+		"name": "Имя",
+		"email": "Почта для ответа",
+		"send": "Отправить",
+		"button": "Задать вопрос"
+	}
 }

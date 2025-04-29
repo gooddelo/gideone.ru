@@ -31,6 +31,7 @@ export const i18nNamespaces = [
   'howGideoneWorks',
   'startUsing',
   'cookieAgreement',
+  'analytics_and_sales',
 ] as const;
 export type i18nNamespacesType = (typeof i18nNamespaces)[number];
 

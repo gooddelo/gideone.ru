@@ -33,11 +33,16 @@ $circle-size: 12px;
   border-radius: 40px;
   flex-shrink: 0;
   aspect-ratio: 451/419;
+  transition: border-radius 0.3s ease;
 
   @include media-max-tablet {
     width: 100%;
     height: 612px;
     object-fit: cover;
+  }
+
+  @include media-max-mobile {
+    border-radius: 10px;
   }
 }
 
