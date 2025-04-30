@@ -19,6 +19,12 @@ import Decisions from '@/components/Decisions';
 import Try from '@/components/Try';
 import ForWho from '@/components/ForWho';
 import Consultation from '@/components/Consultation';
+import { Header } from '@/components/Header';
+import Footer from '@/components/Footer';
+import { HeaderLarge } from '@/components/HeaderLarge';
+import { TabletHeader } from '@/components/TabletHeader';
+import { ButtonToTop } from '@/components/ButtonToTop';
+import { CookieAgreement } from '@/components/CookieAgreement';
 interface HomeProps {
   params: Promise<{ locale: Locales }>;
 }
@@ -28,6 +34,11 @@ const Home: FC<HomeProps> = async ({ params }) => {
 
   return (
     <main className={styles.main}>
+      {/*  */}
+      <Header locale={locale} />
+      <HeaderLarge locale={locale} />
+      <TabletHeader locale={locale} />
+      {/*  */}
       <Banner locale={locale} />
       <Tasks locale={locale} />
       <Marquee />
@@ -44,6 +55,12 @@ const Home: FC<HomeProps> = async ({ params }) => {
       <FAQ locale={locale} />
       <Consultation locale={locale} />
       <News locale={locale} />
+
+      {/* */}
+      <CookieAgreement locale={locale} />
+      <Footer locale={locale} />
+      <ButtonToTop />
+      {/*  */}
     </main>
   );
 };

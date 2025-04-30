@@ -6,6 +6,7 @@ import { Icon } from '@/components/UI';
 import { HeaderLangBtn } from '../HeaderLangBtn';
 
 export const Header: FC<I18nConfig> = async ({ locale }) => {
+  console.log('header locale:  ' + locale);
   const { t } = await getServerTranslation(locale, ['header', 'common']);
 
   return (

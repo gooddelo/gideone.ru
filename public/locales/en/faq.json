@@ -1,33 +1,33 @@
 {
-	"title": "Still Have Questions?",
+	"title": "Still have questions?",
 	"questions": [
 		{
 			"question": "Is complex installation required?",
-			"answer": "answer 1"
+			"answer": "No. If you already have cameras/microphones - we'll connect Gideone in minutes. Without existing equipment, we provide a complete turnkey solution."
 		},
 		{
-			"question": "What if employees are against cameras?",
-			"answer": "answer 2"
+			"question": "What if employees object to cameras?",
+			"answer": "In 9 out of 10 cases, staff perceive Gideone as an assistant, not surveillance. The system doesn't punish but teaches: new hires adapt faster, experienced employees earn bonuses for high ratings."
 		},
 		{
-			"question": "How quickly will I see results?",
-			"answer": "answer 3"
+			"question": "How soon will I see results?",
+			"answer": "First changes appear in 3-5 days: employees start mentioning promotions more often. Average ticket growth comes in weeks 2-3."
 		},
 		{
-			"question": "How does Gideone work with existing training programs?",
-			"answer": "answer 4"
+			"question": "How does Gideone integrate with existing training?",
+			"answer": "The system complements training - reinforces knowledge in practice and identifies development areas."
 		},
 		{
 			"question": "What about privacy?",
-			"answer": "answer 5"
+			"answer": "We use encryption, store audio-video temporarily - only text analytics remain in reports. All data protection requirements are strictly followed."
 		},
 		{
-			"question": "How can I be sure it actually works?",
-			"answer": "answer 6"
+			"question": "How can I verify it actually works?",
+			"answer": "Typically in the first month, average ticket increases by 10-15%. We also reduce control and coaching costs, while dashboards show all statistics."
 		},
 		{
-			"question": "Can scripts and rules be changed during the process?",
-			"answer": "answer 7"
+			"question": "Can scripts and rules be modified later?",
+			"answer": "Absolutely. Make changes via web interface, and the system instantly adapts to new phrases and standards."
 		}
 	],
 	"send": "Send"

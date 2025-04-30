@@ -7,10 +7,12 @@ import { FC, useLayoutEffect, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import styles from './CookieAgreement.module.scss';
 import '@/i18n/client'; // Import the i18n client to ensure translations are available
+import { I18nConfig } from '@/i18n';
 
-const CookieAgreement: FC = () => {
-  // const [locale, setLocale] = useState('ru');
-  const { t } = useTranslation('cookieAgreement');
+const CookieAgreement: FC<I18nConfig> = () => {
+  // console.log('cookie agreement locale:  ' + locale);
+  const [locale, setLocale] = useState('ru');
+  const { t } = useTranslation('cookieAgreement', { lng: locale });
   const { getLocalItem, setLocalItem } = secureStorage();
   const [agreed, setAgreed] = useState<boolean>(true);
 
@@ -23,6 +25,13 @@ const CookieAgreement: FC = () => {
     const cookieAgreement = getLocalItem(LOCAL_STORAGE_KEYS.cookie_agreement);
     if (cookieAgreement) return setAgreed(true);
     else return setAgreed(false);
+  }, []);
+
+  useLayoutEffect(() => {
+    if (!window) return;
+
+    const pathLocale = window.location.pathname.split('/')[1];
+    setLocale(pathLocale);
   }, []);
 
   if (agreed === false)

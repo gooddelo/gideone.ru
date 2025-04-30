@@ -1,5 +1,5 @@
 {
-	"agreement": "By clicking the \"{{agreementVia}}\" button, I agree to the",
+	"agreement": "By clicking the «{{agreementVia}}» button, I agree to the",
 	"agreement_2": "and give consent to the processing of personal data.",
 	"policy": " privacy policy ",
 	"agreementVia": {

@@ -1,5 +1,5 @@
 {
-	"title": "Increase Sales with Us",
+	"title": "Increase sales with us",
 	"analytics": {
 		"name": "General",
 		"subname": "analytics",
@@ -8,13 +8,13 @@
 		"img_2": "/img/sales-2.png"
 	},
 	"education": {
-		"name": "Employee Training",
+		"name": "Employee training",
 		"subname": "on-site",
 		"description": "The system provides personalized feedback on a specific sale based on the company’s standards, helping maintain a high level of service regardless of employee experience.",
 		"img_1": "/img/sales-3.png"
 	},
 	"dashboards": {
-		"name": "Dashboards and Reports",
+		"name": "Dashboards and reports",
 		"description": "Management can view statistics: who doesn't mention promotions, who has poor sales, and where customers are being lost.",
 		"img_1": "/img/sales-4.png",
 		"img_2": "/img/sales-5.png",

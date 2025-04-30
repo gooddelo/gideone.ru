@@ -1,18 +1,18 @@
 {
 	"analytics": {
-		"name": "Общая <span>аналитика</span>",
-		"description": "Всегда можно увидеть зоны роста как персонально по сотрудникам, так и по всей компании и скорректировать планы, мотивацию, планёрки, планы продаж.",
+		"name": "General <span>analytics</span>",
+		"description": "You can always identify growth areas both for individual employees and the entire company, and adjust plans, motivation, meetings, and sales targets accordingly.",
 		"img_1": "/img/sales-1.png",
 		"img_2": "/img/sales-2.png"
 	},
 	"education": {
-		"name": "<span>Обучение персонала</span> на местах",
-		"description": "Система даёт персональную обратную связь по конкретной продаже на основании стандартов работы компании, что позволяет держать высокую планку сервиса независимо от опыта работы сотрудника.",
+		"name": "<span>Staff training</span> on-site",
+		"description": "The system provides personalized feedback on specific sales based on company standards, helping maintain high service quality regardless of employee experience.",
 		"img_1": "/img/sales-3.png"
 	},
 	"dashboards": {
-		"name": "<span>Дашборды и отчёты</span>",
-		"description": "Руководство видит статистику: кто не упоминает акций, у кого плохие продажи, где теряются клиенты.",
+		"name": "<span>Dashboards and reports</span>",
+		"description": "Management sees statistics: who isn't mentioning promotions, who has poor sales performance, where customers are being lost.",
 		"img_1": "/img/sales-4.png",
 		"img_2": "/img/sales-5.png",
 		"img_3": "/img/sales-6.png",
@@ -22,24 +22,24 @@
 	},
 	"items": {
 		"1": {
-			"name": "<span>Геймификация и мотивация</span>",
-			"description": "Рейтинги, бейджи, внутренняя «Доска почёта», чтобы люди стремились улучшать показатели, а не боялись наказаний.",
+			"name": "<span>Gamification and motivation</span>",
+			"description": "Ratings, badges, internal 'Hall of Fame' to encourage people to improve performance rather than fear punishment.",
 			"img-1": "/img/analytics-1.png",
 			"img-2": "/img/analytics-2.png"
 		},
 		"2": {
-			"name": "<span>Персональные</span> рекомендации",
-			"description": "Система сама хвалит сотрудника и говорит, что он мог сделать лучше: «Хорошо, что вы предложили кофе, но не забывайте про скидку на комбо».",
+			"name": "<span>Personalized</span> recommendations",
+			"description": "The system automatically praises employees and suggests improvements: 'Great job offering coffee, but don't forget about the combo discount.'",
 			"img-1": "/img/analytics-3.png"
 		},
 		"3": {
-			"name": "Подключение за пару минут",
-			"description": "Достаточно поставить устройство GIDEONE в прикассовой зоне и зарегистрироваться в системе — всё просто!",
+			"name": "Set up in minutes",
+			"description": "Just place the GIDEONE device at the checkout area and register in the system - it's that simple!",
 			"img-1": "/img/analytics-4.png"
 		},
 		"4": {
-			"name": "<span>Настройка критериев</span> под ваш бизнес",
-			"description": "Вы можете настроить несколько сценариев продаж, формируя важные фразы, допродажи, акции, целевые товары — всё, что должны выполнять сотрудники.",
+			"name": "<span>Custom criteria</span> for your business",
+			"description": "You can configure multiple sales scenarios, setting up key phrases, upsells, promotions, target products - everything employees should follow.",
 			"img-1": "/img/analytics-5.png"
 		}
 	}

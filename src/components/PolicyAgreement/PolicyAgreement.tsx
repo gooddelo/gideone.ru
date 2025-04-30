@@ -1,5 +1,5 @@
 'use client';
-import React, { FC } from 'react';
+import React, { FC, useLayoutEffect, useState } from 'react';
 import { InputCheck } from '@/components/UI';
 import styles from './PolicyAgreement.module.scss';
 import Link from 'next/link';
@@ -15,10 +15,18 @@ interface IProps {
 }
 
 const PolicyAgreement: FC<IProps> = ({ check, className, agreementVia }) => {
-  const { t } = useTranslation<i18nNamespacesType>('common');
+  const [locale, setLocale] = useState('ru');
+  const { t } = useTranslation<i18nNamespacesType>('common', { lng: locale });
+
+  useLayoutEffect(() => {
+    if (!window) return;
+
+    const pathLocale = window.location.pathname.split('/')[1];
+    setLocale(pathLocale);
+  }, []);
   return (
     <div className={cn(styles.agreement, className)}>
-      <InputCheck size='small' onClick={check} />
+      <InputCheck size='small' onClick={check} checked />
       <p>
         {t('agreement', {
           agreementVia: t(`agreementVia.${agreementVia}`),
