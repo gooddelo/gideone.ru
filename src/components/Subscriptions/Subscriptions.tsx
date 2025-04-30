@@ -3,7 +3,7 @@ import styles from './Subscriptions.module.scss';
 import Image from 'next/image';
 import cn from 'classnames';
 import { getServerTranslation, I18nConfig } from '@/i18n';
-import { ModalContact } from '@/components/Widgets';
+import { ModalContact } from '../ModalContact';
 
 interface Subscription {
   title: string;
@@ -102,5 +102,7 @@ const Subscriptions: FC<I18nConfig> = async ({ locale }) => {
     </section>
   );
 };
+
+Subscriptions.displayName = 'Subscriptions section';
 
 export default Subscriptions;

@@ -11,6 +11,10 @@
   @include typography-h2(#8ac3c7);
   margin-bottom: 40px;
 
+  @include media-max-mobile {
+    font-size: 32px;
+  }
+
   .subtitle {
     display: block;
     color: var(---primary-200, #d5dcfe);

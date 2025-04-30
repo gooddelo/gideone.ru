@@ -34,4 +34,6 @@ const ForWho: FC<I18nConfig> = async ({ locale }) => {
   );
 };
 
+ForWho.displayName = 'For who section';
+
 export default ForWho;

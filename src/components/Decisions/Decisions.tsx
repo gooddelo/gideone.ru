@@ -59,4 +59,6 @@ const Decisions: FC<I18nConfig> = async ({ locale }) => {
   );
 };
 
+Decisions.displayName = 'Decisions section';
+
 export default Decisions;

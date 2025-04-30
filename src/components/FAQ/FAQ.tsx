@@ -5,8 +5,8 @@ import { I18nConfig } from '@/i18n';
 import { Dropdown, Icon } from '@/components/UI';
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
-import '@/i18n/client'; // Import the i18n client to ensure translations are available
-import { ModalQuestion } from '@/components/Widgets';
+import '@/i18n/client'; // Import the i18n client to ensu
+import { ModalQuestion } from '../ModalQuestion';
 
 const FAQ: FC<I18nConfig> = ({ locale }) => {
   const { t } = useTranslation('faq', { lng: locale });
@@ -60,5 +60,7 @@ const FAQ: FC<I18nConfig> = ({ locale }) => {
     </section>
   );
 };
+
+FAQ.displayName = 'FAQ section';
 
 export default FAQ;

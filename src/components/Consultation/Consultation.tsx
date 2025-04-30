@@ -13,7 +13,7 @@ const Consultation: FC<I18nConfig> = async ({ locale }) => {
           className={styles.img}
           src={'/img/consultation.png'}
           alt={'consultation'}
-          width={890}
+          width={1070}
           height={886}
         />
         <ConsultationForm locale={locale} />
@@ -21,5 +21,7 @@ const Consultation: FC<I18nConfig> = async ({ locale }) => {
     </section>
   );
 };
+
+Consultation.displayName = 'Consultation section';
 
 export default Consultation;

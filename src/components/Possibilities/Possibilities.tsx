@@ -41,4 +41,6 @@ const Possibilities: FC<I18nConfig> = async ({ locale }) => {
   );
 };
 
+Possibilities.displayName = 'Possibilities section';
+
 export default Possibilities;

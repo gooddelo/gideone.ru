@@ -105,7 +105,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    @include typography-body-m-narrow(var(---primary-100, #eaedff));
+    // @include typography-body-m-narrow(var(---primary-100, #eaedff));
+    @include typography-body-l-medium-narrow(var(---primary-100, #eaedff));
 
     button {
       background: none;
@@ -126,7 +127,8 @@
     p {
       overflow: hidden;
       padding-top: 8px;
-      @include typography-body-m-narrow(var(---primary-100, #eaedff));
+      @include typography-body-m-narrow(var(--color-roles-on-surface-variant, #dadae1));
+      font-size: 16px;
     }
   }
 }
@@ -223,6 +225,7 @@
   );
   z-index: -1;
   transition: all 0.3s ease;
+  pointer-events: none;
 
   @include media-max-tablet {
     width: 854px;

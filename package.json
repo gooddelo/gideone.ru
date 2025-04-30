@@ -1,11 +1,13 @@
 {
-  "name": "landing_2",
+  "name": "Gideone landing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:stream": "next dev -H 192.168.3.20",
     "build": "next build",
     "start": "next start",
+    "start:stream": "next start -H 192.168.3.20",
     "lint": "next lint"
   },
   "dependencies": {
@@ -29,6 +31,7 @@
     "react-i18next": "^15.5.1",
     "sass": "^1.87.0",
     "sharp": "^0.34.1",
+    "uuid": "^11.1.0",
     "yup": "^1.6.1"
   },
   "devDependencies": {

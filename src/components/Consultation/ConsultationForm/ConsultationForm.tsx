@@ -2,7 +2,7 @@
 import { I18nConfig } from '@/i18n';
 import Link from 'next/link';
 import React, { FC } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import styles from './ConsultationForm.module.scss';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
@@ -36,8 +36,15 @@ const ConsultationForm: FC<I18nConfig> = ({ locale }) => {
   return (
     <form action='' className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <div className={cn(styles.form__head, styles.form__block_head)}>
-        <h3 className={styles.title}>{t('title')}</h3>
-        <h3 className={styles.subtitle}>{t('subtitle')}</h3>
+        <h3 className={styles.title}>
+          <Trans
+            i18nKey='title'
+            t={t}
+            components={{
+              span: <span className={styles.highlight} />,
+            }}
+          />
+        </h3>
       </div>
       <div className={cn(styles.form__block, styles.form__fields)}>
         <input
@@ -78,5 +85,7 @@ const ConsultationForm: FC<I18nConfig> = ({ locale }) => {
     </form>
   );
 };
+
+ConsultationForm.displayName = 'Consultation form';
 
 export default ConsultationForm;

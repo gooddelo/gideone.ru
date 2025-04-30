@@ -45,6 +45,12 @@
   }
 }
 
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .actions {
   display: flex;
   padding-top: 32px;
@@ -57,7 +63,9 @@
   &__social {
     display: flex;
     width: 56px;
+    min-width: 56px;
     height: 56px;
+    min-height: 56px;
     padding-right: 4px;
     justify-content: center;
     align-items: center;
@@ -67,9 +75,9 @@
     fill: var(--btn-primary, #acbafd);
     position: relative;
 
-    &:nth-child(odd) {
-      margin-right: 12px;
-    }
+    // &:nth-child(odd) {
+    //   margin-right: 12px;
+    // }
 
     &_vk {
       transform: translateY(22%);
@@ -78,12 +86,18 @@
 
   &__phone {
     @include typography-h4(var(--btn-primary, #acbafd));
-    margin-left: 32px;
+    // margin-left: 32px;``
+
+    // @media screen and (max-width: 380px) {
+    //   margin-top: 32px;
+    // }
   }
 
   &__links {
     display: flex;
     align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
   }
 
   &__application {
@@ -159,6 +173,10 @@
     }
   }
 
+  &__link {
+    opacity: 0.7;
+  }
+
   @include media-max-tablet {
     padding: 40px 0;
   }
@@ -167,20 +185,16 @@
 .links {
   display: flex;
   // width: 1240px;
-  padding-top: 32px;
+
   justify-content: space-between;
   align-items: flex-start;
   align-content: flex-start;
   row-gap: 16px;
   flex-wrap: wrap;
   border-top: 1px solid var(---secondary-600, #5d5d71);
-  margin-top: 32px;
+  // margin-top: 32px;
 
-  @include container($padding: 0 20px);
-
-  @include media-max-tablet {
-    padding: 40px 20px 20px;
-  }
+  @include container($padding: 32px 20px 20px);
 
   &__group {
     display: flex;

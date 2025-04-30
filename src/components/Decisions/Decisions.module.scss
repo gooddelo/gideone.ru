@@ -14,6 +14,10 @@
   @include media-max-tablet {
     padding: 80px 20px;
   }
+
+  @include media-max-mobile {
+    gap: 0;
+  }
 }
 
 .title {
@@ -21,6 +25,10 @@
 
   @include media-max-tablet {
     @include typography-h3(var(---primary-200, #d5dcfe), center);
+  }
+
+  @include media-max-mobile {
+    @include typography-h4(var(---primary-200, #d5dcfe), center);
   }
 }
 

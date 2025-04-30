@@ -8,6 +8,15 @@
   position: relative;
   z-index: 2;
   @include container($max-width: 1312px);
+
+  @include media-max-mobile {
+    margin-bottom: 250px;
+  }
+
+  @media screen and (max-width: 544px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .title {
@@ -33,6 +42,10 @@
     flex-direction: column;
     width: fit-content;
     max-width: 100%;
+  }
+
+  @media screen and (max-width: 544px) {
+    padding: 0;
   }
 }
 
@@ -77,6 +90,10 @@
       width: 100%;
       max-width: 408px;
     }
+
+    @include media-max-mobile {
+      padding: 40px 16px;
+    }
   }
 
   &_2,
@@ -90,6 +107,10 @@
     flex: 1 0 0;
     border-radius: 40px;
     background: linear-gradient(180deg, #1a2c86 0%, #0c1237 100%);
+
+    @include media-max-mobile {
+      padding: 40px 16px;
+    }
   }
 
   &__name {
@@ -208,6 +229,10 @@
   border: 1px solid #f7f7fa;
   backdrop-filter: blur(10px);
 
+  @include media-max-mobile {
+    padding: 40px 16px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -222,16 +247,21 @@
     font-weight: 600;
     line-height: 125%; /* 50px */
     max-width: 725px;
+
+    @include media-max-mobile {
+      @include typography-h4(var(--color-roles-on-tertiary-container, #e2fbfc));
+    }
   }
 
   &__amount {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(---primary-200, #d5dcfe);
     font-family: Montserrat;
     font-size: 84px;
     font-style: normal;
     font-weight: 800;
     line-height: 100%;
+
+    color: transparent; // no fill
+    -webkit-text-stroke: 1px var(---primary-200, #d5dcfe); // outline color and thickness
   }
 
   &__employees {
@@ -251,6 +281,10 @@
     width: fit-content;
 
     @include typography-body-l-narrow(var(--btn-on-primary, #020268));
+
+    @include media-max-mobile {
+      max-width: 100%;
+    }
   }
 }
 
@@ -268,5 +302,10 @@
     width: 441px;
     height: auto;
     left: 55%;
+  }
+
+  @include media-max-mobile {
+    bottom: -80%;
+    width: 350px;
   }
 }

@@ -22,4 +22,6 @@ const Marquee: FC = () => {
   );
 };
 
+Marquee.displayName = 'Marquee section';
+
 export default Marquee;

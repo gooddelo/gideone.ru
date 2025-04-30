@@ -3,7 +3,7 @@ import styles from './Banner.module.scss';
 import { FC } from 'react';
 import { I18nConfig } from '@/i18n';
 import Image from 'next/image';
-import { ModalContact } from '@/components/Widgets';
+import { ModalContact } from '../ModalContact';
 
 const Banner: FC<I18nConfig> = async ({ locale }) => {
   // TODO: fix margins for adaptive
@@ -31,5 +31,7 @@ const Banner: FC<I18nConfig> = async ({ locale }) => {
     </section>
   );
 };
+
+Banner.displayName = 'Banner section';
 
 export default Banner;

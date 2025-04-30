@@ -32,6 +32,6 @@ const Dropdown: FunctionComponent<IProps> = forwardRef(
   }
 );
 
-Dropdown.displayName = 'Dropdown';
+Dropdown.displayName = 'UI Dropdown';
 
 export default Dropdown;

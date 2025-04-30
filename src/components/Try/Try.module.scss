@@ -4,7 +4,7 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   max-width: 1720px;
   gap: 80px;
 
@@ -67,8 +67,8 @@
 
 .content {
   display: flex;
-  width: 643px;
-  max-width: 37%;
+  min-width: 643px;
+  width: 37%;
   height: 710px;
   flex-direction: column;
   justify-content: center;
@@ -78,6 +78,7 @@
   @include media-max-tablet {
     width: 510px;
     max-width: 100%;
+    min-width: auto;
   }
 
   @media screen and (max-width: 940px) {
@@ -109,16 +110,21 @@
 }
 
 .img {
-  width: 919px;
-  max-width: 57%;
-  height: auto;
+  // width: 919px;
+  // max-width: 57%;
+  width: calc(100vw - 763px);
+  height: 710px;
   border-radius: 40px;
-  max-height: 710px;
+  min-height: 710px;
+  object-fit: cover;
+  // transition: all 0.3s ease;
 
-  transition: all 0.3s ease;
+  @include media-desktop {
+    max-width: 919px;
+  }
 
   @include media-max-tablet {
-    width: calc(100% - 510px);
+    width: calc(100vw - 590px);
     max-width: none;
     height: 710px;
     object-fit: none;

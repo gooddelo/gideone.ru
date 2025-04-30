@@ -41,4 +41,6 @@ const HowGideoneWorks: FC<I18nConfig> = async ({ locale }) => {
   );
 };
 
+HowGideoneWorks.displayName = 'How gideone works section';
+
 export default HowGideoneWorks;

@@ -2,14 +2,12 @@ import type { Metadata, Viewport } from 'next';
 import './globals.scss';
 import Footer from '@/components/Footer/Footer';
 import { Locales } from '@/i18n/i18nConfig';
-import ServiceWorkerRegister from '@/components/Widgets/ServiceWorkerRegister/ServiceWorkerRegister';
-import {
-  HeaderLarge,
-  TabletHeader,
-  Header,
-  CookieAgreement,
-  ButtonToTop,
-} from '@/components/Widgets';
+import ServiceWorkerRegister from '@/components/ServiceWorkerRegister/ServiceWorkerRegister';
+import { Header } from '@/components/Header';
+import { HeaderLarge } from '@/components/HeaderLarge';
+import { TabletHeader } from '@/components/TabletHeader';
+import { CookieAgreement } from '@/components/CookieAgreement';
+import { ButtonToTop } from '@/components/ButtonToTop';
 
 export const metadata: Metadata = {
   title: 'Gideone',

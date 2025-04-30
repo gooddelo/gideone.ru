@@ -11,21 +11,33 @@ $circle-size: 12px;
   margin: 0 auto;
   padding: 140px 20px;
 
-  @include container($max-width: none);
-
-  .title {
-    @include typography-h2(var(---primary-200, #d5dcfe), center);
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 120px;
-  }
+  @include container($max-width: 1642px);
+  // @include container($max-width: 1578px);
 
   @include media-max-tablet {
     flex-direction: column;
+  }
+}
+
+.title {
+  @include typography-h2(var(---primary-200, #d5dcfe), left);
+
+  @include media-max-tablet {
+    text-align: center;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+
+  width: 660px;
+  min-width: 660px;
+
+  @include media-max-mobile {
+    max-width: 100%;
   }
 }
 
@@ -34,11 +46,23 @@ $circle-size: 12px;
   flex-shrink: 0;
   aspect-ratio: 451/419;
   transition: border-radius 0.3s ease;
+  object-fit: cover;
+
+  // width: 902px;
+
+  width: calc(100vw - 780px);
+  max-width: 902px;
+
+  // @media screen and (max-width: 1642px) {
+  //   width: calc(100vw - 780px);
+  //   max-width: ;
+  // }
 
   @include media-max-tablet {
     width: 100%;
     height: 612px;
     object-fit: cover;
+    max-width: none;
   }
 
   @include media-max-mobile {

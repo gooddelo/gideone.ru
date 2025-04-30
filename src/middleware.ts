@@ -3,14 +3,14 @@ import { NextRequest, NextResponse } from 'next/server';
 const supported = ['ru', 'en'];
 
 export function middleware(request: NextRequest) {
-  console.log('🔥 Middleware triggered');
+  // console.log('🔥 Middleware triggered');
   const languages = request.headers.get('accept-language')?.split(',') || [];
   const parsed = languages.map((lang) => lang.split(';')[0].trim());
-  console.log('Accept-Language:', languages);
-  console.log(
-    'Parsed languages:',
-    languages.map((lang) => lang.split(';')[0].trim())
-  );
+  // console.log('Accept-Language:', languages);
+  // console.log(
+  //   'Parsed languages:',
+  //   languages.map((lang) => lang.split(';')[0].trim())
+  // );
 
   let chosen: string = 'ru';
 

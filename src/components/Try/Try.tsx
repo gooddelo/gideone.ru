@@ -2,7 +2,7 @@ import { getServerTranslation, I18nConfig } from '@/i18n';
 import React, { FC } from 'react';
 import styles from './Try.module.scss';
 import Image from 'next/image';
-import { ModalContact } from '@/components/Widgets';
+import { ModalContact } from '../ModalContact';
 
 interface IReason {
   reason: string;
@@ -33,5 +33,7 @@ const Try: FC<I18nConfig> = async ({ locale }) => {
     </section>
   );
 };
+
+Try.displayName = 'Try section';
 
 export default Try;

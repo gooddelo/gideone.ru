@@ -76,4 +76,6 @@ const Analytics: FC<I18nConfig> = async ({ locale }) => {
   );
 };
 
+Analytics.displayName = 'Analytics section';
+
 export default Analytics;

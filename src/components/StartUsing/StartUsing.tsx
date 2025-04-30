@@ -38,4 +38,5 @@ const StartUsing: FC<I18nConfig> = async ({ locale }) => {
   );
 };
 
+StartUsing.displayName = 'Start using section';
 export default StartUsing;

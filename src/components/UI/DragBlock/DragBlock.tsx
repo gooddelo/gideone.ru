@@ -74,4 +74,6 @@ const DragBlock: FC<IProps> = ({ children, className }) => {
   );
 };
 
+DragBlock.displayName = 'UI drag block';
+
 export default DragBlock;

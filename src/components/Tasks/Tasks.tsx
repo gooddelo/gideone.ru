@@ -26,4 +26,6 @@ const Tasks: FunctionComponent<I18nConfig> = async ({ locale }) => {
   );
 };
 
+Tasks.displayName = 'Tasks section';
+
 export default Tasks;

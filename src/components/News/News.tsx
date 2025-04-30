@@ -153,4 +153,6 @@ const News: FC<I18nConfig> = ({ locale }) => {
   );
 };
 
+News.displayName = 'News section';
+
 export default News;

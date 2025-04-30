@@ -5,15 +5,16 @@ import { getServerTranslation, I18nConfig } from '@/i18n';
 import { Icon } from '@/components/UI';
 import Image from 'next/image';
 import cn from 'classnames';
-import Logo from '@/components/UI/Logo';
-import { ModalContact, ModalQuestion } from '@/components/Widgets';
+import { ModalContact } from '../ModalContact';
+import { ModalQuestion } from '../ModalQuestion';
+import React from 'react';
 
 export const Footer: FC<I18nConfig> = async ({ locale }) => {
   const { t } = await getServerTranslation(locale, ['footer', 'common']);
   return (
     <footer className={styles.footer} id='footer'>
       <div className={styles.top}>
-        <Logo />
+        <Image src='/img/logo.png' alt='banner' width={182} height={64} />
         <nav className={styles.nav}>
           <Link href={t('nav_links.about', { ns: 'common' })} className={styles.nav__link}>
             {t('nav.about', { ns: 'common' })}
@@ -31,20 +32,22 @@ export const Footer: FC<I18nConfig> = async ({ locale }) => {
       </div>
       <div className={styles.actions}>
         <div className={styles.actions__links}>
-          <Link
-            href={t('vk_link', { ns: 'common' })}
-            target='_blank'
-            className={cn(styles.actions__social)}
-          >
-            <Icon icon='vk' size={32} className={styles.actions__social_vk} />
-          </Link>
-          <Link
-            href={t('telegram_link', { ns: 'common' })}
-            target='_blank'
-            className={styles.actions__social}
-          >
-            <Icon icon='telegram' size={32} />
-          </Link>
+          <div className={styles.socials}>
+            <Link
+              href={t('vk_link', { ns: 'common' })}
+              target='_blank'
+              className={cn(styles.actions__social)}
+            >
+              <Icon icon='vk' size={32} className={styles.actions__social_vk} />
+            </Link>
+            <Link
+              href={t('telegram_link', { ns: 'common' })}
+              target='_blank'
+              className={styles.actions__social}
+            >
+              <Icon icon='telegram' size={32} />
+            </Link>
+          </div>
           <Link href={`tel:${t('phone', { ns: 'common' })}`} className={styles.actions__phone}>
             {t('phone', { ns: 'common' })}
           </Link>
@@ -58,10 +61,10 @@ export const Footer: FC<I18nConfig> = async ({ locale }) => {
       </div>
       <div className={styles.bottom}>
         <ModalQuestion locale={locale} />
-        <Link href={'https://www.sk.ru/'} target='_blank'>
+        <Link className={styles.bottom__link} href={'https://www.sk.ru/'} target='_blank'>
           <Image src='/img/logo-skolkovo.png' alt='Сколково' width={55} height={55} />
         </Link>
-        <Link href={'https://fasie.ru/'} target='_blank'>
+        <Link className={styles.bottom__link} href={'https://fasie.ru/'} target='_blank'>
           <Image
             src='/img/logo-fond.png'
             alt='Фонд содействия инновациям'
@@ -72,7 +75,7 @@ export const Footer: FC<I18nConfig> = async ({ locale }) => {
       </div>
       <div className={styles.links}>
         <div className={cn(styles.links__group, styles.links__copyright)}>{t('copyright')}</div>
-        <div className={styles.links__group}>
+        <div className={cn(styles.links__group, styles.column)}>
           <Link target='_blank' href={''} className={styles.links__link}>
             {t('user_agreement')}
           </Link>
@@ -80,7 +83,7 @@ export const Footer: FC<I18nConfig> = async ({ locale }) => {
             {t('policy')}
           </Link>
         </div>
-        <div className={styles.links__group}>
+        <div className={cn(styles.links__group, styles.column)}>
           <Link target='_blank' href={''} className={styles.links__link}>
             {t('support')}
           </Link>
@@ -92,5 +95,7 @@ export const Footer: FC<I18nConfig> = async ({ locale }) => {
     </footer>
   );
 };
+
+Footer.displayName = 'Footer block';
 
 export default Footer;
