@@ -1,0 +1,64 @@
+@use '@/styles/mixins.scss' as *;
+@use '@/styles/typography.scss' as *;
+
+.agreement {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  padding: 40px 80px;
+  align-items: center;
+  // flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+
+  border-radius: 160px;
+  background: var(--color-roles-surface-container-highest, rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(100px);
+  width: 1545px;
+  max-width: calc(100vw - 40px);
+  z-index: 50;
+  transition: border-radius 0.3s ease;
+
+  @include media-max-tablet {
+    padding: 20px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 1360px) {
+    border-radius: 20px;
+    padding: 20px;
+    background: var(--color-roles-surface-container-highest, rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(100px);
+  }
+
+  // @include media-max-mobile {
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  // }
+}
+
+.text {
+  @include typography-body-l-medium-narrow(#fff);
+  // max-width: 790px;
+}
+
+.link {
+  color: var(--color-roles-primary, #acbafd);
+}
+
+.btn {
+  height: 56px;
+  padding: 0px 32px;
+  border-radius: 16px;
+  background: var(--color-roles-primary, #acbafd);
+  min-width: fit-content;
+  @include typography-body-l-narrow(var(--btn-on-primary, #020268), center);
+
+  @include media-max-tablet {
+    margin: 0 auto;
+  }
+}

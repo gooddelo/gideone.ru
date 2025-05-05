@@ -1,0 +1,207 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.news {
+  display: flex;
+  padding-top: 140px;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1240px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  @include container();
+
+  @include media-max-tablet {
+    gap: 0;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 15%;
+    max-width: 190px;
+
+    // @include media-max-tablet {
+    //   display: none;
+    // }
+  }
+
+  &:before {
+    display: none;
+    left: 0;
+    background: linear-gradient(90deg, #0b091b 0%, rgba(12, 9, 27, 0) 100%);
+    // background: linear-gradient(90deg, #0b091b 0%, rgba(12, 9, 27, 0) 100%);
+  }
+
+  &:after {
+    display: none;
+    right: 0;
+    background: linear-gradient(270deg, #0b091b 0%, rgba(12, 9, 27, 0) 100%);
+    // background: linear-gradient(270deg, #0b091b 0%, rgba(12, 9, 27, 0) 100%);
+  }
+
+  &__short {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &__left {
+    &:after {
+      display: block;
+    }
+
+    &_scrolling {
+      &:after,
+      &:before {
+        display: block;
+      }
+
+      &:before {
+        width: 5%;
+        background: linear-gradient(90deg, #0b091b 0%, #0b091b 50%, rgba(12, 9, 27, 0) 100%);
+      }
+    }
+  }
+  &__right {
+    &:before {
+      display: block;
+    }
+
+    &_scrolling {
+      &:after,
+      &:before {
+        display: block;
+      }
+
+      &:after {
+        width: 5%;
+        background: linear-gradient(270deg, #0b091b 0%, #0b091b 50%, rgba(12, 9, 27, 0) 100%);
+      }
+    }
+  }
+
+  &__title {
+    @include typography-h2(var(---primary-100, #eaedff), center);
+
+    @include media-max-tablet {
+      @include typography-h3(var(---primary-100, #eaedff), center);
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    cursor: grab;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 20px;
+    overscroll-behavior-inline: contain;
+    user-select: none;
+
+    overflow-x: 'auto';
+    white-space: 'nowrap';
+    cursor: 'grab';
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include media-max-tablet {
+      display: none;
+    }
+  }
+
+  @include media-max-tablet {
+    &:before {
+      display: none;
+      left: 0;
+      background: linear-gradient(90deg, #0b091b 20%, rgba(12, 9, 27, 0) 100%);
+    }
+
+    &:after {
+      display: none;
+      right: 0;
+      background: linear-gradient(270deg, #0b091b 20%, rgba(12, 9, 27, 0) 100%);
+    }
+  }
+}
+
+.block {
+  border-radius: 16px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container, rgba(255, 255, 255, 0.08));
+  display: flex;
+  flex-direction: column;
+  max-width: 507px;
+
+  &__info {
+    display: flex;
+    padding: 24px 32px 24px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  &__date {
+    color: var(---white-400, rgba(255, 255, 255, 0.3));
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 20.8px */
+    letter-spacing: 0.16px;
+  }
+
+  &__paragraph {
+    @include typography-body-m-narrow(var(--color-roles-on-surface-variant, #dadae1));
+  }
+
+  &__list {
+    list-style: none;
+
+    &_item {
+      @include typography-body-m-narrow(var(--color-roles-on-surface-variant, #dadae1));
+
+      display: flex;
+
+      &:before {
+        content: '•';
+        display: block;
+        position: relative;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  @include media-max-mobile {
+    width: 507px;
+    max-width: calc(100vw - 40px);
+
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.drag_block {
+  display: none;
+
+  @include media-max-tablet {
+    display: block;
+  }
+}

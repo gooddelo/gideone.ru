@@ -1,0 +1,315 @@
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &__disabled {
+    pointer-events: none;
+  }
+
+  &:hover {
+    .checkmark {
+      background: var(--color-switch-bg-switch-off-hover);
+    }
+  }
+
+  &:active {
+    .checkmark {
+      background: var(--color-switch-bg-switch-off-active);
+    }
+  }
+
+  // ********************************************* CHECKBOX STATUSES
+
+  .checkbox:checked ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-default);
+
+    .checkmark__icon {
+      top: 50%;
+      left: 50%;
+      transform: scale(1) translate(-50%, -50%);
+    }
+  }
+  .checkbox:checked:hover ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-hover);
+  }
+  .checkbox:checked:active ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-active);
+  }
+
+  // ********************************************* RADIO STATUSES
+
+  .radio:checked ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-default);
+
+    &:after {
+      top: 50%;
+      left: 50%;
+      transform: scale(1) translate(-50%, -50%);
+    }
+  }
+  .radio:checked:hover ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-hover);
+  }
+  .radio:checked:active ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-active);
+  }
+
+  // ********************************************* SWITCH STATUSES
+
+  .switch__small:checked ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-default);
+
+    .checkmark__icon {
+      top: 50%;
+      transform: scale(1) translateY(-50%);
+    }
+
+    &:after {
+      left: 4px;
+      transform: translate(14px, -50%);
+    }
+
+    &:before {
+      top: 25%;
+      transform: scale(0) translateY(-50%);
+    }
+  }
+
+  .switch__medium:checked ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-default);
+
+    .checkmark__icon {
+      top: 50%;
+      transform: scale(1) translateY(-50%);
+    }
+
+    &:after {
+      left: 4px;
+      transform: translate(24px, -50%);
+    }
+
+    &:before {
+      top: 25%;
+      transform: scale(0) translateY(-50%);
+    }
+  }
+  .switch:checked:hover ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-hover);
+  }
+  .switch:checked:active ~ .checkmark {
+    background: var(--color-switch-bg-switch-on-active);
+  }
+}
+
+// ********************************************* CHECKBOX
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+
+  &__small {
+    & ~ .checkmark {
+      width: 16px;
+      height: 16px;
+      .checkmark__icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__medium {
+    & ~ .checkmark {
+      width: 24px;
+      height: 24px;
+      .checkmark__icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  & ~ .checkmark {
+    position: relative;
+    left: 0;
+    border-radius: 6px;
+    background: var(--color-bg-default-on_surface);
+
+    transition: all 0.3s ease;
+
+    .checkmark__icon {
+      position: absolute;
+
+      transition: all 0.1s ease;
+      top: 0%;
+      left: 0%;
+      transform: scale(0) translate(-50%, -50%);
+      transform-origin: center;
+
+      path {
+        fill: var(--color-day-base-09);
+      }
+    }
+  }
+}
+
+// ********************************************* RADIO
+
+.radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+
+  &__small {
+    & ~ .checkmark {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__medium {
+    & ~ .checkmark {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  & ~ .checkmark {
+    position: relative;
+    left: 0;
+    border-radius: 50%;
+    background: var(--color-bg-default-on_surface);
+
+    transition: all 0.3s ease;
+
+    &:after {
+      position: absolute;
+      content: '';
+
+      transition: all 0.1s ease;
+      top: 25%;
+
+      left: 25%;
+      transform: scale(0) translate(-50%, -50%);
+      transform-origin: center;
+
+      border-radius: 50%;
+
+      background: var(--color-switch-bg-icon);
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+
+// ********************************************* SWITCH
+
+.switch {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+
+  &__small {
+    & ~ .checkmark {
+      width: 32px;
+      height: 16px;
+
+      .checkmark__icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      &:after {
+        left: 4px;
+        width: 12px;
+        height: 12px;
+      }
+
+      &:before {
+        right: 4px;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  &__medium {
+    & ~ .checkmark {
+      width: 48px;
+      height: 24px;
+
+      .checkmark__icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:after {
+        left: 2px;
+        width: 16px;
+        height: 16px;
+      }
+
+      &:before {
+        right: 6px;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  & ~ .checkmark {
+    position: relative;
+    left: 0;
+    border-radius: 48px;
+    background: var(--color-bg-default-on_surface);
+
+    transition: all 0.3s ease;
+
+    .checkmark__icon {
+      position: absolute;
+      top: 0;
+
+      left: 0;
+      transform: scale(0) translateY(-50%);
+      transition: all 0.3s ease;
+    }
+
+    &:after,
+    &:before {
+      display: block;
+      position: absolute;
+      top: 50%;
+
+      border-radius: 50%;
+      content: '';
+
+      transition: all 0.3s ease;
+    }
+
+    &:after {
+      left: 4px;
+      transform: translate(0, -50%);
+      background: var(--color-switch-bg-icon);
+    }
+
+    &:before {
+      transform: scale(1) translateY(-50%);
+      transform-origin: center;
+      border: 2px solid var(--color-switch-bg-icon-off);
+    }
+  }
+}

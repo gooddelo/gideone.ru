@@ -1,0 +1,70 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  @include container();
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 40px;
+  max-width: 100%;
+
+  @include media-max-tablet {
+    max-width: 100%;
+  }
+}
+
+.title {
+  @include typography-h3(var(---primary-200, #d5dcfe), center);
+
+  @include media-max-tablet {
+    @include typography-h3(var(---primary-200, #d5dcfe), center);
+  }
+}
+
+.item {
+  max-width: 386px;
+  width: 100%;
+  min-width: 228px;
+
+  @include media-max-tablet {
+    min-width: 228px;
+    max-width: 100%;
+    flex: 1;
+  }
+
+  &__img {
+    width: 100%;
+    height: 189px;
+    object-fit: cover;
+    transition: height 0.3s ease;
+    border-radius: 10px;
+
+    @include media-tablet {
+      height: 320px;
+    }
+  }
+
+  &__name {
+    @include typography-h4(var(--color-roles-on-surface, #f7f7fa));
+    margin: 24px 0 16px;
+  }
+
+  &__description {
+    color: var(---white-600, rgba(255, 255, 255, 0.7));
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.32px;
+  }
+}

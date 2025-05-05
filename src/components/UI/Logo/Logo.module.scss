@@ -1,0 +1,42 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    // path {
+    fill: #e6e6e6;
+    // }
+
+    &_wrapper {
+      position: relative;
+    }
+
+    &_bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      width: 82px;
+      height: 75.5px;
+    }
+  }
+
+  &__text {
+    color: var(--txt-logo, #e6e6e6);
+    font-family: Montserrat;
+    font-size: 49.88px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 49.88px */
+
+    // @media screen and (max-width: $screen-tablet) {
+    //   font-size: 26px;
+    // }
+  }
+}

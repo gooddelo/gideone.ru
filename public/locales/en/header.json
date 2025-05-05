@@ -1,0 +1,13 @@
+{
+	"nav": {
+		"about": "About the product",
+		"prices": "Pricing",
+		"faq": "FAQ",
+		"contacts": "Contacts"
+	},
+	"phone": "+7 927 16-27-22",
+	"lang": {
+		"en": "EN",
+		"ru": "RU"
+	}
+}

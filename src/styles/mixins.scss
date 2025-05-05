@@ -1,0 +1,44 @@
+@mixin container($max-width: 1280px, $padding: 140px 20px) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $padding;
+  width: 100%;
+
+  @include media-max-tablet {
+    padding: 80px 20px;
+  }
+
+  @include media-max-mobile {
+    padding: 40px 20px;
+  }
+}
+
+@mixin media-desktop {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin media-max-tablet {
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (max-width: 1280px) and (min-width: 720px) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media screen and (max-width: 720px) {
+    @content;
+  }
+}
+
+@mixin media-max-mobile {
+  @media screen and (max-width: 720px) {
+    @content;
+  }
+}

@@ -1,0 +1,28 @@
+{
+	"title": "More than just analytics",
+	"items": {
+		"1": {
+			"name": "Gamification and motivation",
+			"description": "Ratings, badges, an internal 'Wall of Honor' to encourage people to improve performance instead of fearing punishment.",
+			"img-1": "/img/analytics-1.png",
+			"img-2": "/img/analytics-2.png"
+		},
+		"2": {
+			"name": "Personal",
+			"subname": "recommendations",
+			"description": "The system praises the employee and offers tips for improvement: 'Great that you offered coffee, but don't forget about the combo discount.'",
+			"img-1": "/img/analytics-3.png"
+		},
+		"3": {
+			"name": "Setup in just a few minutes",
+			"description": "Simply place the GIDEONE device in the checkout area and register in the system — it's that easy!",
+			"img-1": "/img/analytics-4.png"
+		},
+		"4": {
+			"name": "Criteria customization",
+			"subname": "for your business",
+			"description": "You can configure multiple sales scenarios, including key phrases, upsells, promotions, and target products — everything employees should be doing.",
+			"img-1": "/img/analytics-5.png"
+		}
+	}
+}

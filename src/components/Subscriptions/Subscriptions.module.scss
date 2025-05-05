@@ -1,0 +1,311 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  @include container($max-width: 1312px);
+
+  @include media-max-mobile {
+    margin-bottom: 250px;
+  }
+
+  @media screen and (max-width: 544px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.title {
+  @include typography-h2(var(---primary-100, #eaedff), center);
+  margin-bottom: 80px;
+
+  @include media-max-tablet {
+    @include typography-h3(var(---primary-100, #eaedff), center);
+  }
+}
+
+.subscriptions {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 56px;
+  background: rgba(0, 44, 255, 0.1);
+  position: relative;
+
+  @include media-max-tablet {
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 544px) {
+    padding: 0;
+  }
+}
+
+.curved_line {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 1920px;
+  max-width: 100vw;
+  height: auto;
+}
+
+.subscription {
+  display: flex;
+  width: 408px;
+  height: 660px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  flex-shrink: 0;
+
+  @include media-max-tablet {
+    width: 100%;
+    max-width: 408px;
+  }
+
+  &_1 {
+    display: flex;
+    width: 408px;
+    height: 680px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+
+    @include media-max-tablet {
+      width: 100%;
+      max-width: 408px;
+    }
+
+    @include media-max-mobile {
+      padding: 40px 16px;
+    }
+  }
+
+  &_2,
+  &_3 {
+    display: flex;
+    height: 680px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    flex: 1 0 0;
+    border-radius: 40px;
+    background: linear-gradient(180deg, #1a2c86 0%, #0c1237 100%);
+
+    @include media-max-mobile {
+      padding: 40px 16px;
+    }
+  }
+
+  &__name {
+    @include typography-h4(var(---white-600, rgba(255, 255, 255, 0.7)), center);
+  }
+
+  &__price {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    background: linear-gradient(180deg, #dae1ff 0%, #a6b6ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+
+    span {
+      font-size: 36px;
+      font-weight: 600;
+      background: linear-gradient(180deg, #dae1ff 0%, #a6b6ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform: translateY(5px);
+    }
+
+    &_wrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__per {
+    @include typography-body-m-narrow(rgba(197, 246, 249, 0.88), center);
+  }
+
+  &__description {
+    @include typography-body-m-narrow(var(---white-500, rgba(255, 255, 255, 0.55)));
+  }
+
+  &__options {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include typography-body-m-narrow(var(---white-700, rgba(255, 255, 255, 0.8)));
+
+    &:first-of-type {
+      @include typography-body-m-narrow(var(---white-600, rgba(255, 255, 255, 0.7)));
+    }
+  }
+
+  &__option {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+
+    img {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__action {
+    display: flex;
+    height: 56px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    gap: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 100px;
+    margin-top: auto;
+
+    &_1 {
+      border: 1px solid var(--color-roles-tertiary, #c5f6f9);
+      background: none;
+      @include typography-body-l-narrow(var(--color-roles-tertiary, #c5f6f9), center);
+    }
+    &_2,
+    &_3 {
+      display: flex;
+      height: 56px;
+      padding: 0px 32px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      align-self: stretch;
+
+      background: linear-gradient(180deg, #c6d0ff 0%, #8898e4 100%);
+      @include typography-body-l-narrow(var(--btn-on-primary, #020268), center);
+    }
+  }
+}
+
+.enterprise {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-top: 160px;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid #f7f7fa;
+  backdrop-filter: blur(10px);
+
+  @include media-max-mobile {
+    padding: 40px 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__title {
+    color: var(--color-roles-on-tertiary-container, #e2fbfc);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 50px */
+    max-width: 725px;
+
+    @include media-max-mobile {
+      @include typography-h4(var(--color-roles-on-tertiary-container, #e2fbfc));
+    }
+  }
+
+  &__amount {
+    font-family: Montserrat;
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+
+    color: transparent; // no fill
+    -webkit-text-stroke: 1px var(---primary-200, #d5dcfe); // outline color and thickness
+  }
+
+  &__employees {
+    @include typography-body-l-medium-narrow(var(---white-600, rgba(255, 255, 255, 0.7)));
+  }
+
+  &__button {
+    display: flex;
+    height: 56px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 40px;
+    border: 2px solid var(--color-roles-tertiary, #c5f6f9);
+    background: var(--color-roles-tertiary, #c5f6f9);
+    width: fit-content;
+
+    @include typography-body-l-narrow(var(--btn-on-primary, #020268));
+
+    @include media-max-mobile {
+      max-width: 100%;
+    }
+  }
+}
+
+.enterprise__img {
+  width: 522.175px;
+  height: 491.303px;
+  transform: rotate(-141.359deg);
+  aspect-ratio: 522.17/491.3;
+
+  position: absolute;
+  right: 3%;
+  bottom: -40%;
+
+  @include media-max-tablet {
+    width: 441px;
+    height: auto;
+    left: 55%;
+  }
+
+  @include media-max-mobile {
+    bottom: -80%;
+    width: 350px;
+  }
+}

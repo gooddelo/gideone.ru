@@ -1,0 +1,66 @@
+{
+	"title": "Start using today",
+	"subscriptions": [
+		{
+			"title": "Start",
+			"price": "0",
+			"per": "for two weeks",
+			"description": "Discover how GIDEONE impacts your business",
+			"options": [
+				{
+					"name": "Full functionality"
+				},
+				{
+					"name": "Help with integration and initial setup"
+				},
+				{
+					"name": "Assistance with integration and initial setup"
+				}
+			],
+			"action": "Start using"
+		},
+		{
+			"title": "Pro",
+			"price": "3000",
+			"per": "per employee per month",
+			"description": "For companies with their own ATS, small businesses with a limited number of employees",
+			"options": [
+				{
+					"name": "2 sales scripts, 20 evaluation criteria"
+				},
+				{
+					"name": "No device installation required"
+				},
+				{
+					"name": "Price per employee"
+				}
+			],
+			"action": "Try for free"
+		},
+		{
+			"title": "Business",
+			"price": "10,000",
+			"per": "per workstation per month",
+			"description": "For places where many employees work at a single point.",
+			"options": [
+				{
+					"name": "2 sales scripts and 20 evaluation criteria"
+				},
+				{
+					"name": "Device installation"
+				},
+				{
+					"name": "No limit on the number of people per workstation"
+				}
+			],
+			"action": "Try for free"
+		}
+	],
+	"enterprise": {
+		"title": "We offer personalized conditions for large companies!",
+		"amount": "1000+",
+		"employees": "employees in the company",
+		"button": "Try for free"
+	},
+	"currency": "₽"
+}

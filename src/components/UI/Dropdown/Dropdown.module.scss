@@ -1,0 +1,15 @@
+.dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  width: 100%;
+  overflow: hidden;
+
+  .dropdown__content {
+    overflow: hidden;
+  }
+}
+
+.dropdown_open {
+  grid-template-rows: 1fr;
+}

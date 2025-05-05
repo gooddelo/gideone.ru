@@ -1,0 +1,219 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.footer {
+  @include container;
+  @include media-max-tablet {
+    padding: 80px 20px 20px;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.nav {
+  display: flex;
+  width: 610px;
+  padding-bottom: 14px;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+
+  &__link {
+    @include typography-body-l-medium-narrow(var(--btn-primary, #acbafd));
+    display: flex;
+    height: 44px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @include media-max-tablet {
+    column-gap: 58px;
+    width: fit-content;
+    flex-wrap: wrap;
+
+    &__link {
+      padding: 8px 16px;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.actions {
+  display: flex;
+  padding-top: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__social {
+    display: flex;
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+    min-height: 56px;
+    padding-right: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 34px;
+    border: 1px solid var(--btn-primary, #acbafd);
+    fill: var(--btn-primary, #acbafd);
+    position: relative;
+
+    // &:nth-child(odd) {
+    //   margin-right: 12px;
+    // }
+
+    &_vk {
+      transform: translateY(22%);
+    }
+  }
+
+  &__phone {
+    @include typography-h4(var(--btn-primary, #acbafd));
+    // margin-left: 32px;``
+
+    // @media screen and (max-width: 380px) {
+    //   margin-top: 32px;
+    // }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  &__application {
+    // margin-left: auto;
+    display: flex;
+    height: 56px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 16px;
+    background: var(--color-roles-primary, #acbafd);
+    @include typography-body-l-narrow(var(--btn-on-primary, #020268, center));
+    border: none;
+
+    @include media-max-tablet {
+      border-radius: 100px;
+      // margin-left: 0;
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 80px;
+  gap: 32px;
+  align-self: stretch;
+  padding-bottom: 32px;
+
+  .questions {
+    margin-right: auto;
+    display: flex;
+    height: 56px;
+    width: 610px;
+    padding: 6px 0px;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+
+    padding: 0px 8px 0px 24px;
+    gap: 8px;
+
+    border-radius: 16px;
+    border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+    background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+
+    /* shadow-light-mode-input */
+    box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+
+    input {
+      @include typography-body-l-medium-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+    }
+
+    button {
+      display: flex;
+      width: 162px;
+      height: 44px;
+      padding: 10px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      border: 1px solid var(--btn-primary, #acbafd);
+      background: none;
+
+      @include typography-btn-input-l-bold(var(--btn-primary, #acbafd));
+    }
+
+    @include media-max-tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    opacity: 0.7;
+  }
+
+  @include media-max-tablet {
+    padding: 40px 0;
+  }
+}
+
+.links {
+  display: flex;
+  // width: 1240px;
+
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  row-gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(---secondary-600, #5d5d71);
+  // margin-top: 32px;
+
+  @include container($padding: 32px 20px 20px);
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__copyright {
+    @include typography-body-l-medium-narrow(var(---secondary-500, #7d7d94));
+  }
+
+  &__link {
+    @include typography-body-l-medium-narrow(var(---secondary-500, #7d7d94));
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+}

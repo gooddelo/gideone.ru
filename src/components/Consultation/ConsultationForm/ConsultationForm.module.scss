@@ -1,0 +1,186 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 610px;
+  margin: 0 134px 0 0;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url('/svg/curved-arrow-with-stars.svg');
+    width: 207px;
+    height: 350px;
+    background-size: contain;
+    background-position: center;
+    bottom: 147.5px;
+    left: 420px;
+
+    @include media-max-tablet {
+      width: 119px;
+      height: 203px;
+      bottom: 40px;
+      left: 95px;
+      transform: rotateY(-180deg) translate(100%, -50%);
+    }
+
+    @include media-max-mobile {
+      display: none;
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media-max-tablet {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 390px !important;
+    }
+  }
+
+  &__block {
+    max-width: 390px;
+
+    @include media-max-tablet {
+      max-width: none;
+      margin: 0 auto;
+    }
+
+    &_head {
+      width: max-content;
+      max-width: 610px;
+
+      @include media-max-tablet {
+        width: 100%;
+      }
+    }
+  }
+
+  &__input {
+    display: flex;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 8px 0px 24px;
+    gap: 4px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+    background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+
+    /* shadow-light-mode-input */
+    box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+    outline: none;
+
+    @include typography-body-l-medium-narrow(var(--color-roles-on-surface-variant, #dadae1));
+
+    &::placeholder {
+      @include typography-body-l-medium-narrow(var(--color-roles-on-surface-variant, #dadae1));
+    }
+  }
+
+  &__message {
+    display: flex;
+    height: 136px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    outline: none;
+    align-self: stretch;
+    padding: 16px 12px 8px 16px;
+    border-radius: 16px;
+    border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+    background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+    resize: none;
+
+    /* shadow-light-mode-input */
+    box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+    @include typography-body-l-medium-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+  }
+
+  &__btn {
+    display: flex;
+    height: 56px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: var(--color-roles-primary, #acbafd);
+    @include typography-body-l-narrow(var(--btn-on-primary, #020268));
+    border: none;
+    width: 100%;
+    transition: all 0.3s ease;
+
+    @include media-max-tablet {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 390px;
+      border-radius: 100px;
+    }
+  }
+
+  &__agreement {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    @include typography-body-m-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+    margin-top: 16px;
+
+    a {
+      @include typography-body-m-narrow(var(--color-roles-primary, #acbafd));
+    }
+
+    @include media-max-tablet {
+      width: 100%;
+      padding: 0 24px;
+    }
+  }
+
+  @include media-max-tablet {
+    display: flex;
+    width: 100%;
+    max-width: 619px;
+    min-width: 400px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background: var(--color-roles-surface-container, rgba(255, 255, 255, 0.08));
+  }
+
+  @include media-max-mobile {
+    padding: 0;
+    background: none;
+    min-width: auto;
+    max-width: 480px;
+  }
+}
+
+.title {
+  @include typography-h2(var(---primary-100, #eaedff));
+
+  @include media-max-tablet {
+    @include typography-h3(var(---primary-200, #d5dcfe), center);
+  }
+}
+
+.highlight {
+  @include typography-h2(var(--color-roles-primary, #acbafd));
+  @include media-max-tablet {
+    @include typography-h3(var(--color-roles-primary, #acbafd), center);
+  }
+}

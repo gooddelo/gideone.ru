@@ -1,0 +1,20 @@
+@use '@/styles/typography' as *;
+@use '@/styles/mixins' as *;
+
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin: 140px 0;
+  width: 100vw !important;
+  // left: 50%;
+  transform: translateX(-100%);
+
+  @include media-max-tablet {
+    margin: 80px 0;
+  }
+
+  @include media-max-mobile {
+    margin: 40px 0;
+  }
+}

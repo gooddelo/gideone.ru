@@ -1,0 +1,40 @@
+@use '@/styles/mixins' as *;
+
+.consultation {
+  @include container(1920px, 140px 0);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  border-radius: 40px;
+  border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+  background: var(--color-roles-surface-container, rgba(255, 255, 255, 0.08));
+
+  @include media-max-tablet {
+    flex-direction: column;
+    gap: 160px;
+    background: none;
+    border: none;
+  }
+
+  @include media-max-mobile {
+    gap: 40px;
+  }
+}
+
+.img {
+  border-radius: 40px;
+  object-fit: cover;
+  height: 886px;
+  max-width: calc(100vw - 715px);
+
+  @include media-max-tablet {
+    width: 100%;
+    height: 600px;
+    max-width: none;
+    object-fit: cover;
+    z-index: 2;
+  }
+}

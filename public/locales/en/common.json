@@ -1,0 +1,58 @@
+{
+	"agreement": "By clicking the «{{agreementVia}}» button, I agree to the",
+	"agreement_2": "and give consent to the processing of personal data.",
+	"policy": " privacy policy ",
+	"agreementVia": {
+		"send": "Send",
+		"get_consultation": "Get a consultation"
+	},
+	"nav_blocks": {
+		"banner": "banner",
+		"tasks": "tasks",
+		"marquee": "marquee",
+		"sales": "sales",
+		"analytics": "analytics",
+		"for-who": "for-who",
+		"try": "try",
+		"decisions": "decisions",
+		"how-it-works": "how-it-works",
+		"start-using": "start-using",
+		"possibilities": "possibilities",
+		"subscriptions": "subscriptions",
+		"faq": "faq",
+		"consultations": "consultations",
+		"news": "news"
+	},
+	"nav_links": {
+		"about": "#sales",
+		"subscriptions": "#subscriptions",
+		"faq": "#faq",
+		"news": "#news",
+		"top": "#banner"
+	},
+	"nav": {
+		"about": "About the product",
+		"subscriptions": "Pricing",
+		"faq": "FAQ",
+		"news": "News"
+	},
+	"telegram_link": "https://t.me/gideone_4u",
+	"vk_link": "https://vk.com/gideone.online",
+	"phone": "+7 927 16-27-22",
+	"modal-contact": {
+		"title": "We'll get in touch with you!",
+		"name": "Name",
+		"phone": "Phone",
+		"email": "Email",
+		"send": "Send"
+	},
+	"modal-question": {
+		"ask": "Ask us a question and we’ll get back to you",
+		"title": "Ask us a question",
+		"question": "I’d like to know...",
+		"name": "Name",
+		"email": "Email for response",
+		"send": "Send",
+		"button": "Ask a question"
+	}
+}
