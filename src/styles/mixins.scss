@@ -1,8 +1,8 @@
-@mixin container($max-width: 1280px, $padding: 140px 20px) {
+@mixin container($max-width: 1280px, $padding: 140px 20px, $width: 100%) {
   max-width: $max-width;
   margin: 0 auto;
   padding: $padding;
-  width: 100%;
+  width: $width;
 
   @include media-max-tablet {
     padding: 80px 20px;
