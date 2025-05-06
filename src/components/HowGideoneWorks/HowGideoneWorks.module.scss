@@ -37,6 +37,7 @@ $circle-size: 12px;
 
   @include media-max-mobile {
     max-width: 100%;
+    min-width: none;
   }
 }
 

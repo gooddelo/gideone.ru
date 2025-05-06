@@ -1,7 +1,7 @@
 @use '@/styles/mixins' as *;
 
 .consultation {
-  @include container(1920px, 140px 0);
+  @include container($width: 1920px, $padding: 140px 0);
 }
 
 .content {

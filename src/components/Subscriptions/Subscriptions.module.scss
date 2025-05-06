@@ -7,7 +7,7 @@
   align-items: center;
   position: relative;
   z-index: 2;
-  @include container($max-width: 1312px);
+  @include container();
 
   @include media-max-mobile {
     margin-bottom: 250px;
