@@ -2,11 +2,12 @@ import { type FC, useLayoutEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { secureStorage } from '@/utils';
 import { LOCAL_STORAGE_KEYS } from '@/types';
+import type { Namespaces } from '@/types';
 import styles from './CookieAgreement.module.scss';
 
 const CookieAgreement: FC = () => {
   const [locale, setLocale] = useState('ru');
-  const { t } = useTranslation('cookieAgreement', { lng: locale });
+  const { t } = useTranslation<Namespaces>('cookieAgreement', { lng: locale });
   const { getLocalItem, setLocalItem } = secureStorage();
   const [agreed, setAgreed] = useState<boolean>(true);
 

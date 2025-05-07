@@ -1,11 +1,12 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ModalContact } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './Banner.module.scss';
 
 const Banner: FC = () => {
   // TODO: fix margins for adaptive
-  const { t } = useTranslation('banner');
+  const { t } = useTranslation<Namespaces>('banner');
   return (
     <section className={styles.banner} id={t('nav_blocks.banner', { ns: 'common' })}>
       <img

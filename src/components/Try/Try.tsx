@@ -1,6 +1,7 @@
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ModalContact } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './Try.module.scss';
 
 interface IReason {
@@ -8,7 +9,7 @@ interface IReason {
 }
 
 const Try: FC = () => {
-  const { t } = useTranslation('try');
+  const { t } = useTranslation<Namespaces>('try');
   const reasons = t('reasons', { returnObjects: true }) as Array<IReason>;
   return (
     <section className={styles.container} id={t('nav_blocks.try', { ns: 'common' })}>

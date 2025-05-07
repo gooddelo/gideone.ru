@@ -9,6 +9,7 @@ import { Modal } from '@/components/UI';
 import { PolicyAgreement } from '@/components/Widgets';
 import { secureStorage } from '@/utils';
 import { SESSION_STORAGE_KEYS } from '@/types';
+import type { Namespaces } from '@/types';
 import styles from './ModalContact.module.scss';
 
 interface ISchema {
@@ -31,7 +32,7 @@ interface IProps {
 }
 
 const ModalContact: FC<IProps> = ({ id = uuidv4(), className, text, switchToBtn = false }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation<Namespaces>('common');
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const { setSessionItem, getSessionItem } = secureStorage();
   const handleSaveToStorage = (

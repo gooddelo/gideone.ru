@@ -13,6 +13,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,woff2,ttf,json}'],
+        mode: '',
         runtimeCaching: [
           {
             urlPattern: ({ request }) => request.destination === 'image',
@@ -49,12 +50,15 @@ export default defineConfig({
             },
           },
         ],
+        // disableDevLogs: true,
       },
       includeAssets: ['locales/**/*', 'animations/**/*', 'img/**/*', 'svg/**/*', 'gideone.svg'], // include icons and other assets
       manifest: false, // <- disables installability
-      devOptions: {
-        enabled: true, // enables service worker in dev mode (optional)
-      },
+
+      // devOptions: {
+      //   enabled: false,
+      //   // enabled: true, // enables service worker in dev mode (optional)
+      // },
     }),
   ],
   resolve: {

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { Namespaces } from '@/types';
 import styles from './ForWho.module.scss';
 
 interface IItem {
@@ -9,7 +10,7 @@ interface IItem {
 }
 
 const ForWho: FC = () => {
-  const { t } = useTranslation('forWho');
+  const { t } = useTranslation<Namespaces>('forWho');
   const list = t('list', { returnObjects: true }) as IItem[];
   return (
     <section className={styles.container} id={t('nav_blocks.for-who', { ns: 'common' })}>

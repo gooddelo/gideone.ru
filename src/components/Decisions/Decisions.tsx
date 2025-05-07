@@ -1,6 +1,7 @@
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DragBlock } from '@/components/UI';
+import type { Namespaces } from '@/types';
 import styles from './Decisions.module.scss';
 
 interface IDecision {
@@ -10,7 +11,7 @@ interface IDecision {
 }
 
 const Decisions: FC = () => {
-  const { t } = useTranslation('decisions');
+  const { t } = useTranslation<Namespaces>('decisions');
   const decisions = t('decisions', { returnObjects: true }) as Array<IDecision>;
 
   return (

@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import { type FC, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { Namespaces } from '@/types';
 import styles from './HeaderLangBtn.module.scss';
 
 // import React from 'react';
@@ -11,7 +12,7 @@ interface IProps {
 
 const HeaderLangBtn: FC<IProps> = ({ className }) => {
   const [locale, setLocale] = useState('ru');
-  const { t, i18n } = useTranslation('header');
+  const { t, i18n } = useTranslation<Namespaces>('header');
 
   const handleLangChange = () => {
     // const newLocale = locale === 'en' ? 'ru' : 'en';

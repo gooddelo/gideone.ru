@@ -1,5 +1,6 @@
 import { type FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { Namespaces } from '@/types';
 import styles from './Tasks.module.scss';
 
 interface ITask {
@@ -9,7 +10,7 @@ interface ITask {
 }
 
 const Tasks: FunctionComponent = () => {
-  const { t } = useTranslation('tasks');
+  const { t } = useTranslation<Namespaces>('tasks');
 
   const tasks = t('tasks', { returnObjects: true }) as ITask[];
   return (

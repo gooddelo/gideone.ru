@@ -1,10 +1,11 @@
 import cn from 'classnames';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { Namespaces } from '@/types';
 import styles from './Sales.module.scss';
 
 const Sales: FC = () => {
-  const { t } = useTranslation('sales');
+  const { t } = useTranslation<Namespaces>('sales');
 
   if (t('analytics.img_1').startsWith('/'))
     return (

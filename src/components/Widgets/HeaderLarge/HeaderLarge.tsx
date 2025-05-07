@@ -3,10 +3,11 @@ import { type FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
 import { HeaderLangBtn } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './HeaderLarge.module.scss';
 
 const HeaderLarge: FC = () => {
-  const { t } = useTranslation('header');
+  const { t } = useTranslation<Namespaces>('header');
   const [inView, setInView] = useState(false);
 
   const goTop = () => {

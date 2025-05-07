@@ -2,10 +2,11 @@ import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
 import { Burger, HeaderLangBtn } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './TabletHeader.module.scss';
 
 const TabletHeader: FC = () => {
-  const { t } = useTranslation('header');
+  const { t } = useTranslation<Namespaces>('header');
   return (
     <div className={styles.tablet} id="tablet-header">
       <div className={styles.tablet__contact}>

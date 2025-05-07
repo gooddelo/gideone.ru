@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { type FC, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DragBlock } from '@/components/UI';
+import type { Namespaces } from '@/types';
 import styles from './News.module.scss';
 
 export interface NewsItem {
@@ -16,7 +17,7 @@ const News: FC = () => {
     'left' | 'left_scrolling' | 'right' | 'right_scrolling' | null
   >('left');
   const prevScrollLeft = useRef(0);
-  const { t } = useTranslation('news');
+  const { t } = useTranslation<Namespaces>('news');
   const news = t('news', { returnObjects: true }) as NewsItem[];
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {

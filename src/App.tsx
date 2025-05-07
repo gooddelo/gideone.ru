@@ -1,7 +1,7 @@
 import '@/locales';
-import { useLayoutEffect } from 'react';
+// import { useEffect, useLayoutEffect } from 'react';
 import Marquee from 'react-fast-marquee';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import {
   Analytics,
   AnalyticsSales,
@@ -25,21 +25,27 @@ import {
   Footer,
   Header,
   HeaderLarge,
+  SEOHelmet,
   TabletHeader,
 } from '@/components/Widgets';
 
 function App() {
-  const { i18n } = useTranslation();
+  // const { i18n } = useTranslation();
 
-  useLayoutEffect(() => {
-    if (!window) return;
+  // useLayoutEffect(() => {
+  //   if (!window) return;
 
-    const pathLocale = window.location.pathname.split('/')[1];
-    i18n.changeLanguage(pathLocale);
-  }, []);
+  //   const pathLocale = window.location.pathname.split('/')[1];
+  //   i18n.changeLanguage(pathLocale);
+  // }, []);
+
+  // useEffect(() => {
+  //   document.documentElement.lang = i18n.language;
+  // }, [i18n.language]);
 
   return (
     <>
+      <SEOHelmet />
       <main>
         {/*  */}
         <Header />

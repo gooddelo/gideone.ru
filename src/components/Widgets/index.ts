@@ -12,3 +12,4 @@ export { default as ModalContact } from './ModalContact/ModalContact';
 export { default as ModalQuestion } from './ModalQuestion/ModalQuestion';
 export { default as PolicyAgreement } from './PolicyAgreement/PolicyAgreement';
 export { default as TabletHeader } from './TabletHeader/TabletHeader';
+export { default as SEOHelmet } from './SEOHelmet/SEOHelmet';

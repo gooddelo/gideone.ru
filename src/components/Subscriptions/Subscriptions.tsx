@@ -2,6 +2,7 @@ import cn from 'classnames';
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ModalContact } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './Subscriptions.module.scss';
 
 interface Subscription {
@@ -14,7 +15,7 @@ interface Subscription {
 }
 
 const Subscriptions: FC = () => {
-  const { t } = useTranslation('subscriptions');
+  const { t } = useTranslation<Namespaces>('subscriptions');
 
   const subscriptions = t('subscriptions', { returnObjects: true }) as Array<Subscription>;
 

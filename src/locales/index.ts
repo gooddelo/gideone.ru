@@ -1,16 +1,15 @@
 import i18n from 'i18next';
 import HttpBackend, { type HttpBackendOptions } from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
+import { getDefLang } from '@/utils';
 import { LANGUAGES } from '@/types';
 import { i18nNamespaces } from './namespaces';
 
-// import { secureStorage } from '@/utils/secureStorage'
-// import { TInitialState } from '@/redux/user'
+// console.log('bgvdfctnhbgsvdfcjnthvfgdcthenbfgsvdchtbgfvsdchndbvfgc');
+// console.log(navigator);
+// console.log('rdvfdxcds');
 
-// const {getLocalItem} = secureStorage()
-// const user = getLocalItem<TInitialState>(LOCAL_STORAGE_KEYS.user)
-
-const defLang = LANGUAGES.ru;
+// let lannn = LANGUAGES.ru;
 
 i18n
   .use(HttpBackend)
@@ -20,7 +19,8 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json', // Path to load JSON files dynamically
     },
-    lng: defLang,
+    lng: getDefLang(),
+    // lng: defLang,
     fallbackLng: LANGUAGES.ru,
     ns: i18nNamespaces, // Namespaces to load
     // defaultNS: 'auth_pages', // Default namespace

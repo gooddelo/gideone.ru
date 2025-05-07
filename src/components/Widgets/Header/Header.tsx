@@ -2,10 +2,11 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
 import { HeaderLangBtn } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './Header.module.scss';
 
 export const Header: FC = () => {
-  const { t } = useTranslation('header');
+  const { t } = useTranslation<Namespaces>('header');
 
   return (
     <header className={styles.header} id="header">

@@ -9,6 +9,7 @@ import { Modal } from '@/components/UI';
 import { PolicyAgreement } from '@/components/Widgets';
 import { secureStorage } from '@/utils';
 import { SESSION_STORAGE_KEYS } from '@/types';
+import type { Namespaces } from '@/types';
 import styles from './ModalQuestion.module.scss';
 
 interface ISchema {
@@ -44,7 +45,7 @@ const ModalQuestion: FC<IProps> = ({
   switchToBtn = false,
   switchClassName,
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation<Namespaces>('common');
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const { setSessionItem, getSessionItem } = secureStorage();
   const toggleModal = () => setModalOpen((prev) => !prev);

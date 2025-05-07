@@ -3,10 +3,11 @@ import { type FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dropdown, Icon } from '@/components/UI';
 import { ModalQuestion } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './FAQ.module.scss';
 
 const FAQ: FC = () => {
-  const { t } = useTranslation('faq');
+  const { t } = useTranslation<Namespaces>('faq');
   const [open, setOpen] = useState<number | null>(null);
 
   const questions = t('questions', { returnObjects: true }) as Array<{

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { Namespaces } from '@/types';
 import styles from './StartUsing.module.scss';
 
 interface IStep {
@@ -7,7 +8,7 @@ interface IStep {
 }
 
 const StartUsing: FC = () => {
-  const { t } = useTranslation('startUsing');
+  const { t } = useTranslation<Namespaces>('startUsing');
   const steps = t('steps', { returnObjects: true }) as IStep[];
 
   return (

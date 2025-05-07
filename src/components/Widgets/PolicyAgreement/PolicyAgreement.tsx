@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { InputCheck } from '@/components/UI';
+import type { Namespaces } from '@/types';
 import styles from './PolicyAgreement.module.scss';
 
 interface IProps {
@@ -12,7 +13,7 @@ interface IProps {
 }
 
 const PolicyAgreement: FC<IProps> = ({ check, className, agreementVia }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation<Namespaces>('common');
 
   return (
     <div className={cn(styles.agreement, className)}>

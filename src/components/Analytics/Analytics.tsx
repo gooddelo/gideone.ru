@@ -1,10 +1,11 @@
 import cn from 'classnames';
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { Namespaces } from '@/types';
 import styles from './Analytics.module.scss';
 
 const Analytics: FC = () => {
-  const { t } = useTranslation('analytics');
+  const { t } = useTranslation<Namespaces>('analytics');
   return (
     <section className={styles.container} id={t('nav_blocks.analytics', { ns: 'common' })}>
       <h2 className={styles.title}>{t('title')}</h2>

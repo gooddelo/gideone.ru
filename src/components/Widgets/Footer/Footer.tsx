@@ -3,10 +3,11 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
 import { ModalContact, ModalQuestion } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './Footer.module.scss';
 
 export const Footer: FC = () => {
-  const { t } = useTranslation('footer');
+  const { t } = useTranslation<Namespaces>('footer');
   return (
     <footer className={styles.footer} id="footer">
       <div className={styles.top}>

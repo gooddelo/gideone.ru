@@ -4,7 +4,8 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["vite-plugin-pwa/client"]
     // other options
   },
   "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]

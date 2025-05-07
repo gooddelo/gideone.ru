@@ -1,10 +1,11 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ConsultationForm } from '@/components/Widgets';
+import type { Namespaces } from '@/types';
 import styles from './Consultation.module.scss';
 
 const Consultation: FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation<Namespaces>('common');
   return (
     <section className={styles.consultation} id={t('nav_blocks.consultation', { ns: 'common' })}>
       <div className={styles.content}>

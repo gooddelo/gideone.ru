@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 import * as yup from 'yup';
 import { InputCheck } from '@/components/UI';
+import type { Namespaces } from '@/types';
 import styles from './ConsultationForm.module.scss';
 
 const phoneRegExp =
@@ -17,7 +18,7 @@ const schema = yup.object().shape({
 });
 
 const ConsultationForm: FC = () => {
-  const { t } = useTranslation('consultation');
+  const { t } = useTranslation<Namespaces>('consultation');
   const {
     register,
     handleSubmit,

@@ -3,6 +3,7 @@ import { type Dispatch, type FC, type SetStateAction, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
 import { useClickOutside } from '@/hooks';
+import type { Namespaces } from '@/types';
 import styles from './Menu.module.scss';
 
 interface IProps {
@@ -11,7 +12,7 @@ interface IProps {
 }
 
 const Menu: FC<IProps> = ({ open, setOpen }) => {
-  const { t } = useTranslation('header');
+  const { t } = useTranslation<Namespaces>('header');
 
   const containerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLMenuElement>(null);

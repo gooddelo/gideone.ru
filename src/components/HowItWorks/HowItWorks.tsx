@@ -2,6 +2,7 @@ import type { FC } from 'react';
 // import howWorksEn from '../../../public/img/bot-message-en.png';
 // import howWorksRu from '../../../public/img/bot-message-ru.png';
 import { useTranslation } from 'react-i18next';
+import type { Namespaces } from '@/types';
 import styles from './HowItWorks.module.scss';
 
 interface IPoint {
@@ -9,7 +10,7 @@ interface IPoint {
 }
 
 const HowItWorks: FC = () => {
-  const { t } = useTranslation('howItWorks');
+  const { t } = useTranslation<Namespaces>('howItWorks');
   const points = t('points', { returnObjects: true }) as IPoint[];
 
   return (

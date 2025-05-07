@@ -1,5 +1,6 @@
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { Namespaces } from '@/types';
 import styles from './Possibilities.module.scss';
 
 interface Step {
@@ -7,7 +8,7 @@ interface Step {
 }
 
 const Possibilities: FC = () => {
-  const { t } = useTranslation('possibilities');
+  const { t } = useTranslation<Namespaces>('possibilities');
   const steps = t('steps', { returnObjects: true }) as Step[];
   return (
     <section className={styles.possibilities} id={t('nav_blocks.possibilities', { ns: 'common' })}>
