@@ -13,6 +13,7 @@ import {
   HowItWorks,
   News,
   Possibilities,
+  Preview,
   Sales,
   StartUsing,
   Subscriptions,
@@ -55,6 +56,7 @@ function App() {
         <Banner />
         <Tasks />
         <Marquee />
+        <Preview />
         <AnalyticsSales />
         <Sales />
         <Analytics />

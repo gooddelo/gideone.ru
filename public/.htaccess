@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect requests for the root to index.html
+
+RewriteRule ^robots\.txt$ - [L]
+RewriteRule ^sitemap\.xml$ - [L]
+
+# Redirect all other requests to index.html
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.\*)$ /index.html [L]

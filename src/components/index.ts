@@ -1,6 +1,7 @@
 export { default as Analytics } from './Analytics/Analytics';
 export { default as AnalyticsSales } from './AnalyticsSales/AnalyticsSales';
 export { default as Banner } from './Banner/Banner';
+export { default as Preview } from './Preview/Preview';
 export { default as Consultation } from './Consultation/Consultation';
 export { default as Decisions } from './Decisions/Decisions';
 export { default as FAQ } from './FAQ/FAQ';

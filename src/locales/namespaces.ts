@@ -18,4 +18,5 @@ export const i18nNamespaces = [
   'subscriptions',
   'tasks',
   'try',
+  'preview',
 ] as const;
