@@ -29,11 +29,16 @@
   position: relative;
 
   filter: blur(3.2580645084381104px);
+  backdrop-filter: blur(0);
 
-  transition: filter 0.3s ease, margin-top 0.3s ease;
-
+  transition:
+    filter 0.3s ease,
+    margin-top 0.3s ease,
+    backdrop-filter 0.3s ease;
   &_active {
-    filter: none;
+    // filter: none;
+    filter: blur(0);
+    backdrop-filter: blur(31.8999996185px);
     margin-top: -40px;
   }
 }

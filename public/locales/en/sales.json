@@ -1,26 +1,26 @@
 {
-	"title": "Increase sales with us",
-	"analytics": {
-		"name": "General",
-		"subname": "analytics",
-		"description": "You can always see growth areas both for individual employees and for the entire company, and adjust plans, motivation, meetings, and sales strategies accordingly.",
-		"img_1": "/img/sales-1.png",
-		"img_2": "/img/sales-2.png"
-	},
-	"education": {
-		"name": "Employee training",
-		"subname": "on-site",
-		"description": "The system provides personalized feedback on a specific sale based on the company’s standards, helping maintain a high level of service regardless of employee experience.",
-		"img_1": "/img/sales-3.png"
-	},
-	"dashboards": {
-		"name": "Dashboards and reports",
-		"description": "Management can view statistics: who doesn't mention promotions, who has poor sales, and where customers are being lost.",
-		"img_1": "/img/sales-4.png",
-		"img_2": "/img/sales-5.png",
-		"img_3": "/img/sales-6.png",
-		"img_4": "/img/sales-7.png",
-		"img_5": "/img/sales-8.png",
-		"img_6": "/img/sales-9.png"
-	}
+  "title": "Increase sales with us",
+  "analytics": {
+    "name": "General",
+    "subname": "analytics",
+    "description": "You can always see growth areas both for individual employees and for the entire company, and adjust plans, motivation, meetings, and sales strategies accordingly.",
+    "img_1": "/img/sales-1.png",
+    "img_2": "/img/sales-2.png"
+  },
+  "education": {
+    "name": "Employee training",
+    "subname": "on-site",
+    "description": "The system provides personalized feedback on a specific sale based on the company’s standards, helping maintain a high level of service regardless of employee experience.",
+    "img_1": "/img/sales-3.png"
+  },
+  "dashboards": {
+    "name": "Dashboards and reports",
+    "description": "Management can view statistics: who doesn't mention promotions, who has poor sales, and where customers are being lost.",
+    "img_1": "/img/sales-4.png",
+    "img_2": "/img/sales-5.png",
+    "img_3": "/img/sales-6.png",
+    "img_4": "/img/sales-7.png",
+    "img_5": "/img/sales-8.png",
+    "img_6": "/img/sales-9.png"
+  }
 }

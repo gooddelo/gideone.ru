@@ -1,8 +1,7 @@
 import { type FC } from 'react';
-import styles from './Try.module.scss';
-
-import { ModalContact } from '../ModalContact';
 import { useTranslation } from 'react-i18next';
+import { ModalContact } from '@/components/Widgets';
+import styles from './Try.module.scss';
 
 interface IReason {
   reason: string;
@@ -21,7 +20,7 @@ const Try: FC = () => {
           {Array.isArray(reasons) &&
             reasons.map((reason, i) => (
               <li key={reason.reason + i} className={styles.reason}>
-                <img src={'/svg/check.svg'} alt='check' width={40} height={40} />
+                <img src={'/svg/check.svg'} alt="check" width={40} height={40} />
                 {reason.reason}
               </li>
             ))}
@@ -30,7 +29,7 @@ const Try: FC = () => {
 
         <ModalContact className={styles.action} text={t('action')} />
       </div>
-      <img src={t('img')} className={styles.img} width={919} height={710} alt='try' />
+      <img src={t('img')} className={styles.img} width={919} height={710} alt="try" />
     </section>
   );
 };

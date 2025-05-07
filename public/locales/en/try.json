@@ -1,20 +1,20 @@
 {
-	"title": "Try",
-	"title_2": "for free!",
-	"reasons": [
-		{
-			"reason": "Free 14-day trial with no hidden fees or additional conditions"
-		},
-		{
-			"reason": "Full functionality"
-		},
-		{
-			"reason": "We help with integration and initial setup"
-		},
-		{
-			"reason": "You can safely check how GIDEONE impacts your business"
-		}
-	],
-	"action": "Try for free for 14 days",
-	"img": "/img/try-img.png"
+  "title": "Try",
+  "title_2": "for free!",
+  "reasons": [
+    {
+      "reason": "Free 14-day trial with no hidden fees or additional conditions"
+    },
+    {
+      "reason": "Full functionality"
+    },
+    {
+      "reason": "We help with integration and initial setup"
+    },
+    {
+      "reason": "You can safely check how GIDEONE impacts your business"
+    }
+  ],
+  "action": "Try for free for 14 days",
+  "img": "/img/try-img.png"
 }

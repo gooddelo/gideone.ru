@@ -1,0 +1,14 @@
+export { default as Burger } from './Burger/Burger';
+export { default as ButtonToTop } from './ButtonToTop/ButtonToTop';
+export { default as ConsultationForm } from './ConsultationForm/ConsultationForm';
+export { default as CookieAgreement } from './CookieAgreement/CookieAgreement';
+export { default as Footer } from './Footer/Footer';
+export { default as Header } from './Header/Header';
+export { default as HeaderLangBtn } from './HeaderLangBtn/HeaderLangBtn';
+export { default as HeaderLarge } from './HeaderLarge/HeaderLarge';
+export { default as Marquee } from './Marquee/Marquee';
+export { default as Menu } from './Menu/Menu';
+export { default as ModalContact } from './ModalContact/ModalContact';
+export { default as ModalQuestion } from './ModalQuestion/ModalQuestion';
+export { default as PolicyAgreement } from './PolicyAgreement/PolicyAgreement';
+export { default as TabletHeader } from './TabletHeader/TabletHeader';

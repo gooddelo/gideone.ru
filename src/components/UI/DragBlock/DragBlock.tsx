@@ -1,16 +1,20 @@
-import { Children, type FC, type ReactNode, useCallback, useEffect, useState } from 'react';
+// Import your CSS module
+import cn from 'classnames';
 import useEmblaCarousel from 'embla-carousel-react';
-import styles from './DragBlock.module.scss'; // Import your CSS module
-import cn from 'classnames'; // Import classnames l
+import { Children, type FC, type ReactNode, useCallback, useEffect, useState } from 'react';
+import styles from './DragBlock.module.scss';
+
+// Import classnames l
 
 // const blocks = [1, 2, 3, 4, 5];
 
 interface IProps {
   children: ReactNode;
   className?: string;
+  classNameSlide?: string;
 }
 
-const DragBlock: FC<IProps> = ({ children, className }) => {
+const DragBlock: FC<IProps> = ({ children, className, classNameSlide }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true, // <-- infinite loop
     align: 'center', // Center active slide
@@ -35,7 +39,7 @@ const DragBlock: FC<IProps> = ({ children, className }) => {
       if (!emblaApi) return;
       emblaApi.scrollTo(index);
     },
-    [emblaApi]
+    [emblaApi],
   );
 
   return (
@@ -56,7 +60,7 @@ const DragBlock: FC<IProps> = ({ children, className }) => {
         <div className={styles.embla__container}>
           {Children.map(children, (child, index) => (
             <div
-              className={cn(styles.embla__slide, {
+              className={cn(styles.embla__slide, classNameSlide, {
                 [styles.embla__slide_active]: currentIndex === index,
               })}
               key={index}

@@ -1,7 +1,7 @@
-import { type FC } from 'react';
-import styles from './Sales.module.scss';
 import cn from 'classnames';
+import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import styles from './Sales.module.scss';
 
 const Sales: FC = () => {
   const { t } = useTranslation('sales');

@@ -1,6 +1,6 @@
 import { type FC } from 'react';
-import styles from './Possibilities.module.scss';
 import { useTranslation } from 'react-i18next';
+import styles from './Possibilities.module.scss';
 
 interface Step {
   name: string;

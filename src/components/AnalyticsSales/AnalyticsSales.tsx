@@ -1,9 +1,8 @@
-import { DragBlock } from '@/components/UI';
-
 import cn from 'classnames';
-import styles from './AnalyticsSales.module.scss';
-import { Trans, useTranslation } from 'react-i18next';
 import type { FC } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
+import { DragBlock } from '@/components/UI';
+import styles from './AnalyticsSales.module.scss';
 
 const AnalyticsSales: FC = () => {
   const { t } = useTranslation('analytics_and_sales');
@@ -14,7 +13,7 @@ const AnalyticsSales: FC = () => {
         <div className={cn(styles.block, styles.first)}>
           <h4 className={cn(styles.block__title)}>
             <Trans
-              i18nKey='analytics.name'
+              i18nKey="analytics.name"
               t={t}
               components={{
                 span: <span className={styles.highlight} />,
@@ -38,7 +37,7 @@ const AnalyticsSales: FC = () => {
         <div className={cn(styles.block, styles.second)}>
           <h4 className={cn(styles.block__title)}>
             <Trans
-              i18nKey='education.name'
+              i18nKey="education.name"
               t={t}
               components={{
                 span: <span className={styles.highlight} />,
@@ -54,7 +53,7 @@ const AnalyticsSales: FC = () => {
         <div className={cn(styles.block, styles.third)}>
           <h4 className={cn(styles.block__title)}>
             <Trans
-              i18nKey='dashboards.name'
+              i18nKey="dashboards.name"
               t={t}
               components={{
                 span: <span className={styles.highlight} />,
@@ -75,7 +74,7 @@ const AnalyticsSales: FC = () => {
         <div className={cn(styles.block, styles.fourth)}>
           <h4 className={cn(styles.block__title)}>
             <Trans
-              i18nKey='items.1.name'
+              i18nKey="items.1.name"
               t={t}
               components={{
                 span: <span className={styles.highlight} />,
@@ -88,14 +87,14 @@ const AnalyticsSales: FC = () => {
             src={t('items.1.img-1')}
             width={1600}
             height={928}
-            alt=''
+            alt=""
           />
           <img
             className={cn(styles.fourth__img)}
             src={t('items.1.img-2')}
             width={1666}
             height={928}
-            alt=''
+            alt=""
           />
         </div>
 
@@ -103,7 +102,7 @@ const AnalyticsSales: FC = () => {
           <div>
             <h4 className={styles.block__title}>
               <Trans
-                i18nKey='items.3.name'
+                i18nKey="items.3.name"
                 t={t}
                 components={{
                   span: <span className={styles.highlight} />,
@@ -117,7 +116,7 @@ const AnalyticsSales: FC = () => {
             src={t('items.3.img-1')}
             width={452}
             height={928}
-            alt=''
+            alt=""
           />
         </div>
 
@@ -125,7 +124,7 @@ const AnalyticsSales: FC = () => {
           <div className={styles.sixth__text}>
             <h4 className={styles.block__title}>
               <Trans
-                i18nKey='items.2.name'
+                i18nKey="items.2.name"
                 t={t}
                 components={{
                   span: <span className={styles.highlight} />,
@@ -139,14 +138,14 @@ const AnalyticsSales: FC = () => {
             src={t('items.2.img-1')}
             width={2120}
             height={240}
-            alt=''
+            alt=""
           />
         </div>
 
         <div className={cn(styles.block, styles.seventh)}>
           <h4 className={styles.block__title}>
             <Trans
-              i18nKey='items.4.name'
+              i18nKey="items.4.name"
               t={t}
               components={{
                 span: <span className={styles.highlight} />,
@@ -159,7 +158,7 @@ const AnalyticsSales: FC = () => {
             src={t('items.4.img-1')}
             width={2120}
             height={1152}
-            alt=''
+            alt=""
           />
         </div>
       </DragBlock>

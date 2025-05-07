@@ -3,6 +3,7 @@ import HttpBackend, { type HttpBackendOptions } from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 import { LANGUAGES } from '@/types';
 import { i18nNamespaces } from './namespaces';
+
 // import { secureStorage } from '@/utils/secureStorage'
 // import { TInitialState } from '@/redux/user'
 

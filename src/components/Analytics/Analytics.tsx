@@ -1,7 +1,7 @@
-import styles from './Analytics.module.scss';
 import cn from 'classnames';
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import styles from './Analytics.module.scss';
 
 const Analytics: FC = () => {
   const { t } = useTranslation('analytics');
@@ -17,14 +17,14 @@ const Analytics: FC = () => {
             src={t('items.1.img-1')}
             width={1600}
             height={928}
-            alt=''
+            alt=""
           />
           <img
             className={cn(styles.item__img_2, styles.item__img)}
             src={t('items.1.img-2')}
             width={1666}
             height={928}
-            alt=''
+            alt=""
           />
         </div>
 
@@ -38,7 +38,7 @@ const Analytics: FC = () => {
             src={t('items.2.img-1')}
             width={2120}
             height={240}
-            alt=''
+            alt=""
           />
         </div>
 
@@ -52,7 +52,7 @@ const Analytics: FC = () => {
             src={t('items.3.img-1')}
             width={452}
             height={928}
-            alt=''
+            alt=""
           />
         </div>
 
@@ -67,7 +67,7 @@ const Analytics: FC = () => {
             src={t('items.4.img-1')}
             width={2120}
             height={1152}
-            alt=''
+            alt=""
           />
         </div>
       </div>

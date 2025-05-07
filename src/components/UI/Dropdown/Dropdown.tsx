@@ -34,7 +34,7 @@ const Dropdown: FunctionComponent<IProps> = forwardRef(
         </div>
       </div>
     );
-  }
+  },
 );
 
 Dropdown.displayName = 'UI Dropdown';

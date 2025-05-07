@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
-import { LOCAL_STORAGE_KEYS, SESSION_STORAGE_KEYS } from '@/types';
 import * as CryptoJS from 'crypto-js';
+import { LOCAL_STORAGE_KEYS, SESSION_STORAGE_KEYS } from '@/types';
 
 const secretKey = import.meta.env.VITE_SECRET_KEY || 'secret';
 

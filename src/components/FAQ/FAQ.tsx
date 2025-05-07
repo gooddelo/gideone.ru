@@ -1,9 +1,9 @@
-import { type FC, useState } from 'react';
-import styles from './FAQ.module.scss';
-import { Dropdown, Icon } from '@/components/UI';
-import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
-import { ModalQuestion } from '../ModalQuestion';
+import { type FC, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Dropdown, Icon } from '@/components/UI';
+import { ModalQuestion } from '@/components/Widgets';
+import styles from './FAQ.module.scss';
 
 const FAQ: FC = () => {
   const { t } = useTranslation('faq');
@@ -37,7 +37,7 @@ const FAQ: FC = () => {
               >
                 {question}{' '}
                 <button className={styles.question__btn}>
-                  <Icon icon='chevron-down' size={24} />
+                  <Icon icon="chevron-down" size={24} />
                 </button>
               </div>
 

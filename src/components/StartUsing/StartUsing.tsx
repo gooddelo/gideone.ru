@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import styles from './StartUsing.module.scss';
 import { useTranslation } from 'react-i18next';
+import styles from './StartUsing.module.scss';
 
 interface IStep {
   step: string;

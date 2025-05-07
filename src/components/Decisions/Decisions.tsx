@@ -1,8 +1,7 @@
 import { type FC } from 'react';
-import styles from './Decisions.module.scss';
-
-import { DragBlock } from '../UI';
 import { useTranslation } from 'react-i18next';
+import { DragBlock } from '@/components/UI';
+import styles from './Decisions.module.scss';
 
 interface IDecision {
   name: string;

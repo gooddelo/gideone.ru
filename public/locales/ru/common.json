@@ -1,58 +1,58 @@
 {
-	"agreement": "Нажимая на кнопку «{{agreementVia}}», я соглашаюсь с",
-	"agreement_2": "и даю согласие на обработку персональных данных.",
-	"policy": " политикой конфиденциальности ",
-	"agreementVia": {
-		"send": "Отправить",
-		"get_consultation": "Получить консультацию"
-	},
-	"nav_blocks": {
-		"banner": "banner",
-		"tasks": "tasks",
-		"marquee": "marquee",
-		"sales": "sales",
-		"analytics": "analytics",
-		"for-who": "for-who",
-		"try": "try",
-		"decisions": "decisions",
-		"how-it-works": "how-it-works",
-		"start-using": "start-using",
-		"possibilities": "possibilities",
-		"subscriptions": "subscriptions",
-		"faq": "faq",
-		"consultations": "consultations",
-		"news": "news"
-	},
-	"nav_links": {
-		"about": "#sales",
-		"subscriptions": "#subscriptions",
-		"faq": "#faq",
-		"news": "#news",
-		"top": "#banner"
-	},
-	"nav": {
-		"about": "О продукте",
-		"subscriptions": "Цены",
-		"faq": "FAQ",
-		"news": "Новости"
-	},
-	"telegram_link": "https://t.me/gideone_4u",
-	"vk_link": "https://vk.com/gideone.online",
-	"phone": "+7 927 16-27-22",
-	"modal-contact": {
-		"title": "Мы с вами свяжемся!",
-		"name": "Имя",
-		"phone": "Телефон",
-		"email": "Почта",
-		"send": "Отправить"
-	},
-	"modal-question": {
-		"ask": "Задайте нам вопрос и мы ответим",
-		"title": "Задайте нам вопрос",
-		"question": "Я бы хотел узнать...",
-		"name": "Имя",
-		"email": "Почта для ответа",
-		"send": "Отправить",
-		"button": "Задать вопрос"
-	}
+  "agreement": "Нажимая на кнопку «{{agreementVia}}», я соглашаюсь с",
+  "agreement_2": "и даю согласие на обработку персональных данных.",
+  "policy": " политикой конфиденциальности ",
+  "agreementVia": {
+    "send": "Отправить",
+    "get_consultation": "Получить консультацию"
+  },
+  "nav_blocks": {
+    "banner": "banner",
+    "tasks": "tasks",
+    "marquee": "marquee",
+    "sales": "sales",
+    "analytics": "analytics",
+    "for-who": "for-who",
+    "try": "try",
+    "decisions": "decisions",
+    "how-it-works": "how-it-works",
+    "start-using": "start-using",
+    "possibilities": "possibilities",
+    "subscriptions": "subscriptions",
+    "faq": "faq",
+    "consultations": "consultations",
+    "news": "news"
+  },
+  "nav_links": {
+    "about": "#sales",
+    "subscriptions": "#subscriptions",
+    "faq": "#faq",
+    "news": "#news",
+    "top": "#banner"
+  },
+  "nav": {
+    "about": "О продукте",
+    "subscriptions": "Цены",
+    "faq": "FAQ",
+    "news": "Новости"
+  },
+  "telegram_link": "https://t.me/gideone_4u",
+  "vk_link": "https://vk.com/gideone.online",
+  "phone": "+7 927 16-27-22",
+  "modal-contact": {
+    "title": "Мы с вами свяжемся!",
+    "name": "Имя",
+    "phone": "Телефон",
+    "email": "Почта",
+    "send": "Отправить"
+  },
+  "modal-question": {
+    "ask": "Задайте нам вопрос и мы ответим",
+    "title": "Задайте нам вопрос",
+    "question": "Я бы хотел узнать...",
+    "name": "Имя",
+    "email": "Почта для ответа",
+    "send": "Отправить",
+    "button": "Задать вопрос"
+  }
 }

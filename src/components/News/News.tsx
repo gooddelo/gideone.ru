@@ -1,9 +1,9 @@
+import cn from 'classnames';
 import { type FC, useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { DragBlock } from '@/components/UI';
 import styles from './News.module.scss';
 
-import { useTranslation } from 'react-i18next';
-import cn from 'classnames';
-import { DragBlock } from '@/components/UI';
 export interface NewsItem {
   date: string;
   text: string | { item: string }[];
@@ -85,7 +85,7 @@ const News: FC = () => {
         [styles.news__left_scrolling]: scrollClass === 'left_scrolling',
         [styles.news__right_scrolling]: scrollClass === 'right_scrolling',
       })}
-      id='news'
+      id="news"
     >
       <h2 className={styles.news__title}>{t('title')}</h2>
       <div className={cn(styles.news__blocks)} ref={containerRef} onMouseDown={handleMouseDown}>

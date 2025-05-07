@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import styles from './Consultation.module.scss';
-import { ConsultationForm } from './ConsultationForm';
 import { useTranslation } from 'react-i18next';
+import { ConsultationForm } from '@/components/Widgets';
+import styles from './Consultation.module.scss';
 
 const Consultation: FC = () => {
   const { t } = useTranslation('common');

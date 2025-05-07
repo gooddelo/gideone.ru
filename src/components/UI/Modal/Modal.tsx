@@ -1,19 +1,19 @@
-import { useClickOutside } from '@/hooks';
+import cn from 'classnames';
 import {
   type FC,
-  forwardRef,
   type ReactNode,
   type RefAttributes,
   type RefObject,
+  forwardRef,
+  useEffect,
   useImperativeHandle,
   useMemo,
   useRef,
   useState,
-  useEffect,
 } from 'react';
 import { createPortal } from 'react-dom';
+import { useClickOutside } from '@/hooks';
 import styles from './Modal.module.scss';
-import cn from 'classnames';
 
 interface IProps extends RefAttributes<HTMLDivElement> {
   parentElement?: Element | DocumentFragment;
@@ -48,9 +48,9 @@ const Modal: FC<IProps> = forwardRef<HTMLDivElement, IProps>(
           {children}
         </div>
       </div>,
-      parent
+      parent,
     );
-  }
+  },
 );
 
 Modal.displayName = 'UI Modal';

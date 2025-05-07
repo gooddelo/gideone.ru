@@ -52,7 +52,8 @@
 
   border-radius: 40px;
   background: linear-gradient(180deg, #9363f9 9.3%, #2c3493 138.03%);
-  box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33),
+  box-shadow:
+    0px 1px 92px 0px rgba(108, 114, 255, 0.33),
     2px 2px 34.1px 0px rgba(54, 213, 255, 0.44) inset;
 
   @include typography-body-l-narrow(var(--color-roles-on-surface, #f7f7fa), center);

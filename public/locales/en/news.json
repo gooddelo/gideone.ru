@@ -1,92 +1,92 @@
 {
-	"title": "News and events",
-	"news": [
-		{
-			"date": "March 19, 2025",
-			"text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
-			"img": "/img/news.png"
-		},
-		{
-			"date": "March 15, 2025",
-			"text": [
-				{
-					"item": "The calendar feature is now free for everyone."
-				},
-				{
-					"item": "Now works on multiple devices."
-				},
-				{
-					"item": "Try our new free trial version."
-				},
-				{
-					"item": "Choose a lifetime, monthly, or annual plan."
-				},
-				{
-					"item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
-				},
-				{
-					"item": "Bug fixes."
-				}
-			],
-			"img": "/img/news.png"
-		},
-		{
-			"date": "March 19, 2025",
-			"text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
-			"img": "/img/news.png"
-		},
-		{
-			"date": "March 15, 2025",
-			"text": [
-				{
-					"item": "The calendar feature is now free for everyone."
-				},
-				{
-					"item": "Now works on multiple devices."
-				},
-				{
-					"item": "Try our new free trial version."
-				},
-				{
-					"item": "Choose a lifetime, monthly, or annual plan."
-				},
-				{
-					"item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
-				},
-				{
-					"item": "Bug fixes."
-				}
-			],
-			"img": "/img/news.png"
-		},
-		{
-			"date": "March 19, 2025",
-			"text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
-			"img": "/img/news.png"
-		},
-		{
-			"date": "March 15, 2025",
-			"text": [
-				{
-					"item": "The calendar feature is now free for everyone."
-				},
-				{
-					"item": "Now works on multiple devices."
-				},
-				{
-					"item": "Try our new free trial version."
-				},
-				{
-					"item": "Choose a lifetime, monthly, or annual plan."
-				},
-				{
-					"item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
-				},
-				{
-					"item": "Bug fixes."
-				}
-			],
-			"img": "/img/news.png"
-		}
-	]
+  "title": "News and events",
+  "news": [
+    {
+      "date": "March 19, 2025",
+      "text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
+      "img": "/img/news.png"
+    },
+    {
+      "date": "March 15, 2025",
+      "text": [
+        {
+          "item": "The calendar feature is now free for everyone."
+        },
+        {
+          "item": "Now works on multiple devices."
+        },
+        {
+          "item": "Try our new free trial version."
+        },
+        {
+          "item": "Choose a lifetime, monthly, or annual plan."
+        },
+        {
+          "item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
+        },
+        {
+          "item": "Bug fixes."
+        }
+      ],
+      "img": "/img/news.png"
+    },
+    {
+      "date": "March 19, 2025",
+      "text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
+      "img": "/img/news.png"
+    },
+    {
+      "date": "March 15, 2025",
+      "text": [
+        {
+          "item": "The calendar feature is now free for everyone."
+        },
+        {
+          "item": "Now works on multiple devices."
+        },
+        {
+          "item": "Try our new free trial version."
+        },
+        {
+          "item": "Choose a lifetime, monthly, or annual plan."
+        },
+        {
+          "item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
+        },
+        {
+          "item": "Bug fixes."
+        }
+      ],
+      "img": "/img/news.png"
+    },
+    {
+      "date": "March 19, 2025",
+      "text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
+      "img": "/img/news.png"
+    },
+    {
+      "date": "March 15, 2025",
+      "text": [
+        {
+          "item": "The calendar feature is now free for everyone."
+        },
+        {
+          "item": "Now works on multiple devices."
+        },
+        {
+          "item": "Try our new free trial version."
+        },
+        {
+          "item": "Choose a lifetime, monthly, or annual plan."
+        },
+        {
+          "item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
+        },
+        {
+          "item": "Bug fixes."
+        }
+      ],
+      "img": "/img/news.png"
+    }
+  ]
 }

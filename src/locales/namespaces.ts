@@ -10,7 +10,7 @@ export const i18nNamespaces = [
   'footer',
   'forWho',
   'header',
-  'howGideoneWorks',
+  'howItWorks',
   'news',
   'possibilities',
   'sales',

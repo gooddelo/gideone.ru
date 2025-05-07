@@ -35,7 +35,7 @@ const InputCheck: FunctionComponent<InputProps> = forwardRef<HTMLInputElement, I
       size = 'medium',
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <label className={cn(styles.container, disabled && styles[`container__disabled`], className)}>
@@ -55,7 +55,7 @@ const InputCheck: FunctionComponent<InputProps> = forwardRef<HTMLInputElement, I
               {...props}
             />
             <div className={styles.checkmark}>
-              <Icon icon='checkmark' className={styles.checkmark__icon} />
+              <Icon icon="checkmark" className={styles.checkmark__icon} />
             </div>
           </>
         )}
@@ -87,7 +87,7 @@ const InputCheck: FunctionComponent<InputProps> = forwardRef<HTMLInputElement, I
               {...props}
             />
             <div className={styles.checkmark}>
-              <Icon icon='checkmark' className={styles.checkmark__icon} />
+              <Icon icon="checkmark" className={styles.checkmark__icon} />
             </div>
           </>
         )}
@@ -96,7 +96,7 @@ const InputCheck: FunctionComponent<InputProps> = forwardRef<HTMLInputElement, I
         )}
       </label>
     );
-  }
+  },
 );
 
 InputCheck.displayName = ' UI InputCheck';

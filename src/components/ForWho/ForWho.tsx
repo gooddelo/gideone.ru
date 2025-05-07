@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import styles from './ForWho.module.scss';
 import { useTranslation } from 'react-i18next';
+import styles from './ForWho.module.scss';
 
 interface IItem {
   name: string;

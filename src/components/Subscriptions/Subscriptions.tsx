@@ -1,9 +1,8 @@
-import type { FC } from 'react';
-import styles from './Subscriptions.module.scss';
-
 import cn from 'classnames';
-import { ModalContact } from '../ModalContact';
+import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ModalContact } from '@/components/Widgets';
+import styles from './Subscriptions.module.scss';
 
 interface Subscription {
   title: string;
@@ -47,7 +46,7 @@ const Subscriptions: FC = () => {
               <ul className={styles.subscription__options}>
                 {subscription.options.map((option, i) => (
                   <li key={option.name + i + Math.random()} className={styles.subscription__option}>
-                    <img src='/svg/check.svg' alt='check' width={40} height={40} />
+                    <img src="/svg/check.svg" alt="check" width={40} height={40} />
                     {option.name}
                   </li>
                 ))}
@@ -70,7 +69,7 @@ const Subscriptions: FC = () => {
           src={'/svg/curved-line.svg'}
           width={1920}
           height={63}
-          alt='curved-line'
+          alt="curved-line"
           className={styles.curved_line}
         />
       </div>

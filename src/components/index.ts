@@ -1,0 +1,15 @@
+export { default as Analytics } from './Analytics/Analytics';
+export { default as AnalyticsSales } from './AnalyticsSales/AnalyticsSales';
+export { default as Banner } from './Banner/Banner';
+export { default as Consultation } from './Consultation/Consultation';
+export { default as Decisions } from './Decisions/Decisions';
+export { default as FAQ } from './FAQ/FAQ';
+export { default as ForWho } from './ForWho/ForWho';
+export { default as HowItWorks } from './HowItWorks/HowItWorks';
+export { default as News } from './News/News';
+export { default as Possibilities } from './Possibilities/Possibilities';
+export { default as Sales } from './Sales/Sales';
+export { default as StartUsing } from './StartUsing/StartUsing';
+export { default as Subscriptions } from './Subscriptions/Subscriptions';
+export { default as Tasks } from './Tasks/Tasks';
+export { default as Try } from './Try/Try';

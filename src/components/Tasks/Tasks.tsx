@@ -1,6 +1,6 @@
 import { type FunctionComponent } from 'react';
-import styles from './Tasks.module.scss';
 import { useTranslation } from 'react-i18next';
+import styles from './Tasks.module.scss';
 
 interface ITask {
   task: string;
