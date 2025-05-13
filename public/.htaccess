@@ -5,6 +5,7 @@ RewriteBase /
 
 RewriteRule ^robots\.txt$ - [L]
 RewriteRule ^sitemap\.xml$ - [L]
+RewriteRule ^privacy_policy\.pdf$ - [L]
 
 # Если файл или папка существует — отдать как есть
 

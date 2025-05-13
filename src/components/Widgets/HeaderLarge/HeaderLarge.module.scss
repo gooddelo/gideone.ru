@@ -4,8 +4,10 @@
 .header {
   position: fixed;
   top: 0;
-  transform: translateY(-100%);
-  justify-self: anchor-center;
+  transform: translate(-50%, -100%);
+  // justify-self: anchor-center;
+  left: 50%;
+  // transform: translateX(-50%);
 
   display: inline-flex;
   width: 1240px;
@@ -24,7 +26,7 @@
 
   &__shown {
     top: 20px;
-    transform: translateY(0%);
+    transform: translate(-50%, 0%);
   }
 
   @include media-tablet {

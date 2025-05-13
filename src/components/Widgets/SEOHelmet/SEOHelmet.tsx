@@ -23,8 +23,8 @@ const SEOHelmet: FC = () => {
     metaDesc.setAttribute(
       'content',
       i18n.language === LANGUAGES.ru
-        ? 'Гидеон предоставляет AI-рекомендации для обучения сотрудников в онлайн и оффлайн торговле.'
-        : 'Gideone offers AI-powered training recommendations for both online and offline retail employees.',
+        ? 'Gideone - ваш персональный бизнес-тренер с искусственным интеллектом. Мгновенный анализ и обратная связь для каждого сотрудника онлайн и оффлайн торговли. Мы предоставляем удобную платформу AI-рекомендаций, аналитики и статистики в режиме реального времени.'
+        : 'Gideone – your personal business coach with artificial intelligence. Instant analysis and feedback for each employee in online and offline retail. We provide a convenient platform for AI recommendations, analytics, and real-time statistics.',
     );
 
     // выбрать meta keywords, если такового нет - создать

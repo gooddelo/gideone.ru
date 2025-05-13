@@ -27,6 +27,7 @@
     "react-geolocated": "^4.3.0",
     "react-hook-form": "^7.56.2",
     "react-i18next": "^15.5.1",
+    "react-router-dom": "^7.6.0",
     "resend": "^4.5.1",
     "sass": "^1.87.0",
     "uuid": "^11.1.0",

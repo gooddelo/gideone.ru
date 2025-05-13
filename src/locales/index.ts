@@ -5,12 +5,6 @@ import { getDefLang } from '@/utils';
 import { LANGUAGES } from '@/types';
 import { i18nNamespaces } from './namespaces';
 
-// console.log('bgvdfctnhbgsvdfcjnthvfgdcthenbfgsvdchtbgfvsdchndbvfgc');
-// console.log(navigator);
-// console.log('rdvfdxcds');
-
-// let lannn = LANGUAGES.ru;
-
 i18n
   .use(HttpBackend)
   .use(initReactI18next)

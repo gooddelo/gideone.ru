@@ -6,8 +6,7 @@ import type { Namespaces } from '@/types';
 import styles from './CookieAgreement.module.scss';
 
 const CookieAgreement: FC = () => {
-  const [locale, setLocale] = useState('ru');
-  const { t } = useTranslation<Namespaces>('cookieAgreement', { lng: locale });
+  const { t } = useTranslation<Namespaces>('cookieAgreement');
   const { getLocalItem, setLocalItem } = secureStorage();
   const [agreed, setAgreed] = useState<boolean>(true);
 
@@ -22,13 +21,6 @@ const CookieAgreement: FC = () => {
     else return setAgreed(false);
   }, []);
 
-  useLayoutEffect(() => {
-    if (!window) return;
-
-    const pathLocale = window.location.pathname.split('/')[1];
-    setLocale(pathLocale);
-  }, []);
-
   if (agreed === false)
     return (
       <div className={styles.agreement}>
@@ -37,7 +29,13 @@ const CookieAgreement: FC = () => {
             i18nKey="paragraph"
             t={t}
             components={{
-              policy: <a href={t('policy_link')} target="__blank" className={styles.link} />,
+              policy: (
+                <a
+                  href={t('privacy_policy_link', { ns: 'common' })}
+                  target="__blank"
+                  className={styles.link}
+                />
+              ),
             }}
           />
         </p>
