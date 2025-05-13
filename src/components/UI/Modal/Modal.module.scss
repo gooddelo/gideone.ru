@@ -1,16 +1,26 @@
 .modal {
   display: flex;
   width: 508px;
+  max-width: calc(100% - 40px);
   padding: 40px;
   flex-direction: column;
   align-items: center;
   gap: 32px;
   flex-shrink: 0;
+  transition:
+    padding 0.3s ease,
+    border-radius 0.3s ease;
 
   border-radius: 40px;
   border: 1px solid var(--color-roles-outline, rgba(255, 255, 255, 0.3));
   background: var(--color-roles-surface-container-highest, rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(200px);
+
+  @media screen and (max-width: 540px) {
+    padding: 20px;
+    max-width: calc(100% - 10px);
+    border-radius: 20px;
+  }
 
   &__wrapper {
     position: fixed;

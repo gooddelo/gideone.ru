@@ -5,11 +5,11 @@
   width: 100%;
   overflow: hidden;
 
-  .dropdown__content {
+  &__content {
     overflow: hidden;
   }
-}
 
-.dropdown_open {
-  grid-template-rows: 1fr;
+  &_open {
+    grid-template-rows: 1fr;
+  }
 }

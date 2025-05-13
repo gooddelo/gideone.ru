@@ -8,8 +8,9 @@ import styles from './AnalyticsSales.module.scss';
 const AnalyticsSales: FC = () => {
   const { t } = useTranslation<Namespaces>('analytics_and_sales');
 
-  if (t('analytics.img_1').startsWith('/'))
-    return (
+  // if (t('analytics.img_1').startsWith('/'))
+  return (
+    <section id={'analytics_sales'}>
       <DragBlock className={cn(styles.drag_block)}>
         <div className={cn(styles.block, styles.first)}>
           <h4 className={cn(styles.block__title)}>
@@ -163,7 +164,8 @@ const AnalyticsSales: FC = () => {
           />
         </div>
       </DragBlock>
-    );
+    </section>
+  );
 };
 
 AnalyticsSales.displayName = 'Analytics and sales section (for tablet)';

@@ -17,7 +17,7 @@ const PolicyAgreement: FC<IProps> = ({ check, className, agreementVia }) => {
 
   return (
     <div className={cn(styles.agreement, className)}>
-      <InputCheck size="small" onClick={check} checked />
+      <InputCheck size="small" onClick={check} checked variant="checkbox" />
       <p>
         {t('agreement', {
           agreementVia: t(`agreementVia.${agreementVia}`),

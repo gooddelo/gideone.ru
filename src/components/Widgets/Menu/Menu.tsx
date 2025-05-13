@@ -2,8 +2,8 @@ import cn from 'classnames';
 import { type Dispatch, type FC, type SetStateAction, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
-import { useClickOutside } from '@/hooks';
-import type { Namespaces } from '@/types';
+import { useClickOutside, useGetAboutProductLink, useGetPhone } from '@/hooks';
+import { type Namespaces } from '@/types';
 import styles from './Menu.module.scss';
 
 interface IProps {
@@ -13,11 +13,14 @@ interface IProps {
 
 const Menu: FC<IProps> = ({ open, setOpen }) => {
   const { t } = useTranslation<Namespaces>('header');
+  const phone = useGetPhone();
 
   const containerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLMenuElement>(null);
 
   const handleClose = () => setOpen(false);
+
+  const link = useGetAboutProductLink();
 
   useClickOutside(menuRef, handleClose);
   return (
@@ -27,11 +30,7 @@ const Menu: FC<IProps> = ({ open, setOpen }) => {
           <Icon icon="dismiss" size={32} />
         </button>
         <nav className={styles.nav}>
-          <a
-            onClick={handleClose}
-            href={t('nav_links.about', { ns: 'common' })}
-            className={styles.nav__link}
-          >
+          <a onClick={handleClose} href={link} className={styles.nav__link}>
             {t('nav.about', { ns: 'common' })}
           </a>
           <a
@@ -78,10 +77,12 @@ const Menu: FC<IProps> = ({ open, setOpen }) => {
           </div>
           <a
             onClick={handleClose}
-            href={`tel:${t('phone', { ns: 'common' })}`}
+            href={`tel:${phone.href}`}
+            // href={`tel:${t('phone', { ns: 'common' })}`}
             className={styles.contacts__phone}
           >
-            {t('phone', { ns: 'common' })}
+            {phone.display}
+            {/* {t('phone', { ns: 'common' })} */}
           </a>
         </div>
       </menu>

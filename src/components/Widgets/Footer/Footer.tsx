@@ -3,17 +3,23 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
 import { ModalContact, ModalQuestion } from '@/components/Widgets';
-import type { Namespaces } from '@/types';
+import { useGetPhone } from '@/hooks';
+import { useGetAboutProductLink } from '@/hooks/useGetAboutProductLink';
+import { type Namespaces } from '@/types';
 import styles from './Footer.module.scss';
 
 export const Footer: FC = () => {
   const { t } = useTranslation<Namespaces>('footer');
+  const phone = useGetPhone();
+
+  const link = useGetAboutProductLink();
+
   return (
     <footer className={styles.footer} id="footer">
       <div className={styles.top}>
         <img src="/img/logo.png" alt="banner" width={182} height={64} />
         <nav className={styles.nav}>
-          <a href={t('nav_links.about', { ns: 'common' })} className={styles.nav__link}>
+          <a href={link} className={styles.nav__link}>
             {t('nav.about', { ns: 'common' })}
           </a>
           <a href={t('nav_links.subscriptions', { ns: 'common' })} className={styles.nav__link}>
@@ -45,8 +51,13 @@ export const Footer: FC = () => {
               <Icon icon="telegram" size={32} />
             </a>
           </div>
-          <a href={`tel:${t('phone', { ns: 'common' })}`} className={styles.actions__phone}>
-            {t('phone', { ns: 'common' })}
+          <a
+            // href={`tel:${t('phone', { ns: 'common' })}`}
+            href={`tel:${phone.href}`}
+            className={styles.actions__phone}
+          >
+            {/* {location?.address.country_code === 'ru' ? t('phone', { ns: 'common' }) :} */}
+            {phone.display}
           </a>
         </div>
         {/* <button className={styles.actions__application}>{t('application')}</button> */}
@@ -64,18 +75,34 @@ export const Footer: FC = () => {
       <div className={styles.links}>
         <div className={cn(styles.links__group, styles.links__copyright)}>{t('copyright')}</div>
         <div className={cn(styles.links__group, styles.column)}>
-          <a target="_blank" href={''} className={styles.links__link}>
+          <a
+            target="_blank"
+            href={t('privacy_policy_link', { ns: 'common' })}
+            className={styles.links__link}
+          >
             {t('user_agreement')}
           </a>
-          <a target="_blank" href={''} className={styles.links__link}>
+          <a
+            target="_blank"
+            href={t('privacy_policy_link', { ns: 'common' })}
+            className={styles.links__link}
+          >
             {t('policy')}
           </a>
         </div>
         <div className={cn(styles.links__group, styles.column)}>
-          <a target="_blank" href={''} className={styles.links__link}>
+          <a
+            target="_blank"
+            href={t('privacy_policy_link', { ns: 'common' })}
+            className={styles.links__link}
+          >
             {t('support')}
           </a>
-          <a target="_blank" href={''} className={styles.links__link}>
+          <a
+            target="_blank"
+            href={t('privacy_policy_link', { ns: 'common' })}
+            className={styles.links__link}
+          >
             {t('review')}
           </a>
         </div>

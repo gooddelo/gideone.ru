@@ -3,12 +3,14 @@ import { type FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
 import { HeaderLangBtn } from '@/components/Widgets';
+import { useGetPhone } from '@/hooks';
 import type { Namespaces } from '@/types';
 import styles from './HeaderLarge.module.scss';
 
 const HeaderLarge: FC = () => {
   const { t } = useTranslation<Namespaces>('header');
   const [inView, setInView] = useState(false);
+  const phone = useGetPhone();
 
   const goTop = () => {
     if (!window) return;
@@ -60,8 +62,13 @@ const HeaderLarge: FC = () => {
 
       <div className={styles.right}>
         <div className={styles.contact}>
-          <a className={styles.contact__link} href={`tel:${t('phone', { ns: 'common' })}`}>
-            {t('phone', { ns: 'common' })}
+          <a
+            className={styles.contact__link}
+            href={`tel:${phone.href}`}
+            // href={`tel:${t('phone', { ns: 'common' })}`}
+          >
+            {/* {t('phone', { ns: 'common' })} */}
+            {phone.display}
           </a>
           <a href={t('telegram_link', { ns: 'common' })} target="_blank" className={styles.icon}>
             <Icon icon="telegram" />

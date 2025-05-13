@@ -12,8 +12,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^5.0.1",
     "@lottiefiles/dotlottie-react": "^0.13.5",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
     "crypto-js": "^4.2.0",
     "embla-carousel-react": "^8.6.0",
     "i18next": "^25.0.2",
@@ -22,9 +24,10 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-fast-marquee": "^1.6.5",
-    "react-helmet": "^6.1.0",
+    "react-geolocated": "^4.3.0",
     "react-hook-form": "^7.56.2",
     "react-i18next": "^15.5.1",
+    "resend": "^4.5.1",
     "sass": "^1.87.0",
     "uuid": "^11.1.0",
     "yup": "^1.6.1"
@@ -36,7 +39,6 @@
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "@types/react-helmet": "^6.1.11",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "classnames": "^2.5.1",
     "eslint": "^9.25.0",

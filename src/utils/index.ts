@@ -4,11 +4,6 @@ export * from './secureStorage';
 export const getDefLang = () => {
   if (navigator.language.startsWith(LANGUAGES.ru)) return LANGUAGES.ru;
   else return LANGUAGES.en_us;
-
-  // if (navigator.languages.includes(LANGUAGES.ru)) {
-  //   const RUindex = navigator.languages.indexOf(LANGUAGES.ru);
-  //   console.log(RUindex);
-  //   if (RUindex >= 1) return LANGUAGES.en_us;
-  //   else return LANGUAGES.ru;
-  // } else return LANGUAGES.en_us;
 };
+
+export const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;

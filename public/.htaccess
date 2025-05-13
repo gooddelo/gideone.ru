@@ -1,13 +1,21 @@
 RewriteEngine On
 RewriteBase /
 
-# Redirect requests for the root to index.html
+# Отдаём robots.txt и sitemap.xml как есть
 
 RewriteRule ^robots\.txt$ - [L]
 RewriteRule ^sitemap\.xml$ - [L]
 
-# Redirect all other requests to index.html
+# Если файл или папка существует — отдать как есть
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Все маршруты одностраничного приложения идут в index.html
+
 RewriteRule ^(.\*)$ /index.html [L]
+
+# Обработка 404
+
+ErrorDocument 404 /404.html

@@ -49,12 +49,12 @@
     img {
       &:nth-child(1) {
         width: 209px;
-        height: 244px;
+        height: auto;
         aspect-ratio: 209/244;
       }
       &:nth-child(2) {
         width: 252px;
-        height: 244px;
+        height: auto;
         aspect-ratio: 63/61;
       }
     }
@@ -75,7 +75,7 @@
 
     img {
       width: 529px;
-      height: 200px;
+      height: auto;
       aspect-ratio: 529/200;
     }
   }
@@ -92,22 +92,22 @@
     img {
       &:nth-child(1) {
         width: 286px;
-        height: 106px;
+        height: auto;
         aspect-ratio: 143/53;
       }
       &:nth-child(2) {
         width: 404px;
-        height: 106px;
+        height: auto;
         aspect-ratio: 202/53;
       }
       &:nth-child(3) {
         width: 461px;
-        height: 106px;
+        height: auto;
         aspect-ratio: 461/106;
       }
       &:nth-child(4) {
         width: 469px;
-        height: 105px;
+        height: auto;
         aspect-ratio: 67/15;
 
         @include media-max-tablet {
@@ -116,7 +116,7 @@
       }
       &:nth-child(5) {
         width: 285px;
-        height: 105.231px;
+        height: auto;
         aspect-ratio: 285/105.23;
 
         @include media-max-tablet {
@@ -125,7 +125,7 @@
       }
       &:nth-child(6) {
         width: 392px;
-        height: 105px;
+        height: auto;
         aspect-ratio: 56/15;
       }
     }
@@ -139,7 +139,7 @@
   flex-direction: column;
   &__img {
     width: 400px;
-    height: 232px;
+    height: auto;
     aspect-ratio: 50/29;
 
     &:nth-child(even) {
@@ -164,8 +164,16 @@
 
   &__img {
     width: 113px;
-    height: 231.584px;
+    height: auto;
     aspect-ratio: 113/231.58;
+  }
+
+  @media screen and (max-width: 440px) {
+    flex-direction: column;
+
+    img {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -199,6 +207,7 @@
 
 .drag_block {
   display: none;
+  cursor: grab;
 
   @include media-max-tablet {
     display: block;

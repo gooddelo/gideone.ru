@@ -29,7 +29,8 @@
   // ********************************************* CHECKBOX STATUSES
 
   .checkbox:checked ~ .checkmark {
-    background: var(--color-switch-bg-switch-on-default);
+    // background: var(--color-switch-bg-switch-on-default);
+    background: var(--btn-primary, #acbafd);
 
     .checkmark__icon {
       top: 50%;
@@ -38,10 +39,12 @@
     }
   }
   .checkbox:checked:hover ~ .checkmark {
-    background: var(--color-switch-bg-switch-on-hover);
+    // background: var(--color-switch-bg-switch-on-hover);
+    background: var(--btn-primary, #acbafd);
   }
   .checkbox:checked:active ~ .checkmark {
-    background: var(--color-switch-bg-switch-on-active);
+    // background: var(--color-switch-bg-switch-on-active);
+    background: var(--btn-primary, #acbafd);
   }
 
   // ********************************************* RADIO STATUSES

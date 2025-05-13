@@ -184,3 +184,7 @@
     @include typography-h3(var(--color-roles-primary, #acbafd), center);
   }
 }
+
+.input_error {
+  border: 1px solid red;
+}

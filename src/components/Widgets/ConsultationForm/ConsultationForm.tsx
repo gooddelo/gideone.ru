@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
 import type { FC } from 'react';
@@ -5,16 +6,20 @@ import { useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 import * as yup from 'yup';
 import { InputCheck } from '@/components/UI';
+import { emailRegex } from '@/utils';
 import type { Namespaces } from '@/types';
 import styles from './ConsultationForm.module.scss';
 
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+interface ISchema {
+  name: string;
+  email: string;
+  message: string;
+}
 
 const schema = yup.object().shape({
   name: yup.string().required().min(2),
-  phone: yup.string().required().matches(phoneRegExp),
-  message: yup.string().required(),
+  email: yup.string().required().matches(emailRegex),
+  message: yup.string().required().min(10),
 });
 
 const ConsultationForm: FC = () => {
@@ -28,10 +33,23 @@ const ConsultationForm: FC = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = () => {
+  const onSubmit = (data: ISchema) => {
     setValue('name', '');
     setValue('message', '');
-    setValue('phone', '');
+    setValue('email', '');
+
+    const today = new Date();
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE,
+      import.meta.env.VITE_EMAILJS_TEMPLATE,
+      {
+        name: data.name,
+        email: data.email,
+        time: today.toDateString(),
+        message: data.message,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    );
   };
 
   return (
@@ -55,16 +73,16 @@ const ConsultationForm: FC = () => {
           placeholder={t('form.name')}
         />
         <input
-          className={cn(styles.form__input, [errors.phone && styles.input_error])}
-          {...register('phone')}
-          type="tel"
-          placeholder={t('form.phone')}
+          className={cn(styles.form__input, [errors.email && styles.input_error])}
+          {...register('email')}
+          type="email"
+          placeholder={t('form.email')}
         />
         <textarea
           className={cn(styles.form__message, [errors.message && styles.input_error])}
           {...register('message')}
-          name=""
-          id=""
+          // name=""
+          // id=""
           placeholder={t('form.placeholder')}
         ></textarea>
       </div>
@@ -76,7 +94,7 @@ const ConsultationForm: FC = () => {
           <InputCheck size="small" />
           <p>
             {t('agreement', { button: t('button') })}
-            <a href={'/policy'} target="_blank">
+            <a href={t('privacy_policy_link', { ns: 'common' })} target="_blank">
               {t('policy')}
             </a>
             {t('agreement_2')}

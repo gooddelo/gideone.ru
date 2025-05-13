@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
 import { type FC, type FormEvent, useState } from 'react';
@@ -7,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import * as yup from 'yup';
 import { Modal } from '@/components/UI';
 import { PolicyAgreement } from '@/components/Widgets';
-import { secureStorage } from '@/utils';
+import { emailRegex, secureStorage } from '@/utils';
 import { SESSION_STORAGE_KEYS } from '@/types';
 import type { Namespaces } from '@/types';
 import styles from './ModalQuestion.module.scss';
@@ -20,8 +21,8 @@ interface ISchema {
 
 export const schema = yup.object().shape({
   name: yup.string().required().min(2),
-  email: yup.string().required().min(2),
-  message: yup.string().required(),
+  email: yup.string().required().matches(emailRegex),
+  message: yup.string().required().min(10),
 });
 
 interface IProps {
@@ -47,7 +48,7 @@ const ModalQuestion: FC<IProps> = ({
 }) => {
   const { t } = useTranslation<Namespaces>('common');
   const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const { setSessionItem, getSessionItem } = secureStorage();
+  const { setSessionItem, getSessionItem, removeSessionItem } = secureStorage();
   const toggleModal = () => setModalOpen((prev) => !prev);
   const openModal = () => {
     toggleModal();
@@ -55,16 +56,43 @@ const ModalQuestion: FC<IProps> = ({
     setValue('email', getSessionItem(SESSION_STORAGE_KEYS.question_email) || '');
     setValue('name', getSessionItem(SESSION_STORAGE_KEYS.question_name) || '');
   };
-  const { register, setValue, handleSubmit } = useForm<ISchema>({ resolver: yupResolver(schema) });
+  const {
+    register,
+    setValue,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ISchema>({ resolver: yupResolver(schema) });
   const handleSaveToStorage = (
     e: FormEvent<HTMLInputElement | HTMLTextAreaElement>,
     key: SESSION_STORAGE_KEYS,
   ) => {
     setSessionItem(key, e.currentTarget.value);
   };
+  // const resend = new Resend(import.meta.env.VITE_RESEND_KEY);
 
-  const onSubmit = () => {
+  const onSubmit = (data: ISchema) => {
     setModalOpen(false);
+
+    const today = new Date();
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE,
+        import.meta.env.VITE_EMAILJS_TEMPLATE,
+        {
+          name: data.name,
+          email: data.email,
+          time: today.toDateString(),
+          message: data.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      )
+      .then(() => {
+        removeSessionItem([
+          SESSION_STORAGE_KEYS.question,
+          SESSION_STORAGE_KEYS.question_email,
+          SESSION_STORAGE_KEYS.question_name,
+        ]);
+      });
   };
 
   const formId = uuidv4();
@@ -93,20 +121,20 @@ const ModalQuestion: FC<IProps> = ({
           <h4 className={styles.modal__title}>{t('modal-question.title')}</h4>
           <form id={formId} onSubmit={handleSubmit(onSubmit)} className={styles.modal__fields}>
             <textarea
-              className={styles.modal__textarea}
+              className={cn(styles.modal__textarea, [errors.name && styles.input_error])}
               placeholder={t('modal-question.question')}
               {...register('message')}
               onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question)}
             ></textarea>
             <input
-              className={styles.modal__input}
+              className={cn(styles.modal__input, [errors.name && styles.input_error])}
               {...register('name')}
               onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_name)}
               type="text"
               placeholder={t('modal-question.name')}
             />
             <input
-              className={styles.modal__input}
+              className={cn(styles.modal__input, [errors.email && styles.input_error])}
               onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_email)}
               {...register('email')}
               type="email"

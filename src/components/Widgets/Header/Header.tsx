@@ -2,11 +2,13 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/UI';
 import { HeaderLangBtn } from '@/components/Widgets';
+import { useGetPhone } from '@/hooks';
 import type { Namespaces } from '@/types';
 import styles from './Header.module.scss';
 
 export const Header: FC = () => {
   const { t } = useTranslation<Namespaces>('header');
+  const phone = useGetPhone();
 
   return (
     <header className={styles.header} id="header">
@@ -27,8 +29,13 @@ export const Header: FC = () => {
 
       <div className={styles.right}>
         <div className={styles.contact}>
-          <a className={styles.contact__link} href={`tel:${t('phone', { ns: 'common' })}`}>
-            {t('phone', { ns: 'common' })}
+          <a
+            className={styles.contact__link}
+            href={`tel:${phone.href}`}
+            // href={`tel:${t('phone', { ns: 'common' })}`}
+          >
+            {phone.display}
+            {/* {t('phone', { ns: 'common' })} */}
           </a>
           <a href={t('telegram_link', { ns: 'common' })} target="_blank" className={styles.icon}>
             <Icon icon="telegram" />
