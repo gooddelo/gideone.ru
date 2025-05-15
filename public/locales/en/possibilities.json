@@ -21,5 +21,7 @@
     {
       "name": "Incorporating augmented reality elements"
     }
-  ]
+  ],
+  "image": "/img/elipses.png",
+  "loading_image": "/img/loader.png"
 }

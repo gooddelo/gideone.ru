@@ -1,6 +1,3 @@
-@use '@/styles/typography' as *;
-@use '@/styles/mixins' as *;
-
 .possibilities {
   display: flex;
   flex-direction: column;
@@ -39,78 +36,104 @@
     width: 100%;
     position: relative;
   }
+}
 
-  &__step {
-    list-style: none;
-    @include typography-body-l-medium-narrow(var(---white-600, rgba(255, 255, 255, 0.7)));
-    display: flex;
-    align-items: flex-start;
-    padding: 40px 0;
-    gap: 24px;
+.step {
+  position: relative;
+  overflow: hidden; // Make sure the animation doesn't bleed out
+
+  list-style: none;
+  @include typography-body-l-medium-narrow(var(---white-600, rgba(255, 255, 255, 0.7)));
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 0;
+  gap: 24px;
+  position: relative;
+
+  transition: all 0.5s ease;
+
+  &:nth-child(1),
+  &:nth-child(6) {
+    padding-left: 355px;
+
+    @include media-max-tablet {
+      padding-left: 0;
+      margin-left: 60px;
+    }
+    @include media-max-mobile {
+      margin-left: 0;
+    }
+  }
+  &:nth-child(2),
+  &:nth-child(5) {
+    padding-left: 445px;
+    @include media-max-tablet {
+      padding-left: 0;
+      margin-left: 60px;
+    }
+    @include media-max-mobile {
+      margin-left: 0;
+    }
+  }
+  &:nth-child(3),
+  &:nth-child(4) {
+    padding-left: 497px;
+    @include media-max-tablet {
+      padding-left: 0;
+      margin-left: 60px;
+    }
+    @include media-max-mobile {
+      margin-left: 0;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(18, 152, 164, 1) 3.23%, rgba(18, 146, 158, 0) 100.18%);
+  }
+
+  &__text {
+    max-width: 440px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(17, 142, 155, 0.18) 3.23%,
+      rgba(18, 146, 158, 0) 100.18%
+    );
+    transition: all 0.5s ease;
+    z-index: 0;
+  }
+
+  // @include init-position-for-start-step();
+
+  &__active {
+    // @include animation($name: 'initialize-start-step');
+    &::before {
+      left: 0;
+    }
+  }
+
+  // Content on top
+  position: relative;
+  z-index: 1;
+
+  // Optional: ensure children are above the gradient
+  * {
     position: relative;
-
-    transition: all 0.3s ease;
-
-    &__active {
-      background: linear-gradient(
-        90deg,
-        rgba(17, 142, 155, 0.18) 3.23%,
-        rgba(18, 146, 158, 0) 100.18%
-      );
-    }
-
-    &:nth-child(1),
-    &:nth-child(6) {
-      padding-left: 355px;
-
-      @include media-max-tablet {
-        padding-left: 0;
-        margin-left: 60px;
-      }
-      @include media-max-mobile {
-        margin-left: 0;
-      }
-    }
-    &:nth-child(2),
-    &:nth-child(5) {
-      padding-left: 445px;
-      @include media-max-tablet {
-        padding-left: 0;
-        margin-left: 60px;
-      }
-      @include media-max-mobile {
-        margin-left: 0;
-      }
-    }
-    &:nth-child(3),
-    &:nth-child(4) {
-      padding-left: 497px;
-      @include media-max-tablet {
-        padding-left: 0;
-        margin-left: 60px;
-      }
-      @include media-max-mobile {
-        margin-left: 0;
-      }
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      height: 1px;
-      width: 100%;
-      background: linear-gradient(
-        90deg,
-        rgba(18, 152, 164, 1) 3.23%,
-        rgba(18, 146, 158, 0) 100.18%
-      );
-    }
-
-    &__text {
-      max-width: 440px;
-    }
+    z-index: 2;
   }
 }
 
@@ -120,10 +143,10 @@
   left: 452px;
   height: 100%;
   aspect-ratio: 1 / 1;
+  z-index: 2;
 
   transform: translate(-100%, -50%);
-  z-index: +1;
-  background: #0c091b;
+  background: #0e0d14;
   border-radius: 50%;
   padding: 37px;
 
@@ -136,7 +159,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-
+    transform: rotate(-27.5deg);
     transition: all 0.3s ease;
   }
 }

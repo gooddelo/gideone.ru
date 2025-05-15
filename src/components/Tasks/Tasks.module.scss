@@ -7,10 +7,16 @@
   border-radius: 40px;
   border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
   box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33);
-
+  backdrop-filter: blur(50px);
+  background: rgba($color: #fff, $alpha: 0.01);
   // @media (max-width: 1240px) {
   //   display: none;
   // }
+  overflow: hidden;
+
+  @include media-max-tablet {
+    backdrop-filter: blur(0);
+  }
 
   @include media-tablet {
     display: grid;
@@ -19,7 +25,7 @@
     max-width: 608px;
     gap: 8px;
 
-    border-radius: 0;
+    // border-radius: 0;
     border: none;
     box-shadow: none;
   }
@@ -55,6 +61,39 @@
     line-height: 120%; /* 19.2px */
     letter-spacing: 0.16px;
     width: 240px;
+  }
+
+  div {
+    position: relative;
+    &:before {
+      content: '';
+      aspect-ratio: 1 / 1;
+      width: 0;
+      height: auto;
+      display: block;
+      left: 50%;
+      top: 64%;
+      box-shadow: 0px 4px 130px 70px rgba(42, 165, 242, 0.53);
+      transform: translate(-50%, -50%);
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+    }
+  }
+
+  // img {
+  //   object-fit: contain;
+  //   box-shadow: 0px 4px 130px 23px rgba(42, 165, 242, 0.53);
+  //   background-color: transparent;
+  //   // mix-blend-mode: normal; // or unset
+  //   mix-blend-mode: multiply;
+  // }
+
+  @include media-max-tablet {
+    border-radius: 40px;
+    outline: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
+    background: var(---white-100, rgba(255, 255, 255, 0.08));
+    box-shadow: 0px 1px 92px 0px rgba(108, 114, 255, 0.33);
   }
 
   @include media-tablet {

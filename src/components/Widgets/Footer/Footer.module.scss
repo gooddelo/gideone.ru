@@ -1,6 +1,3 @@
-@use '@/styles/typography' as *;
-@use '@/styles/mixins' as *;
-
 .footer {
   @include container;
   @include media-max-tablet {

@@ -10,5 +10,7 @@
     {
       "point": "The sale evaluation is sent to the employee and appears in the users' dashboards."
     }
-  ]
+  ],
+  "img": "/img/bot-message-en.png",
+  "imgAlt": "how does gideone works img"
 }

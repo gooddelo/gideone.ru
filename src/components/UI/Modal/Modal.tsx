@@ -13,6 +13,7 @@ import {
 } from 'react';
 import { createPortal } from 'react-dom';
 import { useClickOutside } from '@/hooks';
+import Icon from '../Icon';
 import styles from './Modal.module.scss';
 
 interface IProps extends RefAttributes<HTMLDivElement> {
@@ -21,6 +22,7 @@ interface IProps extends RefAttributes<HTMLDivElement> {
   onClose: () => void;
   exceptions?: RefObject<null | HTMLElement>[];
   className?: string;
+  // open: boolean;
 }
 
 const Modal: FC<IProps> = forwardRef<HTMLDivElement, IProps>(
@@ -43,8 +45,11 @@ const Modal: FC<IProps> = forwardRef<HTMLDivElement, IProps>(
     if (!mounted || !parent) return null;
 
     return createPortal(
-      <div className={styles.modal__wrapper}>
+      <div className={cn(styles.modal__wrapper)}>
         <div ref={modalRef} className={cn(styles.modal, className)}>
+          <button className={styles.close_btn} onClick={onClose}>
+            <Icon icon="dismiss" size={24} />
+          </button>
           {children}
         </div>
       </div>,

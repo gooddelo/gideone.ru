@@ -117,7 +117,7 @@ const ModalQuestion: FC<IProps> = ({
         </button>
       )}
       {modalOpen && (
-        <Modal onClose={toggleModal} className={styles.modal}>
+        <Modal onClose={toggleModal} open={modalOpen} className={cn(styles.modal)}>
           <h4 className={styles.modal__title}>{t('modal-question.title')}</h4>
           <form id={formId} onSubmit={handleSubmit(onSubmit)} className={styles.modal__fields}>
             <textarea

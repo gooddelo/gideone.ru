@@ -1,7 +1,5 @@
 import '@/locales';
-// import emailjs from '@emailjs/browser';
 import { type FC } from 'react';
-// import { useEffect } from 'react';
 import Marquee from 'react-fast-marquee';
 import {
   Analytics,
@@ -18,30 +16,16 @@ import {
   Sales,
   StartUsing,
   Subscriptions,
-  Tasks,
+  // Tasks,
   Try,
 } from '@/components';
-import {
-  ButtonToTop,
-  CookieAgreement,
-  Footer,
-  Header,
-  HeaderLarge,
-  // SEOHelmet,
-  TabletHeader,
-} from '@/components/Widgets';
+import '@/components/Widgets';
 
-// import { useGetLocation } from './hooks';
-
-const LandingPage: FC = () => {
+export const LandingPage: FC = () => {
   return (
     <>
-      <Header />
-      <HeaderLarge />
-      <TabletHeader />
-      {/*  */}
       <Banner />
-      <Tasks />
+      {/* <Tasks /> */}
       <Marquee />
       {/* <Preview /> */}
       <AnalyticsSales />
@@ -57,12 +41,6 @@ const LandingPage: FC = () => {
       <FAQ />
       <Consultation />
       <News />
-
-      {/* */}
-      <CookieAgreement />
-      <Footer />
-      <ButtonToTop />
-      {/*  */}
     </>
   );
 };

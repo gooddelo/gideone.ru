@@ -1,5 +1,5 @@
-@use '@/styles/typography' as *;
-@use '@/styles/mixins' as *;
+// @use '@/styles/typography' as *;
+// @use '@/styles/mixins' as *;
 
 .container {
   display: flex;
@@ -64,6 +64,19 @@
   }
 }
 
+@for $i from 1 through 6 {
+  .decisions_active > .decision:nth-child(#{$i}) {
+    // Adjust initial transform for even items
+    @if ($i == 1) {
+      @include animation($name: 'initialize-cards-odd');
+    } @else if ($i % 2 == 0) {
+      @include animation($name: 'initialize-cards-even', $delay: #{($i - 1) * 0.3}s);
+    } @else {
+      @include animation($name: 'initialize-cards-odd', $delay: #{($i - 1) * 0.3}s);
+    }
+  }
+}
+
 .decision {
   height: 388px;
   position: relative;
@@ -76,9 +89,10 @@
   position: relative;
 
   transition: backdrop-filter 0.3s ease;
+  @include init-position-for-cards-odd();
 
   &:nth-child(even) {
-    transform: translateY(calc(50% + 16px));
+    @include init-position-for-cards-even();
   }
 
   @include media-max-tablet {

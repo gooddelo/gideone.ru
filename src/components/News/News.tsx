@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { type FC, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DragBlock } from '@/components/UI';
+import { createObserver } from '@/utils';
 import type { Namespaces } from '@/types';
 import styles from './News.module.scss';
 
@@ -11,6 +12,8 @@ export interface NewsItem {
   img: string;
 }
 
+// TODO slight drag issue with after and before pseudo elements
+
 const News: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scrollClass, setScrollClass] = useState<
@@ -19,6 +22,12 @@ const News: FC = () => {
   const prevScrollLeft = useRef(0);
   const { t } = useTranslation<Namespaces>('news');
   const news = t('news', { returnObjects: true }) as NewsItem[];
+  const [titleInView, setTitleInView] = useState(false);
+  const [newsInView, setNewsInView] = useState(false);
+
+  const sectionId = t('nav_blocks.news', { ns: 'common' });
+  const titleId = sectionId + '-title';
+  const newsId = sectionId + '-blocks';
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault();
@@ -75,7 +84,28 @@ const News: FC = () => {
     handleScroll(); // set initial
 
     return () => container.removeEventListener('scroll', handleScroll);
-  }, []);
+  });
+
+  useEffect(() => {
+    const title = document.querySelector('#' + titleId);
+    const news = document.querySelector('#' + newsId);
+    if (!title || !news) return;
+
+    const titleObserver = createObserver({
+      target: title,
+      onEnter: () => setTitleInView(true),
+    });
+
+    const newsObserver = createObserver({
+      target: news,
+      onEnter: () => setNewsInView(true),
+    });
+
+    return () => {
+      titleObserver.disconnect();
+      newsObserver.disconnect();
+    };
+  });
 
   return (
     <section
@@ -86,10 +116,20 @@ const News: FC = () => {
         [styles.news__left_scrolling]: scrollClass === 'left_scrolling',
         [styles.news__right_scrolling]: scrollClass === 'right_scrolling',
       })}
-      id="news"
+      id={sectionId}
     >
-      <h2 className={styles.news__title}>{t('title')}</h2>
-      <div className={cn(styles.news__blocks)} ref={containerRef} onMouseDown={handleMouseDown}>
+      <h2
+        id={titleId}
+        className={cn(styles.news__title, { [styles.news__title_active]: titleInView })}
+      >
+        {t('title')}
+      </h2>
+      <div
+        id={newsId}
+        className={cn(styles.news__blocks, { [styles.news__blocks_active]: newsInView })}
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+      >
         {Array.isArray(news) &&
           news.map((item, i) => (
             <div className={styles.block} key={'news from news' + i}>

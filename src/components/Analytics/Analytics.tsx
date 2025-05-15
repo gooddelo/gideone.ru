@@ -1,15 +1,43 @@
 import cn from 'classnames';
-import type { FC } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { createObserver } from '@/utils';
 import type { Namespaces } from '@/types';
 import styles from './Analytics.module.scss';
 
 const Analytics: FC = () => {
   const { t } = useTranslation<Namespaces>('analytics');
+  const [titleInView, setTitleInView] = useState(false);
+  const [cardsInView, setCardsInView] = useState(false);
+
+  const sectionId = t('nav_blocks.analytics', { ns: 'common' });
+  const titleId = sectionId + '-title';
+  const blocksId = sectionId + '-blocks';
+
+  useEffect(() => {
+    const title = document.querySelector('#' + titleId);
+    const blocks = document.querySelector('#' + blocksId);
+    if (!title || !blocks) return;
+
+    const titleObserver = createObserver({
+      target: title,
+      onEnter: () => setTitleInView(true),
+    });
+
+    const blocksObserver = createObserver({ target: blocks, onEnter: () => setCardsInView(true) });
+
+    return () => {
+      titleObserver.disconnect();
+      blocksObserver.disconnect();
+    };
+  });
+
   return (
-    <section className={styles.container} id={t('nav_blocks.analytics', { ns: 'common' })}>
-      <h2 className={styles.title}>{t('title')}</h2>
-      <div className={styles.content}>
+    <section className={styles.container} id={sectionId}>
+      <h2 className={cn(styles.title, { [styles.title_active]: titleInView })} id={titleId}>
+        {t('title')}
+      </h2>
+      <div className={cn(styles.content, { [styles.content_active]: cardsInView })} id={blocksId}>
         <div className={cn(styles.item, styles.first)}>
           <h4 className={cn(styles.item__title)}>{t('items.1.name')}</h4>
           <p className={styles.item__description}>{t('items.1.description')}</p>

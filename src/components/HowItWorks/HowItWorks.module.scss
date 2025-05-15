@@ -1,5 +1,5 @@
-@use '@/styles/typography' as *;
-@use '@/styles/mixins' as *;
+// @use '@/styles/typography' as *;
+// @use '@/styles/mixins' as *;
 
 $points-gap: 100px;
 $circle-size: 12px;
@@ -52,11 +52,11 @@ $circle-size: 12px;
 
   width: calc(100vw - 780px);
   max-width: 902px;
+  @include init-position-for-large-image();
 
-  // @media screen and (max-width: 1642px) {
-  //   width: calc(100vw - 780px);
-  //   max-width: ;
-  // }
+  &_active {
+    @include animation($name: 'initialize-large-image');
+  }
 
   @include media-max-tablet {
     width: 100%;

@@ -9,6 +9,8 @@ export enum SESSION_STORAGE_KEYS {
   contact_name = 'contact_name',
   contact_phone = 'contact_phone',
 
+  visited = 'visited',
+
   question_email = 'question_email',
   question_name = 'question_name',
   question_phone = 'question_phone',

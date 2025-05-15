@@ -1,0 +1,199 @@
+// GLOBAL =======================================================>
+@mixin init-position-for-title {
+  opacity: 0;
+  transform: translate(0, calc(100% + 20px));
+}
+@keyframes initialize-title {
+  from {
+    opacity: 0;
+    transform: translate(0, calc(100% + 20px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@mixin init-position-for-content {
+  opacity: 0;
+  transform: translate(0, calc(50px));
+}
+@keyframes initialize-content {
+  from {
+    opacity: 0;
+    transform: translate(0, calc(50px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@mixin init-position-for-large-image {
+  opacity: 0;
+  transform: translate(0, calc(50%));
+}
+@keyframes initialize-large-image {
+  from {
+    opacity: 0;
+    transform: translate(0, calc(50%));
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+// HEADER (regular) =======================================================>
+@keyframes initialize-header {
+  from {
+    transform: translate(-50%, calc(-100% - 24px));
+  }
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+
+// BANNER section =======================================================>
+@keyframes initialize-banner-tasks {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(100% + 40px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes initialize-banner-main {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// DECISIONS section =======================================================>
+@mixin init-position-for-cards-odd() {
+  opacity: 0;
+  transform: translate(0, calc(50px));
+}
+@keyframes initialize-cards-odd {
+  from {
+    opacity: 0;
+    transform: translate(0, calc(50px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@mixin init-position-for-cards-even() {
+  opacity: 0;
+  transform: translate(0, calc(50% + 66px));
+}
+@keyframes initialize-cards-even {
+  from {
+    opacity: 0;
+    transform: translate(0, calc(50% + 66px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, calc(50% + 16px));
+  }
+}
+
+// START USING section =======================================================>
+@mixin init-position-for-start-step {
+  opacity: 0;
+  transform: translate(calc(25%), 0);
+}
+@keyframes initialize-start-step {
+  from {
+    opacity: 0;
+    transform: translate(calc(25%), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+// POSSIBILITIES section =======================================================>
+
+// SUBSCRIPTIONS section =======================================================>
+@mixin init-position-for-first-subscription {
+  opacity: 0;
+  margin-top: 50px;
+}
+@keyframes initialize-first-subscription {
+  from {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@mixin init-position-for-second-subscription {
+  opacity: 0;
+  margin-top: 100px;
+}
+@keyframes initialize-second-subscription {
+  from {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@mixin init-position-for-third-subscription {
+  opacity: 0;
+  margin-top: 150px;
+}
+@keyframes initialize-third-subscription {
+  from {
+    opacity: 0;
+    margin-top: 150px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@mixin init-position-for-enterprise-img {
+  transform: rotate(-100deg);
+}
+@keyframes initialize-enterprise-img {
+  from {
+    transform: rotate(-100deg);
+  }
+  to {
+    transform: rotate(-142.359deg);
+  }
+}
+
+// FAQ section =======================================================>
+// @mixin init-position-for-faq-questions {
+//   opacity: 0;
+//   transform: translate(0, calc(150px));
+// }
+// @keyframes initialize-faq-questions {
+//   from {
+//     opacity: 0;
+//     transform: translate(0, calc(150px));
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translate(0, 0);
+//   }
+// }

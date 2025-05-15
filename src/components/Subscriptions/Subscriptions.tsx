@@ -1,7 +1,8 @@
 import cn from 'classnames';
-import type { FC } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ModalContact } from '@/components/Widgets';
+import { createObserver } from '@/utils';
 import type { Namespaces } from '@/types';
 import styles from './Subscriptions.module.scss';
 
@@ -19,10 +20,62 @@ const Subscriptions: FC = () => {
 
   const subscriptions = t('subscriptions', { returnObjects: true }) as Array<Subscription>;
 
+  const [titleInView, setTitleInView] = useState(false);
+  const [subscriptionsInView, setSubscriptionsInView] = useState(false);
+  const [enterpriseInView, setEnterpriseInView] = useState(false);
+  // const [enterpriseImgInView, setEnterpriseImgInView] = useState(false);
+
+  const sectionId = t('nav_blocks.subscriptions', { ns: 'common' });
+  const titleId = sectionId + '-title';
+  const subscriptionsId = sectionId + '-subscriptions';
+  const enterpriseId = sectionId + '-enterprise';
+  const enterpriseImgId = enterpriseId + '-img';
+
+  useEffect(() => {
+    const title = document.querySelector('#' + titleId);
+    const subscriptions = document.querySelector('#' + subscriptionsId);
+    const enterprise = document.querySelector('#' + enterpriseId);
+    // const enterpriseImg = document.querySelector('#' + enterpriseImgId);
+
+    if (!title || !subscriptions || !enterprise) return;
+
+    const titleObserver = createObserver({
+      target: title,
+      onEnter: () => setTitleInView(true),
+    });
+
+    const subscriptionsObserver = createObserver({
+      target: subscriptions,
+      onEnter: () => setSubscriptionsInView(true),
+    });
+
+    const enterpriseObserver = createObserver({
+      target: enterprise,
+      onEnter: () => setEnterpriseInView(true),
+    });
+
+    // const enterpriseImgObserver = createObserver({
+    //   target: enterpriseImg,
+    //   onEnter: () => setEnterpriseImgInView(true),
+    // });
+
+    return () => {
+      titleObserver.disconnect();
+      subscriptionsObserver.disconnect();
+      enterpriseObserver.disconnect();
+      // enterpriseImgObserver.disconnect();
+    };
+  });
+
   return (
-    <section className={styles.container} id={t('nav_blocks.subscriptions', { ns: 'common' })}>
-      <h2 className={styles.title}>{t('title')}</h2>
-      <div className={styles.subscriptions}>
+    <section id={sectionId} className={styles.container}>
+      <h2 id={titleId} className={cn(styles.title, { [styles.title_active]: titleInView })}>
+        {t('title')}
+      </h2>
+      <div
+        id={subscriptionsId}
+        className={cn(styles.subscriptions, { [styles.subscriptions_active]: subscriptionsInView })}
+      >
         {Array.isArray(subscriptions) &&
           subscriptions.map((subscription, i) => (
             <div
@@ -52,13 +105,6 @@ const Subscriptions: FC = () => {
                   </li>
                 ))}
               </ul>
-
-              {/* <button
-              className={cn(styles.subscription__action, styles[`subscription__action_${i + 1}`])}
-            >
-              {subscription.action}
-            </button> */}
-
               <ModalContact
                 className={cn(styles.subscription__action, styles[`subscription__action_${i + 1}`])}
                 text={subscription.action}
@@ -75,19 +121,21 @@ const Subscriptions: FC = () => {
         />
       </div>
 
-      <div className={styles.enterprise}>
+      <div
+        id={enterpriseId}
+        className={cn(styles.enterprise, { [styles.enterprise_active]: enterpriseInView })}
+      >
         <div className={styles.enterprise__content}>
           <h3 className={styles.enterprise__title}>{t('enterprise.title')}</h3>
           <div>
             <div className={styles.enterprise__amount}>{t('enterprise.amount')}</div>
             <div className={styles.enterprise__employees}>{t('enterprise.employees')}</div>
           </div>
-          {/* <button className={styles.enterprise__button}>{t('enterprise.button')}</button> */}
-
           <ModalContact className={styles.enterprise__button} text={t('enterprise.button')} />
         </div>
 
         <img
+          id={enterpriseImgId}
           src={'/img/enterprise.png'}
           alt={'enterprise'}
           width={522}

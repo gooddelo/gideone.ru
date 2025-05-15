@@ -22,7 +22,7 @@ const PolicyAgreement: FC<IProps> = ({ check, className, agreementVia }) => {
         {t('agreement', {
           agreementVia: t(`agreementVia.${agreementVia}`),
         })}
-        <a href={'/policy'} target="_blank">
+        <a href={t('privacy_policy_link')} target="_blank">
           {t('policy')}
         </a>
         {t('agreement_2')}

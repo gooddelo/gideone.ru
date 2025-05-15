@@ -21,5 +21,7 @@
     {
       "name": "Включение элементов дополненной реальности"
     }
-  ]
+  ],
+  "image": "/img/elipses.png",
+  "loading_image": "/img/loader.png"
 }

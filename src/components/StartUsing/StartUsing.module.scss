@@ -1,6 +1,3 @@
-@use '@/styles/typography' as *;
-@use '@/styles/mixins' as *;
-
 .container {
   display: flex;
   flex-direction: column;
@@ -30,10 +27,25 @@
   }
 }
 
+@for $i from 1 through 3 {
+  .steps > .step:nth-child(#{$i}) {
+    // Adjust initial transform for even items
+    @if ($i == 1) {
+      @include animation($name: 'initialize-start-step', $duration: 1s);
+    } @else if ($i % 2 == 0) {
+      @include animation($name: 'initialize-start-step', $duration: 1s, $delay: #{($i - 1) * 0.3}s);
+    } @else {
+      @include animation($name: 'initialize-start-step', $duration: 1s, $delay: #{($i - 1) * 0.3}s);
+    }
+  }
+}
+
 .step {
   display: flex;
   align-items: center;
   position: relative;
+
+  @include init-position-for-start-step();
 
   @include media-max-tablet {
     flex-direction: column-reverse;
@@ -116,7 +128,6 @@
     gap: 59px;
     margin-left: 31%;
     padding: 57px 0;
-    margin: 0 auto;
 
     @include media-max-tablet {
       gap: 40px;

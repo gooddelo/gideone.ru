@@ -1,5 +1,7 @@
 {
   "name": "Gideone",
-  "description": "Бизнес-тренер на базе искусственного интеллекта",
-  "button": "Попробовать бесплатно"
+  "description": "Бизнес-тренер<br></br>на базе искусственного интеллекта",
+  "button": "Попробовать бесплатно 14 дней",
+  "logo": "/img/gideone_logo_lg.png",
+  "animation": "/animations/btn-animation.json"
 }

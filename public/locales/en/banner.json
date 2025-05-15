@@ -1,5 +1,6 @@
 {
   "name": "Gideone",
-  "description": "AI-powered business coach",
-  "button": "Try for free"
+  "description": "Business coach<br></br>powered by artificial intelligence",
+  "button": "Try for free for 14 days",
+  "animation": "/animations/btn-animation.json"
 }

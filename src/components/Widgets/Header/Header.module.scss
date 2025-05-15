@@ -1,35 +1,23 @@
-@use '@/styles/typography.scss' as *;
-@use '@/styles/mixins.scss' as *;
+// @use '@/styles/typography.scss' as *;
+// @use '@/styles/mixins.scss' as *;
 
 .header {
   position: absolute;
   top: 24px;
+  left: 50%;
   width: 1240px;
   max-width: 100%;
   display: flex;
   align-items: center;
   padding: 0 20px;
   z-index: 3;
-  // justify-self: anchor-center;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-.burger {
-  display: none;
-  background: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
-  padding: 10px;
-  border-radius: 50%;
-  border: 1px solid var(---primary-100, #eaedff);
+  // animation-duration: 0.6s;
+  // animation-name: initialize;
+  // animation-delay: 1.25s;
+  // animation-fill-mode: both;
 
-  &__icon {
-    path {
-      fill: var(---primary-100, #eaedff);
-    }
-  }
+  @include animation($name: 'initialize-header', $duration: 0.6s, $delay: 1.25s);
 }
 
 .nav {
@@ -120,9 +108,6 @@
   border: 1px solid var(---primary-100, #eaedff);
   background: none;
   cursor: pointer;
-  // @media (max-width: 1024px) {
-  //   display: none;
-  // }
 
   @include typography-btn-input-l-bold;
 }
@@ -133,3 +118,12 @@
     display: none;
   }
 }
+
+// @keyframes initialize {
+//   from {
+//     transform: translate(-50%, calc(-100% - 24px));
+//   }
+//   to {
+//     transform: translate(-50%, 0);
+//   }
+// }

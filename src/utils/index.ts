@@ -1,6 +1,7 @@
 import { LANGUAGES } from '@/types';
 
 export * from './secureStorage';
+export * from './createObserver';
 export const getDefLang = () => {
   if (navigator.language.startsWith(LANGUAGES.ru)) return LANGUAGES.ru;
   else return LANGUAGES.en_us;

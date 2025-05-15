@@ -68,6 +68,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
+        @use "@/styles/keyframes.scss" as *;
         @use "@/styles/mixins.scss" as *;
         @use "@/styles/typography.scss" as *;
       `,

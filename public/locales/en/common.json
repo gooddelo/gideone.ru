@@ -20,7 +20,7 @@
     "possibilities": "possibilities",
     "subscriptions": "subscriptions",
     "faq": "faq",
-    "consultations": "consultations",
+    "consultation": "consultation",
     "news": "news"
   },
   "nav_links": {
@@ -28,7 +28,8 @@
     "subscriptions": "#subscriptions",
     "faq": "#faq",
     "news": "#news",
-    "top": "#banner"
+    "top": "#banner",
+    "consultation": "#consultation"
   },
   "nav": {
     "about": "About the product",
@@ -58,5 +59,6 @@
     "email": "Email for response",
     "send": "Send",
     "button": "Ask a question"
-  }
+  },
+  "loading-video": "/animations/loading-animation.mp4"
 }

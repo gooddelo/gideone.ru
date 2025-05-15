@@ -1,5 +1,5 @@
-@use '@/styles/typography' as *;
-@use '@/styles/mixins' as *;
+// @use '@/styles/typography' as *;
+// @use '@/styles/mixins' as *;
 
 .container {
   display: flex;
@@ -20,10 +20,28 @@
   @include media-max-tablet {
     max-width: 100%;
   }
+
+  &_active {
+    .item_1 {
+      @include animation($name: 'initialize-content', $delay: 0.2s);
+    }
+
+    .item_2 {
+      @include animation($name: 'initialize-content', $delay: 0.4s);
+    }
+
+    .item_3 {
+      @include animation($name: 'initialize-content', $delay: 0.6s);
+    }
+  }
 }
 
 .title {
   @include typography-h3(var(---primary-200, #d5dcfe), center);
+  @include init-position-for-title();
+  &_active {
+    @include animation($name: 'initialize-title');
+  }
 
   @include media-max-tablet {
     @include typography-h3(var(---primary-200, #d5dcfe), center);
@@ -34,6 +52,7 @@
   max-width: 386px;
   width: 100%;
   min-width: 228px;
+  @include init-position-for-content();
 
   @include media-max-tablet {
     min-width: 228px;

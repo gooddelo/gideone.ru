@@ -8,5 +8,9 @@
   "button": "Get consultation",
   "agreement": "By clicking the '{{button}}' button, I agree to the",
   "agreement_2": "and consent to the processing of personal data.",
-  "policy": " privacy policy "
+  "policy": " privacy policy ",
+  "img": {
+    "url": "/img/consultation.png",
+    "alt": "We'll provide a consultation"
+  }
 }
