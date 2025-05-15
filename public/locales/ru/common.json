@@ -21,7 +21,8 @@
     "subscriptions": "subscriptions",
     "faq": "faq",
     "consultation": "consultation",
-    "news": "news"
+    "news": "news",
+    "analytics-sales": "analytics-sales"
   },
   "nav_links": {
     "about": "#sales",
@@ -40,8 +41,8 @@
   "telegram_link": "https://t.me/gideone_4u",
   "vk_link": "https://vk.com/gideone.online",
   "privacy_policy_link": "/privacy_policy.pdf",
-  "phone": "+7 (800) 101-79-87",
-  "phone_href": "+78001017987",
+  "phone": "8 (800) 101-79-87",
+  "phone_href": "88001017987",
   "phone_en": "+7 (996) 737-99-12",
   "phone_en_href": "+79967379912",
   "modal-contact": {

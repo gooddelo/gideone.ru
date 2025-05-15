@@ -98,7 +98,6 @@
   }
 
   &__application {
-    // margin-left: auto;
     display: flex;
     height: 56px;
     padding: 0px 32px;
@@ -107,12 +106,11 @@
     gap: 8px;
     border-radius: 16px;
     background: var(--color-roles-primary, #acbafd);
-    @include typography-body-l-narrow(var(--btn-on-primary, #020268, center));
+    @include typography-body-l-narrow(var(--btn-on-primary, #020268), center);
     border: none;
 
     @include media-max-tablet {
       border-radius: 100px;
-      // margin-left: 0;
     }
   }
 }

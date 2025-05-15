@@ -191,7 +191,8 @@
 
   @include media-max-mobile {
     width: 507px;
-    max-width: calc(100vw - 40px);
+    // max-width: calc(100vw - 40px);
+    @include support-with-fallback(max-width, calc(100svw - 40px), calc(100vw - 40px));
 
     &__image {
       width: 100%;
@@ -202,6 +203,11 @@
 
 .drag_block {
   display: none;
+
+  @include init-position-for-content();
+  &_active {
+    @include animation($name: 'initialize-content');
+  }
 
   @include media-max-tablet {
     display: block;

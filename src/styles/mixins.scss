@@ -28,6 +28,14 @@
   animation-timing-function: $function;
 }
 
+@mixin support-with-fallback($property, $value, $fallback) {
+  #{$property}: #{$fallback};
+
+  @supports (#{$property}: #{$value}) {
+    #{$property}: #{$value};
+  }
+}
+
 @mixin media-desktop {
   @media screen and (min-width: 1920px) {
     @content;

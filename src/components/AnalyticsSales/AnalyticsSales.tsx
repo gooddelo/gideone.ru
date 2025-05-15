@@ -1,16 +1,35 @@
 import cn from 'classnames';
-import type { FC } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { DragBlock } from '@/components/UI';
+import { createObserver } from '@/utils';
 import type { Namespaces } from '@/types';
 import styles from './AnalyticsSales.module.scss';
 
 const AnalyticsSales: FC = () => {
   const { t } = useTranslation<Namespaces>('analytics_and_sales');
 
-  // if (t('analytics.img_1').startsWith('/'))
+  const [analyticsInView, setAnalyticsInView] = useState(false);
+
+  const sectionId = t('nav_blocks.analytics-sales', { ns: 'common' });
+
+  useEffect(() => {
+    const analytics = document.querySelector('#' + sectionId);
+    if (!analytics) return;
+
+    const analyticsObserver = createObserver({
+      target: analytics,
+      onEnter: () => setAnalyticsInView(true),
+    });
+
+    return () => analyticsObserver.disconnect();
+  });
+
   return (
-    <section id={'analytics_sales'}>
+    <section
+      id={sectionId}
+      className={cn(styles.section, { [styles.section__active]: analyticsInView })}
+    >
       <DragBlock className={cn(styles.drag_block)}>
         <div className={cn(styles.block, styles.first)}>
           <h4 className={cn(styles.block__title)}>

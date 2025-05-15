@@ -24,10 +24,12 @@ const News: FC = () => {
   const news = t('news', { returnObjects: true }) as NewsItem[];
   const [titleInView, setTitleInView] = useState(false);
   const [newsInView, setNewsInView] = useState(false);
+  const [newsDragInView, setNewsDragInView] = useState(false);
 
   const sectionId = t('nav_blocks.news', { ns: 'common' });
   const titleId = sectionId + '-title';
   const newsId = sectionId + '-blocks';
+  const newsDragId = sectionId + '-drag';
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault();
@@ -89,7 +91,8 @@ const News: FC = () => {
   useEffect(() => {
     const title = document.querySelector('#' + titleId);
     const news = document.querySelector('#' + newsId);
-    if (!title || !news) return;
+    const newsDrag = document.querySelector('#' + newsDragId);
+    if (!title || !news || !newsDrag) return;
 
     const titleObserver = createObserver({
       target: title,
@@ -101,9 +104,15 @@ const News: FC = () => {
       onEnter: () => setNewsInView(true),
     });
 
+    const newsDragObserver = createObserver({
+      target: newsDrag,
+      onEnter: () => setNewsDragInView(true),
+    });
+
     return () => {
       titleObserver.disconnect();
       newsObserver.disconnect();
+      newsDragObserver.disconnect();
     };
   });
 
@@ -158,7 +167,10 @@ const News: FC = () => {
           ))}
       </div>
 
-      <DragBlock className={cn(styles.drag_block)}>
+      <DragBlock
+        id={newsDragId}
+        className={cn(styles.drag_block, { [styles.drag_block_active]: newsDragInView })}
+      >
         {Array.isArray(news) &&
           news.map((item, i) => (
             <div className={styles.block} key={'news-from-news-' + i}>

@@ -1,12 +1,12 @@
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
-import type { FC } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 import * as yup from 'yup';
 import { InputCheck } from '@/components/UI';
-import { emailRegex } from '@/utils';
+import { createObserver, emailRegex } from '@/utils';
 import type { Namespaces } from '@/types';
 import styles from './ConsultationForm.module.scss';
 
@@ -52,8 +52,31 @@ const ConsultationForm: FC = () => {
     );
   };
 
+  const [contentInView, setContentInView] = useState(false);
+
+  const sectionId = t('nav_blocks.consultation', { ns: 'common' });
+  const formId = sectionId + '-form';
+
+  useEffect(() => {
+    const form = document.querySelector('#' + formId);
+    if (!form) return;
+    const formObserver = createObserver({
+      target: form,
+      onEnter: () => setContentInView(true),
+    });
+
+    return () => {
+      formObserver.disconnect();
+    };
+  });
+
   return (
-    <form action="" className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+    <form
+      action=""
+      id={formId}
+      className={cn(styles.form, { [styles.form_active]: contentInView })}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className={cn(styles.form__head, styles.form__block_head)}>
         <h3 className={styles.title}>
           <Trans

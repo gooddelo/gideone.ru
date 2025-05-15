@@ -31,7 +31,9 @@
   border-radius: 40px;
   object-fit: cover;
   height: 886px;
-  max-width: calc(100vw - 715px);
+  // max-width: calc(100vw - 715px);
+
+  @include support-with-fallback(max-width, calc(100svw - 715px), calc(100vw - 715px));
 
   @include media-max-tablet {
     width: 100%;

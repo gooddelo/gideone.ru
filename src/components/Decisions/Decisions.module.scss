@@ -74,6 +74,14 @@
     } @else {
       @include animation($name: 'initialize-cards-odd', $delay: #{($i - 1) * 0.3}s);
     }
+
+    @include media-max-tablet {
+      @if ($i == 1) {
+        @include animation($name: 'initialize-cards-tablet');
+      } @else {
+        @include animation($name: 'initialize-cards-tablet', $delay: #{($i - 1) * 0.3}s);
+      }
+    }
   }
 }
 
@@ -99,8 +107,10 @@
     overflow-x: hidden;
     max-width: 360px;
     height: 436px;
+
+    @include init-position-for-cards-tablet();
     &:nth-child(even) {
-      transform: none;
+      @include init-position-for-cards-tablet();
     }
   }
 
@@ -111,7 +121,8 @@
     // max-width: 100%;
     // width: 320px;
     width: 100%;
-    max-width: calc(100vw - 48px);
+    // max-width: calc(100vw - 48px);
+    @include support-with-fallback(max-width, calc(100svw - 48px), calc(100vw - 48px));
     padding-bottom: 0;
   }
 
@@ -164,6 +175,7 @@
 }
 
 .img {
+  width: 135svw;
   width: 135vw;
   // max-width: 2607px;
   height: auto;
@@ -177,7 +189,9 @@
   // TODO correct this img
 
   @include media-max-tablet {
+    height: 90svw;
     height: 90vw;
+    width: 90svw;
     width: 90vw;
     left: 50%;
     top: 0;
@@ -187,6 +201,7 @@
   }
   @include media-max-mobile {
     height: auto;
+    width: 135svw;
     width: 135vw;
     left: 50%;
     top: 50%;

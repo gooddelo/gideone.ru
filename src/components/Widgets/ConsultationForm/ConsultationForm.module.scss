@@ -157,6 +157,11 @@
     margin: 0 auto;
     border-radius: 30px;
     background: var(--color-roles-surface-container, rgba(255, 255, 255, 0.08));
+
+    @include init-position-for-content();
+    &_active {
+      @include animation($name: 'initialize-content');
+    }
   }
 
   @include media-max-mobile {

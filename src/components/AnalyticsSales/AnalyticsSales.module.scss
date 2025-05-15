@@ -1,3 +1,10 @@
+.section {
+  @include init-position-for-content();
+  &__active {
+    @include animation($name: 'initialize-content');
+  }
+}
+
 .block {
   padding: 40px;
   border-radius: 40px;
@@ -29,7 +36,9 @@
   @include media-max-mobile {
     width: 610px;
     padding: 20px;
-    max-width: calc(100vw - 40px);
+    // max-width: calc(100vw - 40px);
+
+    @include support-with-fallback(max-width, calc(100svw - 40px), calc(100vw - 40px));
 
     img {
       max-width: 100%;

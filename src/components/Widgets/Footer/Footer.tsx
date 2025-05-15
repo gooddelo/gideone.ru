@@ -65,7 +65,11 @@ export const Footer: FC = () => {
       </div>
       <div className={styles.bottom}>
         <ModalQuestion />
-        <a className={styles.bottom__link} href={'https://www.sk.ru/'} target="_blank">
+        <a
+          className={styles.bottom__link}
+          href={'https://navigator.sk.ru/orn/1126754'}
+          target="_blank"
+        >
           <img src="/img/logo-skolkovo.png" alt="Сколково" width={55} height={55} />
         </a>
         <a className={styles.bottom__link} href={'https://fasie.ru/'} target="_blank">
@@ -90,7 +94,7 @@ export const Footer: FC = () => {
             {t('policy')}
           </a>
         </div>
-        <div className={cn(styles.links__group, styles.column)}>
+        {/* <div className={cn(styles.links__group, styles.column)}>
           <a
             target="_blank"
             href={t('privacy_policy_link', { ns: 'common' })}
@@ -105,7 +109,7 @@ export const Footer: FC = () => {
           >
             {t('review')}
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

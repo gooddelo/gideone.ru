@@ -12,9 +12,10 @@ interface IProps {
   children: ReactNode;
   className?: string;
   classNameSlide?: string;
+  id?: string;
 }
 
-const DragBlock: FC<IProps> = ({ children, className, classNameSlide }) => {
+const DragBlock: FC<IProps> = ({ children, className, classNameSlide, id }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true, // <-- infinite loop
     align: 'center', // Center active slide
@@ -43,7 +44,7 @@ const DragBlock: FC<IProps> = ({ children, className, classNameSlide }) => {
   );
 
   return (
-    <div className={cn(styles.carousel_container, className)}>
+    <div id={id} className={cn(styles.carousel_container, className)}>
       <div className={styles.pagination}>
         {Children.map(children, (_, index) => (
           <button

@@ -26,7 +26,8 @@
 
 .menu {
   width: 316px;
-  max-width: 90vw;
+  // max-width: 90vw;
+  @include support-with-fallback(max-width, 90svw, 90vw);
   height: 100vh;
   height: 100svh;
   position: relative;
