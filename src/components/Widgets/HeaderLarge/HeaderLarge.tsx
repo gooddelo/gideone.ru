@@ -70,7 +70,7 @@ const HeaderLarge: FC = () => {
             {/* {t('phone', { ns: 'common' })} */}
             {phone.display}
           </a>
-          <a href={t('telegram_link', { ns: 'common' })} target="_blank" className={styles.icon}>
+          <a href={t('links.telegram', { ns: 'common' })} target="_blank" className={styles.icon}>
             <Icon icon="telegram" />
           </a>
         </div>

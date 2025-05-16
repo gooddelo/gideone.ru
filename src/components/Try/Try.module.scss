@@ -110,7 +110,8 @@
   // width: 919px;
   // max-width: 57%;
   // width: calc(100vw - 763px);
-  @include support-with-fallback(width, calc(100svw - 763px), calc(100vw - 763px));
+  // @include support-with-fallback(width, calc(100svw - 763px), calc(100vw - 763px));
+  @include safe-viewport(width, 'calc(100vw - 763px)');
   height: 710px;
   border-radius: 40px;
   min-height: 710px;
@@ -129,7 +130,8 @@
 
   @include media-max-tablet {
     // width: calc(100vw - 590px);
-    @include support-with-fallback(width, calc(100svw - 590px), calc(100vw - 590px));
+    // @include support-with-fallback(width, calc(100svw - 590px), calc(100vw - 590px));
+    @include safe-viewport(width, 'calc(100vw - 590px)');
     max-width: none;
     height: 710px;
     object-fit: none;

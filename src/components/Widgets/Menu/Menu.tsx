@@ -60,7 +60,7 @@ const Menu: FC<IProps> = ({ open, setOpen }) => {
           <div className={styles.contacts__socials}>
             <a
               onClick={handleClose}
-              href={t('vk_link', { ns: 'common' })}
+              href={t('links.vk', { ns: 'common' })}
               target="_blank"
               className={cn(styles.contacts__social, styles.vk)}
             >
@@ -68,7 +68,7 @@ const Menu: FC<IProps> = ({ open, setOpen }) => {
             </a>
             <a
               onClick={handleClose}
-              href={t('telegram_link', { ns: 'common' })}
+              href={t('links.telegram', { ns: 'common' })}
               target="_blank"
               className={cn(styles.contacts__social, styles.telegram)}
             >

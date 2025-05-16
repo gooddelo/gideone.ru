@@ -1,8 +1,9 @@
 .banner {
   width: 100%;
   @include container;
-  height: 100vh;
-  height: 100svh;
+  // height: 100vh;
+  // height: 100svh;
+  @include safe-viewport(height, '100vh');
   position: relative;
   display: flex;
   align-items: center;
@@ -32,6 +33,9 @@
   transform: translate(-31%, 10%);
   height: auto;
 
+  @include init-position-for-banner-main();
+  @include animation($name: 'initialize-banner-main', $duration: 1s);
+
   @include media-max-tablet {
     position: absolute;
     right: 22%;
@@ -55,11 +59,9 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  // bottom: 32%;
 
-  animation-duration: 1s;
-  animation-name: initialize-main;
-  animation-fill-mode: both;
+  @include init-position-for-banner-main();
+  @include animation($name: 'initialize-banner-main', $duration: 1s);
 
   @include media-max-tablet {
     right: 20%;
@@ -85,7 +87,7 @@
 
 .name {
   color: #ececec;
-  text-shadow: 41px 10px 59.5px #211e35;
+
   font-family: 'Montserrat', 'sans-serif';
   font-size: 200px;
   font-style: normal;
@@ -183,6 +185,10 @@
   @include media-max-tablet {
     margin-left: 80px;
     margin-top: 40px;
+  }
+
+  @include media-max-mobile {
+    margin: 0;
   }
 }
 

@@ -38,7 +38,8 @@
     padding: 20px;
     // max-width: calc(100vw - 40px);
 
-    @include support-with-fallback(max-width, calc(100svw - 40px), calc(100vw - 40px));
+    // @include support-with-fallback(max-width, calc(100svw - 40px), calc(100vw - 40px));
+    @include safe-viewport(max-width, 'calc(100vw - 40px)');
 
     img {
       max-width: 100%;

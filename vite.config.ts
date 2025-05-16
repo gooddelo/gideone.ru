@@ -69,6 +69,7 @@ export default defineConfig({
       scss: {
         additionalData: `
         @use "@/styles/keyframes.scss" as *;
+       // @use "@/styles/functions.scss" as *;
         @use "@/styles/mixins.scss" as *;
         @use "@/styles/typography.scss" as *;
       `,

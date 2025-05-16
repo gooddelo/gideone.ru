@@ -38,10 +38,8 @@
     "faq": "FAQ",
     "news": "Новости"
   },
-  "telegram_link": "https://t.me/gideone_4u",
-  "vk_link": "https://vk.com/gideone.online",
   "privacy_policy_link": "/privacy_policy.pdf",
-  "phone": "8 (800) 101-79-87",
+  "phone": "8-800-101-79-87",
   "phone_href": "88001017987",
   "phone_en": "+7 (996) 737-99-12",
   "phone_en_href": "+79967379912",
@@ -61,5 +59,12 @@
     "send": "Отправить",
     "button": "Задать вопрос"
   },
-  "loading-video": "/animations/loading-animation.mp4"
+  "loading-video": "/animations/loading-animation.mp4",
+  "links": {
+    "skolkovo": "https://navigator.sk.ru/orn/1126754",
+    "innovation_fond": "https://fasie.ru/",
+    "telegram": "https://t.me/gideone_4u",
+    "vk": "https://vk.com/gideone.online",
+    "privacy_policy": "/privacy_policy.pdf"
+  }
 }

@@ -1,6 +1,7 @@
 .carousel_container {
-  width: 100vw;
-  width: 100svw;
+  // width: 100vw;
+  // width: 100svw;
+  @include safe-viewport(width, '100vw');
   margin: 0 auto;
   text-align: center;
 

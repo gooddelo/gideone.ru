@@ -18,15 +18,18 @@ const Decisions: FC = () => {
 
   const [titleInView, setTitleInView] = useState(false);
   const [cardsInView, setCardsInView] = useState(false);
+  const [dragInView, setDragInView] = useState(false);
 
   const sectionId = t('nav_blocks.decisions', { ns: 'common' });
   const titleId = sectionId + '-title';
   const blocksId = sectionId + '-blocks';
+  const dragId = sectionId + '-drag';
 
   useEffect(() => {
     const title = document.querySelector('#' + titleId);
     const blocks = document.querySelector('#' + blocksId);
-    if (!title || !blocks) return;
+    const drag = document.querySelector('#' + dragId);
+    if (!title || !blocks || !drag) return;
 
     const titleObserver = createObserver({
       target: title,
@@ -35,9 +38,12 @@ const Decisions: FC = () => {
 
     const blocksObserver = createObserver({ target: blocks, onEnter: () => setCardsInView(true) });
 
+    const dragObserver = createObserver({ target: drag, onEnter: () => setDragInView(true) });
+
     return () => {
       titleObserver.disconnect();
       blocksObserver.disconnect();
+      dragObserver.disconnect();
     };
   });
 
@@ -73,7 +79,10 @@ const Decisions: FC = () => {
           ))}
       </div>
 
-      <DragBlock className={styles.drag_block}>
+      <DragBlock
+        id={dragId}
+        className={cn(styles.drag_block, { [styles.drag_block_active]: dragInView })}
+      >
         {Array.isArray(decisions) &&
           decisions.map((decision, i) => (
             <div className={styles.decision} key={decision.name + i}>

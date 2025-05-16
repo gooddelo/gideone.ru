@@ -17,11 +17,12 @@
   border-radius: 160px;
   background: var(--color-roles-surface-container-highest, rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(100px);
-  width: 1545px;
-  // max-width: calc(100vw - 40px);
-  @include support-with-fallback(max-width, calc(100svw - 40px), calc(100vw - 40px));
   z-index: 50;
   transition: border-radius 0.3s ease;
+  width: 1545px;
+  // max-width: calc(100vw - 40px);
+  // @include support-with-fallback(max-width, calc(100svw - 40px), calc(100vw - 40px));
+  @include safe-viewport(max-width, 'calc(100vw - 40px)');
 
   @include media-max-tablet {
     padding: 20px 40px;

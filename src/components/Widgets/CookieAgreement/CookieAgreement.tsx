@@ -3,6 +3,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import { secureStorage } from '@/utils';
 import { LOCAL_STORAGE_KEYS } from '@/types';
 import type { Namespaces } from '@/types';
+import { Markdown } from '../Markdown/Markdown';
 import styles from './CookieAgreement.module.scss';
 
 const CookieAgreement: FC = () => {
@@ -25,22 +26,24 @@ const CookieAgreement: FC = () => {
     return (
       <div className={styles.agreement}>
         <p className={styles.text}>
+          {/* <Markdown> */}
           <Trans
             i18nKey="paragraph"
             t={t}
             components={{
               policy: (
                 <a
-                  href={t('privacy_policy_link', { ns: 'common' })}
+                  href={t('links.privacy_policy', { ns: 'common' })}
                   target="__blank"
                   className={styles.link}
                 />
               ),
             }}
           />
+          {/* </Markdown> */}
         </p>
         <button onClick={handleAgreement} className={styles.btn}>
-          {t('button')}
+          <Markdown>{t('button')}</Markdown>
         </button>
       </div>
     );

@@ -1,8 +1,11 @@
+@use '@/styles/functions.scss' as *;
+
 @mixin container($max-width: 100vw, $padding: 140px 20px, $width: 1280px) {
-  max-width: $max-width;
   margin: 0 auto;
   padding: $padding;
-  width: $width;
+
+  @include safe-viewport(max-width, $max-width);
+  @include safe-viewport(width, $width);
 
   @include media-max-tablet {
     padding: 80px 20px;
@@ -10,6 +13,15 @@
 
   @include media-max-mobile {
     padding: 40px 20px;
+  }
+}
+
+@mixin safe-viewport($property, $value) {
+  @if type-of($value) == 'string' and (str-index($value, 'vw') or str-index($value, 'vh')) {
+    $safe-value: replace-safe-viewport-units($value);
+    @include support-with-fallback($property, $safe-value, $value);
+  } @else {
+    #{$property}: $value;
   }
 }
 

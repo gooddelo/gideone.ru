@@ -2,5 +2,6 @@
   "name": "Gideone",
   "description": "Business coach<br></br>powered by artificial intelligence",
   "button": "Try for free for 14 days",
+  "button_mobile": "Try for free",
   "animation": "/animations/btn-animation.json"
 }

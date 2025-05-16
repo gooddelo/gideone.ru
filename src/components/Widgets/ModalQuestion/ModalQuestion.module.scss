@@ -25,14 +25,14 @@
   }
 
   input {
-    @include typography-body-l-medium-narrow(#f7f7fa);
+    @include typography-body-l-medium-narrow(#eedffe);
     background: none;
     border: none;
     flex: 1;
     outline: none;
 
     &::placeholder {
-      color: var(--btn-primary, #acbafd);
+      color: var(--input-placeholder, rgba(255, 255, 255, 0.55));
     }
 
     @include media-max-tablet {
@@ -96,7 +96,7 @@
   &__fields {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    // gap: 16px;
     width: 100%;
   }
 
@@ -127,6 +127,7 @@
     height: 56px;
     padding: 6px 8px 6px 24px;
     width: 100%;
+    margin-top: 16px;
 
     border-radius: 16px;
     border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));

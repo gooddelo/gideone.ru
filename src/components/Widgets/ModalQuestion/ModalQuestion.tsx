@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { v4 as uuidv4 } from 'uuid';
 import * as yup from 'yup';
 import { Modal } from '@/components/UI';
+import Input from '@/components/UI/Input';
 import { PolicyAgreement } from '@/components/Widgets';
 import { emailRegex, secureStorage } from '@/utils';
 import { SESSION_STORAGE_KEYS } from '@/types';
@@ -19,11 +20,11 @@ interface ISchema {
   message: string;
 }
 
-export const schema = yup.object().shape({
-  name: yup.string().required().min(2),
-  email: yup.string().required().matches(emailRegex),
-  message: yup.string().required().min(10),
-});
+// export const schema = yup.object().shape({
+//   name: yup.string().required().min(2),
+//   email: yup.string().required().matches(emailRegex),
+//   message: yup.string().required().min(10),
+// });
 
 interface IProps {
   inputText?: string;
@@ -47,9 +48,23 @@ const ModalQuestion: FC<IProps> = ({
   switchClassName,
 }) => {
   const { t } = useTranslation<Namespaces>('common');
+  const { t: tErrors } = useTranslation<Namespaces>('errors');
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const { setSessionItem, getSessionItem, removeSessionItem } = secureStorage();
   const toggleModal = () => setModalOpen((prev) => !prev);
+
+  const schema = yup.object().shape({
+    name: yup.string().required(tErrors('input.required')).min(2, tErrors('input.name_short')),
+    email: yup
+      .string()
+      .required(tErrors('input.required'))
+      .matches(emailRegex, tErrors('input.email')),
+    message: yup
+      .string()
+      .required(tErrors('input.required'))
+      .min(10, tErrors('input.message_short')),
+  });
+
   const openModal = () => {
     toggleModal();
     setValue('message', getSessionItem(SESSION_STORAGE_KEYS.question) || '');
@@ -68,7 +83,6 @@ const ModalQuestion: FC<IProps> = ({
   ) => {
     setSessionItem(key, e.currentTarget.value);
   };
-  // const resend = new Resend(import.meta.env.VITE_RESEND_KEY);
 
   const onSubmit = (data: ISchema) => {
     setModalOpen(false);
@@ -106,7 +120,6 @@ const ModalQuestion: FC<IProps> = ({
           onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question)}
           className={cn(inputClassName)}
         />
-        {/* TODO в душе не ебу как и что нужно сделать с кнопкой, но нужно менять текст в зависимости от ширины экрана */}
         <button onClick={openModal} className={buttonClassName}>
           {buttonText || t('modal-question.send')}
         </button>
@@ -117,7 +130,7 @@ const ModalQuestion: FC<IProps> = ({
         </button>
       )}
       {modalOpen && (
-        <Modal onClose={toggleModal} open={modalOpen} className={cn(styles.modal)}>
+        <Modal onClose={toggleModal} className={cn(styles.modal)}>
           <h4 className={styles.modal__title}>{t('modal-question.title')}</h4>
           <form id={formId} onSubmit={handleSubmit(onSubmit)} className={styles.modal__fields}>
             <textarea
@@ -126,20 +139,31 @@ const ModalQuestion: FC<IProps> = ({
               {...register('message')}
               onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question)}
             ></textarea>
-            <input
-              className={cn(styles.modal__input, [errors.name && styles.input_error])}
+            <Input
               {...register('name')}
-              onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_name)}
+              label={t('modal-question.name')}
+              // onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_name)}
               type="text"
-              placeholder={t('modal-question.name')}
+              labelPosition="in"
+              error={errors.name}
+              className={styles.modal__input}
             />
-            <input
+            <Input
+              {...register('email')}
+              label={t('modal-question.email')}
+              // onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_email)}
+              type="text"
+              labelPosition="in"
+              error={errors.email}
+              className={styles.modal__input}
+            />
+            {/* <input
               className={cn(styles.modal__input, [errors.email && styles.input_error])}
               onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_email)}
               {...register('email')}
               type="email"
               placeholder={t('modal-question.email')}
-            />
+            /> */}
           </form>
           <div className={styles.modal__btns}>
             <button form={formId} type="submit" className={styles.modal__btn}>

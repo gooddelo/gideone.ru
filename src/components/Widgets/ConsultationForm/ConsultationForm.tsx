@@ -5,7 +5,7 @@ import { type FC, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 import * as yup from 'yup';
-import { InputCheck } from '@/components/UI';
+// import { InputCheck } from '@/components/UI';
 import { createObserver, emailRegex } from '@/utils';
 import type { Namespaces } from '@/types';
 import styles from './ConsultationForm.module.scss';
@@ -114,10 +114,10 @@ const ConsultationForm: FC = () => {
           {t('button')}
         </button>
         <div className={styles.form__agreement}>
-          <InputCheck size="small" />
+          {/* <InputCheck size="small" checked /> */}
           <p>
             {t('agreement', { button: t('button') })}
-            <a href={t('privacy_policy_link', { ns: 'common' })} target="_blank">
+            <a href={t('links.privacy_policy', { ns: 'common' })} target="_blank">
               {t('policy')}
             </a>
             {t('agreement_2')}

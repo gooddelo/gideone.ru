@@ -1,5 +1,5 @@
 .footer {
-  @include container;
+  @include container($padding: 140px 20px 0);
   @include media-max-tablet {
     padding: 80px 20px 20px;
   }
@@ -15,11 +15,10 @@
 
 .nav {
   display: flex;
-  width: 610px;
-  padding-bottom: 14px;
+  // padding-bottom: 14px;
   justify-content: space-between;
-  align-items: flex-end;
-  align-self: stretch;
+  align-items: center;
+  column-gap: 58px;
 
   &__link {
     @include typography-body-l-medium-narrow(var(--btn-primary, #acbafd));
@@ -32,13 +31,16 @@
   }
 
   @include media-max-tablet {
-    column-gap: 58px;
     width: fit-content;
     flex-wrap: wrap;
 
     &__link {
       padding: 8px 16px;
     }
+  }
+
+  @include media-max-mobile {
+    column-gap: 0;
   }
 }
 
@@ -51,7 +53,7 @@
 .actions {
   display: flex;
   padding-top: 32px;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   row-gap: 24px;
   justify-content: space-between;
@@ -72,27 +74,18 @@
     fill: var(--btn-primary, #acbafd);
     position: relative;
 
-    // &:nth-child(odd) {
-    //   margin-right: 12px;
-    // }
-
     &_vk {
       transform: translateY(22%);
     }
   }
 
-  &__phone {
-    @include typography-h4(var(--btn-primary, #acbafd));
-    // margin-left: 32px;``
-
-    // @media screen and (max-width: 380px) {
-    //   margin-top: 32px;
-    // }
-  }
+  // &__phone {
+  //   @include typography-h4(var(--btn-primary, #acbafd));
+  // }
 
   &__links {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 32px;
     flex-wrap: wrap;
   }
@@ -104,7 +97,7 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-    border-radius: 16px;
+    border-radius: 40px;
     background: var(--color-roles-primary, #acbafd);
     @include typography-body-l-narrow(var(--btn-on-primary, #020268), center);
     border: none;
@@ -112,16 +105,49 @@
     @include media-max-tablet {
       border-radius: 100px;
     }
+
+    @include media-max-mobile {
+      font-size: 14px;
+      margin: 0 auto;
+    }
   }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  a {
+    color: var(--color-roles-primary, #acbafd);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+
+    @include media-max-mobile {
+      font-size: 20px;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  fill: var(--color-roles-primary, #acbafd);
+  padding-left: 12px;
 }
 
 .bottom {
   display: flex;
   align-items: flex-start;
-  padding-top: 80px;
+  // padding-top: 80px;
   gap: 32px;
   align-self: stretch;
-  padding-bottom: 32px;
+  // padding-bottom: 32px;
+
+  padding: 40px 0;
 
   .questions {
     margin-right: auto;
@@ -180,13 +206,14 @@
 .links {
   display: flex;
   // width: 1240px;
+  position: relative;
 
   justify-content: space-between;
   align-items: flex-start;
   align-content: flex-start;
   row-gap: 16px;
   flex-wrap: wrap;
-  border-top: 1px solid var(---secondary-600, #5d5d71);
+  // border-top: 1px solid var(---secondary-600, #5d5d71);
   // margin-top: 32px;
 
   @include container($padding: 32px 20px 20px);
@@ -207,6 +234,90 @@
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    height: 1px;
+    @include safe-viewport(min-width, '100vw');
+    background: var(---secondary-600, #5d5d71);
+    top: 0;
+    left: 50%;
+    transform: translateX(-51%);
+    position: absolute;
+  }
+}
+
+.juridical {
+  position: relative;
+
+  color: var(---secondary-400, #a2a2b3);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  padding: 80px 0 40px;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 1px;
+    @include safe-viewport(min-width, '100vw');
+    background: var(---secondary-600, #5d5d71);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+}
+
+.juridical__company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.juridical__address {
+  margin: 32px 0 12px;
+  font-style: normal;
+}
+
+.juridical__main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.juridical__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.juridical__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  a {
+    color: var(---secondary-400, #a2a2b3);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;

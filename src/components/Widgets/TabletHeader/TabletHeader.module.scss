@@ -1,5 +1,5 @@
-@use '@/styles/typography.scss' as *;
-@use '@/styles/mixins.scss' as *;
+// @use '@/styles/typography.scss' as *;
+// @use '@/styles/mixins.scss' as *;
 
 .tablet {
   justify-content: space-between;
@@ -9,8 +9,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  width: 100svw;
+  // width: 100vw;
+  // width: 100svw;
+  @include safe-viewport(width, '100svw');
   padding: 20px;
   z-index: 100;
   pointer-events: none;

@@ -1,0 +1,34 @@
+@function replace-safe-viewport-units($value) {
+  @if type-of($value) == 'string' {
+    // Replace plain 'vw' only if not part of 'svw', 'lvw', or 'dvw'
+    $value: str-replace-safe($value, 'vw', 'svw');
+    $value: str-replace-safe($value, 'vh', 'svh');
+  }
+
+  @return $value;
+}
+
+@function str-replace-safe($string, $search, $replace: '') {
+  // Avoid replacing if it's already part of 'svw', 'lvw', 'dvw', etc.
+  $already-safe: ('s' + $search, 'l' + $search, 'd' + $search);
+
+  @each $safe in $already-safe {
+    @if str-index($string, $safe) {
+      // If already contains safe unit, skip replacement
+      @return $string;
+    }
+  }
+
+  @return str-replace($string, $search, $replace);
+}
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

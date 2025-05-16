@@ -1,4 +1,5 @@
 @import './fonts.css';
+@import './root.scss';
 
 main {
   display: flex;
@@ -8,23 +9,24 @@ main {
   z-index: 2;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --color-day-base-09: #000;
-}
+// :root {
+//   --background: #ffffff;
+//   --foreground: #171717;
+//   --color-day-base-09: #000;
+// }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --background: #0a0a0a;
+//     --foreground: #ededed;
+//   }
+// }
 
 html,
 body {
-  max-width: 100vw;
-  @include support-with-fallback(max-width, 100svw, 100vw);
+  // max-width: 100vw;
+  // @include support-with-fallback(max-width, 100svw, 100vw);
+  @include safe-viewport(max-width, '100vw');
   overflow-x: hidden;
   scroll-behavior: smooth;
   background: #0c091b;
@@ -38,7 +40,8 @@ body {
   // background-position: top;
   // min-height: 100vh;
 
-  @include support-with-fallback(min-height, 100svh, 100vh);
+  // @include support-with-fallback(min-height, 100svh, 100vh);
+  @include safe-viewport(min-height, '100vh');
 
   display: flex;
   flex-direction: column;

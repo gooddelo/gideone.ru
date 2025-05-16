@@ -1,0 +1,163 @@
+$input-width: 320px;
+
+@mixin label_position_in_transform {
+  .label_position_in {
+    top: 4px;
+    transform: none;
+    @include typography-btn-input-s(var(--color-txt-default-secondary));
+  }
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  gap: 8px;
+  // TODO change color after it's assigned
+  box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
+
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 16px;
+  background: var(--color-bg-default-12dp);
+
+  &:focus-within {
+    @include label_position_in_transform();
+    box-shadow: none;
+    border: 1px solid var(--color-border-tertiary);
+  }
+
+  &_error {
+    border: 1px solid var(--color-border-negative);
+
+    &:focus-within {
+      @include label_position_in_transform();
+      box-shadow: none;
+      border: 1px solid var(--color-border-negative);
+    }
+  }
+
+  &_readonly,
+  &_disabled {
+    box-shadow: none;
+    border: 1px solid var(--color-border-default);
+    pointer-events: none;
+  }
+}
+
+.wrapper_size {
+  &_l {
+    padding: 8px 8px 8px 16px;
+    width: $input-width;
+    height: 56px;
+
+    .input {
+      @include typography-btn-input-l(var(--color-txt-default-default), left);
+    }
+  }
+  &_m {
+    padding: 5px 8px 5px 16px;
+    width: $input-width;
+    height: 46px;
+    .input {
+      @include typography-btn-input-m(var(--color-txt-default-default), left);
+    }
+  }
+  &_s {
+    padding: 6px 6px 6px 12px;
+    width: $input-width;
+    height: 32px;
+
+    .input {
+      height: 20px;
+      @include typography-btn-input-m(var(--color-txt-default-default), left);
+    }
+
+    .btn__clear {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.has_value {
+  @include label_position_in_transform();
+
+  .btn__clear {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.label {
+  position: absolute;
+
+  &_position {
+    &_in {
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease-in-out;
+      @include typography-btn-input-l(var(--color-txt-default-secondary));
+    }
+
+    &_out {
+      @include typography-btn-input-s(var(--color-txt-default-secondary));
+      top: -22px;
+      left: -1px;
+    }
+  }
+}
+
+.input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 100%;
+  height: 24px;
+
+  &::placeholder {
+    color: var(--color-txt-default-secondary);
+  }
+
+  &_position {
+    &_bottom {
+      margin: auto 0 0 0;
+    }
+
+    &_center {
+      margin: auto 0;
+    }
+  }
+}
+
+.btn__clear {
+  transform: rotate(0);
+  opacity: 0;
+  transition: transform 0.3s ease;
+  margin: auto 0;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+
+  path {
+    fill: var(--color-txt-default-tertiary);
+  }
+
+  &:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+    background: none;
+
+    path: {
+      fill: var(--color-txt-default-tertiary);
+    }
+  }
+}
+
+.error {
+  @include typography-btn-input-s(var(--color-txt-negative-default), left);
+  // padding-top: 4px;
+}

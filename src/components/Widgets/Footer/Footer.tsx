@@ -11,7 +11,6 @@ import styles from './Footer.module.scss';
 export const Footer: FC = () => {
   const { t } = useTranslation<Namespaces>('footer');
   const phone = useGetPhone();
-
   const link = useGetAboutProductLink();
 
   return (
@@ -37,79 +36,86 @@ export const Footer: FC = () => {
         <div className={styles.actions__links}>
           <div className={styles.socials}>
             <a
-              href={t('vk_link', { ns: 'common' })}
+              href={t('links.vk', { ns: 'common' })}
               target="_blank"
               className={cn(styles.actions__social)}
             >
               <Icon icon="vk" size={32} className={styles.actions__social_vk} />
             </a>
             <a
-              href={t('telegram_link', { ns: 'common' })}
+              href={t('links.telegram', { ns: 'common' })}
               target="_blank"
               className={styles.actions__social}
             >
               <Icon icon="telegram" size={32} />
             </a>
           </div>
-          <a
-            // href={`tel:${t('phone', { ns: 'common' })}`}
-            href={`tel:${phone.href}`}
-            className={styles.actions__phone}
-          >
-            {/* {location?.address.country_code === 'ru' ? t('phone', { ns: 'common' }) :} */}
-            {phone.display}
-          </a>
+          <div className={styles.contacts}>
+            <div className={cn(styles.contacts__phone)}>
+              <a href={`tel:${phone.href}`} className={cn(styles.contact, styles.actions__phone)}>
+                <Icon icon="phone" size={32} />
+                {phone.display}
+              </a>
+            </div>
+            <div className={cn(styles.contacts__email)}>
+              <a
+                href={`mailto:${import.meta.env.VITE_GIDEONE_EMAIL}`}
+                className={cn(styles.contact, styles.actions__email)}
+              >
+                <Icon icon="email" size={32} />
+                {import.meta.env.VITE_GIDEONE_EMAIL}
+              </a>
+            </div>
+          </div>
         </div>
-        {/* <button className={styles.actions__application}>{t('application')}</button> */}
         <ModalContact text={t('application')} className={styles.actions__application} />
       </div>
       <div className={styles.bottom}>
         <ModalQuestion />
         <a
           className={styles.bottom__link}
-          href={'https://navigator.sk.ru/orn/1126754'}
+          href={t('links.skolkovo', { ns: 'common' })}
           target="_blank"
         >
           <img src="/img/logo-skolkovo.png" alt="Сколково" width={55} height={55} />
         </a>
-        <a className={styles.bottom__link} href={'https://fasie.ru/'} target="_blank">
+        <a
+          className={styles.bottom__link}
+          href={t('links.innovation_fond', { ns: 'common' })}
+          target="_blank"
+        >
           <img src="/img/logo-fond.png" alt="Фонд содействия инновациям" width={122} height={60} />
         </a>
       </div>
-      <div className={styles.links}>
-        <div className={cn(styles.links__group, styles.links__copyright)}>{t('copyright')}</div>
-        <div className={cn(styles.links__group, styles.column)}>
-          <a
-            target="_blank"
-            href={t('privacy_policy_link', { ns: 'common' })}
-            className={styles.links__link}
-          >
-            {t('user_agreement')}
-          </a>
-          <a
-            target="_blank"
-            href={t('privacy_policy_link', { ns: 'common' })}
-            className={styles.links__link}
-          >
-            {t('policy')}
-          </a>
+      <div className={styles.juridical}>
+        <div className={styles.juridical__company}>
+          <div>{t('juridical.name')}</div>
+          <div>{t('juridical.copyright')}</div>
         </div>
-        {/* <div className={cn(styles.links__group, styles.column)}>
-          <a
-            target="_blank"
-            href={t('privacy_policy_link', { ns: 'common' })}
-            className={styles.links__link}
-          >
-            {t('support')}
-          </a>
-          <a
-            target="_blank"
-            href={t('privacy_policy_link', { ns: 'common' })}
-            className={styles.links__link}
-          >
-            {t('review')}
-          </a>
-        </div> */}
+        <address className={styles.juridical__address}>{t('juridical.address')}</address>
+        <div className={styles.juridical__main}>
+          <div className={styles.juridical__info}>
+            <div>{t('juridical.inn')}</div>
+            <div>{t('juridical.ogrn')}</div>
+            <div>{t('juridical.okved')}</div>
+            <div>{t('juridical.it-actions')}</div>
+          </div>
+          <div className={styles.juridical__links}>
+            <a
+              href={t('links.privacy_policy', { ns: 'common' })}
+              className={cn(styles.links__link)}
+              rel="nofollow"
+            >
+              {t('links.personal')}
+            </a>
+            <a href="" className={cn(styles.links__link)} rel="nofollow">
+              {t('links.support')}
+            </a>
+            <a href="" className={cn(styles.links__link)} rel="nofollow">
+              {t('links.review')}
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );

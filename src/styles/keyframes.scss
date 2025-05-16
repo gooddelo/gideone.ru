@@ -66,6 +66,9 @@
   }
 }
 
+@mixin init-position-for-banner-main {
+  opacity: 0;
+}
 @keyframes initialize-banner-main {
   from {
     opacity: 0;
