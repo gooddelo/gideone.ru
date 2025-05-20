@@ -34,7 +34,6 @@
   &__fields {
     display: flex;
     flex-direction: column;
-    gap: 16px;
 
     @include media-max-tablet {
       margin: 0 auto;
@@ -62,12 +61,9 @@
   }
 
   &__input {
-    display: flex;
     height: 56px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px 8px 0px 24px;
-    gap: 4px;
+    width: 100%;
+    padding: 6px 8px 6px 24px;
     align-self: stretch;
     border-radius: 16px;
     border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
@@ -86,6 +82,7 @@
 
   &__message {
     display: flex;
+    margin-top: 16px;
     height: 136px;
     flex-direction: column;
     align-items: flex-start;
@@ -101,6 +98,7 @@
     /* shadow-light-mode-input */
     box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
     @include typography-body-l-medium-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+    font-size: 16px;
   }
 
   &__btn {
@@ -113,7 +111,7 @@
     align-self: stretch;
     border-radius: 16px;
     background: var(--color-roles-primary, #acbafd);
-    @include typography-body-l-narrow(var(--btn-on-primary, #020268));
+    @include typography-body-l-narrow(#020268);
     border: none;
     width: 100%;
     transition: all 0.3s ease;
@@ -141,8 +139,14 @@
 
     @include media-max-tablet {
       width: 100%;
-      padding: 0 24px;
+      padding: 0;
+      max-width: 390px;
     }
+
+    // @include media-max-mobile {
+    //   padding: 0;
+    //   max-width: 390px;
+    // }
   }
 
   @include media-max-tablet {
@@ -187,6 +191,9 @@
   }
 }
 
-.input_error {
-  border: 1px solid red;
+// .input_error {
+//   border: 1px solid red;
+// }
+.mt {
+  margin-top: 16px;
 }

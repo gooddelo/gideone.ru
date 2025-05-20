@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { type FC, useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { ModalContact } from '@/components/Widgets';
 import { createObserver } from '@/utils';
 import type { Namespaces } from '@/types';
@@ -70,7 +70,13 @@ const Subscriptions: FC = () => {
   return (
     <section id={sectionId} className={styles.container}>
       <h2 id={titleId} className={cn(styles.title, { [styles.title_active]: titleInView })}>
-        {t('title')}
+        <Trans
+          i18nKey="title"
+          t={t}
+          components={{
+            span: <span className={styles.title__span} />,
+          }}
+        />
       </h2>
       <div
         id={subscriptionsId}

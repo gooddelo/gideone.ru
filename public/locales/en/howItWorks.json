@@ -1,16 +1,16 @@
 {
-  "title": "How does Gideone work?",
+  "title": "How Does Gideone Work?",
   "points": [
     {
-      "point": "The device records the moment of sale when the employee mentions key phrases."
+      "point": "The device records the moment of\u00A0sale when the employee utters key phrases."
     },
     {
-      "point": "AI determines how closely the employee's speech during the sale aligns with the criteria set by the manager."
+      "point": "AI\u00A0determines how closely the employee’s speech during the sale matches the criteria set by\u00A0the manager."
     },
     {
-      "point": "The sale evaluation is sent to the employee and appears in the users' dashboards."
+      "point": "The sale evaluation is\u00A0sent to\u00A0the employee and appears in\u00A0users’ personal dashboards."
     }
   ],
   "img": "/img/bot-message-en.png",
-  "imgAlt": "how does gideone works img"
+  "imgAlt": "How Does Gideone Work?"
 }

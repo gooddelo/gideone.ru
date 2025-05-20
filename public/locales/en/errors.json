@@ -1,0 +1,10 @@
+{
+	"input": {
+		"required": "Required field",
+		"email": "Invalid email",
+		"name_short": "Name must be\u00A0longer than 2\u00A0characters",
+		"message_short": "Message must be\u00A0longer than 10\u00A0characters",
+		"phone": "Invalid phone number",
+		"phone_long": "Phone number must be\u00A0longer than 10\u00A0digits and not exceed\u00A015"
+	}
+}

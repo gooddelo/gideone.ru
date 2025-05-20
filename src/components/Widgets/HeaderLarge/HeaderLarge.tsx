@@ -44,7 +44,14 @@ const HeaderLarge: FC = () => {
 
   return (
     <div className={cn(styles.header, inView && styles.header__shown)} id="header-large">
-      <img onClick={goTop} src="/img/logo.png" alt="banner" width={182} height={64} />
+      <img
+        onClick={goTop}
+        src="/img/logo.png"
+        alt="logo"
+        width={182}
+        height={64}
+        className={styles.logo}
+      />
       <nav className={styles.nav}>
         <a href={t('nav_links.about', { ns: 'common' })} className={styles.nav__link}>
           {t('nav.about', { ns: 'common' })}
@@ -71,7 +78,7 @@ const HeaderLarge: FC = () => {
             {phone.display}
           </a>
           <a href={t('links.telegram', { ns: 'common' })} target="_blank" className={styles.icon}>
-            <Icon icon="telegram" />
+            <Icon icon="telegram" size={24} />
           </a>
         </div>
 

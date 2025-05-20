@@ -1,33 +1,33 @@
 {
-  "title": "Still have questions?",
+  "title": "Have any questions?",
   "questions": [
     {
-      "question": "Is complex installation required?",
-      "answer": "No. If you already have cameras/microphones - we'll connect Gideone in minutes. Without existing equipment, we provide a complete turnkey solution."
+      "question": "Is\u00A0complex installation required?",
+      "answer": "No. If\u00A0you already have cameras/microphones, we\u00A0connect Gideone in\u00A0a\u00A0couple of\u00A0minutes. If\u00A0equipment is\u00A0missing, we\u00A0provide a\u00A0turnkey solution."
     },
     {
-      "question": "What if employees object to cameras?",
-      "answer": "In 9 out of 10 cases, staff perceive Gideone as an assistant, not surveillance. The system doesn't punish but teaches: new hires adapt faster, experienced employees earn bonuses for high ratings."
+      "question": "What if\u00A0employees are against cameras?",
+      "answer": "In\u00A09\u00A0out of\u00A010\u00A0cases, staff perceive Gideone as\u00A0a\u00A0helper, not as\u00A0surveillance. The system doesn’t penalize but teaches: newcomers adapt faster, and experienced employees receive bonuses for high ratings."
     },
     {
-      "question": "How soon will I see results?",
-      "answer": "First changes appear in 3-5 days: employees start mentioning promotions more often. Average ticket growth comes in weeks 2-3."
+      "question": "How quickly will\u00A0I see results?",
+      "answer": "The first changes appear within 3–5\u00A0days: employees start mentioning promotions more often. Average check growth occurs by\u00A0the 2nd—3rd week."
     },
     {
-      "question": "How does Gideone integrate with existing training?",
-      "answer": "The system complements training - reinforces knowledge in practice and identifies development areas."
+      "question": "How does Gideone work with existing trainings?",
+      "answer": "The system complements training\u00A0— it\u00A0reinforces knowledge in\u00A0practice and identifies areas for improvement."
     },
     {
-      "question": "What about privacy?",
-      "answer": "We use encryption, store audio-video temporarily - only text analytics remain in reports. All data protection requirements are strictly followed."
+      "question": "What about confidentiality?",
+      "answer": "We\u00A0use encryption, store audio and video temporarily\u00A0— reports contain only text analytics. Data protection requirements are strictly followed."
     },
     {
-      "question": "How can I verify it actually works?",
-      "answer": "Typically in the first month, average ticket increases by 10-15%. We also reduce control and coaching costs, while dashboards show all statistics."
+      "question": "How can I\u00A0be sure it\u00A0really works?",
+      "answer": "Usually, average check grows by\u00A010–15% in\u00A0the first month. We\u00A0also reduce costs on\u00A0supervision and coaching sessions, and you can see all statistics in\u00A0dashboards."
     },
     {
-      "question": "Can scripts and rules be modified later?",
-      "answer": "Absolutely. Make changes via web interface, and the system instantly adapts to new phrases and standards."
+      "question": "Can scripts and rules be\u00A0changed during the process?",
+      "answer": "Of\u00A0course. You make changes via the web interface, and the system instantly applies new phrases and standards."
     }
   ],
   "send": "Send"

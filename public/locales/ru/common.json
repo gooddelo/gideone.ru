@@ -30,7 +30,8 @@
     "faq": "#faq",
     "news": "#news",
     "top": "#banner",
-    "consultation": "#consultation"
+    "consultation": "#consultation",
+    "analytics-sales": "#analytics-sales"
   },
   "nav": {
     "about": "О продукте",
@@ -48,7 +49,9 @@
     "name": "Имя",
     "phone": "Телефон",
     "email": "Почта",
-    "send": "Отправить"
+    "send": "Отправить",
+    "success_title": "Заявка успешно отправлена!",
+    "success_text": "Мы свяжемся с вами в ближайшее время"
   },
   "modal-question": {
     "ask": "Задайте нам вопрос и мы ответим",
@@ -57,7 +60,27 @@
     "name": "Имя",
     "email": "Почта для ответа",
     "send": "Отправить",
-    "button": "Задать вопрос"
+    "button": "Задать вопрос",
+    "success_title": "Вопрос успешно отправлен!",
+    "success_text": "Мы свяжемся с вами в ближайшее время"
+  },
+  "modal-support": {
+    "title": "Опишите вашу проблему",
+    "textarea": "Проблема",
+    "name": "Имя",
+    "email": "Почта для ответа",
+    "send": "Отправить",
+    "success-title": "Спасибо за обращение!",
+    "success-text": "Мы свяжемся с вами в ближайшее время"
+  },
+  "modal-review": {
+    "title": "Оставьте отзыв о нашем сайте",
+    "textarea": "Отзыв",
+    "name": "Имя",
+    "email": "Почта для ответа",
+    "send": "Отправить",
+    "success-title": "Спасибо за отзыв!",
+    "success-text": "Мы свяжемся с вами в ближайшее время"
   },
   "loading-video": "/animations/loading-animation.mp4",
   "links": {

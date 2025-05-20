@@ -1,92 +1,10 @@
 {
-  "title": "News and events",
+  "title": "News and Events",
   "news": [
     {
       "date": "March 19, 2025",
-      "text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
-      "img": "/img/news.png"
-    },
-    {
-      "date": "March 15, 2025",
-      "text": [
-        {
-          "item": "The calendar feature is now free for everyone."
-        },
-        {
-          "item": "Now works on multiple devices."
-        },
-        {
-          "item": "Try our new free trial version."
-        },
-        {
-          "item": "Choose a lifetime, monthly, or annual plan."
-        },
-        {
-          "item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
-        },
-        {
-          "item": "Bug fixes."
-        }
-      ],
-      "img": "/img/news.png"
-    },
-    {
-      "date": "March 19, 2025",
-      "text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
-      "img": "/img/news.png"
-    },
-    {
-      "date": "March 15, 2025",
-      "text": [
-        {
-          "item": "The calendar feature is now free for everyone."
-        },
-        {
-          "item": "Now works on multiple devices."
-        },
-        {
-          "item": "Try our new free trial version."
-        },
-        {
-          "item": "Choose a lifetime, monthly, or annual plan."
-        },
-        {
-          "item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
-        },
-        {
-          "item": "Bug fixes."
-        }
-      ],
-      "img": "/img/news.png"
-    },
-    {
-      "date": "March 19, 2025",
-      "text": "We released a new update! v.2.1. Fixed bugs and added new features. Now you can add sales scripts from ready-made templates, edit them, and save time on data entry.",
-      "img": "/img/news.png"
-    },
-    {
-      "date": "March 15, 2025",
-      "text": [
-        {
-          "item": "The calendar feature is now free for everyone."
-        },
-        {
-          "item": "Now works on multiple devices."
-        },
-        {
-          "item": "Try our new free trial version."
-        },
-        {
-          "item": "Choose a lifetime, monthly, or annual plan."
-        },
-        {
-          "item": "Purchases made before March 2025 will be upgraded to a lifetime plan."
-        },
-        {
-          "item": "Bug fixes."
-        }
-      ],
-      "img": "/img/news.png"
+      "text": "AIM Congress 2025: How Gideone Presented the Future of\u00A0Employee Training in\u00A0Abu Dhabi\n\nIn March 2025, Gideone became one of\u00A0the two winners of\u00A0the National Startup Competition organized by\u00A0the Moscow Chamber of\u00A0Commerce and Industry (MCCI). «The MCCI competition was a\u00A0springboard. We\u00A0showed that Russian AI\u00A0solutions can compete on\u00A0a\u00A0global level,» says the company founder Ivan Malorossiyanov. Our startup Gideone\u00A0— an\u00A0AI solution for real-time employee training\u00A0— attracted the attention of\u00A0investors and partners from the UAE, Saudi Arabia, and Europe.\n\nThis post is\u00A0not just a\u00A0report about the trip. It’s a\u00A0story about how a\u00A0regional startup, supported by\u00A0MCCI, is\u00A0becoming a\u00A0global player. Gideone is\u00A0an\u00A0example of\u00A0how Russian technology is\u00A0ready to\u00A0change the rules even on\u00A0the most prestigious international stages.",
+      "img": "/img/aim-congress-news.jpg"
     }
   ]
 }

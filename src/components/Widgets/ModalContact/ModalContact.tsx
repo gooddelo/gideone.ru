@@ -1,17 +1,17 @@
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
-import { type FC, type FormEvent, useState } from 'react';
+import { type ChangeEvent, type FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-// import { Resend } from 'resend';
 import { v4 as uuidv4 } from 'uuid';
 import * as yup from 'yup';
 import { Modal } from '@/components/UI';
+import Input from '@/components/UI/Input';
 import { PolicyAgreement } from '@/components/Widgets';
-import { emailRegex, secureStorage } from '@/utils';
-import { SESSION_STORAGE_KEYS } from '@/types';
+import { emailRegex, nameRegex, phoneRegex } from '@/utils';
 import type { Namespaces } from '@/types';
+import ModalSuccess from '../ModalSuccess/ModalSuccess';
 import styles from './ModalContact.module.scss';
 
 interface ISchema {
@@ -19,12 +19,6 @@ interface ISchema {
   email: string;
   phone: string;
 }
-
-export const schema = yup.object().shape({
-  name: yup.string().required().min(2),
-  email: yup.string().required().matches(emailRegex),
-  phone: yup.string().required(),
-});
 
 interface IProps {
   id?: string;
@@ -35,18 +29,42 @@ interface IProps {
 
 const ModalContact: FC<IProps> = ({ id = uuidv4(), className, text, switchToBtn = false }) => {
   const { t } = useTranslation<Namespaces>('common');
+  const { t: tErrors } = useTranslation<Namespaces>('errors');
   const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const { setSessionItem, getSessionItem, removeSessionItem } = secureStorage();
-  const handleSaveToStorage = (
-    e: FormEvent<HTMLInputElement | HTMLTextAreaElement>,
-    key: SESSION_STORAGE_KEYS,
-  ) => {
-    setSessionItem(key, e.currentTarget.value);
-  };
+  const [phone, setPhone] = useState('');
+  const [success, setSuccess] = useState(false);
+
+  const schema = yup.object().shape({
+    name: yup
+      .string()
+      .required(tErrors('input.required'))
+      .min(2, tErrors('input.name_short'))
+      .matches(nameRegex, tErrors('input.name')),
+    email: yup
+      .string()
+      .required(tErrors('input.required'))
+      .matches(emailRegex, tErrors('input.email')),
+    phone: yup
+      .string()
+      .required(tErrors('input.required'))
+      .matches(phoneRegex, tErrors('input.phone'))
+      .test('max-digits', tErrors('input.phone_long'), (value) => {
+        if (!value) return false;
+        const digitCount = (value.match(/\d/g) || []).length;
+        return digitCount <= 15 && digitCount >= 10;
+      }),
+  });
 
   const formId = id + 'form';
 
-  const toggleModal = () => setModalOpen((prev) => !prev);
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+    setValue('name', '');
+    setValue('phone', '');
+    setValue('email', '');
+    setPhone('');
+    setSuccess(false);
+  };
   const {
     register,
     setValue,
@@ -54,34 +72,40 @@ const ModalContact: FC<IProps> = ({ id = uuidv4(), className, text, switchToBtn 
     formState: { errors },
   } = useForm<ISchema>({ resolver: yupResolver(schema) });
 
-  const openModal = () => {
-    toggleModal();
-    setValue('phone', getSessionItem(SESSION_STORAGE_KEYS.question) || '');
-    setValue('email', getSessionItem(SESSION_STORAGE_KEYS.contact_email) || '');
-    setValue('name', getSessionItem(SESSION_STORAGE_KEYS.contact_name) || '');
-  };
+  const openModal = () => toggleModal();
+
   const onSubmit = (data: ISchema) => {
+    setSuccess(true);
+
     const today = new Date();
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE,
-        import.meta.env.VITE_EMAILJS_TEMPLATE,
-        {
-          name: data.name,
-          email: data.email,
-          time: today.toDateString(),
-          message: `Связаться с ${data.email}, номер телефона: ${data.phone}`,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      )
-      .then(() => {
-        removeSessionItem([
-          SESSION_STORAGE_KEYS.question,
-          SESSION_STORAGE_KEYS.contact_email,
-          SESSION_STORAGE_KEYS.contact_name,
-        ]);
-        setModalOpen(false);
-      });
+    // console.log('phone:  ' + data.phone);
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE,
+      import.meta.env.VITE_EMAILJS_TEMPLATE,
+      {
+        name: data.name,
+        email: data.email,
+        subject: 'Запрос на обратную связь от:',
+        time: today.toDateString(),
+        message: `Связаться с ${data.email}, номер телефона: ${data.phone}`,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    );
+    setValue('name', '');
+    setValue('phone', '');
+    setValue('email', '');
+    setPhone('');
+  };
+
+  const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+
+    // Auto-add '+' if user starts with a digit (and no '+' exists)
+    if (/^\d/.test(value) && !value.startsWith('+')) {
+      value = `+${value}`;
+    }
+
+    setPhone(value);
   };
 
   return (
@@ -95,37 +119,53 @@ const ModalContact: FC<IProps> = ({ id = uuidv4(), className, text, switchToBtn 
       </button>
 
       {modalOpen && (
-        <Modal onClose={toggleModal} className={styles.modal}>
-          <h4 className={styles.modal__title}>{t('modal-contact.title', { ns: 'common' })}</h4>
-          <form id={formId} onSubmit={handleSubmit(onSubmit)} className={styles.modal__fields}>
-            <input
-              className={cn(styles.modal__input, [errors.name && styles.input_error])}
-              {...register('name')}
-              onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.contact_name)}
-              type="text"
-              placeholder={t('modal-contact.name', { ns: 'common' })}
+        <Modal
+          onClose={toggleModal}
+          hideBtn={success}
+          className={cn(styles.modal, success && styles.modal__success)}
+        >
+          {!success ? (
+            <>
+              <h4 className={styles.modal__title}>{t('modal-contact.title', { ns: 'common' })}</h4>
+              <form id={formId} onSubmit={handleSubmit(onSubmit)} className={styles.modal__fields}>
+                <Input
+                  {...register('name')}
+                  type="text"
+                  className={cn(styles.modal__input)}
+                  label={t('modal-contact.name', { ns: 'common' })}
+                  error={errors.name}
+                />
+                <Input
+                  {...register('phone')}
+                  type="text"
+                  onChange={handlePhoneChange}
+                  value={phone}
+                  label={t('modal-contact.phone', { ns: 'common' })}
+                  error={errors.phone}
+                  className={styles.modal__input}
+                />
+                <Input
+                  {...register('email')}
+                  type="text"
+                  className={cn(styles.modal__input)}
+                  label={t('modal-contact.email', { ns: 'common' })}
+                  error={errors.email}
+                />
+              </form>
+              <div className={styles.modal__btns}>
+                <button form={formId} className={styles.modal__btn} type="submit">
+                  {t('modal-contact.send', { ns: 'common' })}
+                </button>
+                <PolicyAgreement className={styles.modal__agreement} agreementVia={'send'} />
+              </div>
+            </>
+          ) : (
+            <ModalSuccess
+              title={t('modal-contact.success_title', { ns: 'common' })}
+              text={t('modal-contact.success_text', { ns: 'common' })}
+              onClose={toggleModal}
             />
-            <input
-              className={cn(styles.modal__input, [errors.phone && styles.input_error])}
-              onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.contact_phone)}
-              {...register('phone')}
-              type="tel"
-              placeholder={t('modal-contact.phone', { ns: 'common' })}
-            />
-            <input
-              className={cn(styles.modal__input, [errors.email && styles.input_error])}
-              onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.contact_email)}
-              {...register('email')}
-              type="email"
-              placeholder={t('modal-contact.email', { ns: 'common' })}
-            />
-          </form>
-          <div className={styles.modal__btns}>
-            <button form={formId} className={styles.modal__btn} type="submit">
-              {t('modal-contact.send', { ns: 'common' })}
-            </button>
-            <PolicyAgreement className={styles.modal__agreement} agreementVia={'send'} />
-          </div>
+          )}
         </Modal>
       )}
     </>

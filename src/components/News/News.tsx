@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { type FC, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { DragBlock } from '@/components/UI';
+// import { DragBlock } from '@/components/UI';
 import { createObserver } from '@/utils';
 import type { Namespaces } from '@/types';
 import styles from './News.module.scss';
@@ -23,38 +23,38 @@ const News: FC = () => {
   const { t } = useTranslation<Namespaces>('news');
   const news = t('news', { returnObjects: true }) as NewsItem[];
   const [titleInView, setTitleInView] = useState(false);
-  const [newsInView, setNewsInView] = useState(false);
+  // const [newsInView, setNewsInView] = useState(false);
   const [newsDragInView, setNewsDragInView] = useState(false);
 
   const sectionId = t('nav_blocks.news', { ns: 'common' });
   const titleId = sectionId + '-title';
-  const newsId = sectionId + '-blocks';
+  // const newsId = sectionId + '-blocks';
   const newsDragId = sectionId + '-drag';
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    e.preventDefault();
-    if (!containerRef.current) return;
-    const startX = e.pageX - containerRef.current.offsetLeft;
-    const scrollLeft = containerRef.current.scrollLeft;
+  // const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  //   e.preventDefault();
+  //   if (!containerRef.current) return;
+  //   const startX = e.pageX - containerRef.current.offsetLeft;
+  //   const scrollLeft = containerRef.current.scrollLeft;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current) return;
-      const x = e.pageX - containerRef.current.offsetLeft;
-      const walk = (x - startX) * 2; // Adjust multiplier for sensitivity
-      containerRef.current.scrollLeft = scrollLeft - walk;
-    };
+  //   const handleMouseMove = (e: MouseEvent) => {
+  //     if (!containerRef.current) return;
+  //     const x = e.pageX - containerRef.current.offsetLeft;
+  //     const walk = (x - startX) * 2; // Adjust multiplier for sensitivity
+  //     containerRef.current.scrollLeft = scrollLeft - walk;
+  //   };
 
-    const handleMouseUp = () => {
-      if (!containerRef.current) return;
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      containerRef.current.style.cursor = 'grab';
-    };
+  //   const handleMouseUp = () => {
+  //     if (!containerRef.current) return;
+  //     document.removeEventListener('mousemove', handleMouseMove);
+  //     document.removeEventListener('mouseup', handleMouseUp);
+  //     containerRef.current.style.cursor = 'grab';
+  //   };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-    containerRef.current.style.cursor = 'grabbing';
-  };
+  //   document.addEventListener('mousemove', handleMouseMove);
+  //   document.addEventListener('mouseup', handleMouseUp);
+  //   containerRef.current.style.cursor = 'grabbing';
+  // };
 
   useEffect(() => {
     const container = containerRef.current;
@@ -90,19 +90,19 @@ const News: FC = () => {
 
   useEffect(() => {
     const title = document.querySelector('#' + titleId);
-    const news = document.querySelector('#' + newsId);
+    // const news = document.querySelector('#' + newsId);
     const newsDrag = document.querySelector('#' + newsDragId);
-    if (!title || !news || !newsDrag) return;
+    if (!title || !newsDrag) return;
 
     const titleObserver = createObserver({
       target: title,
       onEnter: () => setTitleInView(true),
     });
 
-    const newsObserver = createObserver({
-      target: news,
-      onEnter: () => setNewsInView(true),
-    });
+    // const newsObserver = createObserver({
+    //   target: news,
+    //   onEnter: () => setNewsInView(true),
+    // });
 
     const newsDragObserver = createObserver({
       target: newsDrag,
@@ -111,7 +111,7 @@ const News: FC = () => {
 
     return () => {
       titleObserver.disconnect();
-      newsObserver.disconnect();
+      // newsObserver.disconnect();
       newsDragObserver.disconnect();
     };
   });
@@ -133,41 +133,9 @@ const News: FC = () => {
       >
         {t('title')}
       </h2>
-      <div
-        id={newsId}
-        className={cn(styles.news__blocks, { [styles.news__blocks_active]: newsInView })}
-        ref={containerRef}
-        onMouseDown={handleMouseDown}
-      >
-        {Array.isArray(news) &&
-          news.map((item, i) => (
-            <div className={styles.block} key={'news from news' + i}>
-              <div className={styles.block__info}>
-                <span className={styles.block__date}>{item.date}</span>
-                {Array.isArray(item.text) ? (
-                  <ul className={styles.block__list}>
-                    {item.text.map((el, i) => (
-                      <li className={styles.block__list_item} key={'news from news' + i}>
-                        {el.item}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className={styles.block__paragraph}>{item.text}</p>
-                )}
-              </div>
-              <img
-                className={styles.block__image}
-                src={item.img}
-                alt={'news' + i}
-                width={505}
-                height={200}
-              />
-            </div>
-          ))}
-      </div>
 
-      <DragBlock
+      {/* //! FOR WHEN THERE'S LESS THAN 4 BLOCKS */}
+      <div
         id={newsDragId}
         className={cn(styles.drag_block, { [styles.drag_block_active]: newsDragInView })}
       >
@@ -197,7 +165,42 @@ const News: FC = () => {
               />
             </div>
           ))}
-      </DragBlock>
+      </div>
+      {/* //! FOR WHEN THERE'S LESS THAN 4 BLOCKS */}
+
+      {/* //! FOR WHEN THERE'S MORE THAN 4 BLOCKS */}
+      {/* <DragBlock
+        id={newsDragId}
+        className={cn(styles.drag_block, { [styles.drag_block_active]: newsDragInView })}
+      >
+        {Array.isArray(news) &&
+          news.map((item, i) => (
+            <div className={styles.block} key={'news-from-news-' + i}>
+              <div className={styles.block__info}>
+                <span className={styles.block__date}>{item.date}</span>
+                {Array.isArray(item.text) ? (
+                  <ul className={styles.block__list}>
+                    {item.text.map((el, j) => (
+                      <li className={styles.block__list_item} key={'news-list-item-' + j}>
+                        {el.item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className={styles.block__paragraph}>{item.text}</p>
+                )}
+              </div>
+              <img
+                className={styles.block__image}
+                src={item.img}
+                alt={'news' + i}
+                width={505}
+                height={200}
+              />
+            </div>
+          ))}
+      </DragBlock> */}
+      {/* //! FOR WHEN THERE'S MORE THAN 4 BLOCKS */}
     </section>
   );
 };

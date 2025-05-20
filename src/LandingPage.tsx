@@ -25,7 +25,8 @@ export const LandingPage: FC = () => {
   const [showTasks, setShowTasks] = useState(false);
 
   useEffect(() => {
-    const toggleTasks = () => setShowTasks(window.innerWidth <= 1280);
+    const toggleTasks = () => setShowTasks(window.innerWidth <= 1280 || window.innerHeight <= 960);
+    console.log('window height:  ' + window.innerHeight);
     window.addEventListener('resize', toggleTasks);
     toggleTasks();
     return () => window.removeEventListener('resize', toggleTasks);

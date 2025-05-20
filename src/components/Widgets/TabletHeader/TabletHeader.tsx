@@ -12,7 +12,7 @@ const TabletHeader: FC = () => {
       <div className={styles.tablet__contact}>
         <Burger />
         <a href={t('links.telegram', { ns: 'common' })} target="_blank" className={styles.icon}>
-          <Icon icon="telegram" />
+          <Icon icon="telegram" size={24} />
         </a>
       </div>
       <HeaderLangBtn />

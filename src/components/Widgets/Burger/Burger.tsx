@@ -8,7 +8,7 @@ const Burger: FC = () => {
   return (
     <>
       <button className={styles.burger} onClick={() => setMenuIsOpen((prev) => !prev)}>
-        <Icon icon="burger" />
+        <Icon icon="burger" size={24} />
       </button>
       <Menu open={menuIsOpen} setOpen={setMenuIsOpen} />
     </>

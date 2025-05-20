@@ -1,19 +1,19 @@
 {
-  "title": "Who our service is for",
+  "title": "Who Our Service Is\u00A0For",
   "list": [
     {
-      "name": "Small and medium businesses",
-      "description": "From two to twenty thousand service points. Set your own rules for evaluating dialogues, start working with the service, and see results.",
+      "name": "Small and Medium Businesses",
+      "description": "From two to\u00A0twenty thousand service points. Set your own rules for evaluating dialogues, start working with the service, and get results.",
       "img": "/img/for-who-1.png"
     },
     {
-      "name": "Virtual PBX operators",
-      "description": "You no longer need an entire quality control department – all call analytics are in Gideone. You’ll be able to monitor your communications, identify weaknesses, and improve them.",
+      "name": "Virtual PBX Operators",
+      "description": "You no\u00A0longer need an\u00A0entire quality control team\u00A0— all call analytics are in\u00A0Gideone. You will be\u00A0able to\u00A0monitor your communications, find weaknesses, and improve them.",
       "img": "/img/for-who-2.png"
     },
     {
-      "name": "Government agencies",
-      "description": "We provide support in training, reducing staff workload, and improving the quality of their interactions with citizens. Gideone helps optimize the operation of government services.",
+      "name": "Government Agencies",
+      "description": "We\u00A0provide assistance in\u00A0training and reducing employee workload, improving the quality of\u00A0their interactions with citizens. Gideone optimizes the work of\u00A0government services.",
       "img": "/img/for-who-3.png"
     }
   ]

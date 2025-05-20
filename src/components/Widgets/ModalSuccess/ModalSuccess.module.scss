@@ -1,0 +1,25 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    @include typography-h3(#f7f7fa, center);
+  }
+
+  &__text {
+    @include typography-body-l-medium-narrow(#f7f7fa, center);
+    margin: 16px 0 32px;
+  }
+
+  &__btn {
+    width: 44px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+
+    path {
+      fill: rgba(162, 162, 179, 1);
+    }
+  }
+}

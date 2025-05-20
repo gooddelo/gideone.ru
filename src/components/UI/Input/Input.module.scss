@@ -16,9 +16,9 @@ $input-width: 320px;
   // TODO change color after it's assigned
   box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
 
-  border: 1px solid var(--color-border-secondary);
+  border: 1px solid var(--color-roles-outline-variant);
   border-radius: 16px;
-  background: var(--color-bg-default-12dp);
+  background: var(--color-roles-surface-container-high);
 
   &:focus-within {
     @include label_position_in_transform();
@@ -51,7 +51,7 @@ $input-width: 320px;
     height: 56px;
 
     .input {
-      @include typography-btn-input-l(var(--color-txt-default-default), left);
+      @include typography-btn-input-l(#dadae1, left);
     }
   }
   &_m {
@@ -59,7 +59,7 @@ $input-width: 320px;
     width: $input-width;
     height: 46px;
     .input {
-      @include typography-btn-input-m(var(--color-txt-default-default), left);
+      @include typography-btn-input-m(#dadae1, left);
     }
   }
   &_s {
@@ -69,12 +69,15 @@ $input-width: 320px;
 
     .input {
       height: 20px;
-      @include typography-btn-input-m(var(--color-txt-default-default), left);
+      @include typography-btn-input-m(#dadae1, left);
     }
 
     .btn__clear {
       width: 20px;
       height: 20px;
+      path {
+        fill: rgba($color: #fff, $alpha: 0.55);
+      }
     }
   }
 }
@@ -143,21 +146,25 @@ $input-width: 320px;
   pointer-events: none;
 
   path {
-    fill: var(--color-txt-default-tertiary);
+    fill: rgba($color: #fff, $alpha: 0.55);
   }
 
-  &:hover {
-    transform: rotate(90deg);
-    cursor: pointer;
-    background: none;
+  // path {
+  //   fill: var(--color-txt-default-tertiary);
+  // }
 
-    path: {
-      fill: var(--color-txt-default-tertiary);
-    }
-  }
+  // &:hover {
+  //   transform: rotate(90deg);
+  //   cursor: pointer;
+  //   background: none;
+
+  //   path: {
+  //     fill: var(--color-txt-default-tertiary);
+  //   }
+  // }
 }
 
 .error {
-  @include typography-btn-input-s(var(--color-txt-negative-default), left);
+  @include typography-btn-input-s(#dadae1, left);
   // padding-top: 4px;
 }

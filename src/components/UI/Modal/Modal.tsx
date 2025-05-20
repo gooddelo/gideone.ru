@@ -22,11 +22,12 @@ interface IProps extends RefAttributes<HTMLDivElement> {
   onClose: () => void;
   exceptions?: RefObject<null | HTMLElement>[];
   className?: string;
+  hideBtn?: boolean;
   // open: boolean;
 }
 
 const Modal: FC<IProps> = forwardRef<HTMLDivElement, IProps>(
-  ({ parentElement, children, onClose, exceptions, className }, ref) => {
+  ({ parentElement, children, onClose, exceptions, className, hideBtn = false }, ref) => {
     const modalRef = useRef<HTMLDivElement>(null);
     const [mounted, setMounted] = useState(false);
 
@@ -47,9 +48,11 @@ const Modal: FC<IProps> = forwardRef<HTMLDivElement, IProps>(
     return createPortal(
       <div className={cn(styles.modal__wrapper)}>
         <div ref={modalRef} className={cn(styles.modal, className)}>
-          <button className={styles.close_btn} onClick={onClose}>
-            <Icon icon="dismiss" size={24} />
-          </button>
+          {hideBtn ? null : (
+            <button className={styles.close_btn} onClick={onClose}>
+              <Icon icon="dismiss" size={24} />
+            </button>
+          )}
           {children}
         </div>
       </div>,

@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
-import { type FC, type FormEvent, useState } from 'react';
+import { type FC, type FormEvent, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { v4 as uuidv4 } from 'uuid';
@@ -9,22 +9,16 @@ import * as yup from 'yup';
 import { Modal } from '@/components/UI';
 import Input from '@/components/UI/Input';
 import { PolicyAgreement } from '@/components/Widgets';
-import { emailRegex, secureStorage } from '@/utils';
-import { SESSION_STORAGE_KEYS } from '@/types';
-import type { Namespaces } from '@/types';
+import { emailRegex, nameRegex, secureStorage } from '@/utils';
+import { type Namespaces, SESSION_STORAGE_KEYS } from '@/types';
+import ModalSuccess from '../ModalSuccess/ModalSuccess';
 import styles from './ModalQuestion.module.scss';
 
-interface ISchema {
+export interface ISchema {
   name: string;
   email: string;
   message: string;
 }
-
-// export const schema = yup.object().shape({
-//   name: yup.string().required().min(2),
-//   email: yup.string().required().matches(emailRegex),
-//   message: yup.string().required().min(10),
-// });
 
 interface IProps {
   inputText?: string;
@@ -50,66 +44,74 @@ const ModalQuestion: FC<IProps> = ({
   const { t } = useTranslation<Namespaces>('common');
   const { t: tErrors } = useTranslation<Namespaces>('errors');
   const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const { setSessionItem, getSessionItem, removeSessionItem } = secureStorage();
-  const toggleModal = () => setModalOpen((prev) => !prev);
+  const [success, setSuccess] = useState(false);
+  const { getSessionItem, setSessionItem, removeSessionItem } = secureStorage();
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+    setSuccess(false);
+    setValue('name', '');
+    setValue('email', '');
+    if (inputRef) inputRef.current!.value = '';
+  };
 
   const schema = yup.object().shape({
-    name: yup.string().required(tErrors('input.required')).min(2, tErrors('input.name_short')),
+    name: yup
+      .string()
+      .required(tErrors('input.required'))
+      .min(2, tErrors('input.name_short'))
+      .matches(nameRegex, tErrors('input.name')),
     email: yup
       .string()
       .required(tErrors('input.required'))
       .matches(emailRegex, tErrors('input.email')),
-    message: yup
-      .string()
-      .required(tErrors('input.required'))
-      .min(10, tErrors('input.message_short')),
+    message: yup.string().required(tErrors('input.required')),
   });
 
   const openModal = () => {
-    toggleModal();
+    // console.log(getSessionItem(SESSION_STORAGE_KEYS.question));
     setValue('message', getSessionItem(SESSION_STORAGE_KEYS.question) || '');
-    setValue('email', getSessionItem(SESSION_STORAGE_KEYS.question_email) || '');
-    setValue('name', getSessionItem(SESSION_STORAGE_KEYS.question_name) || '');
+    toggleModal();
   };
   const {
     register,
-    setValue,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<ISchema>({ resolver: yupResolver(schema) });
+
+  const onSubmit = (data: ISchema) => {
+    setSuccess(true);
+    const today = new Date();
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE,
+      import.meta.env.VITE_EMAILJS_TEMPLATE,
+      {
+        name: data.name,
+        email: data.email,
+        subject: 'Вопрос от:',
+        time: today.toDateString(),
+        message: `${data.message}`,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    );
+
+    removeSessionItem(SESSION_STORAGE_KEYS.question);
+    setValue('name', '');
+    setValue('message', '');
+    setValue('email', '');
+  };
+
+  const formId = uuidv4();
+
   const handleSaveToStorage = (
     e: FormEvent<HTMLInputElement | HTMLTextAreaElement>,
     key: SESSION_STORAGE_KEYS,
   ) => {
+    // console.log(e.currentTarget.value);
     setSessionItem(key, e.currentTarget.value);
   };
-
-  const onSubmit = (data: ISchema) => {
-    setModalOpen(false);
-
-    const today = new Date();
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE,
-        import.meta.env.VITE_EMAILJS_TEMPLATE,
-        {
-          name: data.name,
-          email: data.email,
-          time: today.toDateString(),
-          message: data.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      )
-      .then(() => {
-        removeSessionItem([
-          SESSION_STORAGE_KEYS.question,
-          SESSION_STORAGE_KEYS.question_email,
-          SESSION_STORAGE_KEYS.question_name,
-        ]);
-      });
-  };
-
-  const formId = uuidv4();
 
   return (
     <>
@@ -117,8 +119,9 @@ const ModalQuestion: FC<IProps> = ({
         <input
           type="text"
           placeholder={inputText || t('modal-question.ask')}
-          onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question)}
           className={cn(inputClassName)}
+          ref={inputRef}
+          onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question)}
         />
         <button onClick={openModal} className={buttonClassName}>
           {buttonText || t('modal-question.send')}
@@ -130,47 +133,50 @@ const ModalQuestion: FC<IProps> = ({
         </button>
       )}
       {modalOpen && (
-        <Modal onClose={toggleModal} className={cn(styles.modal)}>
-          <h4 className={styles.modal__title}>{t('modal-question.title')}</h4>
-          <form id={formId} onSubmit={handleSubmit(onSubmit)} className={styles.modal__fields}>
-            <textarea
-              className={cn(styles.modal__textarea, [errors.name && styles.input_error])}
-              placeholder={t('modal-question.question')}
-              {...register('message')}
-              onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question)}
-            ></textarea>
-            <Input
-              {...register('name')}
-              label={t('modal-question.name')}
-              // onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_name)}
-              type="text"
-              labelPosition="in"
-              error={errors.name}
-              className={styles.modal__input}
+        <Modal
+          onClose={toggleModal}
+          hideBtn={success}
+          className={cn(styles.modal, success && styles.modal__success)}
+        >
+          {!success ? (
+            <>
+              <h4 className={styles.modal__title}>{t('modal-question.title')}</h4>
+              <form id={formId} onSubmit={handleSubmit(onSubmit)} className={styles.modal__fields}>
+                <textarea
+                  className={cn(styles.modal__textarea, [errors.name && styles.input_error])}
+                  placeholder={t('modal-question.question')}
+                  {...register('message')}
+                  onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question)}
+                ></textarea>
+                <Input
+                  {...register('name')}
+                  label={t('modal-question.name')}
+                  type="text"
+                  error={errors.name}
+                  className={styles.modal__input}
+                />
+                <Input
+                  {...register('email')}
+                  label={t('modal-question.email')}
+                  type="text"
+                  error={errors.email}
+                  className={styles.modal__input}
+                />
+              </form>
+              <div className={styles.modal__btns}>
+                <button form={formId} type="submit" className={styles.modal__btn}>
+                  {t('modal-question.send')}
+                </button>
+                <PolicyAgreement className={styles.modal__agreement} agreementVia={'send'} />
+              </div>
+            </>
+          ) : (
+            <ModalSuccess
+              onClose={toggleModal}
+              title={t('modal-question.success_title')}
+              text={t('modal-question.success_text')}
             />
-            <Input
-              {...register('email')}
-              label={t('modal-question.email')}
-              // onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_email)}
-              type="text"
-              labelPosition="in"
-              error={errors.email}
-              className={styles.modal__input}
-            />
-            {/* <input
-              className={cn(styles.modal__input, [errors.email && styles.input_error])}
-              onInput={(e) => handleSaveToStorage(e, SESSION_STORAGE_KEYS.question_email)}
-              {...register('email')}
-              type="email"
-              placeholder={t('modal-question.email')}
-            /> */}
-          </form>
-          <div className={styles.modal__btns}>
-            <button form={formId} type="submit" className={styles.modal__btn}>
-              {t('modal-question.send')}
-            </button>
-            <PolicyAgreement className={styles.modal__agreement} agreementVia={'send'} />
-          </div>
+          )}
         </Modal>
       )}
     </>

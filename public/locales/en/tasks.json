@@ -1,24 +1,24 @@
 {
   "tasks": [
     {
-      "task": "Increase in company revenue",
+      "task": "Increasing company revenue",
       "img": "/img/profit.png",
-      "alt": "Increase in company revenue"
+      "alt": "Increasing company revenue"
     },
     {
-      "task": "Employee motivation management and training",
+      "task": "Managing motivation and employee training",
       "img": "/img/motivation.png",
-      "alt": "Employee motivation management and training"
+      "alt": "Managing motivation and employee training"
     },
     {
-      "task": "Service standard control",
+      "task": "Monitoring service standards",
       "img": "/img/standards.png",
-      "alt": "Service standard control"
+      "alt": "Monitoring service standards"
     },
     {
-      "task": "Accelerated employee adaptation",
+      "task": "Accelerated employee onboarding",
       "img": "/img/adaptation.png",
-      "alt": "Accelerated employee adaptation"
+      "alt": "Accelerated employee onboarding"
     }
   ]
 }

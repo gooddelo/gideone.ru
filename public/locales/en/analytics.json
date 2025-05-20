@@ -1,27 +1,27 @@
 {
-  "title": "More than just analytics",
+  "title": "More Than Just Analytics",
   "items": {
     "1": {
-      "name": "Gamification and motivation",
-      "description": "Ratings, badges, an internal 'Wall of Honor' to encourage people to improve performance instead of fearing punishment.",
+      "name": "Gamification and motivation",
+      "description": "Ratings, badges, and an\u00A0internal ’Wall of\u00A0Honor’ to\u00A0encourage people to\u00A0improve performance rather than fear punishment.",
       "img-1": "/img/analytics-1.png",
       "img-2": "/img/analytics-2.png"
     },
     "2": {
-      "name": "Personal",
+      "name": "Personalized",
       "subname": "recommendations",
-      "description": "The system praises the employee and offers tips for improvement: 'Great that you offered coffee, but don't forget about the combo discount.'",
+      "description": "The system praises the employee and suggests what could be\u00A0improved: «Good job offering coffee, but don’t forget the combo discount.»",
       "img-1": "/img/analytics-3.png"
     },
     "3": {
-      "name": "Setup in just a few minutes",
-      "description": "Simply place the GIDEONE device in the checkout area and register in the system — it's that easy!",
+      "name": "Set up\u00A0in\u00A0a\u00A0few minutes",
+      "description": "Just place the GIDEONE device in\u00A0the checkout area and register in\u00A0the system\u00A0— it’s that simple!",
       "img-1": "/img/analytics-4.png"
     },
     "4": {
-      "name": "Criteria customization",
+      "name": "Criteria configuration",
       "subname": "for your business",
-      "description": "You can configure multiple sales scenarios, including key phrases, upsells, promotions, and target products — everything employees should be doing.",
+      "description": "You can configure multiple sales scenarios, including key phrases, upselling, promotions, and target products\u00A0— everything your staff needs to\u00A0follow.",
       "img-1": "/img/analytics-5.png"
     }
   }

@@ -9,6 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "preview:stream": "vite preview --host 192.168.3.20",
     "format": "prettier --write ."
   },
   "dependencies": {

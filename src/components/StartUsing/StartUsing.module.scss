@@ -9,6 +9,10 @@
   @include media-max-tablet {
     gap: 80px;
   }
+
+  @include media-max-mobile() {
+    gap: 40px;
+  }
 }
 
 .title {
@@ -24,6 +28,9 @@
   flex-direction: column;
   @include media-max-tablet {
     gap: 80px;
+  }
+  @include media-max-mobile() {
+    gap: 40px;
   }
 }
 
@@ -71,7 +78,7 @@
 
   &:nth-child(1) {
     gap: 74px;
-    margin-left: 36%;
+    margin-left: 30%;
     padding: 14px 0;
 
     @include media-max-tablet {
@@ -97,7 +104,7 @@
 
   &:nth-child(2) {
     gap: 52px;
-    margin-left: 18%;
+    // margin-left: 18%;
     padding: 29px 0;
 
     @include media-max-tablet {
@@ -126,20 +133,16 @@
 
   &:nth-child(3) {
     gap: 59px;
-    margin-left: 31%;
+    margin-left: 21%;
     padding: 57px 0;
 
     @include media-max-tablet {
       gap: 40px;
       padding: 0;
-
+      margin: 0 auto;
       &:after {
         display: none;
       }
-    }
-
-    @include media-max-mobile {
-      margin-left: 0;
     }
 
     .step__img {

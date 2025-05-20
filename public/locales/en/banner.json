@@ -1,7 +1,8 @@
 {
   "name": "Gideone",
-  "description": "Business coach<br></br>powered by artificial intelligence",
-  "button": "Try for free for 14 days",
+  "description": "AI-powered<br></br>business coach",
+  "button": "Try for free for 14\u00A0days",
   "button_mobile": "Try for free",
+  "logo": "/img/gideone_logo_lg.png",
   "animation": "/animations/btn-animation.json"
 }

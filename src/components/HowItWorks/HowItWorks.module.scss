@@ -16,6 +16,10 @@ $circle-size: 12px;
   @include media-max-tablet {
     flex-direction: column;
   }
+
+  @include media-max-mobile() {
+    gap: 40px;
+  }
 }
 
 .title {
@@ -23,6 +27,12 @@ $circle-size: 12px;
 
   @include media-max-tablet {
     text-align: center;
+  }
+
+  @include media-max-mobile {
+    text-align-last: left;
+    font-size: 32px;
+    margin-right: auto;
   }
 }
 
@@ -38,6 +48,7 @@ $circle-size: 12px;
   @include media-max-mobile {
     max-width: 100%;
     min-width: auto;
+    gap: 40px;
   }
 }
 
@@ -83,11 +94,16 @@ $circle-size: 12px;
     left: calc($circle-size / 2);
     top: calc($circle-size / 2);
     transform: translateX(-50%);
-    height: calc(100% - 41px);
+    height: calc(100% - 80px);
     width: 2px;
     background: url('/svg/dashed-line.svg');
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  @include media-max-mobile() {
+    margin-right: auto;
+    left: 32px;
   }
 }
 
@@ -119,7 +135,9 @@ $circle-size: 12px;
       top: calc($circle-size / 2);
       left: calc($circle-size / 2);
       width: 2px;
-      height: calc(100% + $points-gap);
+      // height: calc(100% + $points-gap);
+      transition: height 0.5s ease;
+      height: calc(100% + var(--after-extra-height, 0px));
       transform: translateX(-50%);
       background: linear-gradient(180deg, #5a44fb 0%, rgba(90, 68, 251, 0) 100%);
     }

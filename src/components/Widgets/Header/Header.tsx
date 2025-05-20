@@ -38,7 +38,7 @@ export const Header: FC = () => {
             {/* {t('phone', { ns: 'common' })} */}
           </a>
           <a href={t('links.telegram', { ns: 'common' })} target="_blank" className={styles.icon}>
-            <Icon icon="telegram" />
+            <Icon icon="telegram" size={24} />
           </a>
         </div>
         <HeaderLangBtn />

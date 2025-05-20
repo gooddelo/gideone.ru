@@ -1,6 +1,3 @@
-@use '@/styles/mixins.scss' as *;
-@use '@/styles/typography.scss' as *;
-
 .agreement {
   position: fixed;
   bottom: 20px;
@@ -37,15 +34,18 @@
     backdrop-filter: blur(100px);
   }
 
-  // @include media-max-mobile {
-  //   flex-direction: column;
-  //   align-items: flex-start;
-  // }
+  @include media-max-mobile {
+    gap: 4px;
+  }
 }
 
 .text {
   @include typography-body-l-medium-narrow(#fff);
   // max-width: 790px;
+
+  @include media-max-mobile {
+    font-size: 10px;
+  }
 }
 
 .link {
@@ -58,9 +58,13 @@
   border-radius: 16px;
   background: var(--color-roles-primary, #acbafd);
   min-width: fit-content;
-  @include typography-body-l-narrow(var(--btn-on-primary, #020268), center);
+  @include typography-body-l-narrow(#020268, center);
 
   @include media-max-tablet {
     margin: 0 auto;
+  }
+
+  @include media-max-mobile {
+    font-size: 14px;
   }
 }

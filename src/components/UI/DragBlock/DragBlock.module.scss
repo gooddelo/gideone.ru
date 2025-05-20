@@ -29,6 +29,7 @@
   border-radius: 10px;
   transition: opacity 0.3s ease;
   position: relative;
+  cursor: grab;
 
   filter: blur(3.2580645084381104px);
   backdrop-filter: blur(0);
@@ -37,6 +38,7 @@
     filter 0.3s ease,
     margin-top 0.3s ease,
     backdrop-filter 0.3s ease;
+
   &_active {
     // filter: none;
     filter: blur(0);

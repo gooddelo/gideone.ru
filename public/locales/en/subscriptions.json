@@ -1,32 +1,35 @@
 {
-  "title": "Start using today",
+  "title": "Start using\n<span>today</span>",
   "subscriptions": [
     {
       "title": "Start",
       "price": "0",
-      "per": "for two weeks",
-      "description": "Discover how GIDEONE impacts your business",
+      "per": " for two weeks",
+      "description": "Find out how GIDEONE impacts your business",
       "options": [
         {
-          "name": "Full functionality"
+          "name": "Test up\u00A0to\u00A08\u00A0sales points"
+        },
+        {
+          "name": "All benefits of\u00A0the paid plan"
         },
         {
           "name": "Help with integration and initial setup"
         }
       ],
-      "action": "Start using"
+      "action": "Get started"
     },
     {
       "title": "Pro",
       "price": "3000",
-      "per": "per employee per month",
-      "description": "For companies with their own ATS, small businesses with a limited number of employees",
+      "per": " per employee per month",
+      "description": "For companies with their own ATS, small businesses with a\u00A0limited number of\u00A0employees",
       "options": [
         {
-          "name": "2 sales scripts, 20 evaluation criteria"
+          "name": "2\u00A0sales scenarios, 20\u00A0evaluation criteria"
         },
         {
-          "name": "No device installation required"
+          "name": "No\u00A0device installation needed"
         },
         {
           "name": "Price per employee"
@@ -37,24 +40,24 @@
     {
       "title": "Business",
       "price": "10,000",
-      "per": "per workstation per month",
-      "description": "For places where many employees work at a single point.",
+      "per": " per workstation per month",
+      "description": "For locations where many employees work at\u00A0one point",
       "options": [
         {
-          "name": "2 sales scripts and 20 evaluation criteria"
+          "name": "2\u00A0sales scenarios, 20\u00A0evaluation criteria"
         },
         {
-          "name": "Device installation"
+          "name": "Device installation included"
         },
         {
-          "name": "No limit on the number of people per workstation"
+          "name": "No\u00A0limit on\u00A0number of\u00A0people per workstation"
         }
       ],
       "action": "Try for free"
     }
   ],
   "enterprise": {
-    "title": "We offer personalized conditions for large companies!",
+    "title": "We\u00A0offer personalized terms for large companies!",
     "amount": "1000+",
     "employees": "employees in the company",
     "button": "Try for free"

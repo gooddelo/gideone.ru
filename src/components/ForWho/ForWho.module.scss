@@ -50,6 +50,7 @@
 
 .item {
   max-width: 386px;
+
   width: 100%;
   min-width: 228px;
   @include init-position-for-content();
@@ -62,6 +63,7 @@
 
   &__img {
     width: 100%;
+    // aspect-ratio: 378.67/320;
     height: 189px;
     object-fit: cover;
     transition: height 0.3s ease;

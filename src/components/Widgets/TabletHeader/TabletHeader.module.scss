@@ -38,7 +38,10 @@
   border-radius: 50%;
   border: 1px solid var(---primary-100, #eaedff);
 
-  path {
-    fill: var(---primary-100, #eaedff);
+  svg {
+    transform: translate(-1px, -2px);
+    path {
+      fill: var(---primary-100, #eaedff);
+    }
   }
 }

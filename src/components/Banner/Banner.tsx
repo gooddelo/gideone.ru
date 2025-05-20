@@ -1,4 +1,5 @@
 import { Player } from '@lottiefiles/react-lottie-player';
+import cn from 'classnames';
 import { type FC, useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Tasks } from '@/components';
@@ -9,8 +10,24 @@ import styles from './Banner.module.scss';
 const Banner: FC = () => {
   const { t } = useTranslation<Namespaces>('banner');
   const [mobileText, setMobileText] = useState<string>(t('button'));
+  const [apple, setApple] = useState<boolean>(false);
 
   useEffect(() => {
+    const isApple = () => {
+      const nav = navigator as Navigator & {
+        userAgentData?: {
+          platform?: string;
+        };
+      };
+
+      if (nav.userAgentData?.platform) {
+        return /macOS|iOS/i.test(nav.userAgentData.platform);
+      }
+
+      return /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+    };
+
+    setApple(isApple());
     const toggleTasks = () => {
       if (window.innerWidth > 720) setMobileText(t('button'));
       else setMobileText(t('button_mobile'));
@@ -19,6 +36,8 @@ const Banner: FC = () => {
     toggleTasks();
     return () => window.removeEventListener('resize', toggleTasks);
   });
+
+  // console.log(isApple);
 
   return (
     <section className={styles.banner} id={t('nav_blocks.banner', { ns: 'common' })}>
@@ -35,8 +54,12 @@ const Banner: FC = () => {
           />
         </h2>
         <div className={styles.button_wrapper}>
-          <ModalContact className={styles.button} text={mobileText} id="banner-button" />
-          <Player autoplay loop src={t('animation')} className={styles.animation} />
+          <ModalContact
+            className={cn(styles.button, { [styles.button_apple]: apple })}
+            text={mobileText}
+            id="banner-button"
+          />
+          {!apple && <Player autoplay loop src={t('animation')} className={styles.animation} />}
         </div>
       </div>
 

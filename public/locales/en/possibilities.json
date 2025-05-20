@@ -1,25 +1,25 @@
 {
-  "title": "New features",
-  "subtitle": "coming soon",
-  "description": "We are constantly improving our product and preparing new features that will make it even more convenient and effective.",
+  "title": "New Features",
+  "subtitle": "Coming Soon",
+  "description": "We\u00A0are constantly improving our product and preparing new features that will make it\u00A0even more convenient and effective",
   "steps": [
     {
-      "name": "Integration with internal or external knowledge bases"
+      "name": "Integration with internal or\u00A0external knowledge bases"
     },
     {
-      "name": "Implementation of a decision-making recommendation system"
+      "name": "Implementation of\u00A0a\u00A0managerial decision recommendation system"
     },
     {
-      "name": "Testing and certification based on employee performance analysis"
+      "name": "Testing and certification based on\u00A0employee performance analysis"
     },
     {
-      "name": "Analysis of emotional tone and speech, analysis of non-verbal signals — posture, gestures, facial expressions"
+      "name": "Analysis of\u00A0emotional tone and speech sentiment, analysis of\u00A0nonverbal signals\u00A0— posture, gestures, facial expressions"
     },
     {
-      "name": "Improving the effectiveness of the recommendation system through large volumes of data"
+      "name": "Improving recommendation system efficiency through large data volumes"
     },
     {
-      "name": "Incorporating augmented reality elements"
+      "name": "Incorporation of\u00A0augmented reality elements"
     }
   ],
   "image": "/img/elipses.png",

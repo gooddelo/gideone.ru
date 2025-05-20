@@ -8,7 +8,7 @@ export const useGetAboutProductLink = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 1280) setLink('#analytics_sales');
+      if (window.innerWidth <= 1280) setLink(t('nav_links.analytics-sales'));
       else setLink(t('nav_links.about'));
     };
 

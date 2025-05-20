@@ -95,16 +95,6 @@
   z-index: 1;
   @include typography-body-m-narrow;
 
-  // @media (max-width: 1024px) {
-  //   padding-left: 0;
-  // }
-
-  &__link {
-    // @media (max-width: 1024px) {
-    //   display: none;
-    // }
-  }
-
   .icon {
     display: flex;
     height: 44px;
@@ -114,8 +104,11 @@
     border-radius: 50%;
     border: 1px solid var(---primary-100, #eaedff);
 
-    path {
-      fill: var(---primary-100, #eaedff);
+    svg {
+      transform: translate(-1px, -1px);
+      path {
+        fill: var(---primary-100, #eaedff);
+      }
     }
   }
 }
@@ -140,4 +133,8 @@
   // }
 
   @include typography-btn-input-l-bold;
+}
+
+.logo {
+  cursor: pointer;
 }

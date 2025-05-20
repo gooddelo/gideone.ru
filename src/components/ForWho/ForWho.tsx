@@ -49,13 +49,7 @@ const ForWho: FC = () => {
         {Array.isArray(list) &&
           list.map((item, i) => (
             <div key={item.name + i} className={cn(styles.item, styles[`item_${i + 1}`])}>
-              <img
-                src={item.img}
-                alt={item.name}
-                className={styles.item__img}
-                width={774}
-                height={378}
-              />
+              <img src={item.img} alt={item.name} className={styles.item__img} />
               <h4 className={styles.item__name}>{item.name}</h4>
               <p className={styles.item__description}>{item.description}</p>
             </div>

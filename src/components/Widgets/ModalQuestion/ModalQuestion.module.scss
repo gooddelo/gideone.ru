@@ -51,7 +51,7 @@
     border-radius: 10px;
     border: 1px solid var(--btn-primary, #acbafd);
     background: none;
-    @include typography-btn-input-l-bold(var(--btn-primary, #acbafd), center);
+    @include typography-btn-input-l-bold(#020268, center);
 
     @include media-max-tablet {
       margin: 0 auto;
@@ -81,7 +81,7 @@
   border-radius: 40px;
   background: var(--color-roles-primary, #acbafd);
 
-  @include typography-body-l-narrow(var(--btn-on-primary, #020268), center);
+  @include typography-body-l-narrow(#020268, center);
 
   @include media-max-tablet {
     display: flex;
@@ -117,9 +117,11 @@
     box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
     resize: none;
     @include typography-body-l-medium-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+    font-size: 16px;
 
     &::placeholder {
       @include typography-body-l-medium-narrow(var(--input-placeholder, rgba(255, 255, 255, 0.55)));
+      font-size: 16px;
     }
   }
 
@@ -130,15 +132,15 @@
     margin-top: 16px;
 
     border-radius: 16px;
-    border: 1px solid var(--color-roles-outline-variant, rgba(255, 255, 255, 0.2));
-    background: var(--color-roles-surface-container-high, rgba(255, 255, 255, 0.14));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.14);
 
     /* shadow-light-mode-input */
     box-shadow: 0px 2px 3px 0px rgba(102, 100, 113, 0.1);
-    @include typography-body-l-medium-narrow(var(--color-roles-on-surface-variant, #dadae1));
+    @include typography-body-l-medium-narrow(#dadae1);
 
     &::placeholder {
-      @include typography-body-l-medium-narrow(var(--color-roles-on-surface-variant, #dadae1));
+      @include typography-body-l-medium-narrow(#dadae1);
     }
   }
 
@@ -151,8 +153,8 @@
     gap: 8px;
     align-self: stretch;
     border-radius: 16px;
-    background: var(--color-roles-primary, #acbafd);
-    @include typography-body-l-narrow(var(--btn-on-primary, #020268));
+    background: #acbafd;
+    @include typography-body-l-narrow(#020268);
   }
 
   &__btns {
@@ -165,4 +167,8 @@
   &__agreement {
     margin-top: 0 !important;
   }
+}
+
+.modal__success {
+  width: fit-content;
 }

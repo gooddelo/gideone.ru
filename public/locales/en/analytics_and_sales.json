@@ -1,18 +1,18 @@
 {
   "analytics": {
-    "name": "General <span>analytics</span>",
-    "description": "You can always identify growth areas both for individual employees and the entire company, and adjust plans, motivation, meetings, and sales targets accordingly.",
+    "name": "Overall <span>Analytics</span>",
+    "description": "You can always see growth areas both for individual employees and for the entire company, and adjust plans, motivation, meetings, and sales strategies accordingly.",
     "img_1": "/img/sales-1.png",
     "img_2": "/img/sales-2.png"
   },
   "education": {
-    "name": "<span>Staff training</span> on-site",
-    "description": "The system provides personalized feedback on specific sales based on company standards, helping maintain high service quality regardless of employee experience.",
+    "name": "<span>On-site staff</span> training",
+    "description": "The system provides personalized feedback for each specific sale based on\u00A0the company’s standards, allowing high service quality regardless of\u00A0the employee’s experience.",
     "img_1": "/img/sales-3.png"
   },
   "dashboards": {
-    "name": "<span>Dashboards and reports</span>",
-    "description": "Management sees statistics: who isn't mentioning promotions, who has poor sales performance, where customers are being lost.",
+    "name": "<span>Dashboards and</span> reports",
+    "description": "Management sees the stats: who doesn’t mention promotions, who has poor sales, and where clients are being lost.",
     "img_1": "/img/sales-4.png",
     "img_2": "/img/sales-5.png",
     "img_3": "/img/sales-6.png",
@@ -22,24 +22,24 @@
   },
   "items": {
     "1": {
-      "name": "<span>Gamification and motivation</span>",
-      "description": "Ratings, badges, internal 'Hall of Fame' to encourage people to improve performance rather than fear punishment.",
+      "name": "<span>Gamification and</span> motivation",
+      "description": "Leaderboards, badges, and an\u00A0internal ’Wall of\u00A0Honor’ to\u00A0encourage employees to\u00A0improve rather than fear punishment.",
       "img-1": "/img/analytics-1.png",
       "img-2": "/img/analytics-2.png"
     },
     "2": {
       "name": "<span>Personalized</span> recommendations",
-      "description": "The system automatically praises employees and suggests improvements: 'Great job offering coffee, but don't forget about the combo discount.'",
+      "description": "The system praises employees and tells them how they could improve: «Great that you offered coffee, but don’t forget the combo discount.»",
       "img-1": "/img/analytics-3.png"
     },
     "3": {
-      "name": "Set up in minutes",
-      "description": "Just place the GIDEONE device at the checkout area and register in the system - it's that simple!",
+      "name": "Setup in\u00A0just a\u00A0few minutes",
+      "description": "Just place the GIDEONE device in\u00A0the checkout area and register in\u00A0the system\u00A0— it’s that simple!",
       "img-1": "/img/analytics-4.png"
     },
     "4": {
-      "name": "<span>Custom criteria</span> for your business",
-      "description": "You can configure multiple sales scenarios, setting up key phrases, upsells, promotions, target products - everything employees should follow.",
+      "name": "<span>Criteria customization</span> for your business",
+      "description": "You can configure multiple sales scenarios, setting up\u00A0key phrases, upselling, promotions, target products\u00A0— everything your staff needs to\u00A0follow.",
       "img-1": "/img/analytics-5.png"
     }
   }

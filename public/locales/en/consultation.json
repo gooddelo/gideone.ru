@@ -1,16 +1,16 @@
 {
-  "title": "We'll provide a <span>personal consultation</span>",
+  "title": "Get a\u00A0<span>personal consultation</span>",
   "form": {
     "name": "Name",
     "email": "Email",
-    "placeholder": "I want to learn more!"
+    "placeholder": "I\u00A0want to\u00A0learn more!"
   },
-  "button": "Get consultation",
-  "agreement": "By clicking the '{{button}}' button, I agree to the",
-  "agreement_2": "and consent to the processing of personal data.",
+  "button": "Get a\u00A0consultation",
+  "agreement": "By\u00A0clicking the «{{button}}» button, I\u00A0agree to\u00A0the",
+  "agreement_2": "and give consent to\u00A0the processing of\u00A0personal data.",
   "policy": " privacy policy ",
   "img": {
     "url": "/img/consultation.png",
-    "alt": "We'll provide a consultation"
+    "alt": "Get a\u00A0personal consultation"
   }
 }

@@ -1,10 +1,10 @@
 {
-  "agreement": "By clicking the «{{agreementVia}}» button, I agree to the",
-  "agreement_2": "and give consent to the processing of personal data.",
+  "agreement": "By\u00A0clicking the «{{agreementVia}}» button, I\u00A0agree to\u00A0the",
+  "agreement_2": "and give consent to\u00A0the processing of\u00A0personal data.",
   "policy": " privacy policy ",
   "agreementVia": {
     "send": "Send",
-    "get_consultation": "Get a consultation"
+    "get_consultation": "Get a\u00A0consultation"
   },
   "nav_blocks": {
     "banner": "banner",
@@ -30,7 +30,8 @@
     "faq": "#faq",
     "news": "#news",
     "top": "#banner",
-    "consultation": "#consultation"
+    "consultation": "#consultation",
+    "analytics-sales": "#analytics-sales"
   },
   "nav": {
     "about": "About the product",
@@ -44,20 +45,42 @@
   "phone_en": "+7 (996) 737-99-12",
   "phone_en_href": "+79967379912",
   "modal-contact": {
-    "title": "We'll get in touch with you!",
+    "title": "We’ll get in\u00A0touch with you!",
     "name": "Name",
     "phone": "Phone",
     "email": "Email",
-    "send": "Send"
+    "send": "Send",
+    "success_title": "Request successfully sent!",
+    "success_text": "We’ll contact you shortly"
   },
   "modal-question": {
-    "ask": "Ask us a question and we’ll get back to you",
-    "title": "Ask us a question",
-    "question": "I’d like to know...",
+    "ask": "Ask\u00A0us a\u00A0question and we’ll answer",
+    "title": "Ask\u00A0us a\u00A0question",
+    "question": "I\u00A0would like to\u00A0know...",
     "name": "Name",
-    "email": "Email for response",
+    "email": "Reply email",
     "send": "Send",
-    "button": "Ask a question"
+    "button": "Ask a\u00A0question",
+    "success_title": "Question successfully sent!",
+    "success_text": "We’ll contact you shortly"
+  },
+  "modal-support": {
+    "title": "Describe your issue",
+    "textarea": "Issue",
+    "name": "Name",
+    "email": "Reply email",
+    "send": "Send",
+    "success-title": "Thank you for your message!",
+    "success-text": "We’ll contact you shortly"
+  },
+  "modal-review": {
+    "title": "Leave a\u00A0review of\u00A0our website",
+    "textarea": "Review",
+    "name": "Name",
+    "email": "Reply email",
+    "send": "Send",
+    "success-title": "Thank you for your feedback!",
+    "success-text": "We’ll contact you shortly"
   },
   "loading-video": "/animations/loading-animation.mp4",
   "links": {

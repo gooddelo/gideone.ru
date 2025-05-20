@@ -25,7 +25,6 @@ const Tasks: FC<IProps> = ({ className }) => {
   useEffect(() => {
     const tasks = document.querySelector('#' + sectionId);
     if (!tasks) return;
-    console.log(tasks);
     const tasksObserver = createObserver({
       target: tasks,
       onEnter: () => {

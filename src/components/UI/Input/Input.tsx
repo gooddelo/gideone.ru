@@ -32,6 +32,7 @@ export type TInputProps = {
   max?: string | number;
   size?: InputSizes;
   clear?: boolean;
+  value?: string;
   initialValue?: string;
 } & RefAttributes<HTMLInputElement>;
 
@@ -54,6 +55,7 @@ const Input: FunctionComponent<TInputProps> = forwardRef<HTMLInputElement, TInpu
       initialValue,
       size = 'l',
       clear = true,
+      value,
       ...props
     },
     ref,
@@ -120,12 +122,13 @@ const Input: FunctionComponent<TInputProps> = forwardRef<HTMLInputElement, TInpu
             onInput={handleInput}
             min={min}
             max={max}
+            value={value}
             defaultValue={initialValue}
             {...props}
           />
 
           {clear ? (
-            <button className={styles.btn__clear} onClick={handleClear}>
+            <button className={styles.btn__clear} onClick={handleClear} type="button">
               <Icon icon="dismiss" />
             </button>
           ) : null}

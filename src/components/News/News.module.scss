@@ -2,7 +2,7 @@
   display: flex;
   padding-top: 140px;
   flex-direction: column;
-  gap: 60px;
+  // gap: 60px;
   max-width: 1240px;
   margin: auto;
   overflow: hidden;
@@ -90,6 +90,7 @@
 
   &__title {
     @include typography-h2(var(---primary-100, #eaedff), center);
+    font-size: 32px;
 
     @include media-max-tablet {
       @include typography-h3(var(---primary-100, #eaedff), center);
@@ -148,6 +149,7 @@
   display: flex;
   flex-direction: column;
   max-width: 507px;
+  overflow: hidden;
 
   &__info {
     display: flex;
@@ -169,6 +171,7 @@
   }
 
   &__paragraph {
+    white-space: pre-line;
     @include typography-body-m-narrow(var(--color-roles-on-surface-variant, #dadae1));
   }
 
@@ -203,14 +206,44 @@
 }
 
 .drag_block {
-  display: none;
+  // display: none;
+
+  width: 100%;
+
+  //! FOR WHEN THERE'S LESS THAN 4 BLOCKS
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 40px;
+  //! FOR WHEN THERE'S LESS THAN 4 BLOCKS
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    z-index: +1;
+    pointer-events: none;
+  }
+
+  &:before {
+    left: 0;
+    background: linear-gradient(90deg, #0e0d14 0%, rgba(12, 9, 27, 0) 100%);
+  }
+
+  &:after {
+    right: 0;
+    background: linear-gradient(270deg, #0e0d14 0%, rgba(12, 9, 27, 0) 100%);
+  }
 
   @include init-position-for-content();
   &_active {
     @include animation($name: 'initialize-content');
   }
 
-  @include media-max-tablet {
-    display: block;
-  }
+  // @include media-max-tablet {
+  //   display: block;
+  // }
 }

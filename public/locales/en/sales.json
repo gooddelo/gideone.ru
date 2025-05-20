@@ -1,21 +1,21 @@
 {
-  "title": "Increase sales with us",
+  "title": "Increase sales together with\u00A0us",
   "analytics": {
-    "name": "General",
+    "name": "Overall",
     "subname": "analytics",
-    "description": "You can always see growth areas both for individual employees and for the entire company, and adjust plans, motivation, meetings, and sales strategies accordingly.",
+    "description": "You can always see growth areas both individually by\u00A0employees and across the entire company, allowing you to\u00A0adjust plans, motivation, meetings, and sales targets.",
     "img_1": "/img/sales-1.png",
     "img_2": "/img/sales-2.png"
   },
   "education": {
-    "name": "Employee training",
-    "subname": "on-site",
-    "description": "The system provides personalized feedback on a specific sale based on the company’s standards, helping maintain a high level of service regardless of employee experience.",
+    "name": "Staff",
+    "subname": "training on\u00A0site",
+    "description": "The system provides personal feedback on\u00A0specific sales based on\u00A0company work standards, helping maintain high service quality regardless of\u00A0employee experience.",
     "img_1": "/img/sales-3.png"
   },
   "dashboards": {
     "name": "Dashboards and reports",
-    "description": "Management can view statistics: who doesn't mention promotions, who has poor sales, and where customers are being lost.",
+    "description": "Management sees statistics: who doesn’t mention promotions, who has poor sales, and where customers are lost.",
     "img_1": "/img/sales-4.png",
     "img_2": "/img/sales-5.png",
     "img_3": "/img/sales-6.png",
