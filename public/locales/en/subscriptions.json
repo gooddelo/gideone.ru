@@ -21,8 +21,8 @@
     },
     {
       "title": "Pro",
-      "price": "3000",
-      "per": " per employee per month",
+      "price": "30",
+      "per": " per employee monthly",
       "description": "For companies with their own ATS, small businesses with a\u00A0limited number of\u00A0employees",
       "options": [
         {
@@ -39,8 +39,8 @@
     },
     {
       "title": "Business",
-      "price": "10,000",
-      "per": " per workstation per month",
+      "price": "100",
+      "per": " per workstation monthly",
       "description": "For locations where many employees work at\u00A0one point",
       "options": [
         {
@@ -62,5 +62,5 @@
     "employees": "employees in the company",
     "button": "Try for free"
   },
-  "currency": "₽"
+  "currency": "$"
 }

@@ -38,6 +38,7 @@ export const Footer: FC = () => {
     setOpenReview(false);
     setOpenTech(false);
     setSuccess(false);
+    reset();
   };
 
   const schema = yup.object().shape({
@@ -56,6 +57,7 @@ export const Footer: FC = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<ISchema>({ resolver: yupResolver(schema) });
 
@@ -78,6 +80,7 @@ export const Footer: FC = () => {
     );
     setOpenReview(false);
     setOpenTech(false);
+    reset();
   };
 
   const formId = uuidv4();

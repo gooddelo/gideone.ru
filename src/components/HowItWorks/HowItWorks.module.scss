@@ -30,7 +30,7 @@ $circle-size: 12px;
   }
 
   @include media-max-mobile {
-    text-align-last: left;
+    text-align: left;
     font-size: 32px;
     margin-right: auto;
   }
@@ -104,6 +104,7 @@ $circle-size: 12px;
   @include media-max-mobile() {
     margin-right: auto;
     left: 32px;
+    width: calc(100% - 32px);
   }
 }
 

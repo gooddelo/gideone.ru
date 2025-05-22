@@ -47,24 +47,25 @@ const ConsultationForm: FC = () => {
   });
 
   const onSubmit = (data: ISchema) => {
+    setSuccess(true);
+
+    const today = new Date();
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE,
+      import.meta.env.VITE_EMAILJS_TEMPLATE,
+      {
+        name: data.name,
+        email: data.email,
+        subject: 'Запрос на обратную связь от:',
+        time: today.toDateString(),
+        message: `Связаться с ${data.email}, номер телефона: ${data.message}`,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    );
+    // .then(() => setSuccess(true));
     setValue('name', '');
     setValue('message', '');
     setValue('email', '');
-
-    const today = new Date();
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE,
-        import.meta.env.VITE_EMAILJS_TEMPLATE,
-        {
-          name: data.name,
-          email: data.email,
-          time: today.toDateString(),
-          message: data.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      )
-      .then(() => setSuccess(true));
   };
 
   const [contentInView, setContentInView] = useState(false);
@@ -144,11 +145,11 @@ const ConsultationForm: FC = () => {
       </form>
 
       {success ? (
-        <Modal onClose={closeModal}>
+        <Modal hideBtn={success} onClose={closeModal}>
           <ModalSuccess
             onClose={closeModal}
-            title={tCommon('modal-question.success_title')}
-            text={tCommon('modal-question.success_text')}
+            title={tCommon('modal-contact.success_title')}
+            text={tCommon('modal-contact.success_text')}
           />
         </Modal>
       ) : null}

@@ -1,5 +1,6 @@
 {
 	"input": {
+		"name": "Invalid name",
 		"required": "Required field",
 		"email": "Invalid email",
 		"name_short": "Name must be\u00A0longer than 2\u00A0characters",
