@@ -1,7 +1,7 @@
 RewriteEngine On
 RewriteBase /
 
-# Отдаём robots.txt и sitemap.xml как есть
+# Отдаем robots.txt и sitemap.xml как есть
 
 RewriteRule ^robots\.txt$ - [L]
 RewriteRule ^sitemap\.xml$ - [L]
