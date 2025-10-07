@@ -3,6 +3,7 @@ import { type FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { createObserver } from '@/utils';
 import type { Namespaces } from '@/types';
+import { ModalContact } from '../Widgets';
 import styles from './StartUsing.module.scss';
 
 interface IStep {
@@ -30,7 +31,10 @@ const StartUsing: FC = () => {
       onEnter: () => setTitleInView(true),
     });
 
-    const blocksObserver = createObserver({ target: steps, onEnter: () => setStepsInView(true) });
+    const blocksObserver = createObserver({
+      target: steps,
+      onEnter: () => setStepsInView(true),
+    });
 
     return () => {
       titleObserver.disconnect();
@@ -63,6 +67,12 @@ const StartUsing: FC = () => {
             </li>
           ))}
       </ul>
+      <div className={styles.action_wrapper}>
+        <ModalContact className={styles.action} text={t('action')} />
+        <div className={cn(styles.action__circle, styles.action__circle_1)} />
+        <div className={cn(styles.action__circle, styles.action__circle_2)} />
+        <div className={cn(styles.action__circle, styles.action__circle_3)} />
+      </div>
     </section>
   );
 };

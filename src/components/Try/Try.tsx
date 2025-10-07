@@ -32,7 +32,10 @@ const Try: FC = () => {
     //   onEnter: () => setTitleInView(true),
     // });
 
-    const imageObserver = createObserver({ target: image, onEnter: () => setImageInView(true) });
+    const imageObserver = createObserver({
+      target: image,
+      onEnter: () => setImageInView(true),
+    });
 
     return () => {
       // titleObserver.disconnect();

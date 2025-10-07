@@ -1,9 +1,15 @@
 import i18n from 'i18next';
 import HttpBackend, { type HttpBackendOptions } from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
-import { getDefLang } from '@/utils';
+// import { getDefLang } from '@/utils';
 import { LANGUAGES } from '@/types';
 import { i18nNamespaces } from './namespaces';
+
+const getDefLang = (): string => {
+  const path = window.location.pathname;
+  if (path.startsWith('/en')) return LANGUAGES.en_us;
+  return LANGUAGES.ru; // дефолт
+};
 
 i18n
   .use(HttpBackend)

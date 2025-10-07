@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
-import { type ChangeEvent, type FC, useState } from 'react';
+import { type ChangeEvent, type FC, useCallback, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { v4 as uuidv4 } from 'uuid';
@@ -34,6 +34,12 @@ const ModalContact: FC<IProps> = ({ id = uuidv4(), className, text, switchToBtn 
   const [phone, setPhone] = useState('');
   const [success, setSuccess] = useState(false);
 
+  // useEffect(() => {
+  //   if (isModalOpen) {
+  //     setModalOpen(true);
+  //   }
+  // }, [isModalOpen]);
+
   const schema = yup.object().shape({
     name: yup
       .string()
@@ -57,14 +63,26 @@ const ModalContact: FC<IProps> = ({ id = uuidv4(), className, text, switchToBtn 
 
   const formId = id + 'form';
 
-  const toggleModal = () => {
+  const toggleModal = useCallback(() => {
     setModalOpen((prev) => !prev);
     setValue('name', '');
     setValue('phone', '');
     setValue('email', '');
     setPhone('');
     setSuccess(false);
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const test = window.location.href.split('?')[1];
+    if (test && test.includes('modal=true')) {
+      toggleModal();
+      // window.location.href = window.location.href.split("?")[0];
+      const url = window.location.href.split('?')[0];
+      window.history.replaceState({}, '', url);
+    }
+  }, [toggleModal]);
+
   const {
     register,
     setValue,
